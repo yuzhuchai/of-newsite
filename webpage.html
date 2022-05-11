@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!--
+this is the first HTML code, load font and style!
+-->
+
+
+<!-- 回到顶部 -->
+<!-- menu 滑动 + 二号menu -->
+
+
+
+<!-- min screen width 320px -->
+
+
+<script>
+    let courseWidth
+    let courseHeight
+
+    let socialCard3Width
+
+    let careerWidth
+    let careerHeight
+
+    let advisorWidth
+    let advisorHeight
+
+
+	$(window).on("load",function(){
+		$(".main_area").width($(window).width())
+        courseWidth = $('.course').width();
+        courseHeight = courseWidth * 480/474
+        $('.course').height(courseHeight)
+
+        careerWidth = $('.career').width();
+        careerHeight = careerWidth * 364/360 + 20
+        $('.career').height(careerHeight)
+
+
+
+        socialCard3Width = $('.socialCard3').width();
+        $('.socialCard3').height(socialCard3Width)
+	})
+
+
+    $( window ).resize(function() {
+        courseWidth = $('.course').width();
+        // console.log(courseWidth , "<-onresize")
+                // courseWidth = $('.course').width();
+        courseHeight = courseWidth * 480/474
+        $('.course').height(courseHeight)
+
+        socialCard3Width = $('.socialCard3').width();
+        $('.socialCard3').height(socialCard3Width)
+
+        careerWidth = $('.career').width();
+        careerHeight = careerWidth * 364/360 
+        $('.career').height(careerHeight)
+    });
+
+
+
+    // $("#menuIcon").click(function() {
+    //     console.log('display')
+    //     $("#menuPopUp").css({"display":"block"})
+    // })
+
+    // $('body').click(function(){
+    //     console.log('display')
+    // })
+
+
+
+
+    $(window).scroll(function(){
+        // console.log("hi")
+        $("#header").css({"box-shadow":"0px 4px 20px rgba(0,0,0,0.09)"})
+    })
+
+
+</script>
+
+
+
+<!-- 1660 -->
+
+<style>
+
+
+
+    @font-face {
+      font-family:  "XYZB";
+      src: url("/static/font/MSYHBD.TTC");
+    }
+
+    @font-face{
+      font-family:  "XYZ";
+      src:url("/static/font/MSYH.TTC");
+    }
+
+
+    @font-face{
+      font-family:  "XYZL";
+      src:url("/static/font/MSYHL.TTC");
+    }
+
+
+	html, body{
+		/*font-family: "Microsoft YaHei";*/
+		font-family:"XYZ";
+        max-width: 100%;
+        overflow-x: hidden;
+	}
+
+    img{
+        display:block;
+    }
+
+
+    .sections{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+    }
+
+    #menuPopUp{
+        display: none;
+        width: 100vw;
+        height:100vh;
+        z-index: 1;
+        position: fixed;
+        left: 0;
+        top: 80px;
+    }
+
+
+
+    #header{
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        z-index: 1;
+        background-color: white;
+    }
+   
+    #headerlogo{
+        /*border: 1px black solid;*/
+        /*width:100px;*/
+        margin-left:26px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #headerlogo > img{
+        display: block;
+        width: 200px;
+    }
+    
+    #menu{
+        /*border: 1px black solid; */
+        color:black;
+        margin-top:auto;
+        margin-bottom:auto;
+        /*font-style: bold;*/
+        font-size: 24px;
+        margin-right:26px;
+        font-family: "XYZB";
+        font-weight: 700;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+
+
+
+    input[type=text]{
+        width: 15vw;
+        height: 30px;
+        padding-left: 20px;
+        border: none;
+        background-color: #FFFFFF;
+        box-shadow: inset 0px 4px 40px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        background: url(http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_212590c6810224e5090d5a1067cce804?imageView2) no-repeat;
+        background-size: 20px;
+        background-position: right 20px bottom 5px;
+    }
+
+    #searchIcon{
+        position:absolute;
+        margin-right: 
+        height: 100;
+        max-height: 30px;
+        /*z-index: 100;*/
+    }
+
+
+    #changeLan{
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 5px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        margin-bottom: 5px;
+    }
+
+        #loginIcon{
+        display: inline;
+        width: 30px;
+        vertical-align: middle;
+    }
+
+    #menuText{
+        color:black;
+        /*display: inline-block;*/
+    }
+
+    #menuIcon{
+        /*border: 1px black solid;*/
+        margin-top: auto;
+        margin-bottom:auto;
+        /*display: inline-block;*/
+        width: 30px;
+        height: 30px;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        margin-right: 20px;
+    }
+
+    #menuIconContainer{
+        display: flex;
+        /*display: inline-block;*/
+    }
+
+    #menuIcon:hover{
+        cursor: pointer;
+    }
+
+
+    #menuIcon > div {
+        width: 14px;
+        height: 14px;
+        border-radius: 5px;
+        background-color: black;
+    }
+
+    #menuText{
+    	color:black;
+        /*display: inline-block;*/
+    }
+
+    
+
+    #contentContainer{
+    	top: 80px;
+    	position: absolute;
+    	left: 0px;
+    	width: 100%;
+    }
+
+    .container{
+    	/*border:1px black solid;*/
+    	/*height: 400px;*/
+        width:1536px;
+    	margin-left:auto;
+    	margin-right: auto;
+/*    	margin-right: 10%;
+    	margin-left: 10%;*/
+    }
+
+    .buttonBlack{
+        background-color: black;
+        color:white;
+        margin-top: 20px;
+        font-size: 20px;
+        font-family: "XYZB";
+        font-weight: 700;
+        border-radius: 8px;
+        padding: 4px 20px 4px 20px;
+        height: 46px;
+        float: right;
+        border:none;
+    }
+
+    .buttonBlack:hover{
+        cursor: pointer;
+    }
+
+    .buttonDiv{
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+
+    #picWallContainer{
+    	margin-left: 0;
+    	margin-right: 0;
+    	height: calc(100vh - 80px);
+    	background-color: #E2E2E2;
+    	min-width:100%;
+    }
+
+
+    #adContainer{
+    	display:flex;
+    	flex-direction: row;
+    	justify-content: space-between;
+    	margin-top: 100px;
+    }
+
+
+    .adContent{
+    	width:474px;
+        /*height:278px;*/
+    	/*background: url("https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2");*/
+		filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.08));
+		border-radius: 15px;
+		/*border:1px black solid;*/
+		padding:0;
+    }
+
+    .adContent > img{
+    	width:100%;
+    	/*object-fit: contain;*/
+    }
+
+
+    #courseContainer{
+    	/*border: 1px solid black;*/
+    	margin-top: 100px;
+    }
+
+    #courseHeader{
+    	margin-bottom: 42px;
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: space-between;
+    }
+
+    #courseButtonContainer{
+    	display: flex;
+    	flex-direction: row;
+    	align-items: center;
+	}
+
+	.courseButton{
+		height:46px;
+    	background: #FFFFFF;
+		box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.08);
+		border-radius: 8px;   
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding-left: 33px; 
+		padding-right: 33px; 
+		color: #222222;
+		font-size: 20px;
+        font-family: "XYZL";
+		font-weight: 290;
+		margin-left: 22px;
+	}
+
+
+    #courseDisplayContainer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        row-gap: 67px;
+    }
+
+    .course{
+        width:474px;
+        height:480px;
+    }
+
+    .career{
+        width:360px;
+        height:364px;
+    }
+
+    .advisor{
+        width:360px;
+        height:504px;
+    }
+
+
+    .socialCard{
+        width:474px;
+        /*height:480px;*/
+    }
+
+
+    .myCard{
+        border-radius: 15px;
+        box-shadow: 0px 4px 40px rgba(0,0,0,0.08);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .myCard > div > img{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        width: 100%;
+    }
+
+    .socialCard > img{
+        width:100%;
+        border-radius: 15px;
+    }
+
+    .career > .cardDescription{
+        justify-content: flex-start;
+        margin:20px;
+    }
+
+    .course > .cardDescription{
+        margin:20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 2;
+    }
+
+    .advisor > .cardDescription{
+        margin:20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 2;
+    }
+
+
+    #metaCareerContainer{
+        /*border:1px solid black;*/
+        margin-top: 32px;
+
+    }
+
+
+
+
+    .cardsContainer{
+        display: flex;
+        flex-direction: row;
+        margin-top:42px;
+        justify-content: space-between;
+    }
+
+
+
+    #recommandCourseContainer{
+        margin-top: 100px;
+    }
+
+
+    #aboutContainer{
+        /*border:1px solid black;*/
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /*width:533px;*/
+    }
+
+    #videoContainer{
+
+        width:946px;
+        height:532px;
+        background-color: black;
+        border-radius: 15px;
+
+    }
+
+
+    #aboutDescription{
+        width:533px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #aboutTitle{
+        margin-top: 42px;
+        font-size: 70px;
+        font-family: "XYZB";
+        font-weight: 700;
+        letter-spacing: 0.005em;
+        line-height: 113.8%;
+        color:#222222;
+    }
+
+    #aboutDes{
+        margin-top:42px;
+        font-size: 30px;
+        font-family: "XYZL";
+        font-weight: 290;
+        letter-spacing: 1.09em;
+        color:#222222;
+        line-height: 100%;
+    }
+
+
+    #aboutText{
+        color:black;
+        font-size: 20px;
+        font-family: "XYZL";
+        font-weight: 290;
+        line-height: 145%;
+        letter-spacing: 0.045em;
+        /*margin-top: 130px;*/
+    }
+
+    #readmore{
+        color:#ACACAC;
+        text-decoration: underline;
+    }
+
+    #newsContainer{
+        margin-top: 100px;
+    }
+
+    #newsContentContainer{
+        margin-top: 42px;
+    }
+
+    #partnerContainer{
+        margin-top: 32px;
+        /*border:1px solid black;*/
+    }
+
+
+    #partnetContentContainer{
+        margin-top:42px;
+        display:flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        margin-left: 80px;
+        margin-right:80px;
+        justify-content: space-between;
+    }
+
+
+    .partner{
+        width: 22%;
+    }
+
+    .partner > img{
+        width: 100%;
+    }
+
+    .newContent{
+        display: flex;
+        flex-direction: row;
+        /*width:100%;*/
+        height:80px;
+        box-shadow: 0px 4px 40px rgba(0,0,0,0.08);
+        border-radius: 8px;
+        margin-bottom: 20px;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 80px;
+        justify-content: space-between;
+        /*max-width:100%;*/
+    }
+
+
+    .date{
+        color: #ACACAC;
+        font-size: 30px;
+        font-family: "XYZB";
+        font-weight: 700;
+        /*margin-left: 30px;*/
+    }
+
+    .newsTitle{
+        font-size: 20px;
+        font-family: "XYZL";
+        font-weight: 290;
+        flex-grow: 2;
+        margin-left: 66px;
+    }
+
+
+    .more{
+        color:#E2E2E2;
+        font-size: 30px;
+        font-family: "XYZB";
+        font-weight: 700;
+    }
+
+    #blogContainer{
+        margin-top: 32px;
+    }
+
+    #advisorContainer{
+        margin-top: 32px;
+    }
+
+
+    #socialMediaContainer{
+        margin-top: 100px;
+    }
+
+
+    #socialMediaContents{
+        margin-top: 42px;
+    }
+
+    #socialCard3{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /*height:480px;*/
+    }
+
+
+
+
+    #footer{
+        margin-top: 213px;
+        background-color: #E5E5E5;
+        width:100vw;
+        height: 331px;
+        padding-top: 106px;
+    }
+
+
+    #footer > div{
+        display: flex;
+        flex-direction: row;
+        /*justify-content: space-between;*/
+        width: 1536px;
+        margin-left: 192px;
+    }
+
+    #footerLogo{
+        width: 250px;
+        /*width:31%*/
+    }
+
+    #footerLogo > img{
+        width:100%;
+    }
+
+    #footerSocialLogo{
+        margin-left: 38px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #footerSocialLogo > img{
+        width:100%;
+        margin-right: 20px;
+        width: 30px;
+    }
+
+
+    #footerMenu{
+        display: flex;
+        flex-direction: row;
+        /*flex-wrap: wrap;*/
+        height: 100px;
+        /*justify-content: space-between;*/
+        align-content: flex-start;
+        font-size: 20px;
+        font-family: "XYZL";
+        font-weight:290;
+        color: #222222;
+    }
+
+
+    .footerMenuItem{
+        margin: 0px 70px 30px 70px;
+    }
+
+    #footerSocial{
+        margin-left: 70px;
+        display: flex;
+        /*flex-direction: row;*/
+        align-items: flex-end;
+
+    }
+
+    #footerCode > div {
+        margin-bottom: 30px;
+    }
+
+
+
+
+    /*below is style classes */
+    .header1{
+    	font-size: 40px;
+        font-family: "XYZB";
+    	font-weight: 700;
+        line-height: 30px;
+    }
+
+    .header2{
+        font-size: 30px;
+        font-family: "XYZB";
+        font-weight: 700;
+        line-height: 30px;
+    }
+
+    .header3{
+    	font-size: 20px;
+        font-family: "XYZL";
+    	font-weight: 290;
+        margin-top: 20px;
+    }
+
+    .tag{
+        font-size: 20px;
+        font-family: "XYZL";
+        font-weight: 290;
+        color: #222222;
+        background-color: #E2E2E2;
+        border-radius: 6px;
+        display: inline-block;
+        /*height:37px;*/
+        padding: 4px 20px 4px 20px;
+    }
+
+    .advisorTitle{
+        color:rgba(0, 0, 0, 0.45);
+        font-size: 20px;
+        font-family: "XYZL";
+        font-weight: 290;
+    }
+
+
+    #newsContentContainerMobile{
+        display: none;
+    }
+
+
+    #socialMediaContentsMobile{
+        display:none;
+    }
+
+
+    .buttonMenu{
+        float: none;
+        /*align-self: stretch;*/
+        /*flex-grow: 1.5;*/
+        width: 18%;
+        height: 68px;
+    }
+
+
+    #menuPopUpContents{
+        width:1536px;
+        margin-left:auto;
+        margin-right: auto;
+    }
+
+
+    #menuButtonContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #menuCategoryContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top:42px;
+    }
+
+    .menuCategory{
+        color: white;
+        text-align: center;
+        /*margin:auto;*/
+        display: flex;
+        background-image: url(http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_a7c819e9f710c667b73d5dc75a7030e7?imageView2);
+        min-width:360px;
+        min-height:199px;
+        border-radius: 15px;
+        /*border:1px solid black;*/
+        justify-content: center;
+    }
+
+    .menuCategory > div {
+
+        align-self: center;
+        font-family: "XYZB";
+        font-weight: 700;
+        font-size: 30px;
+
+    }
+
+
+    #menuSoftwareContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 42px;
+        row-gap: 15px;
+    }
+
+    .software{
+        min-width:360px;
+        min-height: 160px;
+        border-radius: 15px;
+        /*border:1px solid black;*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        box-shadow: 0px 4px 40px rgba(0,0,0,0.08);
+    }
+
+    .software > img {
+        /*border:1px solid black;*/
+        width: 20%;
+        height: 70px;
+        align-self: center;
+        border-radius: 10px;
+    }
+
+    .softwareDescription{
+        align-self: center;
+    }
+
+
+    .softwareh1{
+        font-size: 20px;
+        font-family: "XYZB";
+        font-weight: 700;
+    }
+
+    .softwareh2{
+        font-size: 15px;
+        font-family: "XYZL";
+
+        font-weight: 290px;
+    }
+
+
+    #menuSocialContainer{
+        display: flex;
+        flex-direction: row;
+        margin-top: 42px;
+    }
+
+    #menuSocialContainer > img{
+        margin-right: 25px;
+    }
+
+
+
+    @media screen and (max-width: 1660px){
+        #menuPopUpContents{
+            max-width: 90%;
+        }
+
+        .container{
+            max-width:90%;
+        }
+
+        .adContent{
+            max-width:31%;
+        }
+
+        .course{
+            max-width:31%;
+        }
+
+        .socialCard{
+            max-width: 31%;
+        }
+
+        .career{
+            max-width: 23%;
+        }
+
+        .advisor{
+            max-width: 23%;
+        }
+
+        #videoContainer{
+            min-width:946px;
+            min-height:532px;
+        }
+
+        #aboutDescription{
+            min-width:533px;
+        }
+
+        #footer{
+            max-width: 100%;
+        }
+        
+        #footer > div{
+            display: flex;
+            flex-direction: row;
+            width:100%;
+            margin-left: 5%;
+        }
+
+        #footerLogo{
+            min-width:21%;
+        }
+
+        #footerLogo > img{
+            width:100%;
+        }
+
+        .footerMenuItem{
+            margin: 0px 40px 30px 40px;
+        }
+
+        #footerSocial{
+            margin-left: 40px;
+            display: flex;
+        /*flex-direction: row;*/
+            align-items: flex-end;
+        }
+
+
+        .header2Resize{
+            font-size:2vw;
+            line-height:2vw;
+        }
+
+        .header3Resize{
+            font-size: 1vw;
+            line-height: 20px
+        }
+
+        .header1{
+            /*font-size: 1.5vw;*/
+            font-family: "XYZB";
+
+            font-weight: 700;
+            line-height: 40px;
+        }
+
+        .tag{
+            display:none;
+        }
+
+        .buttonMenu{
+            float:none;
+            display: inline-block;
+            text-align: center;
+        }
+
+
+    }
+
+
+
+
+    @media screen and (max-width: 767px){
+
+        #header{
+            width: 100%;
+        }
+        
+        #language{
+            display: none;
+        }
+
+        #adContainer{
+            display: block;
+        }
+
+        .adContent{
+            margin: 0 auto 20px auto;
+            min-width: 100%;
+            /*margin-bottom:20px;*/
+        }
+
+        #courseHeader{
+            display: block;
+        }
+
+        #courseButtonContainer{
+            margin-top:20px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap:20px;
+            column-gap: 20px;
+            justify-content: space-between;
+            align-items: stretch;
+            margin-left:0px;
+        }
+
+        #courseButtonContainer > div {
+            flex-grow: 2;
+            margin-left: 0px;
+        }
+
+
+        .courseExtra{
+            display: none;
+        }
+
+        #courseDisplayContainer{
+            display: block;
+        }
+
+        .myCard{
+            /*min-width:100%;*/
+            margin-right:auto;
+            margin-left:auto;
+            min-width:100%;
+            /*min-width:320px;*/
+            margin-bottom: 30px;
+        }
+
+
+        .cardsContainer{
+            display:block;
+        }
+
+        #careerContainer{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #metaCareerContainer{
+            margin-top: 100px;
+        }
+
+
+        .career{
+            min-width:45%;
+            height: 280px;
+            /*min-height: 480px;*/
+        }
+
+        #aboutContainer{
+            display: block;
+        }
+
+        #aboutText{
+            margin-top: 49px;
+            max-width: 100%;
+        }
+
+
+
+        .newContent{
+            display: block;;
+        }
+
+        .advisor{
+            display: flex;
+            flex-direction: row;
+            height:100%;
+            /*max-height: 245px;*/
+        }
+
+        .advisor > div > img{
+            border-top-left-radius: 15px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 15px;
+        }
+
+
+
+        .advisor > .cardDescription{
+            margin:20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            /*flex-grow: 2;*/
+        }
+
+        .partner{
+            width: 45%;
+        }
+
+
+        .socialCard{
+            min-width:100%;
+            max-height:150px;
+            /*border: 1px solid black;*/
+        }
+
+/*        .socialCard > img{
+            display: none;
+            border: 1px solid black;
+        }
+
+        #socialCard3{
+            height: 156px;
+        }*/
+
+        #footer{
+            max-width:100%;
+            /*display:none;*/
+        }
+
+        #footerLogo{
+            /*margin-left: 10px;*/
+            max-width:21%;
+        }
+
+        .footerMenuItem{
+            margin: 0px 20px 30px 20px;
+        }
+
+        #footerSocial{
+            margin-left: 20px;
+            display: flex;
+        /*flex-direction: row;*/
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        #footerSocialLogo > img{
+            margin-right: 10px;
+        }
+
+        #footerSocialLogo{
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+
+
+
+        #newsContentContainer{
+            display: none;
+        }
+
+        #newsContentContainerMobile{
+            display: block;
+            /*height: 150px;*/
+        }
+
+        .newsMobileHeader{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .newsTitleMobile{
+            font-size: 25px;
+            font-family: "XYZB";
+
+            font-weight: 700;
+        }
+
+        .newDateMobile{
+            font-size: 20px;
+            font-family: "XYZL";
+
+            font-weight: 290;
+            color:#ACACAC;
+        }
+    
+        .newsContentMobile{
+            font-size: 20px;
+            font-family: "XYZL";
+
+            font-weight: 290;
+        }
+
+        .newsContentMobile > span {
+            color:#ACACAC;
+            text-decoration: underline;
+        }
+
+        .newContentMobile{
+            /*padding:20px;*/
+            height: 100px;
+        }
+
+        .newsMobileHeader{
+            margin-top: 50px;
+        }
+
+        #socialMediaContents{
+            display:none;
+        }
+
+        #socialMediaContentsMobile{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        #socialCard3{
+            flex-direction: row;
+            max-width: 100%;
+        }
+
+
+        #socialCard3 > div  {
+            max-width: 45%;
+        }
+
+        #socialCard3 > div >img {
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+
+
+
+        .socialCard{
+            max-height:326px;
+            margin-bottom: 20px;
+        }
+
+        #videoContainer{
+            max-width: 100%;
+        }
+
+        .header1{
+            font-size: 40px;
+            font-family: "XYZB";
+
+            font-weight: 700;
+            line-height: 40px;
+        }
+
+        .header2{
+            font-size: 30px;
+            font-family: "XYZB";
+
+            font-weight: 700;
+            line-height: 30px;
+        }
+
+        .header3{
+            font-size: 20px;
+            font-family: "XYZL";
+
+            font-weight: 290;
+            margin-top: 20px;
+        }
+
+
+        .tag{
+            display:inline-block;
+        }
+
+        .advisorTitle{
+            margin-top: 30px;
+        }
+
+    }
+
+
+
+
+</style>
+
+
+
+<div id="header">
+    <div id="headerlogo"><img src="http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_25638bbb653f829b3feb1d2208295931?imageView2"></div>
+    <div id="menu">
+        <div>
+
+            <input type='text' id='search' placeholder="processing"> 
+
+        </div>
+        <div id='language'><span id="changeLan"></span> <span id='lanText'>Cn</span></div>
+        <div id='login'><img id='loginIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_86ceb5932e24e2383cce79506f18ef8a?imageView2'>&nbsp Log in</div> 
+        <div id='menuIconContainer'>
+            <div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
+            <div id='menuText'>Menu</div>
+        </div>
+    </div>
+</div>
+<!-- end of header  -->
+
+
+
+
+    <div id='menuPopUp'>
+        <div id='menuPopUpContents'>
+            <div id='menuButtonContainer'>
+                <button class='buttonBlack buttonMenu'>ABOUT US</button>
+                <button class='buttonBlack buttonMenu'>NEWS</button>
+                <button class='buttonBlack buttonMenu'>BLOGS</button>
+                <button class='buttonBlack buttonMenu'>ADVISORS</button>
+                <button class='buttonBlack buttonMenu'>WHO'S WITH US</button>
+            </div> 
+
+            <div id='menuCategoryContainer'>
+                <div class='menuCategory'><div>快速筑基班</div></div>
+                <div class='menuCategory'><div>快速筑基班</div></div>
+                <div class='menuCategory'><div>快速筑基班</div></div>
+                <div class='menuCategory'><div>快速筑基班</div></div>
+            </div>
+
+
+            <div id='menuSoftwareContainer'>
+                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+            </div>
+
+
+            <div id='menuSocialContainer'>
+                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1e150b94ecd5b631b3ebea4157f66c4?imageView2'>
+                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5f3de3726fafd5fec8227fdb837ff092?imageView2'>
+                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'>
+                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'>
+
+
+            </div>
+        </div>
+   
+    </div>
+
+
+
+<div id="contentContainer">
+
+
+    <div class="container" id="picWallContainer">
+    	
+    </div>
+    <!--  end of picture wall container  -->
+    
+ 
+
+    <div class="container" id="adContainer">
+    	<div class="adContent">
+    		<img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_98f9c11c116c6e5fe0ffc50f4da79ba7?imageView2'>
+    	</div>
+    	<div class="adContent">
+    		<img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_98f9c11c116c6e5fe0ffc50f4da79ba7?imageView2'>
+    	</div>
+    	<div class="adContent">
+    		<img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_98f9c11c116c6e5fe0ffc50f4da79ba7?imageView2'>
+    	</div>
+    </div>
+    <!-- end of ad container  -->
+
+
+
+    <div class="container" id="courseContainer">
+    	<div id="courseHeader">
+    		<div>
+    			<div class='header1'>METAVERSE COURSES</div>
+    			<div class='header3'>元宇宙课程</div>
+    		</div>
+    		
+    		<div id='courseButtonContainer'>
+    			<div class='courseButton'>New</div>
+    			<div class='courseButton'>Unity</div>
+    			<div class='courseButton'>Unreal</div>
+    			<div class='courseButton'>TouchDesigner</div>
+    			<div class='courseButton'>Processing</div>
+    		</div>
+    	</div>
+    	<div id="courseDisplayContainer">
+
+    		<div class="myCard course">
+    			<div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
+                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                    </div>
+                    <div><div class='tag'>#p5.js</div></div>
+                </div>
+    		</div>
+            <!-- end of card 1 -->
+    		<div class="myCard course">
+                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
+                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                    </div>
+                    <div><div class='tag'>#p5.js</div></div>
+                </div>
+            </div>
+            <!-- end of card 2 -->
+            <div class="myCard course">
+                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
+                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                    </div>
+                    <div><div class='tag'>#p5.js</div></div>
+                </div>
+            </div>
+            <!-- end of card 3 -->
+            <div class="myCard course courseExtra">
+                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
+                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                    </div>
+                    <div><div class='tag'>#p5.js</div></div>
+                </div>
+            </div>
+            <!-- end of card 4 -->
+            <div class="myCard course courseExtra" >
+                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
+                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                    </div>
+                    <div><div class='tag'>#p5.js</div></div>
+                </div>
+            </div>
+            <!-- end of card 5 -->
+            <div class="myCard course courseExtra" >
+                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
+                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                    </div>
+                    <div><div class='tag'>#p5.js</div></div>
+                </div>
+            </div>
+            <!-- end of card 6 -->
+    	</div>
+        <div class='buttonDiv'>
+            <button class='buttonBlack'>View Course List</button>   
+        </div>
+    </div>
+    <!-- end of course container -->
+
+
+
+    <div class="container" id="metaCareerContainer">
+        <div>
+            <div class='header1'>START YOUR META CAREER</div>
+            <div class='header3'>开启你的元宇宙职业生涯</div>
+        </div>
+
+        <div class='cardsContainer' id='careerContainer'>
+            <div class='myCard career'>
+                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'></div>
+                <div class='cardDescription'>
+                    <div class='header2 header2Resize'>AI Develop</div>
+                    <div class='header3 header3Resize'>人工智能开发</div>
+                </div>
+            </div>
+            <!-- end of card 1 -->
+            <div class='myCard career'>
+                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'></div>
+                <div class='cardDescription'>
+                    <div class='header2 header2Resize'>AI Develop</div>
+                    <div class='header3 header3Resize'>人工智能开发</div>
+                </div>
+            </div>
+            <!-- end of card 2 -->
+            <div class='myCard career'>
+                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'></div>
+                <div class='cardDescription'>
+                    <div class='header2 header2Resize'>AI Develop</div>
+                    <div class='header3 header3Resize'>人工智能开发</div>
+                </div>
+            </div>
+            <!-- end of card 3 -->
+            <div class='myCard career'>
+                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'></div>
+                <div class='cardDescription'>
+                    <div class='header2 header2Resize'>AI Develop</div>
+                    <div class='header3 header3Resize'>人工智能开发</div>
+                </div>
+            </div>
+            <!-- end of card 4 -->
+        </div>
+    </div>
+<!-- end of career container -->
+
+
+
+    <div class="container" id="recommandCourseContainer">
+        <div>
+            <div class='header1'>HIGH SCORE COURSES</div>
+            <div class='header3'>高分课程</div>
+        </div>
+
+        <div class=cardsContainer>
+            <div class='myCard course'>
+                  <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
+                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                    </div>
+                    <div><div class='tag'>#p5.js</div></div>
+                </div>
+            </div>
+
+            <div class='myCard course'>
+                  <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
+                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                    </div>
+                    <div><div class='tag'>#p5.js</div></div>
+                </div>
+            </div>
+
+            <div class='myCard course'>
+                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
+                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                    </div>
+                    <div><div class='tag'>#p5.js</div></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end of recommand containe -->
+
+
+
+    <div class="container" id="aboutContainer">
+        <div id='aboutDescription'>
+            <div>            
+                <div class='header1'>ABOUT US</div>
+                <div class='header3'>关于我们</div>
+                <div id='aboutTitle'>OF COURSE <br/>想当然</div>
+                <div id='aboutDes'>让想到就能做到</div>      
+            </div>
+
+            <div id='aboutText'>创立于2014年，中国第一家元宇宙科技学院。核心成员来自世界顶尖高校，为18-48岁成年人提供下一代互联网生存所需的视界与技能。<span id='readmore'>read more...</span></div>
+        </div>
+        <div id='videoContainer'></div>
+    </div>
+<!-- end of about container -->
+
+
+
+    <div class="container" id="newsContainer">
+        <div>
+            <div class='header1'>NEWS</div>
+            <div class='header3'>新闻</div>
+        </div>
+
+        <div id='newsContentContainer'>
+            <div class='newContent'>
+                <div class='date'>2020.01.05</div>
+                <div class='newsTitle'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现</div>
+                <div class='more'>MORE   >></div>
+            </div>
+            <!-- end of new card 1 -->
+
+            <div class='newContent'>
+                <div class='date'>2020.01.05</div>
+                <div class='newsTitle'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现</div>
+                <div class='more'>MORE   >></div>
+            </div>
+            <!-- end of new card 2 -->
+
+            <div class='newContent'>
+                <div class='date'>2020.01.05</div>
+                <div class='newsTitle'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现</div>
+                <div class='more'>MORE   >></div>
+            </div>
+            <!-- end of new card 3 -->
+
+
+            <div class='newContent'>
+                <div class='date'>2020.01.05</div>
+                <div class='newsTitle'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现</div>
+                <div class='more'>MORE   >></div>
+            </div>
+            <!-- end of new card 4 -->
+        </div>
+
+
+        <div id='newsContentContainerMobile'>
+            <div class='newContent newContentMobile'>
+                <div class='newsMobileHeader'>
+                    <div class='newsTitleMobile'>新媒体舞台表现</div>
+                    <div class='newDateMobile'>2020.01.05</div>
+                </div>
+
+                <div class='newsContentMobile'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现。<span>Read More   >></span></div>
+            </div>
+            <!-- end of new card 1 -->
+
+            <div class='newContent newContentMobile'>
+                <div class='newsMobileHeader'>
+                    <div class='newsTitleMobile'>新媒体舞台表现</div>
+                    <div class='newDateMobile'>2020.01.05</div>
+                </div>
+
+                <div class='newsContentMobile'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现。<span>Read More   >></span></div>
+            </div>
+            <!-- end of new card 2 -->
+
+            <div class='newContent newContentMobile'>
+                <div class='newsMobileHeader'>
+                    <div class='newsTitleMobile'>新媒体舞台表现</div>
+                    <div class='newDateMobile'>2020.01.05</div>
+                </div>
+
+                <div class='newsContentMobile'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现。<span>Read More   >></span></div>
+            </div>
+            <!-- end of new card 3 -->
+
+
+            <div class='newContent newContentMobile'>
+                <div class='newsMobileHeader'>
+                    <div class='newsTitleMobile'>新媒体舞台表现</div>
+                    <div class='newDateMobile'>2020.01.05</div>
+                </div>
+
+                <div class='newsContentMobile'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现。<span>Read More   >></span></div>
+            </div>
+            <!-- end of new card 4 -->
+        </div>
+
+        <div class='buttonDiv'>
+            <button class='buttonBlack'>View All News</button>   
+        </div>
+    </div>
+<!-- end of news container -->
+
+
+
+    <div class="container" id="blogContainer">
+        <div>
+            <div class='header1'>BLOG</div>
+            <div class='header3'>博客</div>
+        </div>
+
+        <div class='cardsContainer'>
+            <div class="myCard course">
+                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
+                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                    </div>
+                    <!-- <div><div class='tag'>#p5.js</div></div> -->
+                </div>
+            </div>
+            <!-- end of card 1 -->
+            <div class="myCard course">
+                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
+                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                    </div>
+                    <!-- <div><div class='tag'>#p5.js</div></div> -->
+                </div>
+            </div>
+            <!-- end of card 2 -->
+            <div class="myCard course">
+                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
+                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                    </div>
+                    <!-- <div><div class='tag'>#p5.js</div></div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class='buttonDiv'>
+            <button class='buttonBlack'>View All Blogs</button>   
+        </div>
+    </div>
+<!-- end of blog container -->
+
+
+    <div class="container" id="advisorContainer">
+        <div>
+            <div class='header1'>ADVISORS</div>
+            <div class='header3'>顾问专家</div>
+        </div>
+
+        <div class='cardsContainer'>
+            <div class='myCard advisor'>
+                <div><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_52aa324d79ac55ca015e54b9a3dc7fba?imageView2'></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize'>Gene Kogan</div>
+                        <div class='header3 header3Resize'>金 高更</div>
+                    </div>
+                    
+                    <div>
+                        <div class='advisorTitle'>
+                            纽约大学特聘研究生导师<br/>
+                            人工智能艺术家
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of card 1 -->
+            <div class='myCard advisor'>
+                <div><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_52aa324d79ac55ca015e54b9a3dc7fba?imageView2'></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize'>Gene Kogan</div>
+                        <div class='header3 header3Resize'>金 高更</div>
+                    </div>
+                    
+                    <div>
+                        <div class='advisorTitle'>
+                            纽约大学特聘研究生导师<br/>
+                            人工智能艺术家
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of card 2 -->
+            <div class='myCard advisor'>
+                <div><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_52aa324d79ac55ca015e54b9a3dc7fba?imageView2'></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize'>Gene Kogan</div>
+                        <div class='header3 header3Resize'>金 高更</div>
+                    </div>
+                    
+                    <div>
+                        <div class='advisorTitle'>
+                            纽约大学特聘研究生导师<br/>
+                            人工智能艺术家
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of card 3 -->
+            <div class='myCard advisor'>
+                <div><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_52aa324d79ac55ca015e54b9a3dc7fba?imageView2'></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize'>Gene Kogan</div>
+                        <div class='header3 header3Resize'>金 高更</div>
+                    </div>
+                    
+                    <div>
+                        <div class='advisorTitle'>
+                            纽约大学特聘研究生导师<br/>
+                            人工智能艺术家
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of card 4 -->
+        </div>
+
+        <div class='buttonDiv'>
+            <button class='buttonBlack'>More Advisors</button>   
+        </div>
+    </div>
+<!-- end of advisor contaienr -->
+
+
+    <div class="container" id="partnerContainer">
+        <div>
+            <div class='header1'>WHO'S WITH US</div>
+            <div class='header3'>谁与我们同行？</div>
+        </div>
+        <div id='partnetContentContainer'>
+            <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_c0460a9206adefa3bf436deec3f79d3f?imageView2'></div>
+            <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_17b9c573378a3ef8cbe637825f2cc731?imageView2'></div>
+            <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_23385c4e0478acfecc65230a59d7dc93?imageView2'></div>
+            <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_03e3206cd4b4c8262875d62e264b7eef?imageView2'></div>
+            <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_fb662b56744594e4a34039e7d595a34e?imageView2'></div>
+            <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1bb97647cd58bbb57c5a712d6eaa75e?imageView2'></div>
+            <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_aeb5f6b3f005dc03afea239a62e9c49d?imageView2'></div>
+            <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_f81f3cd1da5b9f221ccc8337b16dee96?imageView2'></div>
+            <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_0e8941a5333c22ca083971b71c768b3d?imageView2'></div>
+            <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7c7a3a44f3ba16aa290be5b2eb3e30fe?imageView2'></div>
+            <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_4e0a7320fb8905bbe23a51645d985064?imageView2'></div>
+            <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_ba5cb601c9edb5c9a555d684e5069c89?imageView2'></div>
+            <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_17ece74df5ec5597755bfcbdb954a206?imageView2'></div>
+            <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_ab57df06bd1073a3e938ded99db382b7?imageView2'></div>
+            <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_a5fc30172863dc69f92d77e28ffccb37?imageView2'></div>
+            <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_29833298a209422f3b8258ea32a8a8d6?imageView2'></div>
+        </div>
+    </div>
+<!-- end of partner container -->
+
+
+    <div class="container" id="socialMediaContainer"> 
+        <div>
+            <div class='header1'>FOLLOW US</div>
+            <div class='header3'>关注我们</div>
+        </div>
+        <div class='cardsContainer' id='socialMediaContents'>
+            <div class='socialCard'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
+            <div class='socialCard'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
+            <div class='socialCard' id='socialCard3'>
+                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_549b05623eb17e9ddcc206bed8e94491?imageView2'> 
+                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_549b05623eb17e9ddcc206bed8e94491?imageView2'>
+            </div>
+
+        </div>
+
+        <div class='cardsContainer' id='socialMediaContentsMobile'>
+            <div class='socialCard'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_aef553c434c77eca6670ed8a96550248?imageView2'></div>
+            <div class='socialCard'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_aef553c434c77eca6670ed8a96550248?imageView2'></div>
+            <div class='socialCard' id='socialCard3'>
+                <div>
+                    <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_549b05623eb17e9ddcc206bed8e94491?imageView2'>   
+                </div>                
+                <div>
+                    <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_549b05623eb17e9ddcc206bed8e94491?imageView2'>   
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class='' id="footer">
+        <div>
+            <div id='footerLogo'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></div>
+            <div id='footerMenu'>
+                <div>
+                    <div class='footerMenuItem'>Course</div>
+                    <div class='footerMenuItem'>Career</div>
+                    <div class='footerMenuItem'>News</div>
+                    <div class='footerMenuItem'>Blog</div>
+                </div>
+
+                <div>                
+                    <div class='footerMenuItem'>About Us</div>
+                    <div class='footerMenuItem'>Advisors</div>
+                    <div class='footerMenuItem'>Join Us</div>    
+                </div>
+
+            </div>
+            <div id='footerSocial'>
+                <div id='footerCode'>
+                    <div>关注我们</div>
+                    <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e6757c9433475b05bf0018cf12f41c08?imageView2'>
+                </div>
+                <div id='footerSocialLogo'>
+                    <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_c3fda0b5b340c124079c6e9e4d0099ef?imageView2'>
+                    <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_40eaac48e1a318aef9ee5339d733ee29?imageView2'>
+                    <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_378188cd01c79c408f43c6f96e9887fc?imageView2'>
+                    <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2feb65fd9eeacf98cc6e7cd2b939a1ce?imageView2'>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div> 
+<!-- end of content container -->
+
+
+    <script>
+        let displayMenu = false;
+
+        $("#menuIcon").click(function() {
+            if(!displayMenu){
+                console.log('display')
+                $("#menuPopUp").css({"display":"block"})
+                $('#contentContainer').css({'display':'none'})
+                displayMenu = true;
+            } else {
+                $("#menuPopUp").css({"display":"none"})
+                $('#contentContainer').css({'display':'block'})
+                displayMenu = false;
+            }
+
+        })
+        
+    </script>
+</body>
+</html>
