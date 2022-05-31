@@ -141,21 +141,38 @@ this is the first HTML code, load font and style!
     }
 
 
-    a:visited {
-        color: black;
+    #navigation > span > a:visited {
+        color:#ACACAC;
         text-decoration: none;
     } /* Visited link    */
     
 
+    #navigation > span > a:active {
+        color:#ACACAC;
+        text-decoration: none;
+    }
+
+    #navigation > span > a{
+        color:#ACACAC;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color:black;
+        text-decoration: none;
+    } 
+    
+
     a:active {
-        color: black;
+        color:black;
         text-decoration: none;
     }
 
     a{
-        color: black;
+        color:black;
         text-decoration: none;
     }
+    
 
 
     .sections{
@@ -1413,6 +1430,23 @@ this is the first HTML code, load font and style!
         display: none;
     }
 
+    #headerPicContainer{
+        width: 100vw;
+        /* margin-bottom: 24px; */
+    }
+
+    #headerPicContainer > img{
+        width: 100%;
+    }
+
+    #navigation{
+        margin-top: 42px;
+        color:#ACACAC;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 0.005em;
+    }
 
 </style>
 
@@ -1489,6 +1523,13 @@ this is the first HTML code, load font and style!
 
 <div id="contentContainer">
 
+    <div class="container" id="headerPicContainer">
+    	<img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_86d0a83a18008e282834ae69c06fa01c?imageView2">
+    </div>
+
+    <div class='container' id="navigation">
+        <span><a href="webpage.html">HOME</a></span> > <span>BLOG</span>
+    </div>
 
     <div class="container" id="courseContainer">
     	<div id="courseHeader">
