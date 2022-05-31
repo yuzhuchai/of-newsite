@@ -97,10 +97,6 @@ this is the first HTML code, load font and style!
 
 <style>
 
-    .hiddenforOnepointO{
-        display:none;
-    }
-
     @font-face {
       font-family:  "XYZB";
       src: url("/static/font/MSYHBD.TTC");
@@ -158,11 +154,12 @@ this is the first HTML code, load font and style!
     #menuPopUp{
         display: none;
         width: 100vw;
-        height:100vh;
+        height:calc(100vh - 80px);
         z-index: 1;
         position: fixed;
         left: 0;
         top: 80px;
+        background-color:white;
     }
 
 
@@ -355,7 +352,7 @@ this is the first HTML code, load font and style!
 
 
     #adContainer{
-    	display:flex;
+    	/* display:flex; */
     	flex-direction: row;
     	justify-content: space-between;
     	margin-top: 100px;
@@ -1488,6 +1485,10 @@ this is the first HTML code, load font and style!
     right:2px;
 }
 
+.hiddenforOnepointO{
+        display:none;
+    }
+
 
 </style>
 
@@ -1577,14 +1578,14 @@ this is the first HTML code, load font and style!
 <div id="contentContainer">
 
 
-    <div class="container hiddenforOnepointO" id="picWallContainer">
+    <div class="container" id="picWallContainer">
     	
     </div>
     <!--  end of picture wall container  -->
     
  
 
-    <div class="container" id="adContainer">
+    <div class="container hiddenforOnepointO" id="adContainer">
     	<div class="adContent">
     		<a href="mainCourseDescription.html?courseDisplay=unrealLandScape"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_30399843385fc464023880bccd336334?imageView2'></a>
     	</div>
@@ -2129,12 +2130,15 @@ this is the first HTML code, load font and style!
 
         $("#menuIcon").click(function() {
             if(!displayMenu){
-                console.log('display')
-                $("#menuPopUp").css({"display":"block"})
+                // console.log('display')
+                $("#menuPopUp").slideDown()
+                // $("#menuPopUp").css({"display":"block"})
                 $('#contentContainer').css({'display':'none'})
                 displayMenu = true;
             } else {
-                $("#menuPopUp").css({"display":"none"})
+                $("#menuPopUp").slideUp()
+
+                // $("#menuPopUp").css({"display":"none"})
                 $('#contentContainer').css({'display':'block'})
                 displayMenu = false;
             }
@@ -2167,7 +2171,5 @@ this is the first HTML code, load font and style!
 <!-- 主页宣传片 （视频收集） -->
 <!-- 广告位 （先取消）-->
 <!-- toggle button 开关小一点 -->
-<!-- 么嗒verse COurse 筛选跳转课程列表 -->
-<!-- courselist unreal 筛选 -->
 <!-- news 1页的小图标 -->
 <!-- 课程页面链接 - 没有页面的先链接小鹅通 -->
