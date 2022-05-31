@@ -6,6 +6,7 @@
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
+  <!-- <script type="text/javascript" src='data.js'></script> -->
 </head>
 <body>
 
@@ -18,6 +19,9 @@ this is the first HTML code, load font and style!
 
 
 <script>
+
+
+
     let courseWidth
     let courseHeight
 
@@ -64,23 +68,53 @@ this is the first HTML code, load font and style!
 
 
 
-    // $("#menuIcon").click(function() {
-    //     console.log('display')
-    //     $("#menuPopUp").css({"display":"block"})
-    // })
 
-    // $('body').click(function(){
-    //     console.log('display')
-    // })
+    let qs = (function(a) {
+        if (a == "") return {};
+        var b = {};
+        for (var i = 0; i < a.length; ++i)
+        {
+            var p=a[i].split('=', 2);
+            if (p.length == 1)
+                b[p[0]] = "";
+            else
+                b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+        }
+        return b;
+    })(window.location.search.substr(1).split('&'));
+
+    let filter = qs['filter'];
 
 
 
+
+    // console.log(filter)
 
     $(window).scroll(function(){
         // console.log("hi")
         $("#header").css({"box-shadow":"0px 4px 20px rgba(0,0,0,0.09)"})
         
     })
+
+    $('#hiddenLen').click(function(){
+            console.log('this is clickedd')
+            let lanText = $('#lanText').text()
+            let hiddenLan = $('#hiddenLen').text()
+            console.log(lanText, hiddenLan)
+            if(lanText == 'Cn'){
+                $('#lanText').text('Eng')
+                $('#hiddenLen').text('Cn')
+                $('.cn').hide();
+                $('.eng').show();
+                lan = "Eng"
+            } else {
+                $('#lanText').text('Cn')
+                $('#hiddenLen').text('Eng')
+                $('.cn').show();
+                $('.eng').hide();
+                lan = "Cn"
+            }
+        })
 
 
 </script>
@@ -120,6 +154,23 @@ this is the first HTML code, load font and style!
     }
 
 
+    a:visited {
+        color: black;
+        text-decoration: none;
+    } /* Visited link    */
+    
+
+    a:active {
+        color: black;
+        text-decoration: none;
+    }
+
+    a{
+        color: black;
+        text-decoration: none;
+    }
+
+
     .sections{
         position: fixed;
         left: 0;
@@ -132,6 +183,7 @@ this is the first HTML code, load font and style!
 
 
     #filterContainer{
+        cursor:pointer;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -194,9 +246,17 @@ this is the first HTML code, load font and style!
         /*margin-left: 22px;*/
         padding-left: 10px;
         padding-right:10px;
+        min-width:60px;
     }
 
+    .buttonList:hover{
+        cursor:pointer;
+    }
 
+    #all{
+        color: white;
+        background-color: black;
+    }
 
     #filterDisplay{
         height: 510px;
@@ -254,6 +314,7 @@ this is the first HTML code, load font and style!
         flex-direction: row;
         justify-content: space-between;
         top:0;
+        font-size: 20px;
         left: 0;
         width: 100%;
         height: 80px;
@@ -287,10 +348,8 @@ this is the first HTML code, load font and style!
 
     #menu > div{
         font-family:  "XYZB";
-
     	font-weight: 700;
     	font-style: bold;
-    	font-size: 35px;
     	margin-right:26px;
     }
 
@@ -393,28 +452,28 @@ this is the first HTML code, load font and style!
         flex-direction: row;
         justify-content: space-between;
         row-gap: 67px;
+        grid-template-columns: repeat(auto-fill, 474px);
+
+/* 
+        &:after {
+        content: "";
+        flex: auto;
+        } */
+
     }
+/* 
+    #courseDisplayCintainer::after {
+        content: "";
+        flex: auto;
+        width: 474px;
+    } */
+
 
     .course{
         width:474px;
         height:480px;
     }
-/*
-    .career{
-        width:360px;
-        height:364px;
-    }
 
-    .advisor{
-        width:360px;
-        height:504px;
-    }
-
-*/
-/*    .socialCard{
-        width:474px;
-        /*height:480px;
-    }*/
 
 
     .myCard{
@@ -424,7 +483,7 @@ this is the first HTML code, load font and style!
         flex-direction: column;
     }
 
-    .myCard > div > img{
+    .myCard > div > a > img{
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         width: 100%;
@@ -456,6 +515,11 @@ this is the first HTML code, load font and style!
         flex-grow: 2;
     }
 
+
+    .empty{
+        /* visibility:hidden; */
+        box-shadow:none;
+    }
 
     #metaCareerContainer{
         /*border:1px solid black;*/
@@ -649,6 +713,7 @@ this is the first HTML code, load font and style!
         width:100vw;
         height: 331px;
         padding-top: 106px;
+        color:#7c7c7c;
     }
 
 
@@ -665,12 +730,11 @@ this is the first HTML code, load font and style!
         /*width:31%*/
     }
 
-    #footerLogo > img{
+    #footerLogo > a > img{
         width:100%;
     }
 
     #footerSocialLogo{
-        margin-left: 38px;
         display: flex;
         flex-direction: row;
     }
@@ -681,6 +745,11 @@ this is the first HTML code, load font and style!
         width: 30px;
     }
 
+    #footerSocialLogo > a > img{
+        width:100%;
+        margin-right: 20px;
+        width: 30px;
+    }
 
     #footerMenu{
         display: flex;
@@ -692,7 +761,7 @@ this is the first HTML code, load font and style!
         font-size: 20px;
         font-family:  "XYZL";
         font-weight:290;
-        color: #222222;
+        color: #7c7c7c;
     }
 
 
@@ -708,9 +777,45 @@ this is the first HTML code, load font and style!
 
     }
 
+    #footerSocialLogo > img:hover{
+        cursor: pointer;
+    }
+
     #footerCode > div {
         margin-bottom: 30px;
     }
+
+
+    #weChatCode{
+        background-color:white;
+        border-radius: 15px;
+        box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+        padding:20px;
+        position: relative;
+        margin-left: -15px;
+        display:none;
+        width:100px;
+        height:100px;
+    }
+
+    #weChatCode > img{
+        width: 100%;
+    }
+
+
+    #weChatCode::before{
+        content: '';
+	    position: absolute;
+	    width: 0;
+	    height: 0;
+	    bottom: 100%;
+        /* left:0; */
+        border: .75rem solid transparent;
+	    border-top: none;
+        border-bottom-color: #fff;
+	    filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+    }
+
 
 
 
@@ -745,6 +850,7 @@ this is the first HTML code, load font and style!
         background-color: #E2E2E2;
         border-radius: 6px;
         display: inline-block;
+        margin-right:10px;
         /*height:37px;*/
         padding: 4px 20px 4px 20px;
     }
@@ -883,6 +989,188 @@ this is the first HTML code, load font and style!
         display: none;
     }
 
+    /* .course:hover{
+        cursor:pointer;
+    } */
+    img:hover{
+        cursor:pointer;
+    }
+
+    .header2:hover{
+        cursor:pointer;
+    }
+
+    .header3:hover{
+        cursor:pointer;
+    }
+
+
+    #menu{
+        /*border: 1px black solid; */
+        color:black;
+        margin-top:auto;
+        margin-bottom:auto;
+        /*font-style: bold;*/
+        font-size: 24px;
+        margin-right:26px;
+        font-family: "XYZB";
+        font-weight: 700;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    #language{
+        position:relative;
+    }
+
+    #language:hover{
+        cursor:pointer;
+    }
+
+    #dropDown{
+        /* display: none; */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        perspective: 1000px;
+        z-index: -1;
+    }
+
+    #hiddenLen{
+        padding:20px;
+        display: none;
+    }
+
+    #language:hover #hiddenLen{
+        margin-top:-20px;
+        display: block;
+        /* background-color: white; */
+    }
+
+    .eng{
+        display: none;
+    }
+
+ 
+
+    input[type=text]{
+        width: 15vw;
+        height: 30px;
+        padding-left: 20px;
+        border: none;
+        background-color: #FFFFFF;
+        box-shadow: inset 0px 4px 40px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        background: url(http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_212590c6810224e5090d5a1067cce804?imageView2) no-repeat;
+        background-size: 20px;
+        background-position: right 20px bottom 5px;
+    }
+
+    #searchIcon{
+        position:absolute;
+        /* margin-right:  */
+        height: 100;
+        max-height: 30px;
+        /*z-index: 100;*/
+    }
+
+
+    .changeLan{
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 5px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        margin-bottom: 5px;
+    }
+
+    #login{
+        cursor: pointer;
+    }
+
+
+
+    #loginIcon{
+        display: inline;
+        width: 30px;
+        vertical-align: middle;
+    }
+
+    #header{
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        z-index: 1;
+        background-color: white;
+        box-shadow:0px 4px 20px rgba(0,0,0,0.09);
+    }
+   
+    #headerlogo{
+        /*border: 1px black solid;*/
+        /*width:100px;*/
+        margin-left:26px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    #headerlogo > a > img{
+    	display: block;
+        width: 200px;
+    }
+
+    #menuText{
+    	color:black;
+        /*display: inline-block;*/
+    }
+
+    #menuIcon{
+    	/*border: 1px black solid;*/
+    	margin-top: auto;
+    	margin-bottom:auto;
+        /*display: inline-block;*/
+    	width: 30px;
+    	height: 30px;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        margin-right: 20px;
+    }
+
+    #menuIconContainer{
+        display: flex;
+        cursor:pointer;
+        /*display: inline-block;*/
+    }
+
+    #menuIcon:hover{
+        cursor: pointer;
+    }
+
+
+    #menuIcon > div {
+        width: 14px;
+        height: 14px;
+        border-radius: 5px;
+        background-color: black;
+    }
+
+    #menu{
+        font-size: 20px;
+    }    
+
+
 
     @media screen and (max-width: 1660px){
         #menuPopUpContents{
@@ -980,6 +1268,8 @@ this is the first HTML code, load font and style!
             display: inline-block;
             text-align: center;
         }
+
+
 
 
     }
@@ -1176,7 +1466,6 @@ this is the first HTML code, load font and style!
         .newsTitleMobile{
             font-size: 25px;
             font-family:  "XYZB";
-
             font-weight: 700;
         }
 
@@ -1287,11 +1576,26 @@ this is the first HTML code, load font and style!
 
 
 <div id="header">
-    <div id="headerlogo"><img src="http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_25638bbb653f829b3feb1d2208295931?imageView2"></div>
+    <div id="headerlogo"><a href="webpage.html"><img src="http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_25638bbb653f829b3feb1d2208295931?imageView2"></a></div>
     <div id="menu">
-    	<div id='language'><span id="cn">CN</span>/<span id='en'>EN</span></div>
-    	<div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
-    	<div id='menuText'>MENU</div>
+        <div>
+
+            <input type='text' id='search' placeholder="processing"> 
+
+        </div>
+    	<div id='language'>
+            <span class="changeLan"></span> 
+            <span id='lanText'>Cn</span>
+            <div id="dropDown">
+                <!-- <span class="changeLan" id="noneDisplay"></span>  -->
+                <span id="hiddenLen">Eng</span>
+            </div>
+        </div>
+        <div id='login'><img id='loginIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_86ceb5932e24e2383cce79506f18ef8a?imageView2'>&nbsp <span class="cn">登陆</span><span class="eng">Log In</span></div> 
+        <div id='menuIconContainer'>
+        	<div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
+        	<div id='menuText'><span class="eng">Menu</span><span class="cn">菜单</span></div>
+        </div>
     </div>
 </div>
 <!-- end of header  -->
@@ -1343,25 +1647,27 @@ this is the first HTML code, load font and style!
 <div id="contentContainer">
 
     <div  class='container' id='buttonListContainer'>
-        <div class='buttonList'>推荐</div>
-        <div class='buttonList'>Unity</div>
-        <div class='buttonList'>Unreal</div>
-        <div class='buttonList'>TouchDesigner</div>
-        <div class='buttonList'>Processing</div>
-        <div class='buttonList'>AI Developer</div>
-        <div class='buttonList'>XR Developer</div>
-        <div class='buttonList'>NFT</div>
-        <div class='buttonList'>Unreal</div>
-        <div class='buttonList'>Metaverse</div>
-        <div class='buttonList'>AI Developer</div>
-        <div class='buttonList'>XR Developer</div>
+        <div class='buttonList all' id="all">全部</div>
+        <div class='buttonList recommand' id="recommand">推荐</div>
+        <div class='buttonList newest' id="newest">new</div>
+        <div class='buttonList unity' id="unity">Unity</div>
+        <div class='buttonList unreal' id="unreal">Unreal</div>
+        <div class='buttonList td' id="td">TouchDesigner</div>
+        <div class='buttonList processing' id="processing">Processing</div>
+        <div class='buttonList ai' id="ai">AI Developer</div>
+        <div class='buttonList xr' id="xr">XR Developer</div>
+        <div class='buttonList nft' id="nft">NFT</div>
+        <!-- <div class='buttonList p5' id="p5">P5.js</div> -->
+        <div class='buttonList metaverse' id="metaverse">Metaverse</div>
+        <div class='buttonList museum' id="museum">Museum Design</div>
+        <!-- <div class='buttonList light' id="light">Lighting Design</div> -->
     </div>
 
 
     <div class="container" id="courseContainer">
     	<div id="courseHeader">
     		<div>
-    			<div class='header1'>COURSE LIST</div>
+    			<div class='header1' id="filterFiller">COURSE LIST</div>
     			<div class='header3'>元宇宙课程</div>
     		</div>
     		
@@ -1374,356 +1680,197 @@ this is the first HTML code, load font and style!
 
         <div class='container' id='filterDisplay'>
             <div>
-                <div class='filterContent'><div class='filterTitle'>Sort By</div>
-                                            <div class='filters'> <span class='clickFilter'>Newest</span> / <span class='clickFilter'>Highest Rated</span> / <span class='clickFilter'>Most Popular</span></div></div>
+                <div class='filterContent'>
+                    <div class='filterTitle'>Sort By</div>
+                    <div class='filters'> 
+                        <span class='clickFilter newest'>Newest</span> / 
+                        <span class='clickFilter high'>Highest Rated</span> / 
+                        <span class='clickFilter popular'>Most Popular</span>
+                    </div>
+                </div>
 
-                <div class='filterContent'><div class='filterTitle'>Tag</div>
-                                        <div class='filters'><span class='clickFilter'>Processing</span> / <span class='clickFilter'>Unity</span> / <span class='clickFilter'>Arduino</span> / <span class='clickFilter filterH1'>TouchDesinger</span> / <span class='clickFilter'>P5.js</span> / <span class='clickFilter'>Ml.js</span> / <span class='clickFilter'>WebGL</span> / <span class='clickFilter'>Python / <span class='clickFilter'>Unreal / <span class='clickFilter filterUnderline'>Madmapper</span> / <span class='clickFilter'>Adobe XR</span> / <span class='clickFilter filterH1'>JavaScript</span> / <span class='clickFilter'>Shader</span></div></div>
-                <div class='filterContent'><div class='filterTitle'>Category</div>
-                                        <div class='filters'><span class='clickFilter'>High Tech</span> / <span class='clickFilter'>Exhibition</span> / <span class='clickFilter filterH1'>Brand</span> / <span class='clickFilter'>Stage Design</span> / <span class='clickFilter'>Cultural Tourism</span> / <span class='clickFilter'>Activity</span> / <span class='clickFilter'>Estate</span> / <span class='clickFilter filterH1'>Film and Television</span> / <span class='clickFilter'>Internet</span> / <span class='clickFilter'>Audio and video interaction</span> / <span class='clickFilter filterH1 filterUnderline'>Interactive Design</span> / <span class='clickFilter'>Game Designer</span> / <span class='clickFilter'>Device</span> / <span class='clickFilter'>Artificial Intelligence</span> / <span class='clickFilter'>Light Sculpting Projection / <span class='clickFilter filterH1'>Virtual Reality</span> / <span class='clickFilter'>Immersive Experience</span> / <span class='clickFilter'>Augmented Reality</span> / <span class='clickFilter'>Interactive Lighting</span> / <span class='clickFilter filterH1'>Digital Human</span></div></div>
+                <div class='filterContent'>
+                    <div class='filterTitle'>Tag</div>
+                    <div class='filters'>
+                        <span class='clickFilter processing'>Processing</span> / 
+                        <span class='clickFilter unity'>Unity</span> / 
+                        <span class='clickFilter arduino'>Arduino</span> / 
+                        <span class='clickFilter filterH1 td'>TouchDesinger</span> / 
+                        <span class='clickFilter p5'>P5.js</span> / 
+                        <span class='clickFilter ml5'>Ml.js</span> / 
+                        <!-- <span class='clickFilter'>WebGL</span> /  -->
+                        <!-- <span class='clickFilter'>Python</span> /  -->
+                        <span class='clickFilter unreal'>Unreal</span> / 
+                        <!-- <span class='clickFilter filterUnderline'>Madmapper</span> /  -->
+                        <!-- <span class='clickFilter'>Adobe XR</span> /  -->
+                        <span class='clickFilter filterH1 js'>JavaScript</span> / 
+                        <span class='clickFilter shader'>Shader</span>
+                    </div>
+                </div>
+
+                <div class='filterContent'>
+                    <div class='filterTitle'>Category</div>
+                    <div class='filters'>
+                        <span class='clickFilter highTech'>High Tech</span> / 
+                        <span class='clickFilter exhibition'>Exhibition</span> / 
+                        <span class='clickFilter filterH1 brand'>Brand</span> / 
+                        <span class='clickFilter stage'>Stage Design</span> / 
+                        <!-- <span class='clickFilter'>Cultural Tourism</span> /  -->
+                        <!-- <span class='clickFilter'>Activity</span> /  -->
+                        <!-- <span class='clickFilter'>Estate</span> /  -->
+                        <!-- <span class='clickFilter filterH1'>Film and Television</span> /  -->
+                        <!-- <span class='clickFilter'>Internet</span> /  -->
+                        <span class='clickFilter avs'>AudioVisual system</span> / 
+                        <span class='clickFilter filterH1 filterUnderline interactive'>Interactive Design</span> / 
+                        <span class='clickFilter game'>Game Designer</span> / 
+                        <!-- <span class='clickFilter device'>Device</span> /  -->
+                        <span class='clickFilter ai'>Artificial Intelligence</span> / 
+                        <span class='clickFilter light'>Light Sculpting Projection </span> / 
+                        <span class='clickFilter filterH1 vr'>Virtual Reality</span> / 
+                        <span class='clickFilter immersive'>Immersive Experience</span> / 
+                        <span class='clickFilter ar'>Augmented Reality</span> / 
+                        <span class='clickFilter light'>Interactive Lighting</span> / 
+                        <span class='clickFilter filterH1 dh'>Digital Human</span>
+                    </div>
+                </div>
             </div>
         </div>
 
 
     	<div id="courseDisplayContainer">
 
-    		<div class="myCard course">
-    			<div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+            <div class="myCard course recommandCourse unrealCourse metaverseCourse aiCourse nftCourse p5Course tdCourse newestCourse highCourse popularCourse ml5Course jsCourse highTechCourse interactiveCourse immersiveCourse">
+    			<div class="bootCampClick"><a href="mainCourseDescription.html?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f453a6c13ea8d61f9b3b8f84efa0e086?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                        <div class='header2 header2Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">2022 Interactive Art Summer BootCamp</a></div>
+                        <div class='header3 header3Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">2022国际交互艺术夏令营</a></div>
                     </div>
-                    <div><div class='tag'>#p5.js</div></div>
+                    <div><div class='tag p5'>#metaverse</div> <div class='tag unity'>#ai</div></div>
+                </div>
+    		</div>
+
+    		<div class="myCard course recommandCourse unityCourse xrCourse metaverseCourse highCourse popularCourse shaderCourse highTechCourse stageCourse interactiveCourse arCourse">
+    			<div class="arClick"><a href="mainCourseDescription.html?courseDisplay=unityAR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_48d23e3e95a4297037652fc25aaa7008?imageView2'></a></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize arClick'><a href="mainCourseDescription.html?courseDisplay=unityAR">Mastering Augmented Reality with Unity</a></div>
+                        <div class='header3 header3Resize arClick'><a href="mainCourseDescription.html?courseDisplay=unityAR">AR增强现实大师班</a></div>
+                    </div>
+                    <div><div class='tag p5'>#AR</div> <div class='tag unity'>#unity</div></div>
                 </div>
     		</div>
             <!-- end of card 1 -->
-    		<div class="myCard course">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+    		<div class="myCard course recommandCourse unityCourse xrCourse metaverseCourse highCourse popularCourse highTechCourse interactiveCourse gameCourse vrCourse">
+                <div class="vrClick"><a href="mainCourseDescription.html?courseDisplay=unityVR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ebbd934d258ba30d603ac2bc8e9ca4d1?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                        <div class='vrClick header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unityVR">Mastering Virtual Reality with Unity</a></div>
+                        <div class='vrClick header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unityVR">VR虚拟实境大师班</a></div>
                     </div>
-                    <div><div class='tag'>#p5.js</div></div>
+                    <div><div class='tag vr'>#VR</div><div class='tag unity'>#unity</div></div>
                 </div>
             </div>
             <!-- end of card 2 -->
-            <div class="myCard course">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+            <div class="myCard course unrealCourse metaverseCourse highTechCourse interactiveCourse gameCourse dhCourse">
+                <div><a href="mainCourseDescription.html?courseDisplay=unrealLandScape"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_30399843385fc464023880bccd336334?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                        <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unrealLandScape">Matering Landscape and Human with UE</a></div>
+                        <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unrealLandScape">Unreal场景人物大师班</a></div>
                     </div>
-                    <div><div class='tag'>#p5.js</div></div>
+                    <div><div class='tag ue'>#Unreal Engine</div><div class="tag dHuman">Digital Human</div></div>
                 </div>
             </div>
             <!-- end of card 3 -->
-            <div class="myCard course">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+            
+            <div class="myCard course unrealCourse metaverseCourse newestCourse popularCourse highTechCourse interactiveCourse gameCourse">
+                <div><a href="mainCourseDescription.html?courseDisplay=unrealStylized"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f38e77aa21e05249ed286a50d5ad0e24?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                        <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unrealLandScape">Matering 3D Stylized Environment with UE5</a></div>
+                        <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unrealLandScape">UE5 3D风格化场景师班</a></div>
                     </div>
-                    <div><div class='tag'>#p5.js</div></div>
+                    <div><div class='tag ue'>#Unreal Engine</div><div class="tag dHuman">Digital Human</div></div>
+                </div>
+            </div>
+
+
+
+            <div class="myCard course recommandCourse aiCourse nftCourse p5Course metaverseCourse popularCourse ml5Course jsCourse stageCourse interactiveCourse">
+                <div><a href="mainCourseDescription.html?courseDisplay=ai"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ba53ef10b2fd1320874bac0d34c2c46f?imageView2'></a></div>
+                <div class='cardDescription'>
+                    <div>
+                        <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=ai">Mastering AI Generative Art With P5.js</a></div>
+                        <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=ai">AI生成艺术大师班</a></div>
+                    </div>
+                    <div><div class='tag p5'>#p5.js</div><div class='tag ai'>#p5.js</div></div>
                 </div>
             </div>
             <!-- end of card 4 -->
-            <div class="myCard course" >
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+            <div class="myCard course processingCourse lightCourse stageCourse interactiveCourse immersiveCourse" >
+                <div><a href="mainCourseDescription.html"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8f84b748917a0fac32dfcef36cc09a1e?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                        <div class='header2 header2Resize'>Mastering Interactive Lighting with Processing</div>
+                        <div class='header3 header3Resize'>互动灯光编程大师班</div>
                     </div>
-                    <div><div class='tag'>#p5.js</div></div>
+                    <div><div class='tag processing'>#Processing</div><div class='tag lighting'>#Lighting Design</div></div>
                 </div>
             </div>
             <!-- end of card 5 -->
-            <div class="myCard course" >
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+            <div class="myCard course tdCourse arduinoCourse interactiveCourse" >
+                <div><a href="mainCourseDescription.html"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_5c9a5541110ef3c6313434abe4820e89?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                        <div class='header2 header2Resize'>Mastering interactive Installation with TD</div>
+                        <div class='header3 header3Resize'>TD交互装置大师班</div>
                     </div>
-                    <div><div class='tag'>#p5.js</div></div>
+                    <div><div class='tag td'>#touchDesigner</div><div class='tag arduino'>#arduino</div></div>
                 </div>
             </div>
             <!-- end of card 6 -->
 
 
-            <div class="myCard course">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+            <div class="myCard course museumCourse highCourse exhibitionCourse interactiveCourse">
+                <div><a href="mainCourseDescription.html"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_48fd995ba3a597f1bfdc44cc1968571f?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                        <div class='header2 header2Resize'>Mastering Museum Interaction Design</div>
+                        <div class='header3 header3Resize'>博物馆体验设计大师班</div>
                     </div>
-                    <div><div class='tag'>#p5.js</div></div>
+                    <div><div class='tag museum'>#Museum Interaction</div><div class='tag figma'>#figma</div></div>
                 </div>
             </div>
             <!-- end of card 7 -->
-            <div class="myCard course">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+            <div class="myCard course recommandCourse tdCourse newestCourse popularCourse exhibitionCourse brandCourse interactiveCourse">
+                <div><a href="mainCourseDescription.html"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7508903cabc56de3b297a73c789493d0?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                        <div class='header2 header2Resize'>Mastering Commercial Design with TouchDesigner</div>
+                        <div class='header3 header3Resize'>TD商业项目大师班</div>
                     </div>
-                    <div><div class='tag'>#p5.js</div></div>
+                    <div><div class='tag td'>#touchDesigner</div><div class='tag kinect'>#kinect</div></div>
                 </div>
             </div>
             <!-- end of card 8 -->
-            <div class="myCard course">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+            <div class="myCard course recommandCourse tdCourse highCourse popularCourse stageCourse avsCourse interactiveCourse immersiveCourse">
+                <div><a href="mainCourseDescription.html"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_db15f3774704ad3f71879539f669469a?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                        <div class='header2 header2Resize'>Mastering AudioVisual with TouchDesigner</div>
+                        <div class='header3 header3Resize'>TD音画互动大师班</div>
                     </div>
-                    <div><div class='tag'>#p5.js</div></div>
+                    <div><div class='tag td'>#touchDesigner</div><div class='tag avs'>#AudioVisual</div></div>
                 </div>
             </div>
             <!-- end of card 9 -->
-            <div class="myCard course">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 10 -->
-            <div class="myCard course" >
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 11 -->
-            <div class="myCard course" >
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 12 -->
 
 
-            <div class="myCard course hiddenCourse1">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 13 -->
-            <div class="myCard course hiddenCourse1">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 14 -->
-            <div class="myCard course hiddenCourse1">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 15 -->
-            <div class="myCard course hiddenCourse1">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 16 -->
-            <div class="myCard course hiddenCourse1" >
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 17 -->
-            <div class="myCard course hiddenCourse1" >
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 18 -->
+            <!-- empty card -->
+            <div class="myCard course empty">
 
-            <div class="myCard course hiddenCourse2">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
             </div>
-            <!-- end of card 19 -->
-            <div class="myCard course hiddenCourse2">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 20 -->
-            <div class="myCard course hiddenCourse2">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 21 -->
-            <div class="myCard course hiddenCourse2">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 22 -->
-            <div class="myCard course hiddenCourse2" >
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 23 -->
-            <div class="myCard course hiddenCourse2" >
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 24 -->
-
-
-            <div class="myCard course hiddenCourse3">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 25 -->
-            <div class="myCard course hiddenCourse3">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 26 -->
-            <div class="myCard course hiddenCourse3">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 27 -->
-            <div class="myCard course hiddenCourse3">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 28 -->
-            <div class="myCard course hiddenCourse3" >
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 29 -->
-            <div class="myCard course hiddenCourse3" >
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
-                <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
-                    </div>
-                    <div><div class='tag'>#p5.js</div></div>
-                </div>
-            </div>
-            <!-- end of card 30 -->
 
     	</div>
 
@@ -1736,7 +1883,7 @@ this is the first HTML code, load font and style!
 
     <div class='' id="footer">
         <div>
-            <div id='footerLogo'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></div>
+            <div id='footerLogo'><a href="webpage.html"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
             <div id='footerMenu'>
                 <div>
                     <div class='footerMenuItem'>Course</div>
@@ -1755,14 +1902,15 @@ this is the first HTML code, load font and style!
             <div id='footerSocial'>
                 <div id='footerCode'>
                     <div>关注我们</div>
-                    <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e6757c9433475b05bf0018cf12f41c08?imageView2'>
+                    <div id='footerSocialLogo'>
+                        <img id='displayCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_c3fda0b5b340c124079c6e9e4d0099ef?imageView2'>
+                        <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_40eaac48e1a318aef9ee5339d733ee29?imageView2' href=""></a>
+                        <a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_378188cd01c79c408f43c6f96e9887fc?imageView2'></a>
+                        <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2feb65fd9eeacf98cc6e7cd2b939a1ce?imageView2'></a>
+                    </div>
+                    <div id="weChatCode"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
                 </div>
-                <div id='footerSocialLogo'>
-                    <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_c3fda0b5b340c124079c6e9e4d0099ef?imageView2'>
-                    <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_40eaac48e1a318aef9ee5339d733ee29?imageView2'>
-                    <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_378188cd01c79c408f43c6f96e9887fc?imageView2'>
-                    <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2feb65fd9eeacf98cc6e7cd2b939a1ce?imageView2'>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -1790,7 +1938,7 @@ this is the first HTML code, load font and style!
         })
 
         let filterDisplay = false;
-        $('#filterIcon').click(function(){
+        $('#filterContainer').click(function(){
             if(!filterDisplay){
                 $('#filterText').css({'color':'#ACACAC'})
                 $('#filterDisplay').css({'display':'flex'})
@@ -1804,17 +1952,278 @@ this is the first HTML code, load font and style!
             }
         }) 
 
-        $(window).scroll(function() {
-           if($(window).scrollTop() + $(window).height() == $(document).height()) {
-                if($(".hiddenCourse1").display() == 'none'){
-                alert("bottom!");
+        if(filter == 'newest'){
+            $('.course').hide();
+            $('.newestCourse').show();
+            $('.buttonList').css({
+                'color':'black',
+                'background-color':'white'
+            })
+            $('#newest').css({
+                'color':'white',
+                'background-color':'black'
+            })
 
-                    $(".hiddenCourse1").show()
-                }
+        } else if(filter == 'td'){
+            $('.buttonList').css({
+                'color':'black',
+                'background-color':'white'
+            })
+            $('#td').css({
+                'color':'white',
+                'background-color':'black'
+            })
+            $('.course').hide();
+            $('.tdCourse').show();
+        } else if(filter == 'unity'){
+            $('.buttonList').css({
+                'color':'black',
+                'background-color':'white'
+            })
+            $('#unity').css({
+                'color':'white',
+                'background-color':'black'
+            })
+            $('.course').hide();
+            $('.unityCourse').show();
+            $('.empty').show();
+        } else if(filter == 'unreal'){
+            $('.buttonList').css({
+                'color':'black',
+                'background-color':'white'
+            })
+            $('#unreal').css({
+                'color':'white',
+                'background-color':'black'
+            })
+            $('.course').hide();
+            $('.unrealCourse').show();
+            $('.empty').show();
+        } else if(filter == 'processing'){
+            $('.buttonList').css({
+                'color':'black',
+                'background-color':'white'
+            })
+            $('#processing').css({
+                'color':'white',
+                'background-color':'black'
+            })
+            $('.course').hide();
+            $('.processingCourse').show();
+        }
 
-               // alert("bottom!");
-           }
-        });
+
+
+        $('.buttonList').click(function(){
+            $('.buttonList').css({
+                'color':'black',
+                'background-color':'white'
+            })
+            $(this).css({'color':'white'});
+            $(this).css({'background-color':'black'});
+            $('#filterFiller').text('COURSE LIST')
+        })
+
+        $('.clickFilter').click(function(){
+            let name = $(this).text();
+            $('.clickFilter').css({'color':'#222222'})
+            $(this).css({
+                'color':'#ACACAC' 
+            })
+            $('#filterFiller').text(name)
+            $('.buttonList').css({
+                'color':'black',
+                'background-color':'white'
+            })
+        })
+
+        // click event
+        $('.all').click(function(){
+            $('.course').show();
+        })
+
+        $('.recommand').click(function(){
+            $('.course').hide();
+            $('.recommandCourse').show();
+            // $('.empty').show();
+        })
+
+        $('.unity').click(function(){
+            $('.course').hide();
+            $('.unityCourse').show();
+            $('.empty').show();
+        })
+
+        $('.unreal').click(function(){
+            $('.course').hide();
+            $('.unrealCourse').show();
+            $('.empty').show();
+        })
+
+        $('.td').click(function(){
+            $('.course').hide();
+            $('.tdCourse').show();
+        })
+
+        $('.arduino').click(function(){
+            $('.course').hide();
+            $('.arduinoCourse').show();
+        })
+
+        $('.processing').click(function(){
+            $('.course').hide();
+            $('.processingCourse').show();
+        })
+
+        $('.ml5').click(function(){
+            $('.course').hide();
+            $('.ml5Course').show();
+            $('.empty').show();
+        })
+
+        $('.js').click(function(){
+            $('.course').hide();
+            $('.jsCourse').show();
+            $('.empty').show();
+        })
+
+        $('.shader').click(function(){
+            $('.course').hide();
+            $('.shaderCourse').show();
+            $('.empty').show();
+        })
+
+        $('#ai').click(function(){
+            $('.course').hide();
+            $('.aiCourse').show();
+            $('.empty').show();
+        })
+        $('.xr').click(function(){
+            $('.course').hide();
+            $('.xrCourse').show();
+            $('.empty').show();
+        })
+        $('.nft').click(function(){
+            $('.course').hide();
+            $('.nftCourse').show();
+            $('.empty').show();
+        })
+        $('.p5').click(function(){
+            $('.course').hide();
+            $('.p5Course').show();
+            $('.empty').show();
+        })
+        $('.metaverse').click(function(){
+            $('.course').hide();
+            $('.metaverseCourse').show();
+        })
+        $('.museum').click(function(){
+            $('.course').hide();
+            $('.museumCourse').show();
+        })
+        $('.light').click(function(){
+            $('.course').hide();
+            $('.lightCourse').show();
+        })
+
+        $('.highTech').click(function(){
+            $('.course').hide();
+            $('.empty').show();
+            $('.highTechCourse').show();
+        })
+
+        $('.exhibition').click(function(){
+            $('.course').hide();
+            $('.empty').show();
+            $('.exhibitionCourse').show();
+        })
+
+        $('.brand').click(function(){
+            $('.course').hide();
+            $('.empty').show();
+            $('.brandCourse').show();
+        })
+
+        $('.stage').click(function(){
+            $('.course').hide();
+            $('.empty').show();
+            $('.stageCourse').show();
+        })
+
+        $('.avs').click(function(){
+            $('.course').hide();
+            $('.empty').show();
+            $('.avsCourse').show();
+        })
+
+        $('.interactive').click(function(){
+            $('.course').hide();
+            $('.interactiveCourse').show();
+            $('.empty').show();
+        })
+
+        $('.game').click(function(){
+            $('.course').hide();
+            $('.gameCourse').show();
+            $('.empty').show();
+        })
+
+        $('.ar').click(function(){
+            $('.course').hide();
+            $('.arCourse').show();
+            $('.empty').show();
+        })
+
+        $('.vr').click(function(){
+            $('.course').hide();
+            $('.vrCourse').show();
+            $('.empty').show();
+        })
+
+        $('.immersive').click(function(){
+            $('.course').hide();
+            $('.immersiveCourse').show();
+            $('.empty').show();
+        })
+
+        $('.dh').click(function(){
+            $('.course').hide();
+            $('.dhCourse').show();
+            $('.empty').show();
+        })
+
+        
+
+        // ar vr immersive dh
+
+        $('.newest').click(function(){
+            $('.course').hide();
+            $('.newestCourse').show();
+        })
+
+  
+        $('.high').click(function(){
+            $('.course').hide();
+            $('.highCourse').show();
+            $('.empty').show();
+        })
+
+        $('.popular').click(function(){
+            $('.course').hide();
+            $('.popularCourse').show();
+            $('.empty').show();
+        })
+
+
+ 
+
+
+        $('#displayCode').hover(function(){
+            // console.log('hovered')
+            $('#weChatCode').show()
+        }, function(){
+            $('#weChatCode').hide()
+        })
 
     </script>
 </body>
