@@ -68,16 +68,6 @@ this is the first HTML code, load font and style!
     });
 
 
-
-    // $("#menuIcon").click(function() {
-    //     console.log('display')
-    //     $("#menuPopUp").css({"display":"block"})
-    // })
-
-    // $('body').click(function(){
-    //     console.log('display')
-    // })
-
     
 
 
@@ -279,7 +269,6 @@ this is the first HTML code, load font and style!
     #menuIconContainer{
         display: flex;
         cursor:pointer;
-        /*display: inline-block;*/
     }
 
     #menuIcon:hover{
@@ -312,6 +301,7 @@ this is the first HTML code, load font and style!
     	/*border:1px black solid;*/
     	/*height: 400px;*/
         width:1536px;
+        /* margin-top:500px; */
     	margin-left:auto;
     	margin-right: auto;
 /*    	margin-right: 10%;
@@ -346,7 +336,9 @@ this is the first HTML code, load font and style!
     	margin-left: 0;
     	margin-right: 0;
     	height: calc(100vh - 80px);
-    	background-color: #E2E2E2;
+    	/* background-color: #E2E2E2; */
+        background: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_c98157bc29d0c2792ec98b79e76e2dbf?imageView2);  
+        background-size: cover;
     	min-width:100%;
     }
 
@@ -592,7 +584,7 @@ this is the first HTML code, load font and style!
     }
 
     #partnerContainer{
-        margin-top: 32px;
+        margin-top: 100px;
         /*border:1px solid black;*/
     }
 
@@ -626,7 +618,7 @@ this is the first HTML code, load font and style!
         margin-bottom: 20px;
         align-items: center;
         padding-left: 30px;
-        padding-right: 80px;
+        padding-right: 30px;
         justify-content: space-between;
         /*max-width:100%;*/
     }
@@ -657,11 +649,11 @@ this is the first HTML code, load font and style!
     }
 
     #blogContainer{
-        margin-top: 32px;
+        margin-top: 100px;
     }
 
     #advisorContainer{
-        margin-top: 32px;
+        margin-top: 100px;
     }
 
 
@@ -1490,6 +1482,27 @@ this is the first HTML code, load font and style!
     }
 
 
+    .blog{
+        width:474px;
+        height: 440px;
+    }
+    
+    .blog > .cardDescription{
+        height: 100%;
+        margin:20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .titles{
+        min-height: 60%;
+    }
+
+    .titles > .header2{
+        min-height: 60px;
+    }
+
 </style>
 
 
@@ -1817,21 +1830,21 @@ this is the first HTML code, load font and style!
             <div class='newContent'>
                 <div class='date'>2020.01.05</div>
                 <div class='newsTitle'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现</div>
-                <div class='more'>MORE   >></div>
+                <div class='more'>>></div>
             </div>
             <!-- end of new card 1 -->
 
             <div class='newContent'>
                 <div class='date'>2020.01.05</div>
                 <div class='newsTitle'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现</div>
-                <div class='more'>MORE   >></div>
+                <div class='more'>>></div>
             </div>
             <!-- end of new card 2 -->
 
             <div class='newContent'>
                 <div class='date'>2020.01.05</div>
                 <div class='newsTitle'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现</div>
-                <div class='more'>MORE   >></div>
+                <div class='more'>>></div>
             </div>
             <!-- end of new card 3 -->
 
@@ -1839,7 +1852,7 @@ this is the first HTML code, load font and style!
             <div class='newContent'>
                 <div class='date'>2020.01.05</div>
                 <div class='newsTitle'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现</div>
-                <div class='more'>MORE   >></div>
+                <div class='more'>>></div>
             </div>
             <!-- end of new card 4 -->
         </div>
@@ -1852,7 +1865,7 @@ this is the first HTML code, load font and style!
                     <div class='newDateMobile'>2020.01.05</div>
                 </div>
 
-                <div class='newsContentMobile'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现。<span>Read More   >></span></div>
+                <div class='newsContentMobile'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现。<span>>></span></div>
             </div>
             <!-- end of new card 1 -->
 
@@ -1862,7 +1875,7 @@ this is the first HTML code, load font and style!
                     <div class='newDateMobile'>2020.01.05</div>
                 </div>
 
-                <div class='newsContentMobile'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现。<span>Read More   >></span></div>
+                <div class='newsContentMobile'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现。<span>>></span></div>
             </div>
             <!-- end of new card 2 -->
 
@@ -1883,13 +1896,13 @@ this is the first HTML code, load font and style!
                     <div class='newDateMobile'>2020.01.05</div>
                 </div>
 
-                <div class='newsContentMobile'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现。<span>Read More   >></span></div>
+                <div class='newsContentMobile'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现。<span>>></span></div>
             </div>
             <!-- end of new card 4 -->
         </div>
 
         <div class='buttonDiv'>
-            <button class='buttonBlack'>View All News</button>   
+            <a href="news.html"><button class='buttonBlack'>View All News</button></a> 
         </div>
     </div>
 <!-- end of news container -->
@@ -1903,42 +1916,42 @@ this is the first HTML code, load font and style!
         </div>
 
         <div class='cardsContainer'>
-            <div class="myCard course">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+            <div class="myCard blog">
+    			<div class="bootCampClick"><a href="mainCourseDescription.html?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f82e99e49cc9930ec6b3f0d8ae1aa84f?imageView2'></a></div>
                 <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                    <div class="titles">
+                        <div class='header2 header2Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">数字艺术的“世界之最”在中国！</a></div>
+                        <div class='header3 header3Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">NDG画廊联合Stratosphere DAO加密社区举办了全球最大的数字艺术周！</a></div>
                     </div>
-                    <!-- <div><div class='tag'>#p5.js</div></div> -->
+                    <div><div class='tag p5'>#NFT</div></div>
                 </div>
-            </div>
-            <!-- end of card 1 -->
-            <div class="myCard course">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+    		</div>
+
+            <div class="myCard blog">
+    			<div class="bootCampClick"><a href="mainCourseDescription.html?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a75c6c8b4502c99625b3aea16f2c9768?imageView2'></a></div>
                 <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                    <div class="titles">
+                        <div class='header2 header2Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">把“宇宙奥秘”带进威尼斯双年展！</a></div>
+                        <div class='header3 header3Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">韩国传奇科学家、艺术家金允哲的“活体”装置大赏</a></div>
                     </div>
-                    <!-- <div><div class='tag'>#p5.js</div></div> -->
+                    <div><div class='tag p5'>#installation</div></div>
                 </div>
-            </div>
-            <!-- end of card 2 -->
-            <div class="myCard course">
-                <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e1d93c8504799a0687d1317cd039dbee?imageView2'></div>
+    		</div>
+
+            <div class="myCard blog">
+    			<div class="bootCampClick"><a href="mainCourseDescription.html?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_77fb775307924534df3011723d6411d9?imageView2'></a></div>
                 <div class='cardDescription'>
-                    <div>
-                        <div class='header2 header2Resize'>AI Generative Art Master Course</div>
-                        <div class='header3 header3Resize'>AI生成艺术大师班</div>
+                    <div class="titles">
+                        <div class='header2 header2Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">Gather town！聊八卦、谈公事、玩游戏</a></div>
+                        <div class='header3 header3Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">超有临场感的虚拟办公室模拟生活</a></div>
                     </div>
-                    <!-- <div><div class='tag'>#p5.js</div></div> -->
+                    <div><div class='tag p5'>#metaverse</div></div>
                 </div>
-            </div>
+    		</div>
         </div>
 
         <div class='buttonDiv'>
-            <button class='buttonBlack'>View All Blogs</button>   
+            <a href="blog.html"><button class='buttonBlack'>View All Blogs</button></a>
         </div>
     </div>
 <!-- end of blog container -->
@@ -2128,21 +2141,14 @@ this is the first HTML code, load font and style!
     <script>
         let displayMenu = false;
 
-        $("#menuIcon").click(function() {
+        $("#menuIconContainer").click(function() {
             if(!displayMenu){
-                // console.log('display')
                 $("#menuPopUp").slideDown()
-                // $("#menuPopUp").css({"display":"block"})
-                $('#contentContainer').css({'display':'none'})
                 displayMenu = true;
             } else {
                 $("#menuPopUp").slideUp()
-
-                // $("#menuPopUp").css({"display":"none"})
-                $('#contentContainer').css({'display':'block'})
                 displayMenu = false;
             }
-
         })
 
         $('#displayCode').hover(function(){
@@ -2173,3 +2179,7 @@ this is the first HTML code, load font and style!
 <!-- toggle button 开关小一点 -->
 <!-- news 1页的小图标 -->
 <!-- 课程页面链接 - 没有页面的先链接小鹅通 -->
+<!-- 快速筑基班的banner 课程分类 -->
+<!-- menu 按钮 现有页面的按钮 -->
+<!-- menu  -->
+<!-- 第二板块 全部课程 ， 筑基班，大师班，冲刺营 -->

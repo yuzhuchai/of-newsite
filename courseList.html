@@ -303,6 +303,7 @@ this is the first HTML code, load font and style!
         position: fixed;
         left: 0;
         top: 80px;
+        background-color: white;
     }
 
 
@@ -392,12 +393,33 @@ this is the first HTML code, load font and style!
     }
 
 
+    .buttonBlack{
+        background-color: black;
+        color:white;
+        margin-top: 20px;
+        font-size: 20px;
+        font-family: "XYZB";
+        font-weight: 700;
+        border-radius: 8px;
+        padding: 4px 20px 4px 20px;
+        height: 46px;
+        float: right;
+        border:none;
+    }
+
+    .buttonBlack:hover{
+        cursor: pointer;
+    }
+
+
+
     #contentContainer{
     	top: 80px;
     	position: absolute;
     	left: 0px;
     	width: 100%;
     }
+
 
     .container{
     	/*border:1px black solid;*/
@@ -1154,7 +1176,7 @@ this is the first HTML code, load font and style!
         /*display: inline-block;*/
     }
 
-    #menuIcon:hover{
+    #menuIconContainer:hover{
         cursor: pointer;
     }
 
@@ -1923,18 +1945,14 @@ this is the first HTML code, load font and style!
     <script>
         let displayMenu = false;
 
-        $("#menuIcon").click(function() {
+        $("#menuIconContainer").click(function() {
             if(!displayMenu){
-                console.log('display')
-                $("#menuPopUp").css({"display":"block"})
-                $('#contentContainer').css({'display':'none'})
+                $("#menuPopUp").slideDown()
                 displayMenu = true;
             } else {
-                $("#menuPopUp").css({"display":"none"})
-                $('#contentContainer').css({'display':'block'})
+                $("#menuPopUp").slideUp()
                 displayMenu = false;
             }
-
         })
 
         let filterDisplay = false;

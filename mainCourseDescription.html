@@ -306,6 +306,7 @@ this is the first HTML code, load font and style!
         position: fixed;
         left: 0;
         top:80px;
+        background-color: white;
     }
 
 
@@ -457,7 +458,7 @@ this is the first HTML code, load font and style!
         /*display: inline-block;*/
     }
 
-    #menuIcon:hover{
+    #menuIconContainer:hover{
         cursor: pointer;
     }
 
@@ -649,7 +650,7 @@ this is the first HTML code, load font and style!
 
     .overlay{
         width: 100%;
-        background: rgba(0,0,0, .8);
+        background: rgba(0,0,0, .6);
         color: #E2E2E2;
         opacity: 0;
         display: block;
@@ -2983,19 +2984,17 @@ this is the first HTML code, load font and style!
 
 
 
-        $("#menuIcon").click(function() {
+
+    $("#menuIconContainer").click(function() {
             if(!displayMenu){
-                console.log('display')
-                $("#menuPopUp").css({"display":"block"})
-                $('#contentContainer').css({'display':'none'})
+                $("#menuPopUp").slideDown()
                 displayMenu = true;
             } else {
-                $("#menuPopUp").css({"display":"none"})
-                $('#contentContainer').css({'display':'block'})
+                $("#menuPopUp").slideUp()
                 displayMenu = false;
             }
-
         })
+
 
         let filterDisplay = false;
         $('#filterIcon').click(function(){

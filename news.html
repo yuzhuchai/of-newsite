@@ -1,0 +1,1691 @@
+<!-- http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_86d0a83a18008e282834ae69c06fa01c?imageView2 -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <!-- <script type="text/javascript" src='data.js'></script> -->
+</head>
+<body>
+
+<!--
+this is the first HTML code, load font and style!
+-->
+
+
+<!-- min screen width 320px -->
+
+
+<script>
+
+
+
+    let courseWidth
+    let courseHeight
+
+    let socialCard3Width
+
+    let careerWidth
+    let careerHeight
+
+    let advisorWidth
+    let advisorHeight
+
+
+	$(window).on("load",function(){
+		$(".main_area").width($(window).width())
+        courseWidth = $('.course').width();
+        courseHeight = courseWidth * 440/474
+        $('.course').height(courseHeight)
+
+        careerWidth = $('.career').width();
+        careerHeight = careerWidth * 364/360 + 20
+        $('.career').height(careerHeight)
+
+
+
+        socialCard3Width = $('.socialCard3').width();
+        $('.socialCard3').height(socialCard3Width)
+	})
+
+
+    $( window ).resize(function() {
+        courseWidth = $('.course').width();
+        // console.log(courseWidth , "<-onresize")
+                // courseWidth = $('.course').width();
+        courseHeight = courseWidth * 440/474
+        $('.course').height(courseHeight)
+
+        socialCard3Width = $('.socialCard3').width();
+        $('.socialCard3').height(socialCard3Width)
+
+        careerWidth = $('.career').width();
+        careerHeight = careerWidth * 364/360 
+        $('.career').height(careerHeight)
+    });
+
+
+
+
+
+
+
+    // console.log(filter)
+
+    $(window).scroll(function(){
+        // console.log("hi")
+        $("#header").css({"box-shadow":"0px 4px 20px rgba(0,0,0,0.09)"})
+        
+    })
+
+    $('#hiddenLen').click(function(){
+            console.log('this is clickedd')
+            let lanText = $('#lanText').text()
+            let hiddenLan = $('#hiddenLen').text()
+            console.log(lanText, hiddenLan)
+            if(lanText == 'Cn'){
+                $('#lanText').text('Eng')
+                $('#hiddenLen').text('Cn')
+                $('.cn').hide();
+                $('.eng').show();
+                lan = "Eng"
+            } else {
+                $('#lanText').text('Cn')
+                $('#hiddenLen').text('Eng')
+                $('.cn').show();
+                $('.eng').hide();
+                lan = "Cn"
+            }
+        })
+
+
+</script>
+
+
+
+<!-- 1660 -->
+
+<style>
+
+
+    @font-face {
+      font-family:  "XYZB";
+      src: url("/static/font/MSYHBD.TTC");
+    }
+
+    @font-face{
+      font-family:  "XYZ";
+      src:url("/static/font/MSYH.TTC");
+    }
+
+
+    @font-face{
+      font-family:  "XYZL";
+      src:url("/static/font/MSYHL.TTC");
+    }
+
+	html, body{
+		/*font-family: "Microsoft YaHei";*/
+		font-family:"XYZ";
+        max-width: 100%;
+        overflow-x: hidden;
+	}
+
+    img{
+        display:block;
+    }
+
+
+    #navigation > span > a:visited {
+        color:#ACACAC;
+        text-decoration: none;
+    } /* Visited link    */
+    
+
+    #navigation > span > a:active {
+        color:#ACACAC;
+        text-decoration: none;
+    }
+
+    #navigation > span > a{
+        color:#ACACAC;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color:black;
+        text-decoration: none;
+    } 
+    
+
+    a:active {
+        color:black;
+        text-decoration: none;
+    }
+
+    a{
+        color:black;
+        text-decoration: none;
+    }
+    
+
+
+    .sections{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+    }
+
+
+
+
+    #menuPopUp{
+        display: none;
+        width: 100vw;
+        height:100vh;
+        z-index: 1;
+        position: fixed;
+        left: 0;
+        top: 80px;
+    }
+
+
+
+
+    #header{
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        top:0;
+        font-size: 20px;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        z-index: 1;
+        background-color: white;
+    }
+   
+    #headerlogo{
+        /*border: 1px black solid;*/
+        /*width:100px;*/
+        margin-left:26px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #headerlogo > img{
+    	display: block;
+        width: 200px;
+    }
+    
+    #menu{
+        /*border: 1px black solid; */
+        color:#E2E2E2;
+        margin-top:auto;
+        margin-bottom:auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #menu > div{
+        font-family:  "XYZB";
+    	font-weight: 700;
+    	font-style: bold;
+    	margin-right:26px;
+    }
+
+
+
+    #cn{
+    	color:#ACACAC;
+    }
+
+    #menuText{
+    	color:black;
+        /*display: inline-block;*/
+    }
+
+    #menuIcon{
+    	/*border: 1px black solid;*/
+    	margin-top: auto;
+    	margin-bottom:auto;
+        /*display: inline-block;*/
+    	width: 30px;
+    	height: 30px;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+
+
+    #menuIcon:hover{
+        cursor: pointer;
+    }
+
+
+    #menuIcon > div {
+        width: 14px;
+        height: 14px;
+        border-radius: 5px;
+        background-color: black;
+    }
+
+
+    #contentContainer{
+    	top: 80px;
+    	position: absolute;
+    	left: 0px;
+    	width: 100%;
+    }
+
+    .container{
+    	/*border:1px black solid;*/
+    	/*height: 400px;*/
+        width:1536px;
+    	margin-left:auto;
+    	margin-right: auto;
+/*    	margin-right: 10%;
+    	margin-left: 10%;*/
+    }
+
+
+
+    #courseContainer{
+    	/*border: 1px solid black;*/
+    	margin-top: 50px;
+    }
+
+    #courseHeader{
+    	margin-bottom: 42px;
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: space-between;
+    }
+
+
+    #courseDisplayContainer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        row-gap: 67px;
+        grid-template-columns: repeat(auto-fill, 474px);
+    }
+
+
+
+    .course{
+        width:474px;
+        height:440px;
+    }
+
+
+
+    .myCard{
+        border-radius: 15px;
+        box-shadow: 0px 4px 40px rgba(0,0,0,0.08);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .myCard > div > a > img{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        width: 100%;
+    }
+
+    .socialCard > img{
+        width:100%;
+        border-radius: 15px;
+    }
+
+    .career > .cardDescription{
+        justify-content: flex-start;
+        margin:20px;
+    }
+
+    .course > .cardDescription{
+        height: 100%;
+        margin:20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .titles{
+        min-height: 60%;
+    }
+
+    .titles > .header2{
+        min-height: 60px;
+    }
+
+
+    .empty{
+        /* visibility:hidden; */
+        box-shadow:none;
+    }
+
+    #metaCareerContainer{
+        /*border:1px solid black;*/
+        margin-top: 32px;
+
+    }
+
+
+    .cardsContainer{
+        display: flex;
+        flex-direction: row;
+        margin-top:42px;
+        justify-content: space-between;
+    }
+
+
+
+    #recommandCourseContainer{
+        margin-top: 100px;
+    }
+
+
+    #aboutContainer{
+        /*border:1px solid black;*/
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /*width:533px;*/
+    }
+
+    #videoContainer{
+
+        width:946px;
+        height:532px;
+        background-color: black;
+        border-radius: 15px;
+
+    }
+
+
+    #aboutDescription{
+        width:533px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #aboutTitle{
+        margin-top: 42px;
+        font-size: 70px;
+        font-family:  "XYZB";
+        font-weight: 700;
+        letter-spacing: 0.005em;
+        line-height: 113.8%;
+        color:#222222;
+    }
+
+    #aboutDes{
+        margin-top:42px;
+        font-family:  "XYZL";
+        font-size: 30px;
+        font-weight: 290;
+        letter-spacing: 1.09em;
+        color:#222222;
+        line-height: 100%;
+    }
+
+
+    #aboutText{
+        color:black;
+        font-size: 20px;
+        font-family:  "XYZL";
+        font-weight: 290;
+        line-height: 145%;
+        letter-spacing: 0.045em;
+        /*margin-top: 130px;*/
+    }
+
+    #readmore{
+        color:#ACACAC;
+        text-decoration: underline;
+    }
+
+    #newsContainer{
+        margin-top: 100px;
+    }
+
+    #newsContentContainer{
+        margin-top: 42px;
+    }
+
+    #partnerContainer{
+        margin-top: 32px;
+        /*border:1px solid black;*/
+    }
+
+
+    #partnetContentContainer{
+        margin-top:42px;
+        display:flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        margin-left: 80px;
+        margin-right:80px;
+        justify-content: space-between;
+    }
+
+
+    .partner{
+        width: 22%;
+    }
+
+    .partner > img{
+        width: 100%;
+    }
+
+    .newContent{
+        display: flex;
+        flex-direction: row;
+        /*width:100%;*/
+        height:80px;
+        box-shadow: 0px 4px 40px rgba(0,0,0,0.08);
+        border-radius: 8px;
+        margin-bottom: 20px;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        justify-content: space-between;
+        /*max-width:100%;*/
+    }
+
+
+    .date{
+        color: #ACACAC;
+        font-size: 30px;
+        font-family:  "XYZB";
+        font-weight: 700;
+        /*margin-left: 30px;*/
+    }
+
+    .newsTitle{
+        font-size: 20px;
+        font-family:  "XYZL";
+        font-weight: 290;
+        flex-grow: 2;
+        margin-left: 66px;
+    }
+
+
+    .more{
+        color:#E2E2E2;
+        font-size: 30px;
+        font-family:  "XYZB";
+        font-weight: 700;
+    }
+
+    #blogContainer{
+        margin-top: 32px;
+    }
+
+    #advisorContainer{
+        margin-top: 32px;
+    }
+
+
+    #socialMediaContainer{
+        margin-top: 100px;
+    }
+
+
+    #socialMediaContents{
+        margin-top: 42px;
+    }
+
+    #socialCard3{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /*height:480px;*/
+    }
+
+
+
+
+    #footer{
+        margin-top: 213px;
+        background-color: #E5E5E5;
+        width:100vw;
+        height: 331px;
+        padding-top: 106px;
+        color:#7c7c7c;
+    }
+
+
+    #footer > div{
+        display: flex;
+        flex-direction: row;
+        /*justify-content: space-between;*/
+        width: 1536px;
+        margin-left: 192px;
+    }
+
+    #footerLogo{
+        width: 250px;
+        /*width:31%*/
+    }
+
+    #footerLogo > a > img{
+        width:100%;
+    }
+
+    #footerSocialLogo{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #footerSocialLogo > img{
+        width:100%;
+        margin-right: 20px;
+        width: 30px;
+    }
+
+    #footerSocialLogo > a > img{
+        width:100%;
+        margin-right: 20px;
+        width: 30px;
+    }
+
+    #footerMenu{
+        display: flex;
+        flex-direction: row;
+        /*flex-wrap: wrap;*/
+        height: 100px;
+        /*justify-content: space-between;*/
+        align-content: flex-start;
+        font-size: 20px;
+        font-family:  "XYZL";
+        font-weight:290;
+        color: #7c7c7c;
+    }
+
+
+    .footerMenuItem{
+        margin: 0px 70px 30px 70px;
+    }
+
+    #footerSocial{
+        margin-left: 70px;
+        display: flex;
+        /*flex-direction: row;*/
+        align-items: flex-end;
+
+    }
+
+    #footerSocialLogo > img:hover{
+        cursor: pointer;
+    }
+
+    #footerCode > div {
+        margin-bottom: 30px;
+    }
+
+
+    #weChatCode{
+        background-color:white;
+        border-radius: 15px;
+        box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+        padding:20px;
+        position: relative;
+        margin-left: -15px;
+        display:none;
+        width:100px;
+        height:100px;
+    }
+
+    #weChatCode > img{
+        width: 100%;
+    }
+
+
+    #weChatCode::before{
+        content: '';
+	    position: absolute;
+	    width: 0;
+	    height: 0;
+	    bottom: 100%;
+        /* left:0; */
+        border: .75rem solid transparent;
+	    border-top: none;
+        border-bottom-color: #fff;
+	    filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+    }
+
+
+
+
+
+    /*below is style classes */
+    .header1{
+    	font-size: 40px;
+    	font-weight: 700;
+        font-family:  "XYZB";
+        line-height: 30px;
+    }
+
+    .header2{
+        font-size: 30px;
+        font-family:  "XYZB";
+        font-weight: 700;
+        line-height: 30px;
+    }
+
+    .header3{
+    	font-size: 20px;
+        font-family:  "XYZL";
+    	font-weight: 290;
+        margin-top: 20px;
+    }
+
+    .tag{
+        font-size: 20px;
+        font-family:  "XYZL";
+        font-weight: 290;
+        color: #222222;
+        background-color: #E2E2E2;
+        border-radius: 6px;
+        display: inline-block;
+        margin-right:10px;
+        /*height:37px;*/
+        padding: 4px 20px 4px 20px;
+    }
+
+    .advisorTitle{
+        color:rgba(0, 0, 0, 0.45);
+        font-size: 20px;
+        font-family:  "XYZL";
+        font-weight: 290;
+    }
+
+
+    #newsContentContainerMobile{
+        display: none;
+    }
+
+
+    #socialMediaContentsMobile{
+        display:none;
+    }
+
+
+    .buttonMenu{
+        float: none;
+        /*align-self: stretch;*/
+        /*flex-grow: 1.5;*/
+        width: 18%;
+        height: 68px;
+    }
+
+
+    #menuPopUpContents{
+        margin-top:50px;
+        width:1536px;
+        margin-left:auto;
+        margin-right: auto;
+    }
+
+
+    #menuButtonContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #menuCategoryContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top:42px;
+    }
+
+    .menuCategory{
+        color: white;
+        text-align: center;
+        /*margin:auto;*/
+        display: flex;
+        background-image: url(http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_a7c819e9f710c667b73d5dc75a7030e7?imageView2);
+        min-width:360px;
+        min-height:199px;
+        border-radius: 15px;
+        /*border:1px solid black;*/
+        justify-content: center;
+    }
+
+    .menuCategory > div {
+
+        align-self: center;
+        font-family:  "XYZB";
+        font-weight: 700;
+        font-size: 30px;
+
+    }
+
+
+    #menuSoftwareContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 42px;
+        row-gap: 15px;
+    }
+
+    .software{
+        min-width:360px;
+        min-height: 160px;
+        border-radius: 15px;
+        /*border:1px solid black;*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        box-shadow: 0px 4px 40px rgba(0,0,0,0.08);
+    }
+
+    .software > img {
+        /*border:1px solid black;*/
+        width: 20%;
+        height: 70px;
+        align-self: center;
+        border-radius: 10px;
+    }
+
+    .softwareDescription{
+        align-self: center;
+    }
+
+
+    .softwareh1{
+        font-size: 20px;
+        font-family:  "XYZB";
+
+        font-weight: 700;
+    }
+
+    .softwareh2{
+        font-size: 15px;
+        font-family:  "XYZL";
+
+        font-weight: 290px;
+    }
+
+
+    #menuSocialContainer{
+        display: flex;
+        flex-direction: row;
+        margin-top: 42px;
+    }
+
+    #menuSocialContainer > img{
+        margin-right: 25px;
+    }
+
+
+    .hiddenCourse1 .hiddenCourse2 .hiddenCourse3{
+        display: none;
+    }
+
+    /* .course:hover{
+        cursor:pointer;
+    } */
+    img:hover{
+        cursor:pointer;
+    }
+
+    .header2:hover{
+        cursor:pointer;
+    }
+
+    .header3:hover{
+        cursor:pointer;
+    }
+
+
+    #menu{
+        /*border: 1px black solid; */
+        color:black;
+        margin-top:auto;
+        margin-bottom:auto;
+        /*font-style: bold;*/
+        font-size: 24px;
+        margin-right:26px;
+        font-family: "XYZB";
+        font-weight: 700;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    #language{
+        position:relative;
+    }
+
+    #language:hover{
+        cursor:pointer;
+    }
+
+    #dropDown{
+        /* display: none; */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        perspective: 1000px;
+        z-index: -1;
+    }
+
+    #hiddenLen{
+        padding:20px;
+        display: none;
+    }
+
+    #language:hover #hiddenLen{
+        margin-top:-20px;
+        display: block;
+        /* background-color: white; */
+    }
+
+    .eng{
+        display: none;
+    }
+
+ 
+
+    input[type=text]{
+        width: 15vw;
+        height: 30px;
+        padding-left: 20px;
+        border: none;
+        background-color: #FFFFFF;
+        box-shadow: inset 0px 4px 40px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        background: url(http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_212590c6810224e5090d5a1067cce804?imageView2) no-repeat;
+        background-size: 20px;
+        background-position: right 20px bottom 5px;
+    }
+
+    #searchIcon{
+        position:absolute;
+        /* margin-right:  */
+        height: 100;
+        max-height: 30px;
+        /*z-index: 100;*/
+    }
+
+
+    .changeLan{
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 5px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        margin-bottom: 5px;
+    }
+
+    #login{
+        cursor: pointer;
+    }
+
+
+
+    #loginIcon{
+        display: inline;
+        width: 30px;
+        vertical-align: middle;
+    }
+
+    #header{
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        z-index: 1;
+        background-color: white;
+        box-shadow:0px 4px 20px rgba(0,0,0,0.09);
+    }
+   
+    #headerlogo{
+        /*border: 1px black solid;*/
+        /*width:100px;*/
+        margin-left:26px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    #headerlogo > a > img{
+    	display: block;
+        width: 200px;
+    }
+
+    #menuText{
+    	color:black;
+        /*display: inline-block;*/
+    }
+
+    #menuIcon{
+    	/*border: 1px black solid;*/
+    	margin-top: auto;
+    	margin-bottom:auto;
+        /*display: inline-block;*/
+    	width: 30px;
+    	height: 30px;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        margin-right: 20px;
+    }
+
+    #menuIconContainer{
+        display: flex;
+        cursor:pointer;
+        /*display: inline-block;*/
+    }
+
+    #menuIcon:hover{
+        cursor: pointer;
+    }
+
+
+    #menuIcon > div {
+        width: 14px;
+        height: 14px;
+        border-radius: 5px;
+        background-color: black;
+    }
+
+    #menu{
+        font-size: 20px;
+    }    
+
+
+
+    @media screen and (max-width: 1660px){
+        #menuPopUpContents{
+            max-width: 90%;
+        }
+
+        .container{
+            max-width:90%;
+        }
+
+        .adContent{
+            max-width:31%;
+        }
+
+        .course{
+            max-width:31%;
+        }
+
+        .socialCard{
+            max-width: 31%;
+        }
+
+        .career{
+            max-width: 23%;
+        }
+
+        .advisor{
+            max-width: 23%;
+        }
+
+        #videoContainer{
+            min-width:946px;
+            min-height:532px;
+        }
+
+        #aboutDescription{
+            min-width:533px;
+        }
+
+        #footer{
+            max-width: 100%;
+        }
+        
+        #footer > div{
+            display: flex;
+            flex-direction: row;
+            width:100%;
+            margin-left: 5%;
+        }
+
+        #footerLogo{
+            min-width:21%;
+        }
+
+        #footerLogo > img{
+            width:100%;
+        }
+
+        .footerMenuItem{
+            margin: 0px 40px 30px 40px;
+        }
+
+        #footerSocial{
+            margin-left: 40px;
+            display: flex;
+        /*flex-direction: row;*/
+            align-items: flex-end;
+        }
+
+
+        .header2Resize{
+            font-size:2vw;
+            line-height:2vw;
+        }
+
+        .header3Resize{
+            font-size: 1vw;
+            line-height: 20px
+        }
+
+        .header1{
+            /*font-size: 1.5vw;*/
+            font-family:  "XYZB";
+
+            font-weight: 700;
+            line-height: 40px;
+        }
+
+        .tag{
+            display:none;
+        }
+
+        .buttonMenu{
+            float:none;
+            display: inline-block;
+            text-align: center;
+        }
+
+
+
+
+    }
+
+
+
+
+    @media screen and (max-width: 767px){
+
+        #header{
+            width: 100%;
+        }
+        
+        #language{
+            display: none;
+        }
+
+        #adContainer{
+            display: block;
+        }
+
+        .adContent{
+            margin: 0 auto 20px auto;
+            min-width: 100%;
+            /*margin-bottom:20px;*/
+        }
+
+        #courseHeader{
+            display: block;
+        }
+
+        #courseButtonContainer{
+            margin-top:20px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap:20px;
+            column-gap: 20px;
+            justify-content: space-between;
+            align-items: stretch;
+            margin-left:0px;
+        }
+
+        #courseButtonContainer > div {
+            flex-grow: 2;
+            margin-left: 0px;
+        }
+
+
+        .courseExtra{
+            display: none;
+        }
+
+        #courseDisplayContainer{
+            display: block;
+        }
+
+        .myCard{
+            /*min-width:100%;*/
+            margin-right:auto;
+            margin-left:auto;
+            min-width:100%;
+            /*min-width:320px;*/
+            margin-bottom: 30px;
+        }
+
+
+        .cardsContainer{
+            display:block;
+        }
+
+        #careerContainer{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #metaCareerContainer{
+            margin-top: 100px;
+        }
+
+
+        .career{
+            min-width:45%;
+            height: 280px;
+            /*min-height: 480px;*/
+        }
+
+        #aboutContainer{
+            display: block;
+        }
+
+        #aboutText{
+            margin-top: 49px;
+            max-width: 100%;
+        }
+
+
+
+        .newContent{
+            display: block;;
+        }
+
+        .advisor{
+            display: flex;
+            flex-direction: row;
+            height:100%;
+            /*max-height: 245px;*/
+        }
+
+        .advisor > div > img{
+            border-top-left-radius: 15px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 15px;
+        }
+
+
+
+        .advisor > .cardDescription{
+            margin:20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            /*flex-grow: 2;*/
+        }
+
+        .partner{
+            width: 45%;
+        }
+
+
+        .socialCard{
+            min-width:100%;
+            max-height:150px;
+            /*border: 1px solid black;*/
+        }
+
+/*        .socialCard > img{
+            display: none;
+            border: 1px solid black;
+        }
+
+        #socialCard3{
+            height: 156px;
+        }*/
+
+        #footer{
+            max-width:100%;
+            /*display:none;*/
+        }
+
+        #footerLogo{
+            /*margin-left: 10px;*/
+            max-width:21%;
+        }
+
+        .footerMenuItem{
+            margin: 0px 20px 30px 20px;
+        }
+
+        #footerSocial{
+            margin-left: 20px;
+            display: flex;
+        /*flex-direction: row;*/
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        #footerSocialLogo > img{
+            margin-right: 10px;
+        }
+
+        #footerSocialLogo{
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+
+
+
+        #newsContentContainer{
+            display: none;
+        }
+
+        #newsContentContainerMobile{
+            display: block;
+            /*height: 150px;*/
+        }
+
+        .newsMobileHeader{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .newsTitleMobile{
+            font-size: 25px;
+            font-family:  "XYZB";
+            font-weight: 700;
+        }
+
+        .newDateMobile{
+            font-size: 20px;
+            font-family:  "XYZL";
+
+            font-weight: 290;
+            color:#ACACAC;
+        }
+    
+        .newsContentMobile{
+            font-size: 20px;
+            font-family:  "XYZL";
+
+            font-weight: 290;
+        }
+
+        .newsContentMobile > span {
+            color:#ACACAC;
+            text-decoration: underline;
+        }
+
+        .newContentMobile{
+            /*padding:20px;*/
+            height: 100px;
+        }
+
+        .newsMobileHeader{
+            margin-top: 50px;
+        }
+
+        #socialMediaContents{
+            display:none;
+        }
+
+        #socialMediaContentsMobile{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        #socialCard3{
+            flex-direction: row;
+            max-width: 100%;
+        }
+
+
+        #socialCard3 > div  {
+            max-width: 45%;
+        }
+
+        #socialCard3 > div >img {
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+
+
+
+        .socialCard{
+            max-height:326px;
+            margin-bottom: 20px;
+        }
+
+        #videoContainer{
+            max-width: 100%;
+        }
+
+        .header1{
+            font-size: 40px;
+            font-family:  "XYZB";
+
+            font-weight: 700;
+            line-height: 40px;
+        }
+
+        .header2{
+            font-size: 30px;
+            font-family:  "XYZB";
+            font-weight: 700;
+            line-height: 30px;
+        }
+
+        .header3{
+            font-size: 20px;
+            font-family:  "XYZL";
+            font-weight: 290;
+            margin-top: 20px;
+        }
+
+
+        .tag{
+            display:inline-block;
+        }
+
+        .advisorTitle{
+            margin-top: 30px;
+        }
+
+    }
+
+
+
+    .empty{
+        display: none;
+    }
+
+    #headerPicContainer{
+        width: 100vw;
+        /* margin-bottom: 24px; */
+    }
+
+    #headerPicContainer > img{
+        width: 100%;
+    }
+
+    #navigation{
+        margin-top: 42px;
+        color:#ACACAC;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 0.005em;
+    }
+
+    #pageNumberContainer{
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        /* display: inline-block; */
+    }
+
+    .pageNumber{
+        color: #222222;
+        background-color: #E2E2E2;
+        /* padding:20px; */
+        display: flex;
+        font-family: "XYZB";
+        font-weight: 700;
+        flex-direction: column;
+        justify-content: center;
+        /* vertical-align: center; */
+        text-align: center;
+        width:45px;
+        height: 45px;
+        font-size: 20px;
+        box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.08);
+        border-radius: 6px;
+    }
+
+</style>
+
+
+
+<div id="header">
+    <div id="headerlogo"><a href="webpage.html"><img src="http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_25638bbb653f829b3feb1d2208295931?imageView2"></a></div>
+    <div id="menu">
+        <div>
+
+            <input type='text' id='search' placeholder="processing"> 
+
+        </div>
+    	<div id='language'>
+            <span class="changeLan"></span> 
+            <span id='lanText'>Cn</span>
+            <div id="dropDown">
+                <!-- <span class="changeLan" id="noneDisplay"></span>  -->
+                <span id="hiddenLen">Eng</span>
+            </div>
+        </div>
+        <div id='login'><img id='loginIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_86ceb5932e24e2383cce79506f18ef8a?imageView2'>&nbsp <span class="cn">登陆</span><span class="eng">Log In</span></div> 
+        <div id='menuIconContainer'>
+        	<div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
+        	<div id='menuText'><span class="eng">Menu</span><span class="cn">菜单</span></div>
+        </div>
+    </div>
+</div>
+<!-- end of header  -->
+
+    <div id='menuPopUp'>
+        <div id='menuPopUpContents'>
+            <div id='menuButtonContainer'>
+                <button class='buttonBlack buttonMenu'>ABOUT US</button>
+                <button class='buttonBlack buttonMenu'>NEWS</button>
+                <button class='buttonBlack buttonMenu'>BLOGS</button>
+                <button class='buttonBlack buttonMenu'>ADVISORS</button>
+                <button class='buttonBlack buttonMenu'>WHO'S WITH US</button>
+            </div> 
+
+            <div id='menuCategoryContainer'>
+                <div class='menuCategory'><div>快速筑基班</div></div>
+                <div class='menuCategory'><div>快速筑基班</div></div>
+                <div class='menuCategory'><div>快速筑基班</div></div>
+                <div class='menuCategory'><div>快速筑基班</div></div>
+            </div>
+
+
+            <div id='menuSoftwareContainer'>
+                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+            </div>
+
+
+            <div id='menuSocialContainer'>
+                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1e150b94ecd5b631b3ebea4157f66c4?imageView2'>
+                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5f3de3726fafd5fec8227fdb837ff092?imageView2'>
+                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'>
+                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'>
+
+
+            </div>
+        </div>
+   
+    </div>
+
+
+
+<div id="contentContainer">
+
+    <div class="container" id="headerPicContainer">
+    	<img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_86d0a83a18008e282834ae69c06fa01c?imageView2">
+    </div>
+
+    <div class='container' id="navigation">
+        <span><a href="webpage.html">HOME</a></span> > <span>NEWS</span>
+    </div>
+
+    <div class="container" id="courseContainer">
+    	<div id="courseHeader">
+    		<div>
+    			<div class='header1' id="filterFiller">NEWS</div>
+    			<div class='header3'>新闻</div>
+    		</div>
+    	</div>
+
+
+
+
+            <div id='newsContentContainer'>
+                <div class='newContent'>
+                    <div class='date'>2020.01.05</div>
+                    <div class='newsTitle'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现</div>
+                    <div class='more'>>></div>
+                </div>
+                <!-- end of new card 1 -->
+    
+                <div class='newContent'>
+                    <div class='date'>2020.01.05</div>
+                    <div class='newsTitle'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现</div>
+                    <div class='more'>>></div>
+                </div>
+                <!-- end of new card 2 -->
+    
+                <div class='newContent'>
+                    <div class='date'>2020.01.05</div>
+                    <div class='newsTitle'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现</div>
+                    <div class='more'>>></div>
+                </div>
+                <!-- end of new card 3 -->
+    
+    
+                <div class='newContent'>
+                    <div class='date'>2020.01.05</div>
+                    <div class='newsTitle'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现</div>
+                    <div class='more'>>></div>
+                </div>
+                <!-- end of new card 4 -->
+
+                <div class='newContent'>
+                    <div class='date'>2020.01.05</div>
+                    <div class='newsTitle'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现</div>
+                    <div class='more'>>></div>
+                </div>
+                <!-- end of new card 5 -->
+            </div>
+
+            <div class="container" id="pageNumberContainer">
+                <div class="pageNumber">1</div>
+            </div>
+    	
+
+    </div>
+    <!-- end of course container -->
+
+
+
+    
+
+    <div class='' id="footer">
+        <div>
+            <div id='footerLogo'><a href="webpage.html"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
+            <div id='footerMenu'>
+                <div>
+                    <div class='footerMenuItem'>Course</div>
+                    <div class='footerMenuItem'>Career</div>
+                    <div class='footerMenuItem'>News</div>
+                    <div class='footerMenuItem'>Blog</div>
+                </div>
+
+                <div>                
+                    <div class='footerMenuItem'>About Us</div>
+                    <div class='footerMenuItem'>Advisors</div>
+                    <div class='footerMenuItem'>Join Us</div>    
+                </div>
+
+            </div>
+            <div id='footerSocial'>
+                <div id='footerCode'>
+                    <div>关注我们</div>
+                    <div id='footerSocialLogo'>
+                        <img id='displayCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_c3fda0b5b340c124079c6e9e4d0099ef?imageView2'>
+                        <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_40eaac48e1a318aef9ee5339d733ee29?imageView2' href=""></a>
+                        <a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_378188cd01c79c408f43c6f96e9887fc?imageView2'></a>
+                        <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2feb65fd9eeacf98cc6e7cd2b939a1ce?imageView2'></a>
+                    </div>
+                    <div id="weChatCode"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+</div> 
+<!-- end of content container -->
+
+
+    <script>
+        let displayMenu = false;
+
+        $("#menuIcon").click(function() {
+            if(!displayMenu){
+                console.log('display')
+                $("#menuPopUp").css({"display":"block"})
+                $('#contentContainer').css({'display':'none'})
+                displayMenu = true;
+            } else {
+                $("#menuPopUp").css({"display":"none"})
+                $('#contentContainer').css({'display':'block'})
+                displayMenu = false;
+            }
+
+        })
+
+ 
+
+
+        $('#displayCode').hover(function(){
+            // console.log('hovered')
+            $('#weChatCode').show()
+        }, function(){
+            $('#weChatCode').hide()
+        })
+
+    </script>
+</body>
+</html>
+
+
+<!-- more 删除 >>  保留 -->
