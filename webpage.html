@@ -337,7 +337,7 @@ this is the first HTML code, load font and style!
     	margin-right: 0;
     	height: calc(100vh - 80px);
     	/* background-color: #E2E2E2; */
-        background: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_c98157bc29d0c2792ec98b79e76e2dbf?imageView2);  
+        background: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_5d9b5245d92092a01339a8d7846e7320?imageView2);  
         background-size: cover;
     	min-width:100%;
     }
@@ -440,7 +440,9 @@ this is the first HTML code, load font and style!
 
 
     .socialCard{
+        position:relative;
         width:474px;
+        cursor: pointer;
         /*height:480px;*/
     }
 
@@ -671,6 +673,10 @@ this is the first HTML code, load font and style!
         flex-direction: column;
         justify-content: space-between;
         /*height:480px;*/
+    }
+
+    #socialCard3 > a > div > img {
+        border-radius: 15px;
     }
 
 
@@ -1503,6 +1509,49 @@ this is the first HTML code, load font and style!
         min-height: 60px;
     }
 
+    .SocaialCardText{
+        color:white;
+        position: absolute;
+        bottom:50px;
+        left: 20px;
+    }
+
+    .social3Text{
+        position: relative;
+    }
+
+    .eng{
+        display: none;
+    }
+
+    .socialHeader1{
+        font-family: 'XYZB';
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: 0.045em;
+    }
+    .socialHeader2{
+        margin-top:5px;
+        font-weight: 290;
+        font-size: 20px;
+        line-height: 27px;
+        letter-spacing: 0.045em;
+    }
+
+    #showWechatCode{
+        display: none;
+        position: absolute;
+        bottom: 40%;
+        left: 30%;
+        width: 40%;
+    }
+
+    #wechatSocial{
+        position: relative;
+    }
+    
+
 </style>
 
 
@@ -1544,47 +1593,47 @@ this is the first HTML code, load font and style!
 </div>
 
 
-    <div id='menuPopUp'>
-        <div id='menuPopUpContents'>
-            <div id='menuButtonContainer'>
-                <button class='buttonBlack buttonMenu'>ABOUT US</button>
-                <button class='buttonBlack buttonMenu'>NEWS</button>
-                <button class='buttonBlack buttonMenu'>BLOGS</button>
-                <button class='buttonBlack buttonMenu'>ADVISORS</button>
-                <button class='buttonBlack buttonMenu'>WHO'S WITH US</button>
-            </div> 
+<div id='menuPopUp'>
+    <div id='menuPopUpContents'>
+        <div id='menuButtonContainer'>
+            <button class='buttonBlack buttonMenu'>ABOUT US</button>
+            <button class='buttonBlack buttonMenu'>NEWS</button>
+            <button class='buttonBlack buttonMenu'>BLOGS</button>
+            <button class='buttonBlack buttonMenu'>ADVISORS</button>
+            <button class='buttonBlack buttonMenu'>WHO'S WITH US</button>
+        </div> 
 
-            <div id='menuCategoryContainer'>
-                <div class='menuCategory'><div>快速筑基班</div></div>
-                <div class='menuCategory'><div>快速筑基班</div></div>
-                <div class='menuCategory'><div>快速筑基班</div></div>
-                <div class='menuCategory'><div>快速筑基班</div></div>
-            </div>
-
-
-            <div id='menuSoftwareContainer'>
-                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-            </div>
-
-
-            <div id='menuSocialContainer'>
-                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1e150b94ecd5b631b3ebea4157f66c4?imageView2'>
-                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5f3de3726fafd5fec8227fdb837ff092?imageView2'>
-                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'>
-                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'>
-
-
-            </div>
+        <div id='menuCategoryContainer'>
+            <div class='menuCategory'><div>快速筑基班</div></div>
+            <div class='menuCategory'><div>快速筑基班</div></div>
+            <div class='menuCategory'><div>快速筑基班</div></div>
+            <div class='menuCategory'><div>快速筑基班</div></div>
         </div>
-   
+
+
+        <div id='menuSoftwareContainer'>
+            <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+            <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+            <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+            <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+            <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+            <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+            <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+            <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+        </div>
+
+
+        <div id='menuSocialContainer'>
+            <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1e150b94ecd5b631b3ebea4157f66c4?imageView2'>
+            <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5f3de3726fafd5fec8227fdb837ff092?imageView2'>
+            <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'>
+            <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'>
+
+
+        </div>
     </div>
+
+</div>
 
 
 
@@ -1812,7 +1861,9 @@ this is the first HTML code, load font and style!
                 <div id='aboutDes'>让想到就能做到</div>      
             </div>
 
-            <div id='aboutText'>创立于2014年，中国第一家元宇宙科技学院。核心成员来自世界顶尖高校，为18-48岁成年人提供下一代互联网生存所需的视界与技能。<span id='readmore'>read more...</span></div>
+            <div id='aboutText'>创立于2014年，中国第一家元宇宙科技学院。核心成员来自世界顶尖高校，为18-48岁成年人提供下一代互联网生存所需的视界与技能。
+                <!-- <span id='readmore'>read more...</span> -->
+            </div>
         </div>
         <div id='videoContainer'></div>
     </div>
@@ -2074,11 +2125,70 @@ this is the first HTML code, load font and style!
             <div class='header3'>关注我们</div>
         </div>
         <div class='cardsContainer' id='socialMediaContents'>
-            <div class='socialCard'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
-            <div class='socialCard'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
+            <div class='socialCard' id="wechatSocial">
+                <img id='dimImg' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_5b4bbc076cb10260c3d4931c8d98f981?imageView2'>
+                <img id="showWechatCode" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2">
+                <div class="SocaialCardText">
+                    <span class="socialHeader1">
+                        <span class="cn">#微信订阅号</span>
+                        <span class="eng">#OF official Wechat</span>
+                    </span><br/>
+                    <span class="socialHeader2">
+                        <span class="cn">宇中听柴说播客系列</span>
+                        <span class="eng">DOGE TALKIE</span>
+                    </span>
+                </div>
+            </div>
+            <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=409850">
+                <div class='socialCard'>
+                    <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7586af33186b18689171f717778b961d?imageView2'>
+                    <div class="SocaialCardText">
+                        <span class="socialHeader1">
+                            <span class="cn">#哔哩哔哩</span>
+                            <span class="eng">#Bilibili</span>
+                        </span><br/>
+                        <span class="socialHeader2">
+                            <span class="cn">小酒馆系列专访</span>
+                            <span class="eng">OF Bistro</span>
+                        </span>
+                    </div>
+                </div>
+            </a>
+            
+            
             <div class='socialCard' id='socialCard3'>
-                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_549b05623eb17e9ddcc206bed8e94491?imageView2'> 
-                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_549b05623eb17e9ddcc206bed8e94491?imageView2'>
+                <a href="https://weibo.com/u/7126820846">
+                    <div class="social3Text">
+                        <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_94f50d651af413ff63a38f574f081750?imageView2'> 
+                        <div class="SocaialCardText">
+                            <span class="socialHeader1">
+                                <span class="cn">#微博</span>
+                                <span class="eng">#WeiBo</span>
+                            </span><br/>
+                            <span class="socialHeader2">
+                                <span class="cn">元宇宙新闻</span>
+                                <span class="eng">Metaverse News</span>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515">
+                    <div class="social3Text">
+                        <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fd8d2baf171859029135a78f1586e90d?imageView2'>
+                        <div class="SocaialCardText">
+                            <span class="socialHeader1">
+                                <span class="cn">#小红书</span>
+                                <span class="eng">#Little Red Book</span>
+                            </span><br/>
+                            <span class="socialHeader2">
+                                <span class="cn">算法孕育的数码花瓣</span>
+                                <span class="eng">algorithmic digital flower</span>
+                            </span>             
+                        </div>
+                    </div>
+                </a>
+                
             </div>
 
         </div>
@@ -2122,9 +2232,15 @@ this is the first HTML code, load font and style!
                     <div>关注我们</div>
                     <div id='footerSocialLogo'>
                         <img id='displayCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_c3fda0b5b340c124079c6e9e4d0099ef?imageView2'>
-                        <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_40eaac48e1a318aef9ee5339d733ee29?imageView2' href=""></a>
-                        <a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_378188cd01c79c408f43c6f96e9887fc?imageView2'></a>
-                        <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2feb65fd9eeacf98cc6e7cd2b939a1ce?imageView2'></a>
+                        <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048">
+                            <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_40eaac48e1a318aef9ee5339d733ee29?imageView2' href="">
+                        </a>
+                        <a href="https://weibo.com/u/7126820846">
+                            <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_378188cd01c79c408f43c6f96e9887fc?imageView2'>
+                        </a>
+                        <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515">
+                            <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2feb65fd9eeacf98cc6e7cd2b939a1ce?imageView2'>
+                        </a>
                     </div>
                     <div id="weChatCode"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
                 </div>
@@ -2158,6 +2274,14 @@ this is the first HTML code, load font and style!
             $('#weChatCode').hide()
         })
 
+        $('#wechatSocial').hover(function(){
+            $('#dimImg').css({'filter':'brightness(50%)'}) 
+            $('#showWechatCode').show();
+        }, function(){
+            $('#dimImg').css({'filter':'none'}) 
+            $('#showWechatCode').hide();
+        })
+
 
         $('#login').click(function(){
             $('#loginPopupBg').show()
@@ -2172,14 +2296,5 @@ this is the first HTML code, load font and style!
 </html>
 
 
-<!-- 首屏banner （尺寸告诉小张） -->
-<!-- 新闻 点击all 5个 -->
 <!-- 主页宣传片 （视频收集） -->
-<!-- 广告位 （先取消）-->
-<!-- toggle button 开关小一点 -->
-<!-- news 1页的小图标 -->
 <!-- 课程页面链接 - 没有页面的先链接小鹅通 -->
-<!-- 快速筑基班的banner 课程分类 -->
-<!-- menu 按钮 现有页面的按钮 -->
-<!-- menu  -->
-<!-- 第二板块 全部课程 ， 筑基班，大师班，冲刺营 -->

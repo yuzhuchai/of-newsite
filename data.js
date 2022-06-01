@@ -109,7 +109,7 @@ syllabus: [
 mainPoster:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_bd4d3d5a7f7d93f4dcf2840e20c7b8da?imageView2',
 mainPosterMobile:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_9f0ac4620469950c8cffb825493d1a82?imageView2',
 classVideo: 'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_v_d41d8cd98f00b204e9800998ecf8427e',
-videoPoster: 'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_6338d255ebd2efcee45e08b195a7f6f0?imageView2',
+videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ad68276b80d59bf7f1da024e5d9ad606?imageView2',
 showCase: ["http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_ea50ef589cbd97ce394acccbebbf981a?imageView2",
             "http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7b6be75398f1d7f03fc3b90f7702202f?imageView2",
             "http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_61640ab2507efef78425b33e354b9e7d?imageView2",
@@ -684,10 +684,10 @@ syllabus: [
 ],
 
 // 以下是图片内容填充
-mainPoster:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_acc49d3441d3d248c064024d494afbb0?imageView2',
+mainPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1b7a84c878fb62cdbd641df10994cf1c?imageView2',
 mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bfa89f5ecdca524e64d30ca3bd109b96?imageView2',
 classVideo: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_d1dad6d62004749497315ee884c605b9',
-videoPoster: '课程宣导片封面图片url',
+videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7ab0f387c752e15d6b95afcfa982479f?imageView2',
 showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c30066649070dd9b55131678fa07d39f?imageView2",
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_75f6cfc71073fd65b15b62e6bcf8fc84?imageView2",
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_3964e521b51d0151f666ba13adc1f966?imageView2",
