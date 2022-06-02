@@ -401,7 +401,7 @@ syllabus: [
 mainPoster:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_acc49d3441d3d248c064024d494afbb0?imageView2',
 mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bfa89f5ecdca524e64d30ca3bd109b96?imageView2',
 classVideo: '课程宣导片url',
-videoPoster: '课程宣导片封面图片url',
+videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bffda6a769e2214df9c5c38717949395?imageView2',
 showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_22148e031966170973794695ae65586d?imageView2",
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ee51779a24c0cf24e912588cfea8ed7f?imageView2",
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_6063614f2b66a9375b204a782d3cfa49?imageView2",

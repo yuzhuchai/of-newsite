@@ -144,14 +144,13 @@ this is the first HTML code, load font and style!
     #menuPopUp{
         display: none;
         width: 100vw;
-        height:calc(100vh - 80px);
+        height:100vh;
         z-index: 1;
         position: fixed;
         left: 0;
         top: 80px;
-        background-color:white;
+        background: white;
     }
-
 
 
     #header{
@@ -160,22 +159,19 @@ this is the first HTML code, load font and style!
         flex-direction: row;
         justify-content: space-between;
         top:0;
+        font-size: 20px;
         left: 0;
         width: 100%;
         height: 80px;
         z-index: 1;
         background-color: white;
-        box-shadow:0px 4px 20px rgba(0,0,0,0.09);
     }
    
     #headerlogo{
-        /*border: 1px black solid;*/
-        /*width:100px;*/
         margin-left:26px;
         align-items: center;
         display: flex;
         justify-content: center;
-
     }
 
     #headerlogo > a > img{
@@ -183,42 +179,64 @@ this is the first HTML code, load font and style!
         width: 200px;
     }
     
+
     #menu{
-        /*border: 1px black solid; */
-        color:black;
+        color:#222222;
         margin-top:auto;
         margin-bottom:auto;
-        /*font-style: bold;*/
-        font-size: 24px;
+        font-size: 20px;
         margin-right:26px;
         font-family: "XYZB";
         font-weight: 700;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        width: 50%;
+        justify-content: flex-end;
+        width: 45%;
+    }
+
+    #menu > #menuIconContainer{
+       width: 100px;
+    }
+    
+    #menu > #login{
+        min-width: 130px;
+    }
+
+
+    #menu > div{
+        font-family:  "XYZB";
+    	font-weight: 700;
+    	font-style: bold;
+    	margin-right:26px;
     }
 
 
 
-
     input[type=text]{
-        width: 13vw;
+        width: 12vw;
         height: 30px;
         padding-left: 20px;
         border: none;
         background-color: #FFFFFF;
         box-shadow: inset 0px 4px 40px rgba(0, 0, 0, 0.08);
         border-radius: 8px;
-        background: url(http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_212590c6810224e5090d5a1067cce804?imageView2) no-repeat;
+        background: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a6ab599bdae6601593d06ddee3e79926?imageView2) no-repeat;
         background-size: 20px;
         background-position: right 20px bottom 5px;
+        margin-right: 40px;
+    }
+
+
+    input[type=text]::placeholder{
+        color: #e2e2e2;
     }
 
     #searchIcon{
         position:absolute;
+        /* margin-right:  */
         height: 100;
         max-height: 30px;
+        /*z-index: 100;*/
     }
 
 
@@ -227,18 +245,13 @@ this is the first HTML code, load font and style!
     }
 
     #login{
-        cursor:pointer;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-left: 40px;
     }
 
-    #changeLan{
-        border: solid black;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 5px;
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        margin-bottom: 5px;
-    }
+
 
     #loginIcon{
         display: inline;
@@ -247,29 +260,25 @@ this is the first HTML code, load font and style!
     }
 
     #menuText{
-        color:black;
+        color:#222222;
         /*display: inline-block;*/
     }
 
     #menuIcon{
-        /*border: 1px black solid;*/
-        margin-top: auto;
-        margin-bottom:auto;
+    	/*border: 1px black solid;*/
+    	margin-top: auto;
+    	margin-bottom:auto;
         /*display: inline-block;*/
-        width: 25px;
-        height: 25px;
+    	width: 25px;
+    	height: 25px;
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         align-content: space-between;
-        margin-right: 20px;
+        margin-right: 6px;
     }
 
-    #menuIconContainer{
-        display: flex;
-        cursor:pointer;
-    }
 
     #menuIcon:hover{
         cursor: pointer;
@@ -283,12 +292,14 @@ this is the first HTML code, load font and style!
         background-color: #222222;
     }
 
-    #menuText{
-    	color:#222222;
+    #menuIconContainer{
+        display: flex;
+        align-items: center;
+        /* display: flex; */
+        cursor:pointer;
         /*display: inline-block;*/
     }
 
-    
 
     #contentContainer{
     	top: 80px;
@@ -613,7 +624,6 @@ this is the first HTML code, load font and style!
     .newContent{
         display: flex;
         flex-direction: row;
-        /*width:100%;*/
         height:80px;
         box-shadow: 0px 4px 40px rgba(0,0,0,0.08);
         border-radius: 8px;
@@ -621,7 +631,7 @@ this is the first HTML code, load font and style!
         align-items: center;
         padding-left: 30px;
         padding-right: 30px;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         /*max-width:100%;*/
     }
 
@@ -631,14 +641,16 @@ this is the first HTML code, load font and style!
         font-size: 30px;
         font-family: "XYZB";
         font-weight: 700;
-        /*margin-left: 30px;*/
+        width: 10%;
     }
 
     .newsTitle{
         font-size: 20px;
         font-family: "XYZL";
         font-weight: 290;
-        flex-grow: 2;
+        /* flex-grow: 2; */
+        min-width: 75%;
+        max-width: 75%;
         margin-left: 66px;
     }
 
@@ -648,6 +660,7 @@ this is the first HTML code, load font and style!
         font-size: 30px;
         font-family: "XYZB";
         font-weight: 700;
+        margin-left: 5%;
     }
 
     #blogContainer{
@@ -817,10 +830,9 @@ this is the first HTML code, load font and style!
 
 
     .buttonMenu{
+        cursor:pointer;
         float: none;
-        /*align-self: stretch;*/
-        /*flex-grow: 1.5;*/
-        width: 18%;
+        width: 276px;
         height: 68px;
     }
 
@@ -850,12 +862,33 @@ this is the first HTML code, load font and style!
         text-align: center;
         /*margin:auto;*/
         display: flex;
-        background-image: url(http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_a7c819e9f710c667b73d5dc75a7030e7?imageView2);
+        /* background-image: url(http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_a7c819e9f710c667b73d5dc75a7030e7?imageView2); */
         min-width:360px;
         min-height:199px;
         border-radius: 15px;
         /*border:1px solid black;*/
         justify-content: center;
+    }
+
+
+    #bootCampClass{
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b534a64279e9adc5bcbc8d50d8f336bd?imageView2);
+        background-size: cover;
+    }
+
+    #aiClass{
+        background-image: url(http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_a7c819e9f710c667b73d5dc75a7030e7?imageView2);
+        background-size: cover;
+    }
+
+    #allClass{
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_49fb4e49f39071013077a807732bdbcd?imageView2);
+        background-size: cover;
+    }
+
+    #masterClass{
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bd9a7823df742b73a693edc3e218e980?imageView2);
+        background-size: cover;
     }
 
     .menuCategory > div {
@@ -878,41 +911,44 @@ this is the first HTML code, load font and style!
     }
 
     .software{
-        min-width:360px;
+        width:360px;
         min-height: 160px;
         border-radius: 15px;
         /*border:1px solid black;*/
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        /* justify-content: space-around; */
         box-shadow: 0px 4px 40px rgba(0,0,0,0.08);
     }
 
     .software > img {
         /*border:1px solid black;*/
-        width: 20%;
+        min-width: 20%;
         height: 70px;
         align-self: center;
         border-radius: 10px;
+        margin-left: 25px;
+        margin-right: 40px;
     }
 
     .softwareDescription{
         align-self: center;
+        margin-right: 25px;
     }
 
 
     .softwareh1{
         font-size: 20px;
-        font-family: "XYZB";
+        font-family:  "XYZB";
         font-weight: 700;
     }
 
     .softwareh2{
         font-size: 15px;
-        font-family: "XYZL";
-
+        font-family:  "XYZL";
         font-weight: 290px;
     }
+
 
 
     #menuSocialContainer{
@@ -924,6 +960,11 @@ this is the first HTML code, load font and style!
     #menuSocialContainer > img{
         margin-right: 25px;
     }
+    
+    #menuSocialContainer > a >img{
+        margin-right: 25px;
+    }
+
 
     #weChatCode{
         background-color:white;
@@ -1353,51 +1394,7 @@ this is the first HTML code, load font and style!
     }
 
     
-    .toggle {
-    appearance: none;
-    width: 80px;
-    height: 32px;
-    display: inline-block;
-    position: relative;
-    border-radius: 50px;
-    overflow: hidden;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    background-color: #222222;
-    transition: background-color ease 0.3s;
-}
 
-.toggle:before {
-  content: "EN CN";
-  display: block;
-  position: absolute;
-  z-index: 2;
-  width: 28px;
-  height: 28px;
-  background: #fff;
-  left: 2px;
-  top: 2px;
-  border-radius: 50%;
-  font: 10px/28px XYZB;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-indent: -30px;
-  word-spacing: 50px;
-  color: #fff;
-  text-shadow: -1px -1px rgba(0,0,0,0.15);
-  white-space: nowrap;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
-}
-
-.toggle:checked {
-  background-color: #222222;
-}
-
-.toggle:checked:before {
-  left: 50px;
-}
 
 #loginPopupBg{
     position:fixed;
@@ -1550,34 +1547,156 @@ this is the first HTML code, load font and style!
     #wechatSocial{
         position: relative;
     }
+
+    .btn-container{
+        display: flex;
+        align-items: center;
+        margin-right: 40px;
+    }
+
+
+    label {
+    font-size: 13px;
+    color: #424242;
+    font-weight: 500;
+}
+
+.btn-color-mode-switch{
+    /* display: block; */
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner{
+    margin: 0px;
+    width: 120px;
+    height: 30px;
+    background: #e2e2e2;
+    border-radius: 26px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    display: block;
+} 
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:before{
+    content: attr(data-on);
+    position: absolute;
+    font-size: 12px;
+    font-weight: 500;
+    top: 7px;
+    right: 20px;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:after{
+    content: attr(data-off);
+    width: 60px;
+    height: 16px;
+    background: #fff;
+    border-radius: 26px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 6px -2px #111;
+    padding: 5px 0px;
+}   
+
+.btn-color-mode-switch > .alert{
+    display: none;
+    background: #FF9800;
+    border: none;
+    color: #fff;
+}
+
+.btn-color-mode-switch input[type="checkbox"]{
+    cursor: pointer;
+    width: 0px;
+    height: 25px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    margin: 0px;
+} 
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
+    /* background: #151515; */
+    /* color: #fff; */
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after{
+    /* content: attr(data-on); */
+    content: "EN";
+    left: 58px;
+    /* background: #3c3c3c; */
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before{
+    /* content: attr(data-off); */
+    content: "CN";
+    right: auto;
+    left: 20px;
+}
+
+#weChatCodeMenu{
+        background-color:white;
+        border-radius: 15px;
+        box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+        padding:20px;
+        position: absolute;
+        bottom: 22%;
+        display:none;
+        width:100px;
+        height:100px;
+    }
+
+    #weChatCodeMenu > img{
+        width: 100%;
+    }
+
+
+    #weChatCodeMenu::before{
+        content: '';
+	    position: absolute;
+	    width: 0;
+	    height: 0;
+	    top: 100%;
+        border: .75rem solid transparent;
+	    border-bottom: none;
+        border-top-color: #fff;
+	    filter: drop-shadow( 0.0625rem 0 0  rgba(0, 0, 0, .1));
+    }
+
     
 
 </style>
-
-
 
 <div id="header">
     <div id="headerlogo"><a href="webpage.html"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
     <div id="menu">
         <div>
-
             <input type='text' id='search' placeholder="processing"> 
-
-        </div>
-
-        <div>
-            <input class="toggle" type="checkbox" />
         </div>
 
 
-        <!-- <div id='language'><span id="changeLan"></span> <span id='lanText'>Cn</span></div> -->
-        <div id='login'><img id='loginIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_86ceb5932e24e2383cce79506f18ef8a?imageView2'>&nbsp Log in</div> 
+        <div class="btn-container">
+			<label class="switch btn-color-mode-switch">
+		        <input type="checkbox" name="color_mode" id="color_mode" value="1">
+		        <label for="color_mode" data-on="英文" data-off="中文" class="btn-color-mode-switch-inner"></label>
+		    </label>
+        </div>
+
+        <div id='login'><img id='loginIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_86ceb5932e24e2383cce79506f18ef8a?imageView2'>&nbsp <span class="cn">登陆</span><span class="eng">Log In</span></div> 
         <div id='menuIconContainer'>
-            <div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
-            <div id='menuText'>Menu</div>
+        	<div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
+        	<div id='menuText'><span class="eng">Menu</span><span class="cn">菜单</span></div>
         </div>
     </div>
 </div>
+
 <!-- end of header  -->
 
 <div id="loginPopupBg">
@@ -1585,55 +1704,136 @@ this is the first HTML code, load font and style!
         <div class="closeTab"></div>
         <div class="loginContent">
             <div class="loginText">微信/QQ登陆</div>
-            <div class="loginImg"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8af79272f4ec332f03b1c3a838990d9e?imageView2"></div>
+            <div class="loginImg"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d0df37497ebafdf8a7a9fc4a6071ad8b?imageView2"></div>
             <div class="loginText">请打开微信/QQ扫描二维码登陆</div>
             <div class="loginTextSmall">（首次登陆成功即完成注册）</div>
         </div>
     </div>
 </div>
 
-
 <div id='menuPopUp'>
     <div id='menuPopUpContents'>
         <div id='menuButtonContainer'>
-            <button class='buttonBlack buttonMenu'>ABOUT US</button>
-            <button class='buttonBlack buttonMenu'>NEWS</button>
-            <button class='buttonBlack buttonMenu'>BLOGS</button>
-            <button class='buttonBlack buttonMenu'>ADVISORS</button>
-            <button class='buttonBlack buttonMenu'>WHO'S WITH US</button>
+            <a href="courselist.html"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
+            <a href="webpage.html#aboutContainer"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
+            <a href="news.html"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
+            <a href="blogs.html"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
+            <a href="webpage.html#mentorContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
         </div> 
 
         <div id='menuCategoryContainer'>
-            <div class='menuCategory'><div>快速筑基班</div></div>
-            <div class='menuCategory'><div>快速筑基班</div></div>
-            <div class='menuCategory'><div>快速筑基班</div></div>
-            <div class='menuCategory'><div>快速筑基班</div></div>
+            <div class='menuCategory' id="allClass"><div><span class="cn">全部课程</span><span class="eng">All Course</span></div></div>
+            <div class='menuCategory' id="aiClass"><div><span class="cn">快速筑基班</span><span class="eng">Foundation Course</span></div></div>
+            <div class='menuCategory' id="masterClass"><div><span class="cn">大师班</span><span class="eng">Master Class</span></div></div>
+            <div class='menuCategory' id="bootCampClass"><div><span class="cn">冲刺营</span><span class="eng">BootCamp</span></div></div>
         </div>
 
 
         <div id='menuSoftwareContainer'>
-            <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-            <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-            <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-            <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-            <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-            <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-            <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-            <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7087f5df4e170bebc4a04b354ecb3326?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>TouchDesigner</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">基于节点式的视觉话编程语言</span>
+                        <span class="eng">Node-based programming language</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6a9a77d5b3c9675c16167fe8d2c7766f?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>Unity</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">实时内容开发平台</span>
+                        <span class="eng">real-time content delivery platform</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fb9262b4ac760ea1c2b8af813272b48e?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>Unreal Engine</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">实时3D创作工具</span>
+                        <span class="eng">real-time 3D platfrom</span>
+                    </span>
+                </div>
+            </div>
+
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fc889440b6caa0f1c0e430bbe4176df9?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>Processing</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">新兴计算机语言</span>
+                        <span class="eng">creative coding language</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9cc784f659f8498a1a1d563758feaa5d?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>P5.js</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">创意编码的 JavaScript 库</span>
+                        <span class="eng">JS creative coding library</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f647742a09d5fbe44d69d0a497b05ead?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>MaxMSP</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">交互式编程语言与开发环境</span>
+                        <span class="eng">interactive creative codeing language</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_094f651765e5162a3a7aa953faa18311?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>OpenFrameworks</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">是C++为基准的简洁开发框架,擅长开发图像和动画</span>
+                        <span class="eng">C++ creative coding framework</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>JavaScript</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">直译式脚本语言</span>
+                        <span class="eng">Code for web-deveopment</span>
+                    </span>
+                </div>
+            </div>
+            
         </div>
 
+        <div id="weChatCodeMenu"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
 
         <div id='menuSocialContainer'>
-            <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1e150b94ecd5b631b3ebea4157f66c4?imageView2'>
-            <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5f3de3726fafd5fec8227fdb837ff092?imageView2'>
-            <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'>
-            <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'>
-
-
+            <img id='showCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1e150b94ecd5b631b3ebea4157f66c4?imageView2'>
+            <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5f3de3726fafd5fec8227fdb837ff092?imageView2'></a>
+            <a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'></a>
+            <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'></a>
         </div>
+
     </div>
 
 </div>
+
 
 
 
@@ -1754,7 +1954,7 @@ this is the first HTML code, load font and style!
 
     	</div>
         <div class='buttonDiv'>
-            <a href="courseList.html"><button class='buttonBlack'>View Course List</button></a>   
+            <a href="courseList.html"><button class='buttonBlack'><span class="eng">View Course List</span><span class="cn">课程列表</span></button></a>   
         </div>
     </div>
     <!-- end of course container -->
@@ -1879,30 +2079,30 @@ this is the first HTML code, load font and style!
 
         <div id='newsContentContainer'>
             <div class='newContent'>
-                <div class='date'>2020.01.05</div>
-                <div class='newsTitle'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现</div>
+                <div class='date'>2022.06.02</div>
+                <div class='newsTitle'>第三期TD互动装置大师班今日正式发布，上海音乐学院外教亲自授课，12周硬核掌握TD硬件开发，成为最抢手的交互装置设计师！</div>
                 <div class='more'>>></div>
             </div>
             <!-- end of new card 1 -->
 
             <div class='newContent'>
-                <div class='date'>2020.01.05</div>
-                <div class='newsTitle'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现</div>
+                <div class='date'>2022.06.01</div>
+                <div class='newsTitle'>OF COURSE官方平台2022年6月1日换新升级，携3大课程类型，8大元宇宙技术体系，以及n+1跨平台模式，打造只属于你的元宇宙知识库！</div>
                 <div class='more'>>></div>
             </div>
             <!-- end of new card 2 -->
 
             <div class='newContent'>
-                <div class='date'>2020.01.05</div>
-                <div class='newsTitle'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现</div>
+                <div class='date'>2022.05.31</div>
+                <div class='newsTitle'>OF COURSE创始人程鹏先生受邀参加由中国美术学院新设计学院媒介与交互研究所与蓬莱科幻学院举办的“东方幻想”元宇宙科幻大会</div>
                 <div class='more'>>></div>
             </div>
             <!-- end of new card 3 -->
 
 
             <div class='newContent'>
-                <div class='date'>2020.01.05</div>
-                <div class='newsTitle'>新媒体舞台表现 新媒体舞台表现 新媒体舞台表现 新媒体舞台表现</div>
+                <div class='date'>2022.05.25</div>
+                <div class='newsTitle'>2022国际交互艺术夏令营定档7月18日，18位全球顶尖教授专家挂帅，9种前沿交互技术，110小时高品质学习，将带给你前所未有的沉浸式学习体验！</div>
                 <div class='more'>>></div>
             </div>
             <!-- end of new card 4 -->
@@ -1953,7 +2153,7 @@ this is the first HTML code, load font and style!
         </div>
 
         <div class='buttonDiv'>
-            <a href="news.html"><button class='buttonBlack'>View All News</button></a> 
+            <a href="news.html"><button class='buttonBlack'><span class="eng">View All News</span><span class="cn">更多新闻</span></button></a> 
         </div>
     </div>
 <!-- end of news container -->
@@ -2002,7 +2202,7 @@ this is the first HTML code, load font and style!
         </div>
 
         <div class='buttonDiv'>
-            <a href="blog.html"><button class='buttonBlack'>View All Blogs</button></a>
+            <a href="blog.html"><button class='buttonBlack'><span class="eng">View All Blogs</span><span class="cn">更多播客</span></button></a>
         </div>
     </div>
 <!-- end of blog container -->
@@ -2085,7 +2285,7 @@ this is the first HTML code, load font and style!
             <!-- end of card 4 -->
         </div>
 
-        <div class='buttonDiv'>
+        <div class='buttonDiv hiddenforOnepointO'>
             <button class='buttonBlack'>More Advisors</button>   
         </div>
     </div>
@@ -2267,11 +2467,32 @@ this is the first HTML code, load font and style!
             }
         })
 
+        let lan = 'CN'
+        $("#color_mode").on("change", function () {
+            console.log('this is clickedd')
+            if(lan == 'CN'){
+                $('.cn').hide();
+                $('.eng').show();
+                lan = "EN"
+            } else {
+                $('.cn').show();
+                $('.eng').hide();
+                lan = "CN"
+            }
+        })
+
         $('#displayCode').hover(function(){
             // console.log('hovered')
             $('#weChatCode').show()
         }, function(){
             $('#weChatCode').hide()
+        })
+
+        $('#showCode').hover(function(){
+            // console.log('hovered')
+            $('#weChatCodeMenu').show()
+        }, function(){
+            $('#weChatCodeMenu').hide()
         })
 
         $('#wechatSocial').hover(function(){

@@ -30,7 +30,7 @@ this is the first HTML code, load font and style!
 
 
     //end of data --------------------------
-    let lan = "Cn"
+ 
 
     
     
@@ -184,26 +184,6 @@ this is the first HTML code, load font and style!
             }
         });
 
-
-        $('#hiddenLen').click(function(){
-            console.log('this is clickedd')
-            let lanText = $('#lanText').text()
-            let hiddenLan = $('#hiddenLen').text()
-            console.log(lanText, hiddenLan)
-            if(lanText == 'Cn'){
-                $('#lanText').text('Eng')
-                $('#hiddenLen').text('Cn')
-                $('.cn').hide();
-                $('.eng').show();
-                lan = "Eng"
-            } else {
-                $('#lanText').text('Cn')
-                $('#hiddenLen').text('Eng')
-                $('.cn').show();
-                $('.eng').hide();
-                lan = "Cn"
-            }
-        }) 
     })
 
 
@@ -332,8 +312,6 @@ this is the first HTML code, load font and style!
     }
    
     #headerlogo{
-        /*border: 1px black solid;*/
-        /*width:100px;*/
         margin-left:26px;
         align-items: center;
         display: flex;
@@ -344,21 +322,28 @@ this is the first HTML code, load font and style!
     	display: block;
         width: 200px;
     }
+
     
     #menu{
-        /*border: 1px black solid; */
         color:#222222;
         margin-top:auto;
         margin-bottom:auto;
-        /*font-style: bold;*/
-        font-size: 24px;
+        font-size: 20px;
         margin-right:26px;
         font-family: "XYZB";
         font-weight: 700;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        width: 50%;
+        justify-content: flex-end;
+        width: 45%;
+    }
+
+    #menu > #menuIconContainer{
+       width: 100px;
+    }
+    
+    #menu > #login{
+        min-width: 130px;
     }
 
     #language{
@@ -367,16 +352,6 @@ this is the first HTML code, load font and style!
 
     #language:hover{
         cursor:pointer;
-    }
-
-    #dropDown{
-        /* display: none; */
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        perspective: 1000px;
-        z-index: -1;
     }
 
     #hiddenLen{
@@ -391,18 +366,23 @@ this is the first HTML code, load font and style!
     }
 
  
-
     input[type=text]{
-        width: 15vw;
+        width: 12vw;
         height: 30px;
         padding-left: 20px;
         border: none;
         background-color: #FFFFFF;
         box-shadow: inset 0px 4px 40px rgba(0, 0, 0, 0.08);
         border-radius: 8px;
-        background: url(http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_212590c6810224e5090d5a1067cce804?imageView2) no-repeat;
+        background: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a6ab599bdae6601593d06ddee3e79926?imageView2) no-repeat;
         background-size: 20px;
         background-position: right 20px bottom 5px;
+        margin-right: 40px;
+    }
+
+
+    input[type=text]::placeholder{
+        color: #e2e2e2;
     }
 
     #searchIcon{
@@ -412,6 +392,7 @@ this is the first HTML code, load font and style!
         max-height: 30px;
         /*z-index: 100;*/
     }
+
 
 
     .changeLan{
@@ -424,48 +405,56 @@ this is the first HTML code, load font and style!
         margin-bottom: 5px;
     }
 
+    #login{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-left: 40px;
+    }
 
 
 
     #loginIcon{
         display: inline;
-        width: 30px;
+        width: 25px;
         vertical-align: middle;
     }
+
 
     #menuText{
     	color:#222222;
         /*display: inline-block;*/
     }
 
+
     #menuIcon{
     	/*border: 1px black solid;*/
     	margin-top: auto;
     	margin-bottom:auto;
-        /*display: inline-block;*/
-    	width: 30px;
-    	height: 30px;
+    	width: 25px;
+    	height: 25px;
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         align-content: space-between;
-        margin-right: 20px;
+        margin-right: 6px;
     }
 
     #menuIconContainer{
         display: flex;
-        /*display: inline-block;*/
+        align-items: center;
+        cursor:pointer;
     }
 
-    #menuIconContainer:hover{
+
+    #menuIcon:hover{
         cursor: pointer;
     }
 
-
     #menuIcon > div {
-        width: 14px;
-        height: 14px;
+        width: 12px;
+        height: 12px;
         border-radius: 5px;
         background-color: #222222;
     }
@@ -1221,8 +1210,9 @@ this is the first HTML code, load font and style!
 
 
     .buttonMenu{
+        cursor:pointer;
         float: none;
-        width: 18%;
+        width: 276px;
         height: 68px;
     }
 
@@ -1251,20 +1241,37 @@ this is the first HTML code, load font and style!
         color: white;
         text-align: center;
         display: flex;
-        background-image: url(http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_a7c819e9f710c667b73d5dc75a7030e7?imageView2);
         min-width:360px;
         min-height:199px;
         border-radius: 15px;
         justify-content: center;
     }
 
+    #bootCampClass{
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b534a64279e9adc5bcbc8d50d8f336bd?imageView2);
+        background-size: cover;
+    }
+
+    #aiClass{
+        background-image: url(http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_a7c819e9f710c667b73d5dc75a7030e7?imageView2);
+        background-size: cover;
+    }
+
+    #allClass{
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_49fb4e49f39071013077a807732bdbcd?imageView2);
+        background-size: cover;
+    }
+
+    #masterClass{
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bd9a7823df742b73a693edc3e218e980?imageView2);
+        background-size: cover;
+    }
+
     .menuCategory > div {
         align-self: center;
         font-family: "XYZB";
-
         font-weight: 700;
         font-size: 30px;
-
     }
 
 
@@ -1278,41 +1285,70 @@ this is the first HTML code, load font and style!
     }
 
     .software{
-        min-width:360px;
+        width:360px;
         min-height: 160px;
         border-radius: 15px;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
         box-shadow: 0px 4px 40px rgba(0,0,0,0.08);
     }
 
     .software > img {
-        width: 20%;
+        min-width: 20%;
         height: 70px;
         align-self: center;
         border-radius: 10px;
+        margin-left: 25px;
+        margin-right: 40px;
     }
 
     .softwareDescription{
         align-self: center;
+        margin-right: 25px;
     }
 
 
     .softwareh1{
         font-size: 20px;
-        font-family: "XYZB";
-
+        font-family:  "XYZB";
         font-weight: 700;
     }
 
     .softwareh2{
         font-size: 15px;
-        font-family: "XYZL";
-
+        font-family:  "XYZL";
         font-weight: 290px;
     }
 
+
+    #weChatCodeMenu{
+        background-color:white;
+        border-radius: 15px;
+        box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+        padding:20px;
+        position: absolute;
+        bottom: 22%;
+        display:none;
+        width:100px;
+        height:100px;
+    }
+
+    #weChatCodeMenu > img{
+        width: 100%;
+    }
+
+
+    #weChatCodeMenu::before{
+        content: '';
+	    position: absolute;
+	    width: 0;
+	    height: 0;
+	    top: 100%;
+        border: .75rem solid transparent;
+	    border-bottom: none;
+        border-top-color: #fff;
+	    filter: drop-shadow( 0.0625rem 0 0  rgba(0, 0, 0, .1));
+    }
 
     #menuSocialContainer{
         display: flex;
@@ -1321,6 +1357,9 @@ this is the first HTML code, load font and style!
     }
 
     #menuSocialContainer > img{
+        margin-right: 25px;
+    }
+    #menuSocialContainer > a>img{
         margin-right: 25px;
     }
 
@@ -2252,6 +2291,185 @@ this is the first HTML code, load font and style!
      }
 
 
+    /* switch style ===============================  */
+
+    .btn-container{
+        display: flex;
+        align-items: center;
+        margin-right: 40px;
+    }
+
+
+    label {
+    font-size: 13px;
+    color: #424242;
+    font-weight: 500;
+}
+
+.btn-color-mode-switch{
+    /* display: block; */
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner{
+    margin: 0px;
+    width: 120px;
+    height: 30px;
+    background: #e2e2e2;
+    border-radius: 26px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    display: block;
+} 
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:before{
+    content: attr(data-on);
+    position: absolute;
+    font-size: 12px;
+    font-weight: 500;
+    top: 7px;
+    right: 20px;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:after{
+    content: attr(data-off);
+    width: 60px;
+    height: 16px;
+    background: #fff;
+    border-radius: 26px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 6px -2px #111;
+    padding: 5px 0px;
+}   
+
+.btn-color-mode-switch > .alert{
+    display: none;
+    background: #FF9800;
+    border: none;
+    color: #fff;
+}
+
+.btn-color-mode-switch input[type="checkbox"]{
+    cursor: pointer;
+    width: 0px;
+    height: 25px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    margin: 0px;
+} 
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
+    /* background: #151515; */
+    /* color: #fff; */
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after{
+    /* content: attr(data-on); */
+    content: "EN";
+    left: 58px;
+    /* background: #3c3c3c; */
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before{
+    /* content: attr(data-off); */
+    content: "CN";
+    right: auto;
+    left: 20px;
+}
+
+
+#loginPopupBg{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    display: none;
+}
+
+#loginPopup{
+    position:fixed;
+    width: 600px;
+    height:400px;
+    /* border:1px solid black; */
+    background-color: white;
+    z-index:100;
+    left: calc(50vw - 300px);
+    top: calc(50vh - 200px);
+    border-radius: 15px;
+    box-shadow:0px 4px 20px rgba(0,0,0,0.09)
+}
+
+.loginContent{
+    /* position:absolute; */
+    /* margin:auto; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loginText{
+    text-align: center;
+    font-size: 18px;
+    color:#222222;
+}
+
+.loginTextSmall{
+    text-align: center;
+    color:#7c7c7c;
+}
+
+.loginImg{
+    /* margin:auto; */
+    margin:20px auto;
+    width: 200px;
+    height:200px;
+}
+
+.loginImg > img{
+    width: 100%;
+}
+
+.closeTab{
+    /* font-size: 20px; */
+    position: absolute;
+    right: 10px;
+    top:10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.closeTab:before, .closeTab:after{
+    content:'';
+    position:absolute;
+    width:26px;
+    height:4px;
+    background-color:#7c7c7c;
+    border-radius:2px;
+    top:16px;
+    /* box-shadow:0 0 2px 0 #222222; */
+}
+.closeTab:before{
+    transform:rotate(45deg);
+    left:2px;
+}
+.closeTab:after{
+    transform:rotate(-45deg);
+    right:2px;
+}
 
 
 
@@ -2259,24 +2477,21 @@ this is the first HTML code, load font and style!
 
 </style>
 
-
-
 <div id="header">
     <div id="headerlogo"><a href="webpage.html"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
     <div id="menu">
         <div>
-
             <input type='text' id='search' placeholder="processing"> 
+        </div>
 
+
+        <div class="btn-container">
+			<label class="switch btn-color-mode-switch">
+		        <input type="checkbox" name="color_mode" id="color_mode" value="1">
+		        <label for="color_mode" data-on="英文" data-off="中文" class="btn-color-mode-switch-inner"></label>
+		    </label>
         </div>
-    	<div id='language'>
-            <span class="changeLan"></span> 
-            <span id='lanText'>Cn</span>
-            <div id="dropDown">
-                <!-- <span class="changeLan" id="noneDisplay"></span>  -->
-                <span id="hiddenLen">Eng</span>
-            </div>
-        </div>
+
         <div id='login'><img id='loginIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_86ceb5932e24e2383cce79506f18ef8a?imageView2'>&nbsp <span class="cn">登陆</span><span class="eng">Log In</span></div> 
         <div id='menuIconContainer'>
         	<div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
@@ -2291,49 +2506,145 @@ this is the first HTML code, load font and style!
     <div id='commentMenu'>评论</div>
     <div id='servicesMenu'>配套</div>
 </div>
+
 <!-- end of header  -->
 
-    <div id='menuPopUp'>
-        <div id='menuPopUpContents'>
-            <div id='menuButtonContainer'>
-                <button class='buttonBlack buttonMenu'>ABOUT US</button>
-                <button class='buttonBlack buttonMenu'>NEWS</button>
-                <button class='buttonBlack buttonMenu'>BLOGS</button>
-                <button class='buttonBlack buttonMenu'>ADVISORS</button>
-                <button class='buttonBlack buttonMenu'>WHO'S WITH US</button>
-            </div> 
 
-            <div id='menuCategoryContainer'>
-                <div class='menuCategory'><div>快速筑基班</div></div>
-                <div class='menuCategory'><div>快速筑基班</div></div>
-                <div class='menuCategory'><div>快速筑基班</div></div>
-                <div class='menuCategory'><div>快速筑基班</div></div>
-            </div>
-
-
-            <div id='menuSoftwareContainer'>
-                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-                <div class='software'><img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> <div class='softwareDescription'><span class='softwareh1'>TouchDesigner</span><br/><span class='softwareh2'>基于节点式的视觉话编程语言</span></div></div>
-            </div>
-
-
-            <div id='menuSocialContainer'>
-                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1e150b94ecd5b631b3ebea4157f66c4?imageView2'>
-                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5f3de3726fafd5fec8227fdb837ff092?imageView2'>
-                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'>
-                <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'>
-
-
-            </div>
+<div id="loginPopupBg">
+    <div id="loginPopup">
+        <div class="closeTab"></div>
+        <div class="loginContent">
+            <div class="loginText">微信/QQ登陆</div>
+            <div class="loginImg"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d0df37497ebafdf8a7a9fc4a6071ad8b?imageView2"></div>
+            <div class="loginText">请打开微信/QQ扫描二维码登陆</div>
+            <div class="loginTextSmall">（首次登陆成功即完成注册）</div>
         </div>
-   
     </div>
+</div>
+
+<div id='menuPopUp'>
+    <div id='menuPopUpContents'>
+        <div id='menuButtonContainer'>
+            <a href="courselist.html"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
+            <a href="webpage.html#aboutContainer"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
+            <a href="news.html"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
+            <a href="blogs.html"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
+            <a href="webpage.html#mentorContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
+        </div> 
+
+        <div id='menuCategoryContainer'>
+            <div class='menuCategory' id="allClass"><div><span class="cn">全部课程</span><span class="eng">All Course</span></div></div>
+            <div class='menuCategory' id="aiClass"><div><span class="cn">快速筑基班</span><span class="eng">Foundation Course</span></div></div>
+            <div class='menuCategory' id="masterClass"><div><span class="cn">大师班</span><span class="eng">Master Class</span></div></div>
+            <div class='menuCategory' id="bootCampClass"><div><span class="cn">冲刺营</span><span class="eng">BootCamp</span></div></div>
+        </div>
+
+
+        <div id='menuSoftwareContainer'>
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7087f5df4e170bebc4a04b354ecb3326?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>TouchDesigner</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">基于节点式的视觉话编程语言</span>
+                        <span class="eng">Node-based programming language</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6a9a77d5b3c9675c16167fe8d2c7766f?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>Unity</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">实时内容开发平台</span>
+                        <span class="eng">real-time content delivery platform</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fb9262b4ac760ea1c2b8af813272b48e?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>Unreal Engine</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">实时3D创作工具</span>
+                        <span class="eng">real-time 3D platfrom</span>
+                    </span>
+                </div>
+            </div>
+
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fc889440b6caa0f1c0e430bbe4176df9?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>Processing</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">新兴计算机语言</span>
+                        <span class="eng">creative coding language</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9cc784f659f8498a1a1d563758feaa5d?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>P5.js</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">创意编码的 JavaScript 库</span>
+                        <span class="eng">JS creative coding library</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f647742a09d5fbe44d69d0a497b05ead?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>MaxMSP</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">交互式编程语言与开发环境</span>
+                        <span class="eng">interactive creative codeing language</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_094f651765e5162a3a7aa953faa18311?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>OpenFrameworks</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">是C++为基准的简洁开发框架,擅长开发图像和动画</span>
+                        <span class="eng">C++ creative coding framework</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>JavaScript</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">直译式脚本语言</span>
+                        <span class="eng">Code for web-deveopment</span>
+                    </span>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="weChatCodeMenu"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
+
+        <div id='menuSocialContainer'>
+            <img id='showCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1e150b94ecd5b631b3ebea4157f66c4?imageView2'>
+            <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5f3de3726fafd5fec8227fdb837ff092?imageView2'></a>
+            <a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'></a>
+            <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'></a>
+        </div>
+
+    </div>
+
+</div>
+
 
 
 
@@ -2808,42 +3119,102 @@ this is the first HTML code, load font and style!
 		<div id='featureContents' class='shadow'>
 			<div id='featureColumn1'>
 				<div class='columnTitle fillCourseTitleCn' id='column1Title'>Unreal场景人物大师班</div>
-				<div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp<span>千元区间定价合理</span></div>
-				<div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp 导师亲自指导产出有保障</div>
-				<div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_91d23723e74060ea6fffb85f8d9b51a3?imageView2"> &nbsp 全球顶尖名校导师团队</div>
-				<div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp 紧贴当今企业需求</div>
-				<div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp 有作品展出机会</div>
-				<div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp 获得光子学位证书</div>
-				<div class='columnItem'><img class='inlineImg' src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp 创新思维提升</div>
-				<div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp 名师亲自答疑</div>
-                <div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp 结识全世界志同道合的伙伴</div>
-                <div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp 助推个人全方位成长</div>
+				<div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp 
+					<span class='cn'>千元区间定价合理</span>
+					<span class='eng'>Resonable and transparent</span>
+				</div>
+				<div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp
+					<span class='cn'>导师亲自指导产出有保障</span>
+					<span class='eng'>guaranteed outcome</span>
+				</div>
+				<div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_91d23723e74060ea6fffb85f8d9b51a3?imageView2"> &nbsp
+					<span class='cn'>全球顶尖名校导师团队</span>
+					<span class='eng'>World Top 10 Professors</span>
+				</div>
+				<div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp
+					<span class='cn'>紧贴当今企业需求</span>
+					<span class='eng'>Keep up with today's industry needs</span>
+				</div>
+				<div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp
+					<span class='cn'>有作品展出机会</span>
+					<span class='eng'>Opportunity for open exhibits</span>
+				</div>
+				<div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp
+					<span class='cn'>获得光子学位证书</span>
+					<span class='eng'>OF degree certificate</span>
+				</div>
+				<div class='columnItem'><img class='inlineImg' src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp
+					<span class='cn'>创新思维提升</span>
+					<span class='eng'>Improve innovative thinking</span>
+				</div>
+				<div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp
+					<span class='cn'>名师亲自答疑</span>
+					<span class='eng'>personal guidance from professors</span>
+				</div>
+                <div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp
+                	<span class='cn'>结识全世界志同道合的伙伴</span>
+                	<span class='eng'>meet like-minded peers around the world</span>
+                </div>
+                <div class='columnItem'><img class="inlineImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ae9104060e1ad1afcadd326a7880067?imageView2"> &nbsp
+                	<span class='cn'>助推个人全方位成长</span>
+                	<span class='eng'>promote all-round personal growth</span>
+                </div>
 			</div>
 			<div id='featureColumn2'>
 				<div class='columnTitle' id='column2Title'>VS</div>
-				<div class='columnItem noAnimation'>价格区间</div>
-				<div class='columnItem noAnimation'>课程产出</div>
-				<div class='columnItem noAnimation'>师资质量</div>
-				<div class='columnItem noAnimation'>就业能力</div>
-				<div class='columnItem noAnimation'>展览机会</div>
-				<div class='columnItem noAnimation'>学位证书</div>
-				<div class='columnItem noAnimation'>授课方式</div>
-				<div class='columnItem noAnimation'>答疑服务</div>
-				<div class='columnItem noAnimation'>全球人脉</div>
-				<div class='columnItem noAnimation'>个人成长</div>
+				<div class='columnItem noAnimation'><span class='cn'>价格区间</span><span class='eng'>Price Range</span></div>
+				<div class='columnItem noAnimation'><span class='cn'>课程产出</span><span class='eng'>Output</span></div>
+				<div class='columnItem noAnimation'><span class='cn'>师资质量</span><span class='eng'>Advisors</span></div>
+				<div class='columnItem noAnimation'><span class='cn'>就业能力</span><span class='eng'>employability</span></div>
+				<div class='columnItem noAnimation'><span class='cn'>展览机会</span><span class='eng'>Exhibition</span></div>
+				<div class='columnItem noAnimation'><span class='cn'>学位证书</span><span class='eng'>Certificate</span></div>
+				<div class='columnItem noAnimation'><span class='cn'>授课方式</span><span class='eng'>Teaching methods</span></div>
+				<div class='columnItem noAnimation'><span class='cn'>答疑服务</span><span class='eng'>Q&A service</span></div>
+				<div class='columnItem noAnimation'><span class='cn'>全球人脉</span><span class='eng'>Global connections</span></div>
+				<div class='columnItem noAnimation'><span class='cn'>个人成长</span><span class='eng'>Personal Growth</span></div>
 			</div>
 			<div id='featureColumn3'>
-				<div class='columnTitle' id='column3Title'>普通培训营</div>
-				<div class='columnItem'>定价虚高或含隐性费用</div>
-				<div class='columnItem'>自己课余完成作品</div>
-				<div class='columnItem'>师资力量薄弱</div>
-				<div class='columnItem'>缺乏明显职业规划</div>
-				<div class='columnItem'>无作品展出机会</div>
-				<div class='columnItem'>无学位证书</div>
-				<div class='columnItem'>机械化软件教学</div>
-				<div class='columnItem'>助教答疑</div>
-				<div class='columnItem'>无活跃社群氛围</div>
-				<div class='columnItem'>无个人成长指导</div>
+				<div class='columnTitle' id='column3Title'><span class='cn'>普通培训营</span><span class='eng'>Other training Camp</span></div>
+				<div class='columnItem'>
+					<span class='cn'>定价虚高或含隐性费用</span>
+					<span class='eng'>non-transparent</span>
+				</div>
+				<div class='columnItem'>
+					<span class='cn'>自己课余完成作品</span>
+					<span class='eng'>outcome depend on oneself</span>
+				</div>
+				<div class='columnItem'>
+					<span class='cn'>师资力量薄弱</span>
+					<span class='eng'></span>
+				</div>
+				<div class='columnItem'>
+					<span class='cn'>缺乏明显职业规划</span>
+					<span class='eng'>lack career planning</span>
+				</div>
+				<div class='columnItem'>
+					<span class='cn'>无作品展出机会</span>
+					<span class='eng'>no exhibition opportunities</span>
+				</div>
+				<div class='columnItem'>
+					<span class='cn'>无学位证书</span>
+					<span class='eng'>no certificate</span>
+				</div>
+				<div class='columnItem'>
+					<span class='cn'>机械化软件教学</span>
+					<span class='eng'>software learning</span>
+				</div>
+				<div class='columnItem'>
+					<span class='cn'>助教答疑</span>
+					<span class='eng'>Teaching assistant</span>
+				</div>
+				<div class='columnItem'>
+					<span class='cn'>无活跃社群氛围</span>
+					<span class='eng'>lack of comunity</span>
+				</div>
+				<div class='columnItem'>
+					<span class='cn'>无个人成长指导</span>
+					<span class='eng'>no personal growth guidance</span>
+				</div>
 			</div>
 
 		</div>
@@ -2858,36 +3229,36 @@ this is the first HTML code, load font and style!
 		<div id='servicesContents'>
 			<div class='shadow service'> 
 				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_50c71d26db5e44c1e5ae5c2c0789077e?imageView2'></div>
-				<div class='serviceText'>OF COURSE<br/>光子结业证书</div>
+				<div class='serviceText'>OF COURSE<br/><span class="cn">光子结业证书</span><span class="eng">Certificate</span></div>
 			</div>
 
 			<div class='shadow service'> 
 				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_f928d98257f69ff0bc030086366238d2?imageView2'></div>
-				<div class='serviceText'>推荐就业</div>
+				<div class='serviceText'><span class="cn">推荐就业</span><span class="eng">Job<br/>Recommendation</span></div>
 			</div>
 
 			<div class='shadow service'> 
 				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_f55529baa1a78f80bd2df66e600852c0?imageView2'></div>
-				<div class='serviceText'>全方位<br/>服务辅导</div>
+				<div class='serviceText'><span class="cn">全方位<br/>服务辅导</span> <span class="eng">all-round<br/>counseling</span></div>
 			</div>
 
 			<div class='shadow service'> 
 				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_24b06df610dc66edd3ee3e298b544f67?imageView2'></div>
-				<div class='serviceText'>专属<br/>学习平台</div>
+				<div class='serviceText'><span class="cn">专属<br/>学习平台 </span> <span class="eng">exclusive<br/>Learning platform</span></div>
 			</div>
 
 			<div class='shadow service'> 
 				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_673f2527bfd637cafbe5dc7cbafd8980?imageView2'></div>
-				<div class='serviceText'>附赠全套<br/>配置文件</div>
+				<div class='serviceText'><span class="cn">附赠全套<br/>配置文件</span><span class="eng">Complete <br/>Course Files</span></div>
 			</div>
 
 			<div class='shadow service'> 
 				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_6a862f0e8043056be5a2a512c5fe2385?imageView2'></div>
-				<div class='serviceText'>就业指导</div>
+				<div class='serviceText'><span class="cn">就业指导</span><span class="eng">Career<br/>Guidance</span></div>
 			</div>
 		</div>
 
-		<button class='buttonOrange'><img class='inlineImg' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f9d8af26294762e88b88a59fac79d20b?imageView2'> Get Discount</button>
+		<button class='buttonOrange'><img class='inlineImg' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f9d8af26294762e88b88a59fac79d20b?imageView2'> <span class='cn'>获取优惠</span><span class='eng'>Get Discount</span></button>
 		
 	</div>
 
@@ -3102,6 +3473,35 @@ this is the first HTML code, load font and style!
             $('#weChatCode').show()
         }, function(){
             $('#weChatCode').hide()
+        })
+
+        $('#showCode').hover(function(){
+            // console.log('hovered')
+            $('#weChatCodeMenu').show()
+        }, function(){
+            $('#weChatCodeMenu').hide()
+        })
+
+        let lan = 'CN'
+        $("#color_mode").on("change", function () {
+            console.log('this is clickedd')
+            if(lan == 'CN'){
+                $('.cn').hide();
+                $('.eng').show();
+                lan = "EN"
+            } else {
+                $('.cn').show();
+                $('.eng').hide();
+                lan = "CN"
+            }
+        })
+
+        $('#login').click(function(){
+            $('#loginPopupBg').show()
+        })
+        
+        $('.closeTab').click(function(){
+            $('#loginPopupBg').hide()
         })
 
     </script>
