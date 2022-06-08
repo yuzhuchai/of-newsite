@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <!-- <script type="text/javascript" src='data.js'></script> -->
+    </head>
+    <body>
+        <script>
+            $(window).on("load",function(){
+                $(".main_area").width($(window).width())
+            })
+
+        </script>
+
+        <style>
+            @font-face {
+                font-family:  "XYZB";
+                src: url("/static/font/MSYHBD.TTC");
+            }
+
+            @font-face{
+                font-family:  "XYZ";
+                src:url("/static/font/MSYH.TTC");
+            }
+
+
+            @font-face{
+                font-family:  "XYZL";
+                src:url("/static/font/MSYHL.TTC");
+            }
+
+
+            .sections{
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+                overflow: auto;
+            }
+            
+            html, body{
+                font-family:"XYZ";
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            img{
+                display:block;
+            }
+
+            .cursorPointer{
+                cursor: pointer;
+            }
+
+            a:visited {
+                color:#22222;
+                text-decoration: none;
+            } 
+            
+
+            a:active {
+                color:#222222;
+                text-decoration: none;
+            }
+
+            a{
+                color:#222222;
+                text-decoration: none;
+            }
+
+            a, a:visited, a:hover, a:active {
+                color: inherit;
+            }
+
+            .shadow{
+                box-shadow: 0px 4px 40px rgba(0,0,0,0.08);
+            }
+            /* end of setup ========================================= */
+
+
+            /* header style begin =================================== */
+
+            #header{
+                position: fixed;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                top:0;
+                font-size: 20px;
+                left: 0;
+                width: 100%;
+                height: 80px;
+                z-index: 1;
+                background-color: white;
+                box-shadow:0px 4px 20px rgba(0,0,0,0.09);
+            }
+            
+            #headerlogo{
+                /*border: 1px black solid;*/
+                /*width:100px;*/
+                margin-left:26px;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+
+            }
+
+            #headerlogo > a > img{
+                display: block;
+                width: 200px;
+            }
+
+
+            #menu{
+                color:#222222;
+                margin-top:auto;
+                margin-bottom:auto;
+                font-size: 20px;
+                margin-right:26px;
+                font-family: "XYZB";
+                font-weight: 700;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                width: 45%;
+            }
+
+            #menu > div{
+                font-family:  "XYZB";
+                font-weight: 700;
+                font-style: bold;
+                margin-right:26px;
+            }
+    
+            #menu > #menuIconContainer{
+                width: 100px;
+            }
+            
+            #menu > #login{
+                min-width: 130px;
+            }
+
+            #login{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                margin-left: 40px;
+            }
+
+
+
+            #loginIcon{
+                display: inline;
+                width: 25px;
+                vertical-align: middle;
+            }
+
+            .eng{
+                display: none;
+            }
+
+ 
+
+            input[type=text]{
+                width: 12vw;
+                height: 30px;
+                padding-left: 20px;
+                border: none;
+                background-color: #FFFFFF;
+                box-shadow: inset 0px 4px 40px rgba(0, 0, 0, 0.08);
+                border-radius: 8px;
+                background: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a6ab599bdae6601593d06ddee3e79926?imageView2) no-repeat;
+                background-size: 20px;
+                background-position: right 20px bottom 5px;
+                margin-right: 40px;
+            }
+
+
+            input[type=text]::placeholder{
+                color: #e2e2e2;
+            }
+
+            #searchIcon{
+                position:absolute;
+                /* margin-right:  */
+                height: 100;
+                max-height: 30px;
+                /*z-index: 100;*/
+            }
+
+
+            #menuText{
+                color:black;
+                /*display: inline-block;*/
+            }
+
+            #menuIcon{
+                /*border: 1px black solid;*/
+                margin-top: auto;
+                margin-bottom:auto;
+                width: 25px;
+                height: 25px;
+                display:flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-content: space-between;
+                margin-right: 6px;
+            }
+
+            #menuIconContainer{
+                display: flex;
+                align-items: center;
+                cursor:pointer;
+            }
+
+            #menuIcon:hover{
+                cursor: pointer;
+            }
+
+
+            #menuIcon > div {
+                width: 12px;
+                height: 12px;
+                border-radius: 5px;
+                background-color: #222222;
+            }
+
+            .btn-container{
+                display: flex;
+                align-items: center;
+                margin-right: 40px;
+            }
+
+
+            label {
+                font-size: 13px;
+                color: #424242;
+                font-weight: 500;
+            }
+
+            .btn-color-mode-switch{
+                /* display: block; */
+                display: inline-block;
+                margin: 0px;
+                position: relative;
+            }
+
+            .btn-color-mode-switch > label.btn-color-mode-switch-inner{
+                margin: 0px;
+                width: 120px;
+                height: 30px;
+                background: #e2e2e2;
+                border-radius: 26px;
+                overflow: hidden;
+                position: relative;
+                transition: all 0.3s ease;
+                display: block;
+            } 
+
+            .btn-color-mode-switch > label.btn-color-mode-switch-inner:before{
+                content: attr(data-on);
+                position: absolute;
+                font-size: 12px;
+                font-weight: 500;
+                top: 7px;
+                right: 20px;
+            }
+
+            .btn-color-mode-switch > label.btn-color-mode-switch-inner:after{
+                content: attr(data-off);
+                width: 60px;
+                height: 16px;
+                background: #fff;
+                border-radius: 26px;
+                position: absolute;
+                left: 2px;
+                top: 2px;
+                text-align: center;
+                transition: all 0.3s ease;
+                box-shadow: 0px 0px 6px -2px #111;
+                padding: 5px 0px;
+            }   
+
+            .btn-color-mode-switch > .alert{
+                display: none;
+                background: #FF9800;
+                border: none;
+                color: #fff;
+            }
+
+            .btn-color-mode-switch input[type="checkbox"]{
+                cursor: pointer;
+                width: 0px;
+                height: 25px;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                z-index: 1;
+                margin: 0px;
+            } 
+
+            .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
+                /* background: #151515; */
+                /* color: #fff; */
+            }
+
+            .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after{
+                /* content: attr(data-on); */
+                content: "EN";
+                left: 58px;
+                /* background: #3c3c3c; */
+            }
+
+            .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before{
+                /* content: attr(data-off); */
+                content: "CN";
+                right: auto;
+                left: 20px;
+            }
+
+            /* header style ends ==================================== */
+
+            /* login popup begins ==================================== */
+            #loginPopupBg{
+                position:fixed;
+                left:0;
+                top:0;
+                width:100vw;
+                height:100vh;
+                background-color: rgba(0, 0, 0, 0.4);
+                z-index: 10;
+                display: none;
+            }
+
+            #loginPopup{
+                position:fixed;
+                width: 600px;
+                height:400px;
+                /* border:1px solid black; */
+                background-color: white;
+                z-index:100;
+                left: calc(50vw - 300px);
+                top: calc(50vh - 200px);
+                border-radius: 15px;
+                box-shadow:0px 4px 20px rgba(0,0,0,0.09)
+            }
+
+            .loginContent{
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .loginText{
+                text-align: center;
+                font-size: 18px;
+                color:#222222;
+            }
+
+            .loginTextSmall{
+                text-align: center;
+                color:#7c7c7c;
+            }
+
+            .loginImg{
+                /* margin:auto; */
+                margin:20px auto;
+                width: 200px;
+                height:200px;
+            }
+
+            .loginImg > img{
+                width: 100%;
+            }
+
+            .closeTab{
+                /* font-size: 20px; */
+                position: absolute;
+                right: 10px;
+                top:10px;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+            }
+
+            .closeTab:before, .closeTab:after{
+                content:'';
+                position:absolute;
+                width:26px;
+                height:4px;
+                background-color:#7c7c7c;
+                border-radius:2px;
+                top:16px;
+                /* box-shadow:0 0 2px 0 #222222; */
+            }
+            .closeTab:before{
+                transform:rotate(45deg);
+                left:2px;
+            }
+            .closeTab:after{
+                transform:rotate(-45deg);
+                right:2px;
+            }
+
+
+/* login popup ends =============================================================== */
+
+
+/* menu pop up style begin======================================================== */
+            
+            #menuPopUp{
+                display: none;
+                width: 100vw;
+                height:100vh;
+                z-index: 1;
+                position: fixed;
+                left: 0;
+                top: 80px;
+                background: white;
+            }
+
+            
+            #menuPopUpContents{
+                margin-top:50px;
+                width:1536px;
+                margin-left:auto;
+                margin-right: auto;
+            }
+
+            #menuButtonContainer{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            #menuCategoryContainer{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-top:42px;
+            }
+
+            .menuCategory{
+                color: white;
+                text-align: center;
+                /*margin:auto;*/
+                display: flex;
+                min-width:360px;
+                min-height:199px;
+                border-radius: 15px;
+                /*border:1px solid black;*/
+                justify-content: center;
+            }
+
+
+            .menuCategory > div {
+                align-self: center;
+                font-family:  "XYZB";
+                font-weight: 700;
+                font-size: 30px;
+            }
+
+            #bootCampClass{
+                background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b534a64279e9adc5bcbc8d50d8f336bd?imageView2);
+                background-size: cover;
+            }
+
+            #aiClass{
+                background-image: url(http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_a7c819e9f710c667b73d5dc75a7030e7?imageView2);
+                background-size: cover;
+            }
+
+            #allClass{
+                background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_49fb4e49f39071013077a807732bdbcd?imageView2);
+                background-size: cover;
+            }
+
+            #masterClass{
+                background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bd9a7823df742b73a693edc3e218e980?imageView2);
+                background-size: cover;
+            }
+
+            #menuSoftwareContainer{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-top: 42px;
+                row-gap: 15px;
+            }
+
+            .software{
+                width:360px;
+                min-height: 160px;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: row;
+                box-shadow: 0px 4px 40px rgba(0,0,0,0.08);
+            }
+
+            .software > img {
+                min-width: 20%;
+                height: 70px;
+                align-self: center;
+                border-radius: 10px;
+                margin-left: 25px;
+                margin-right: 40px;
+            }
+
+            .softwareDescription{
+                align-self: center;
+                margin-right: 25px;
+            }
+
+
+            .softwareh1{
+                font-size: 20px;
+                font-family:  "XYZB";
+                font-weight: 700;
+            }
+
+            .softwareh2{
+                font-size: 15px;
+                font-family:  "XYZL";
+                font-weight: 290px;
+            }
+
+
+            #menuSocialContainer{
+                display: flex;
+                flex-direction: row;
+                margin-top: 42px;
+            }
+
+            #menuSocialContainer > div{
+                width: 66px;
+                height: 66px;
+                margin-right: 25px;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow:0px 4px 20px rgba(0,0,0,0.09);
+            }
+
+
+            .buttonMenu{
+                cursor:pointer;
+                float: none;
+                width: 276px;
+                height: 68px;
+            }
+
+            .buttonBlack{
+                background-color: #222222;
+                color:white;
+                margin-top: 20px;
+                font-size: 20px;
+                font-family: "XYZB";
+                font-weight: 700;
+                border-radius: 8px;
+                padding: 4px 20px 4px 20px;
+                height: 46px;
+                float: right;
+                border:none;
+            }
+
+
+            #weChatCode{
+                background-color:white;
+                border-radius: 15px;
+                box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+                padding:20px;
+                position: relative;
+                margin-left: -15px;
+                display:none;
+                width:100px;
+                height:100px;
+            }
+
+            #weChatCode > img{
+                width: 100%;
+            }
+
+
+            #weChatCode::before{
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                bottom: 100%;
+                /* left:0; */
+                border: .75rem solid transparent;
+                border-top: none;
+                border-bottom-color: #fff;
+                filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+            }
+
+
+            #weChatCodeMenu{
+                background-color:white;
+                border-radius: 15px;
+                box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+                padding:20px;
+                position: absolute;
+                bottom: 22%;
+                display:none;
+                width:100px;
+                height:100px;
+            }
+
+            #weChatCodeMenu > img{
+                width: 100%;
+            }
+
+
+            #weChatCodeMenu::before{
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                top: 100%;
+                border: .75rem solid transparent;
+                border-bottom: none;
+                border-top-color: #fff;
+                filter: drop-shadow( 0.0625rem 0 0  rgba(0, 0, 0, .1));
+            }
+
+/* menu popup style ends -==================================== */
+
+
+/* begin contents ============================================= */
+    
+            #contentContainer{
+                top: 80px;
+                position: absolute;
+                left: 0px;
+                width: 100%;
+            }
+
+            .container{
+                width:1536px;
+                margin-left:auto;
+                margin-right: auto;
+            }   
+
+
+            #headerPicContainer{
+                width: 100vw;
+            }
+
+            #headerPicContainer > img{
+                width: 100%;
+            }
+
+            #navigation{
+                margin-top: 42px;
+                color:#ACACAC;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 26px;
+                letter-spacing: 0.005em;
+            }
+
+            #aboutContainer{
+                padding-bottom: 100px;
+                background: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_34605348463ca53afae0a78f74000af7?imageView2);
+                background-position: bottom right;
+                background-size: 60%;
+                background-repeat:no-repeat;
+                border-radius:15px;
+            }
+
+            #aboutHeader{
+                font-family:'XYZB';
+                font-weight: 700;
+                font-size: 60px;
+                margin-top:49px;
+            }
+
+            #aboutSummary{
+                margin-top:49px;
+                font-family:'XYZB';
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 180%;
+                letter-spacing: 0.045em;
+            }
+
+            #aboutContent{
+                width: 55%;
+                font-weight: 290;
+                font-size: 24px;
+                color: #222222;
+                margin-top:50px;
+                line-height: 180%;
+            }
+
+            #courseSystemContainer{
+                margin-top: 100px;
+            }
+
+            .header1{
+                font-size: 40px;
+                font-family: "XYZB";
+                font-weight: 700;
+                line-height: 30px;
+            }
+
+            .header2{
+                font-size: 30px;
+                font-family: "XYZB";
+                font-weight: 700;
+                line-height: 30px;
+            }
+
+            .header3{
+                font-size: 20px;
+                font-family: "XYZL";
+                font-weight: 290;
+                margin-top: 20px;
+            }
+
+            .cardsContainer{
+                display: flex;
+                flex-direction: row;
+                margin-top:42px;
+                justify-content: space-between;
+            }
+
+            .myCard{
+                border-radius: 15px;
+                box-shadow: 0px 4px 40px rgba(0,0,0,0.08);
+                display: flex;
+                flex-direction: column;
+            }
+
+            .myCard > div > img{
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                width: 100%;
+            }
+
+            .course{
+                width:360px;
+                height:364px;
+            }
+
+            .course > .cardDescription{
+                justify-content: flex-start;
+                margin:20px;
+            }
+
+            #courseSysSummary{
+                margin-top:49px;
+                font-family:'XYZB';
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 180%;
+                letter-spacing: 0.045em;
+            }
+
+
+            #advisorsContainer{
+                margin-top: 100px;
+            }
+
+            #advisorsCardContainer{
+                flex-wrap: wrap;
+                row-gap: 60px;
+            }
+
+            .advisor{
+                width:360px;
+                height:504px;
+            }
+
+            .advisor > .cardDescription{
+                margin:20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-grow: 2;
+            }
+
+            .advisorTitle{
+                color:rgba(0, 0, 0, 0.45);
+                font-size: 20px;
+                font-family: "XYZL";
+                font-weight: 290;
+            }
+
+            #partnerContainer{
+                margin-top: 100px;
+            }
+
+
+            #partnetContentContainer{
+                margin-top:42px;
+                display:flex;
+                flex-direction: row;
+                flex-wrap:wrap;
+                margin-left: 80px;
+                margin-right:80px;
+                justify-content: space-between;
+                /* row-gap:-10px;   */
+            }
+
+
+            .partner{
+                width: 22%;
+            }
+
+            .partner > img{
+                width: 100%;
+            }
+
+
+            #contactHeader{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            #mapContainer{
+                margin-top: 100px;
+            }
+
+            #map{
+                width: 100%;
+                height: 500px;
+                margin-top: 49px;
+                border-radius: 15px;
+                overflow: hidden;
+            }
+
+            iframe{
+                height:100%;
+                width: 100%;    
+            }
+
+
+            #socialMediaContainer{
+                margin-top: 100px;
+            }
+
+
+            #socialMediaContents{
+                margin-top: 42px;
+            }
+
+            #socialCard3{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                /*height:480px;*/
+            }
+
+            #socialCard3 > a > div > img {
+                border-radius: 15px;
+            }
+
+
+            .SocaialCardText{
+                color:white;
+                position: absolute;
+                bottom:50px;
+                left: 20px;
+            }
+
+            .socialCard{
+                position:relative;
+                width:474px;
+                cursor: pointer;
+                border-radius: 15px;
+                overflow: hidden;
+                /*height:480px;*/
+            }
+
+            .socialCard > img{
+                width:100%;
+                border-radius: 15px;
+            }
+
+            .social3Text{
+                position: relative;
+            }
+
+
+            .socialHeader1{
+                font-family: 'XYZB';
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 40px;
+                letter-spacing: 0.045em;
+            }
+            .socialHeader2{
+                margin-top:5px;
+                font-weight: 290;
+                font-size: 20px;
+                line-height: 27px;
+                letter-spacing: 0.045em;
+            }
+
+/* footer begins ============================================= */
+
+
+            #footer{
+                margin-top: 213px;
+                background-color: #E5E5E5;
+                width:100vw;
+                height: 331px;
+                padding-top: 106px;
+                color:#7c7c7c;
+            }
+
+
+            #footer > div{
+                display: flex;
+                flex-direction: row;
+                /*justify-content: space-between;*/
+                width: 1536px;
+                margin-left: 192px;
+            }
+
+            #footerLogo{
+                width: 250px;
+                /*width:31%*/
+            }
+
+            #footerLogo > a > img{
+                width:100%;
+            }
+
+            #footerSocialLogo{
+                display: flex;
+                flex-direction: row;
+            }
+
+            #footerSocialLogo > img{
+                width:100%;
+                margin-right: 20px;
+                width: 30px;
+            }
+
+            #footerSocialLogo > a > img{
+                width:100%;
+                margin-right: 20px;
+                width: 30px;
+            }
+
+            #footerMenu{
+                display: flex;
+                flex-direction: row;
+                /*flex-wrap: wrap;*/
+                height: 100px;
+                /*justify-content: space-between;*/
+                align-content: flex-start;
+                font-size: 20px;
+                font-family:  "XYZL";
+                font-weight:290;
+                color: #7c7c7c;
+            }
+
+
+            .footerMenuItem{
+                margin: 0px 70px 30px 70px;
+            }
+
+            #footerSocial{
+                margin-left: 70px;
+                display: flex;
+                /*flex-direction: row;*/
+                align-items: flex-end;
+
+            }
+
+            #footerSocialLogo > img:hover{
+                cursor: pointer;
+            }
+
+            #footerCode > div {
+                margin-bottom: 30px;
+            }
+
+
+            #weChatCode{
+                background-color:white;
+                border-radius: 15px;
+                box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+                padding:20px;
+                position: relative;
+                margin-left: -15px;
+                display:none;
+                width:100px;
+                height:100px;
+            }
+
+            #weChatCode > img{
+                width: 100%;
+            }
+
+            #weChatCode::before{
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                bottom: 100%;
+                border: .75rem solid transparent;
+                border-top: none;
+                border-bottom-color: #fff;
+                filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+            }
+
+            /* footer ends =============================================== */
+        </style>
+
+        
+
+
+
+        <div id="header">
+            <div id="headerlogo"><a href="webpage.html"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
+            <div id="menu">
+                <div>
+                    <input type='text' id='search' placeholder="processing"> 
+                </div>
+
+
+                <div class="btn-container">
+                    <label class="switch btn-color-mode-switch">
+                        <input type="checkbox" name="color_mode" id="color_mode" value="1">
+                        <label for="color_mode" data-on="英文" data-off="中文" class="btn-color-mode-switch-inner"></label>
+                    </label>
+                </div>
+
+                <div id='login'><img id='loginIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_86ceb5932e24e2383cce79506f18ef8a?imageView2'>&nbsp <span class="cn">登陆</span><span class="eng">Log In</span></div> 
+                <div id='menuIconContainer'>
+                    <div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
+                    <div id='menuText'><span class="eng">Menu</span><span class="cn">菜单</span></div>
+                </div>
+            </div>
+        </div>
+        <!-- end of header  -->
+
+        <div id="loginPopupBg">
+            <div id="loginPopup">
+                <div class="closeTab"></div>
+                <div class="loginContent">
+                    <div class="loginText">微信/QQ登陆</div>
+                    <div class="loginImg"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d0df37497ebafdf8a7a9fc4a6071ad8b?imageView2"></div>
+                    <div class="loginText">请打开微信/QQ扫描二维码登陆</div>
+                    <div class="loginTextSmall">（首次登陆成功即完成注册）</div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id='menuPopUp'>
+            <div id='menuPopUpContents'>
+                <div id='menuButtonContainer'>
+                    <a href="courselist.html"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
+                    <a href="aboutus.html"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
+                    <a href="news.html"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
+                    <a href="blogs.html"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
+                    <a href="aboutus.html#advisorsContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
+                </div> 
+    
+                <div id='menuCategoryContainer'>
+                    <a class="cursorPointer" href="courseList.html">
+                        <div class='menuCategory' id="allClass">
+                            <div>
+                                <span class="cn">全部课程</span>
+                                <span class="eng">All Course</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="cursorPointer" href="courseList.html">
+                        <div class='menuCategory' id="aiClass">
+                            <div>
+                                <span class="cn">快速筑基班</span>
+                                <span class="eng">Foundation Course</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="cursorPointer" href="courseList.html">
+                        <div class='menuCategory' id="masterClass">
+                            <div>
+                                <span class="cn">大师班</span>
+                                <span class="eng">Master Class</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="cursorPointer" href="courseList.html">
+                        <div class='menuCategory' id="bootCampClass">
+                            <div>
+                                <span class="cn">冲刺营</span>
+                                <span class="eng">BootCamp</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+    
+                <div id='menuSoftwareContainer'>
+                    <a class="cursorPointer" href="courseList.html?filter=td">
+                        <div class='software'>
+                            <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7087f5df4e170bebc4a04b354ecb3326?imageView2'> 
+                            <div class='softwareDescription'>
+                                <span class='softwareh1'>TouchDesigner</span><br/>
+                                <span class='softwareh2'>
+                                    <span class="cn">基于节点式的视觉话编程语言</span>
+                                    <span class="eng">Node-based programming language</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                    <a class="cursorPointer" href="courseList.html?filter=unity">
+                        <div class='software'>
+                            <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6a9a77d5b3c9675c16167fe8d2c7766f?imageView2'> 
+                            <div class='softwareDescription'>
+                                <span class='softwareh1'>Unity</span><br/>
+                                <span class='softwareh2'>
+                                    <span class="cn">实时内容开发平台</span>
+                                    <span class="eng">real-time content delivery platform</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a class="cursorPointer" href="courseList.html?filter=unreal">
+                        <div class='software'>
+                            <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fb9262b4ac760ea1c2b8af813272b48e?imageView2'> 
+                            <div class='softwareDescription'>
+                                <span class='softwareh1'>Unreal Engine</span><br/>
+                                <span class='softwareh2'>
+                                    <span class="cn">实时3D创作工具</span>
+                                    <span class="eng">real-time 3D platfrom</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+    
+                    <a class="cursorPointer" href="courseList.html?filter=processing">
+                        <div class='software'>
+                            <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fc889440b6caa0f1c0e430bbe4176df9?imageView2'> 
+                            <div class='softwareDescription'>
+                                <span class='softwareh1'>Processing</span><br/>
+                                <span class='softwareh2'>
+                                    <span class="cn">新兴计算机语言</span>
+                                    <span class="eng">creative coding language</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+    
+                    <a class="cursorPointer" href="courseList.html?filter=p5">
+                        <div class='software'>
+                            <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9cc784f659f8498a1a1d563758feaa5d?imageView2'> 
+                            <div class='softwareDescription'>
+                                <span class='softwareh1'>P5.js</span><br/>
+                                <span class='softwareh2'>
+                                    <span class="cn">创意编码的 JavaScript 库</span>
+                                    <span class="eng">JS creative coding library</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+    
+
+                    <a class="cursorPointer" href="courseList.html?filter=max">
+                        <div class='software'>
+                            <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f647742a09d5fbe44d69d0a497b05ead?imageView2'> 
+                            <div class='softwareDescription'>
+                                <span class='softwareh1'>MaxMSP</span><br/>
+                                <span class='softwareh2'>
+                                    <span class="cn">交互式编程语言与开发环境</span>
+                                    <span class="eng">interactive creative codeing language</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+    
+                    <a class="cursorPointer" href="courseList.html?filter=of">
+                        <div class='software'>
+                            <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_094f651765e5162a3a7aa953faa18311?imageView2'> 
+                            <div class='softwareDescription'>
+                                <span class='softwareh1'>OpenFrameworks</span><br/>
+                                <span class='softwareh2'>
+                                    <span class="cn">是C++为基准的简洁开发框架,擅长开发图像和动画</span>
+                                    <span class="eng">C++ creative coding framework</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="cursorPointer" href="courseList.html?filter=js">
+                        <div class='software'>
+                            <img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> 
+                            <div class='softwareDescription'>
+                                <span class='softwareh1'>JavaScript</span><br/>
+                                <span class='softwareh2'>
+                                    <span class="cn">直译式脚本语言</span>
+                                    <span class="eng">Code for web-deveopment</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+    
+                <div id="weChatCodeMenu"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
+    
+                <div id='menuSocialContainer'>
+                    <div><img id='showCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1e150b94ecd5b631b3ebea4157f66c4?imageView2'></div>
+                    <div><a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5f3de3726fafd5fec8227fdb837ff092?imageView2'></a></div>
+                    <div><a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'></a></div>
+                    <div><a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'></a></div>
+                </div>
+    
+            </div>
+       
+        </div>
+
+
+
+
+        <div id="contentContainer">
+
+            <div class="container" id="headerPicContainer">
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_86d0a83a18008e282834ae69c06fa01c?imageView2">
+            </div>
+
+            <div class='container' id="navigation">
+                <span><a href="webpage.html"><span class="eng">HOME</span><span class="cn">主页</span></a></span> > <span class="eng">ABOUT US</span><span class="cn">关于我们</span>
+            </div>
+        
+            <div class="container" id="aboutContainer">   
+                <div id="aboutHeader">
+                    OF COURSE <br/> 想当然
+                </div>
+
+                <div>
+                    <div id="aboutSummary">
+                        <span class="cn">创立于2014年，中国第一家元宇宙科技学院。核心成员来自世界顶尖高校，为18-48岁成年人提供下一代互联网生存所需的视野与技能。</span>
+                        <span class="eng">Founded in 2014, OF Course is China's first Metaverse Institute of science and technology. </span>
+                    </div>
+
+                    <div id="aboutContent">
+                        <span class="cn">想当然，是一个具有国际影响力的元宇宙科技学院。我们与全球顶尖教授、新媒体艺术家共同研发“OF 创意编程课程”，提供最前沿的教学指导，让学员从零起步成长为创作先锋。<br/><br/>作为一个高速增长的元宇宙品牌，想当然聚集了50,000名来自新媒体艺术、人工智能、互联网、科研、风投等领域人才。我们的合作伙伴包括美国帕森斯设计学院、同济大学、WildAid、阿里巴巴、索尼、Frog、TBWA和W+K等机构。<br/><br/>我们始终倡导艺术、文化和科技的跨界融合，为企业提供人才，为大众传播前沿资讯，也为客户提供个性化品牌创意服务。</span>
+                        <span class="eng">Of course, it is a metaverse science and technology college with international influence. We have jointly developed the "OF Creative Programming Course" with the world's top professors and new media artists, providing cutting-edge teaching guidance, allowing students to grow from zero to creative pioneers. <br/><br/>As a fast-growing metaverse brand, it has naturally gathered 50,000 talents from new media art, artificial intelligence, Internet, scientific research, venture capital and other fields. Our partners include Parsons School of Design, Tongji University, WildAid, Alibaba, Sony, Frog, TBWA and W+K.</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container" id="courseSystemContainer">
+                <div>
+                    <div class='header1'>COURSE SYSTEM</div>
+                    <div class='header3'>课程体系</div>
+                </div>
+        
+                <div class='cardsContainer' id='courseSysCardContainer'>
+                    <div class='myCard course'>
+                        <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'></div>
+                        <div class='cardDescription'>
+                            <div class='header2 header2Resize'>AI Develop</div>
+                            <div class='header3 header3Resize'>人工智能开发</div>
+                        </div>
+                    </div>
+                    <!-- end of card 1 -->
+                    <div class='myCard course'>
+                        <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'></div>
+                        <div class='cardDescription'>
+                            <div class='header2 header2Resize'>XR Developer</div>
+                            <div class='header3 header3Resize'>混合现实开发</div>
+                        </div>
+                    </div>
+                    <!-- end of card 2 -->
+                    <div class='myCard course'>
+                        <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'></div>
+                        <div class='cardDescription'>
+                            <div class='header2 header2Resize'>NFT Developer</div>
+                            <div class='header3 header3Resize'>数字藏品开发</div>
+                        </div>
+                    </div>
+                    <!-- end of card 3 -->
+                    <div class='myCard course'>
+                        <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'></div>
+                        <div class='cardDescription'>
+                            <div class='header2 header2Resize'>UX Designer</div>
+                            <div class='header3 header3Resize'>交互设计师</div>
+                        </div>
+                    </div>
+                    <!-- end of card 4 -->
+                </div>
+
+                <div id="courseSysSummary">
+                    <span class="cn">创立于2014年，中国第一家元宇宙科技学院。核心成员来自世界顶尖高校，为18-48岁成年人提供下一代互联网生存所需的视野与技能。</span>
+                    <span class="eng">Founded in 2014, OF Course is China's first Metaverse Institute of Science and Technology. </span>
+                </div>
+                    
+            
+
+            </div>
+
+
+            <div class="container" id="advisorsContainer">
+                <div>
+                    <div class='header1'>ADVISORS</div>
+                    <div class='header3'>顾问专家</div>
+                </div>
+        
+                <div class='cardsContainer' id="advisorsCardContainer">
+                    <div class='myCard advisor'>
+                        <div><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_52aa324d79ac55ca015e54b9a3dc7fba?imageView2'></div>
+                        <div class='cardDescription'>
+                            <div>
+                                <div class='header2 header2Resize'>Gene Kogan</div>
+                                <div class='header3 header3Resize'>金 高更</div>
+                            </div>
+                            
+                            <div>
+                                <div class='advisorTitle'>
+                                    纽约大学特聘研究生导师<br/>
+                                    人工智能艺术家
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 1 -->
+                    <div class='myCard advisor'>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_c9aab70be25a9ad3f5755498a57b462c?imageView2'></div>
+                        <div class='cardDescription'>
+                            <div>
+                                <div class='header2 header2Resize'>YUU</div>
+                                <div class='header3 header3Resize'>俞老师</div>
+                            </div>
+                            
+                            <div>
+                                <div class='advisorTitle'>
+                                    皇家艺术学院硕士<br/>
+                                    AR开发者
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 2 -->
+                    <div class='myCard advisor'>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6d3aa3406e216cbbbf2403ce9079845a?imageView2'></div>
+                        <div class='cardDescription'>
+                            <div>
+                                <div class='header2 header2Resize'>Xiaotong Guo</div>
+                                <div class='header3 header3Resize'>郭晓彤</div>
+                            </div>
+                            
+                            <div>
+                                <div class='advisorTitle'>
+                                    分号C联合创始人<br/>
+                                    新媒体艺术家
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 3 -->
+                    <div class='myCard advisor'>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_241febf5afbb67f075cf4b9ff7e07c33?imageView2'></div>
+                        <div class='cardDescription'>
+                            <div>
+                                <div class='header2 header2Resize'>Kyle Li</div>
+                                <div class='header3 header3Resize'>李肃纲</div>
+                            </div>
+                            
+                            <div>
+                                <div class='advisorTitle'>
+                                    帕森斯设计学院副教授<br/>
+                                    互动与体验设计师
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 4 -->
+
+                    <div class='myCard advisor'>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_241febf5afbb67f075cf4b9ff7e07c33?imageView2'></div>
+                        <div class='cardDescription'>
+                            <div>
+                                <div class='header2 header2Resize'>Kyle Li</div>
+                                <div class='header3 header3Resize'>李肃纲</div>
+                            </div>
+                            
+                            <div>
+                                <div class='advisorTitle'>
+                                    帕森斯设计学院副教授<br/>
+                                    互动与体验设计师
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 5 -->
+
+                    <div class='myCard advisor'>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_241febf5afbb67f075cf4b9ff7e07c33?imageView2'></div>
+                        <div class='cardDescription'>
+                            <div>
+                                <div class='header2 header2Resize'>Kyle Li</div>
+                                <div class='header3 header3Resize'>李肃纲</div>
+                            </div>
+                            
+                            <div>
+                                <div class='advisorTitle'>
+                                    帕森斯设计学院副教授<br/>
+                                    互动与体验设计师
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 6 -->
+
+                    <div class='myCard advisor'>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_241febf5afbb67f075cf4b9ff7e07c33?imageView2'></div>
+                        <div class='cardDescription'>
+                            <div>
+                                <div class='header2 header2Resize'>Kyle Li</div>
+                                <div class='header3 header3Resize'>李肃纲</div>
+                            </div>
+                            
+                            <div>
+                                <div class='advisorTitle'>
+                                    帕森斯设计学院副教授<br/>
+                                    互动与体验设计师
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 7 -->
+                    <div class='myCard advisor'>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_241febf5afbb67f075cf4b9ff7e07c33?imageView2'></div>
+                        <div class='cardDescription'>
+                            <div>
+                                <div class='header2 header2Resize'>Kyle Li</div>
+                                <div class='header3 header3Resize'>李肃纲</div>
+                            </div>
+                            
+                            <div>
+                                <div class='advisorTitle'>
+                                    帕森斯设计学院副教授<br/>
+                                    互动与体验设计师
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 8 -->
+                    <div class='myCard advisor'>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_241febf5afbb67f075cf4b9ff7e07c33?imageView2'></div>
+                        <div class='cardDescription'>
+                            <div>
+                                <div class='header2 header2Resize'>Kyle Li</div>
+                                <div class='header3 header3Resize'>李肃纲</div>
+                            </div>
+                            
+                            <div>
+                                <div class='advisorTitle'>
+                                    帕森斯设计学院副教授<br/>
+                                    互动与体验设计师
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 9 -->  
+                    <div class='myCard advisor'>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_241febf5afbb67f075cf4b9ff7e07c33?imageView2'></div>
+                        <div class='cardDescription'>
+                            <div>
+                                <div class='header2 header2Resize'>Kyle Li</div>
+                                <div class='header3 header3Resize'>李肃纲</div>
+                            </div>
+                            
+                            <div>
+                                <div class='advisorTitle'>
+                                    帕森斯设计学院副教授<br/>
+                                    互动与体验设计师
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 10 -->
+
+                    <div class='myCard advisor'>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_241febf5afbb67f075cf4b9ff7e07c33?imageView2'></div>
+                        <div class='cardDescription'>
+                            <div>
+                                <div class='header2 header2Resize'>Kyle Li</div>
+                                <div class='header3 header3Resize'>李肃纲</div>
+                            </div>
+                            
+                            <div>
+                                <div class='advisorTitle'>
+                                    帕森斯设计学院副教授<br/>
+                                    互动与体验设计师
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 11 -->
+                    <div class='myCard advisor'>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_241febf5afbb67f075cf4b9ff7e07c33?imageView2'></div>
+                        <div class='cardDescription'>
+                            <div>
+                                <div class='header2 header2Resize'>Kyle Li</div>
+                                <div class='header3 header3Resize'>李肃纲</div>
+                            </div>
+                            
+                            <div>
+                                <div class='advisorTitle'>
+                                    帕森斯设计学院副教授<br/>
+                                    互动与体验设计师
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 12 -->
+                </div>
+
+            </div>
+ 
+
+
+            <div class="container" id="partnerContainer">
+                <div>
+                    <div class='header1'>WHO'S WITH US</div>
+                    <div class='header3'>谁与我们同行？</div>
+                </div>
+                <div id='partnetContentContainer'>
+                    <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_c0460a9206adefa3bf436deec3f79d3f?imageView2'></div>
+                    <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_17b9c573378a3ef8cbe637825f2cc731?imageView2'></div>
+                    <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_23385c4e0478acfecc65230a59d7dc93?imageView2'></div>
+                    <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_03e3206cd4b4c8262875d62e264b7eef?imageView2'></div>
+                    <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_fb662b56744594e4a34039e7d595a34e?imageView2'></div>
+                    <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1bb97647cd58bbb57c5a712d6eaa75e?imageView2'></div>
+                    <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_aeb5f6b3f005dc03afea239a62e9c49d?imageView2'></div>
+                    <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_f81f3cd1da5b9f221ccc8337b16dee96?imageView2'></div>
+                    <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_0e8941a5333c22ca083971b71c768b3d?imageView2'></div>
+                    <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7c7a3a44f3ba16aa290be5b2eb3e30fe?imageView2'></div>
+                    <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_4e0a7320fb8905bbe23a51645d985064?imageView2'></div>
+                    <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_ba5cb601c9edb5c9a555d684e5069c89?imageView2'></div>
+                    <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_17ece74df5ec5597755bfcbdb954a206?imageView2'></div>
+                    <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_ab57df06bd1073a3e938ded99db382b7?imageView2'></div>
+                    <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_a5fc30172863dc69f92d77e28ffccb37?imageView2'></div>
+                    <div class='partner'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_29833298a209422f3b8258ea32a8a8d6?imageView2'></div>
+                </div>
+            </div>
+        <!-- end of partner container -->
+
+
+            <div class="container" id="mapContainer">
+                <div id="contactHeader">
+                    <div>
+                        <div class='header1'>CONTACT US</div>
+                        <div class='header3'>联系我们</div>
+                    </div>
+                    <a href="https://j.map.baidu.com/be/IatJ"><button class="buttonBlack"><span class="cn">打开百度地图</span><span class="eng">Open Baidu Map</span></button></a>
+                </div>
+
+                <div id="map">
+                    <iframe src="https://j.map.baidu.com/be/IatJ"></iframe>
+                </div>
+            </div>
+
+
+
+
+            <div class="container" id="socialMediaContainer"> 
+                <div>
+                    <div class='header1'>FOLLOW US</div>
+                    <div class='header3'>关注我们</div>
+                </div>
+                <div class='cardsContainer' id='socialMediaContents'>
+                    <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9">
+                        <div class='socialCard shadow' id="wechatSocial">
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0c24f8bdc2fd62b054f60f47ed948e87?imageView2'>
+                            <div class="SocaialCardText">
+                                <span class="socialHeader1">
+                                    <span class="cn">#小宇宙</span>
+                                    <span class="eng">#Cosmos Podcast</span>
+                                </span><br/>
+                                <span class="socialHeader2">
+                                    <span class="cn">宇中听柴说播客系列</span>
+                                    <span class="eng">DOGE TALKIE</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI4NzQzMjYwMQ==&action=getalbum&album_id=2173312120812027907#wechat_redirect">
+                        <div class='socialCard shadow'>
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_80673e5b8bf9b7b28cf9fdacffbf2bd2?imageView2'>
+                            <div class="SocaialCardText">
+                                <span class="socialHeader1">
+                                    <span class="cn">#微信公众号</span>
+                                    <span class="eng">#WeChat Official Account</span>
+                                </span><br/>
+                                <span class="socialHeader2">
+                                    <span class="cn">小酒馆系列专访</span>
+                                    <span class="eng">OF Bistro</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                    <div class='socialCard' id='socialCard3'>
+                        <a href="https://weibo.com/u/7126820846">
+                            <div class="social3Text ">
+                                <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_94f50d651af413ff63a38f574f081750?imageView2'> 
+                                <div class="SocaialCardText">
+                                    <span class="socialHeader1">
+                                        <span class="cn">#微博</span>
+                                        <span class="eng">#WeiBo</span>
+                                    </span><br/>
+                                    <span class="socialHeader2">
+                                        <span class="cn">元宇宙新闻</span>
+                                        <span class="eng">Metaverse News</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=409850">
+                            <div class="social3Text ">
+                                <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ff71f5c98da627465610fece1a90dba6?imageView2'>
+                                <div class="SocaialCardText">
+                                    <span class="socialHeader1">
+                                        <span class="cn">#哔哩哔哩</span>
+                                        <span class="eng">#Bilibili</span>
+                                    </span><br/>
+                                    <span class="socialHeader2">
+                                        <span class="cn">元宇宙科普视频</span>
+                                        <span class="eng">Metaverse 101</span>
+                                    </span>             
+                                </div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class='' id="footer">
+                <div>
+                    <div id='footerLogo'><a href="webpage.html"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
+                    <div id='footerMenu'>
+                        <div>
+                            <div class='footerMenuItem'><a href="courselist.html"><span class='eng'>Course</span><span class="cn">课程</span></a></div>
+                            <div class='footerMenuItem'><a href="webpage.html"><span class='eng'>Career</span><span class="cn">职业</span></a></div>
+                            <div class='footerMenuItem'><a href="news.html"><span class='eng'>News</span><span class="cn">新闻</span></a></div>
+                            <div class='footerMenuItem'><a href="blog.html"><span class='eng'>Blog</span><span class="cn">博客</span></a></div>
+                        </div>
+        
+                        <div>                
+                            <div class='footerMenuItem'><a href="aboutus.html"><span class='eng'>About Us</span><span class="cn">关于我们</span></a></div>
+                            <div class='footerMenuItem'><a href="aboutus.html#advidorsContainer"><span class='eng'>Advisors</span><span class="cn">导师信息</span></a></div>
+                            <div class='footerMenuItem'><a href=""><span class='eng'>Join Us</span><span class="cn">加入我们</span></a></div>    
+                        </div>
+                    </div>
+
+
+                    <div id='footerSocial'>
+                        <div id='footerCode'>
+                            <div><span class="cn">关注我们</span><span class="eng">Follow Us</span></div>
+                            <div id='footerSocialLogo'>
+                                <img id='displayCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_c3fda0b5b340c124079c6e9e4d0099ef?imageView2'>
+                                <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_40eaac48e1a318aef9ee5339d733ee29?imageView2'></a>
+                                <a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_378188cd01c79c408f43c6f96e9887fc?imageView2'></a>
+                                <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2feb65fd9eeacf98cc6e7cd2b939a1ce?imageView2'></a>
+                            </div>
+                            <div id="weChatCode"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <script>
+
+            let displayMenu = false;
+
+            $("#menuIconContainer").click(function() {
+                if(!displayMenu){
+                    $("#menuPopUp").slideDown()
+                    displayMenu = true;
+                } else {
+                    $("#menuPopUp").slideUp()
+                    displayMenu = false;
+                }
+            })
+
+
+            let lan = 'CN'
+            $("#color_mode").on("change", function () {
+                console.log('this is clickedd')
+                if(lan == 'CN'){
+                    $('.cn').hide();
+                    $('.eng').show();
+                    lan = "EN"
+                } else {
+                    $('.cn').show();
+                    $('.eng').hide();
+                    lan = "CN"
+                }
+            })
+
+            $('#login').click(function(){
+                $('#loginPopupBg').show()
+            })
+            
+            $('.closeTab').click(function(){
+                $('#loginPopupBg').hide()
+            })
+
+            $('#showCode').hover(function(){
+                // console.log('hovered')
+                $('#weChatCodeMenu').show()
+            }, function(){
+                $('#weChatCodeMenu').hide()
+            })
+
+            $('#displayCode').hover(function(){
+                // console.log('hovered')
+                $('#weChatCode').show()
+            }, function(){
+                $('#weChatCode').hide()
+            })
+        </script>
+
+    </body>
+</html>

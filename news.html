@@ -201,38 +201,6 @@ this is the first HTML code, load font and style!
 
 
 
-    #header{
-        position: fixed;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        top:0;
-        font-size: 20px;
-        left: 0;
-        width: 100%;
-        height: 80px;
-        z-index: 1;
-        background-color: white;
-        box-shadow:0px 4px 20px rgba(0,0,0,0.09);
-    }
-   
-    #headerlogo{
-        /*border: 1px black solid;*/
-        /*width:100px;*/
-        margin-left:26px;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-
-    }
-
-    #headerlogo > img{
-    	display: block;
-        width: 200px;
-    }
-    
-
-
     #menu > div{
         font-family:  "XYZB";
     	font-weight: 700;
@@ -286,19 +254,14 @@ this is the first HTML code, load font and style!
     }
 
     .container{
-    	/*border:1px black solid;*/
-    	/*height: 400px;*/
         width:1536px;
     	margin-left:auto;
     	margin-right: auto;
-/*    	margin-right: 10%;
-    	margin-left: 10%;*/
     }
 
 
 
     #courseContainer{
-    	/*border: 1px solid black;*/
     	margin-top: 50px;
     }
 
@@ -878,13 +841,15 @@ this is the first HTML code, load font and style!
         margin-top: 42px;
     }
 
-    #menuSocialContainer > img{
+    #menuSocialContainer > div{
+        width: 66px;
+        height: 66px;
         margin-right: 25px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow:0px 4px 20px rgba(0,0,0,0.09);
     }
-    
-    #menuSocialContainer > a >img{
-        margin-right: 25px;
-    }
+
 
     .hiddenCourse1 .hiddenCourse2 .hiddenCourse3{
         display: none;
@@ -1489,7 +1454,6 @@ this is the first HTML code, load font and style!
 
     #headerPicContainer{
         width: 100vw;
-        /* margin-bottom: 24px; */
     }
 
     #headerPicContainer > img{
@@ -1751,128 +1715,128 @@ this is the first HTML code, load font and style!
     </div>
 </div>
 
-    <div id='menuPopUp'>
-        <div id='menuPopUpContents'>
-            <div id='menuButtonContainer'>
-                <a href="courselist.html"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
-                <a href="webpage.html#aboutContainer"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
-                <a href="news.html"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
-                <a href="blogs.html"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
-                <a href="webpage.html#mentorContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
-            </div> 
+<div id='menuPopUp'>
+    <div id='menuPopUpContents'>
+        <div id='menuButtonContainer'>
+            <a href="courselist.html"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
+            <a href="webpage.html#aboutContainer"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
+            <a href="news.html"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
+            <a href="blogs.html"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
+            <a href="webpage.html#mentorContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
+        </div> 
 
-            <div id='menuCategoryContainer'>
-                <div class='menuCategory' id="allClass"><div><span class="cn">全部课程</span><span class="eng">All Course</span></div></div>
-                <div class='menuCategory' id="aiClass"><div><span class="cn">快速筑基班</span><span class="eng">Foundation Course</span></div></div>
-                <div class='menuCategory' id="masterClass"><div><span class="cn">大师班</span><span class="eng">Master Class</span></div></div>
-                <div class='menuCategory' id="bootCampClass"><div><span class="cn">冲刺营</span><span class="eng">BootCamp</span></div></div>
-            </div>
-
-
-            <div id='menuSoftwareContainer'>
-                <div class='software'>
-                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7087f5df4e170bebc4a04b354ecb3326?imageView2'> 
-                    <div class='softwareDescription'>
-                        <span class='softwareh1'>TouchDesigner</span><br/>
-                        <span class='softwareh2'>
-                            <span class="cn">基于节点式的视觉话编程语言</span>
-                            <span class="eng">Node-based programming language</span>
-                        </span>
-                    </div>
-                </div>
-                
-                <div class='software'>
-                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6a9a77d5b3c9675c16167fe8d2c7766f?imageView2'> 
-                    <div class='softwareDescription'>
-                        <span class='softwareh1'>Unity</span><br/>
-                        <span class='softwareh2'>
-                            <span class="cn">实时内容开发平台</span>
-                            <span class="eng">real-time content delivery platform</span>
-                        </span>
-                    </div>
-                </div>
-
-                <div class='software'>
-                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fb9262b4ac760ea1c2b8af813272b48e?imageView2'> 
-                    <div class='softwareDescription'>
-                        <span class='softwareh1'>Unreal Engine</span><br/>
-                        <span class='softwareh2'>
-                            <span class="cn">实时3D创作工具</span>
-                            <span class="eng">real-time 3D platfrom</span>
-                        </span>
-                    </div>
-                </div>
-
-
-                <div class='software'>
-                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fc889440b6caa0f1c0e430bbe4176df9?imageView2'> 
-                    <div class='softwareDescription'>
-                        <span class='softwareh1'>Processing</span><br/>
-                        <span class='softwareh2'>
-                            <span class="cn">新兴计算机语言</span>
-                            <span class="eng">creative coding language</span>
-                        </span>
-                    </div>
-                </div>
-
-                <div class='software'>
-                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9cc784f659f8498a1a1d563758feaa5d?imageView2'> 
-                    <div class='softwareDescription'>
-                        <span class='softwareh1'>P5.js</span><br/>
-                        <span class='softwareh2'>
-                            <span class="cn">创意编码的 JavaScript 库</span>
-                            <span class="eng">JS creative coding library</span>
-                        </span>
-                    </div>
-                </div>
-
-                <div class='software'>
-                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f647742a09d5fbe44d69d0a497b05ead?imageView2'> 
-                    <div class='softwareDescription'>
-                        <span class='softwareh1'>MaxMSP</span><br/>
-                        <span class='softwareh2'>
-                            <span class="cn">交互式编程语言与开发环境</span>
-                            <span class="eng">interactive creative codeing language</span>
-                        </span>
-                    </div>
-                </div>
-
-                <div class='software'>
-                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_094f651765e5162a3a7aa953faa18311?imageView2'> 
-                    <div class='softwareDescription'>
-                        <span class='softwareh1'>OpenFrameworks</span><br/>
-                        <span class='softwareh2'>
-                            <span class="cn">是C++为基准的简洁开发框架,擅长开发图像和动画</span>
-                            <span class="eng">C++ creative coding framework</span>
-                        </span>
-                    </div>
-                </div>
-
-                <div class='software'>
-                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> 
-                    <div class='softwareDescription'>
-                        <span class='softwareh1'>JavaScript</span><br/>
-                        <span class='softwareh2'>
-                            <span class="cn">直译式脚本语言</span>
-                            <span class="eng">Code for web-deveopment</span>
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-
-            <div id="weChatCodeMenu"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
-
-            <div id='menuSocialContainer'>
-                <img id='showCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1e150b94ecd5b631b3ebea4157f66c4?imageView2'>
-                <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5f3de3726fafd5fec8227fdb837ff092?imageView2'></a>
-                <a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'></a>
-                <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'></a>
-            </div>
-
+        <div id='menuCategoryContainer'>
+            <div class='menuCategory' id="allClass"><div><span class="cn">全部课程</span><span class="eng">All Course</span></div></div>
+            <div class='menuCategory' id="aiClass"><div><span class="cn">快速筑基班</span><span class="eng">Foundation Course</span></div></div>
+            <div class='menuCategory' id="masterClass"><div><span class="cn">大师班</span><span class="eng">Master Class</span></div></div>
+            <div class='menuCategory' id="bootCampClass"><div><span class="cn">冲刺营</span><span class="eng">BootCamp</span></div></div>
         </div>
-   
+
+
+        <div id='menuSoftwareContainer'>
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7087f5df4e170bebc4a04b354ecb3326?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>TouchDesigner</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">基于节点式的视觉话编程语言</span>
+                        <span class="eng">Node-based programming language</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6a9a77d5b3c9675c16167fe8d2c7766f?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>Unity</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">实时内容开发平台</span>
+                        <span class="eng">real-time content delivery platform</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fb9262b4ac760ea1c2b8af813272b48e?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>Unreal Engine</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">实时3D创作工具</span>
+                        <span class="eng">real-time 3D platfrom</span>
+                    </span>
+                </div>
+            </div>
+
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fc889440b6caa0f1c0e430bbe4176df9?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>Processing</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">新兴计算机语言</span>
+                        <span class="eng">creative coding language</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9cc784f659f8498a1a1d563758feaa5d?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>P5.js</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">创意编码的 JavaScript 库</span>
+                        <span class="eng">JS creative coding library</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f647742a09d5fbe44d69d0a497b05ead?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>MaxMSP</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">交互式编程语言与开发环境</span>
+                        <span class="eng">interactive creative codeing language</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_094f651765e5162a3a7aa953faa18311?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>OpenFrameworks</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">是C++为基准的简洁开发框架,擅长开发图像和动画</span>
+                        <span class="eng">C++ creative coding framework</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class='software'>
+                <img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> 
+                <div class='softwareDescription'>
+                    <span class='softwareh1'>JavaScript</span><br/>
+                    <span class='softwareh2'>
+                        <span class="cn">直译式脚本语言</span>
+                        <span class="eng">Code for web-deveopment</span>
+                    </span>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="weChatCodeMenu"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
+
+        <div id='menuSocialContainer'>
+            <div><img id='showCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1e150b94ecd5b631b3ebea4157f66c4?imageView2'></div>
+            <div><a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5f3de3726fafd5fec8227fdb837ff092?imageView2'></a></div>
+            <div><a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'></a></div>
+            <div><a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'></a></div>
+        </div>
+
     </div>
+
+</div>
 
 
 
@@ -1945,25 +1909,25 @@ this is the first HTML code, load font and style!
             <div id='footerLogo'><a href="webpage.html"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
             <div id='footerMenu'>
                 <div>
-                    <div class='footerMenuItem'>Course</div>
-                    <div class='footerMenuItem'>Career</div>
-                    <div class='footerMenuItem'>News</div>
-                    <div class='footerMenuItem'>Blog</div>
+                    <div class='footerMenuItem'><span class='eng'>Course</span><span class="cn">课程</span></div>
+                    <div class='footerMenuItem'><span class='eng'>Career</span><span class="cn">职业</span></div>
+                    <div class='footerMenuItem'><span class='eng'>News</span><span class="cn">新闻</span></div>
+                    <div class='footerMenuItem'><span class='eng'>Blog</span><span class="cn">博客</span></div>
                 </div>
 
                 <div>                
-                    <div class='footerMenuItem'>About Us</div>
-                    <div class='footerMenuItem'>Advisors</div>
-                    <div class='footerMenuItem'>Join Us</div>    
+                    <div class='footerMenuItem'><span class='eng'>About Us</span><span class="cn">关于我们</span></div>
+                    <div class='footerMenuItem'><span class='eng'>Advisors</span><span class="cn">导师信息</span></div>
+                    <div class='footerMenuItem'><span class='eng'>Join Us</span><span class="cn">加入我们</span></div>    
                 </div>
 
             </div>
             <div id='footerSocial'>
                 <div id='footerCode'>
-                    <div>关注我们</div>
+                    <div><span class="cn">关注我们</span><span class="eng">Follow Us</span></div>
                     <div id='footerSocialLogo'>
-                        <img class='displayCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_c3fda0b5b340c124079c6e9e4d0099ef?imageView2'>
-                        <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_40eaac48e1a318aef9ee5339d733ee29?imageView2' href=""></a>
+                        <img id='displayCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_c3fda0b5b340c124079c6e9e4d0099ef?imageView2'>
+                        <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_40eaac48e1a318aef9ee5339d733ee29?imageView2'></a>
                         <a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_378188cd01c79c408f43c6f96e9887fc?imageView2'></a>
                         <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2feb65fd9eeacf98cc6e7cd2b939a1ce?imageView2'></a>
                     </div>
@@ -1995,8 +1959,7 @@ this is the first HTML code, load font and style!
  
 
 
-        $('.displayCode').hover(function(){
-            // console.log('hovered')
+        $('#displayCode').hover(function(){
             $('#weChatCode').show()
         }, function(){
             $('#weChatCode').hide()

@@ -7,19 +7,18 @@ classNameCn: 'UnityVR虚拟实境大师班',
 price:'6999',
 installmentValue:'580',
 installmentTime: "12",
-classSlogan:'制作超体验元宇宙世界，从0到1掌握Unity虚拟实境全流程开发路径',
-classHeader:"掌握UnityVR虚拟实境技术<br/>成为高级虚拟现实设计师",
-classSeries:'Unity元宇宙课程系列',
+classSlogan:'<span class="cn">制作超体验元宇宙世界，从0到1掌握Unity虚拟实境全流程开发路径</span><span class="eng weight-290">From zero to one master virtual reality development with Unity create super metaverse</span>',
+classHeader:"<span class='cn'>掌握UnityVR虚拟实境技术<br/>成为高级虚拟现实设计师</span><span class='eng'>MASTER UNITY VR TECHNOLOGY<br/> BECOME VR DESIGNER</span>",
+classSeries:'<span class="cn">Unity元宇宙课程系列</span><span class="eng">Unity Metaverse course series</span>',
 classSeriesLink:'课程系列链接',
-prepClass:'Unity快速筑基课程',
+prepClass:'<span class="cn">Unity快速筑基课程</span><span class="eng">Creative technologist with Unity</span>',
 prepClassLink:'前置课程链接',
-requirements:'近三年主流配置Win或Mac电脑',
-classOverview: '你想成为虚拟现实设计师吗？你想入职元宇宙高精尖企业吗？你脑海中有一个梦幻场景想做出来吗？那么快加入Unity 虚拟实境大师班课程吧！本课程由美国排名Top1的帕森斯设计学院教授李肃纲老师亲自授课，传授全球最多人使用的实时交互引擎Unity与元宇宙平台Styly在线编辑器，快速从0到1掌握Unity VR虚拟实境创作全流程开发路径，制作超体验元宇宙世界，成为高级虚拟现实设计师，入职高精尖创新企业，并有机会参加Styly举办的虚拟实境国际大赛，赢取2万美金大奖。',
+classOverview: "<span class='cn'>你想成为虚拟现实设计师吗？你想入职元宇宙高精尖企业吗？你脑海中有一个梦幻场景想做出来吗？那么快加入Unity 虚拟实境大师班课程吧！本课程由美国排名Top1的帕森斯设计学院教授李肃纲老师亲自授课，传授全球最多人使用的实时交互引擎Unity与元宇宙平台Styly在线编辑器，快速从0到1掌握Unity VR虚拟实境创作全流程开发路径，制作超体验元宇宙世界，成为高级虚拟现实设计师，入职高精尖创新企业，并有机会参加Styly举办的虚拟实境国际大赛，赢取2万美金大奖。</span> <span class='eng'>Do you want to become a VR designer? Do you want to join a high-end Metaverse enterprise? Do you have a dream world in your head that you want to create? Then join the Mastering Virtual Reality With Unity course! This course is taught by Kyle Li, associate professor at the Top 1 school in the US, Parsons School of Design. He has years of experience teaching Unity, the world's most used realtime interaction engine, as well as Styly online editor. You can quickly master Unity VR creation pipline, and create your own Metaverse. You will also have the opportunity to participate in the annual VR international competition held my Styly, and win a grand prize of 20,000 US dollars.</span>",
 mentorNameEng:'Kyle Li',
 mentorNameCn:'李肃纲',
-mentorTitle:["互动与体验设计师",
-            "帕森斯设计学院副教授",
-            "帕森斯设计与科技系前系主任"
+mentorTitle:["<span class='cn'>互动与体验设计师</span><span class='eng'>Interactive Experience Designer</span>",
+            "<span class='cn'>帕森斯设计学院副教授</span><span class='eng'>Associate Professor at Parsons</span>",
+            "<span class='cn'>帕森斯设计与科技系前系主任</span><span class='eng'>Head of </span>"
         ],
 mentorText:'李肃纲教授2008年开始任教于帕森斯设计艺术学院，2014年成为设计与科技系大学部系主任，创立了多门主修课程和专业级室内动态捕捉系统。他设计的互动学习空间被纽约时报誉为改变未来教育的四大科技之一。',
 freeClassTitle:'李肃纲教授公开课「如何创造虚拟世界」',
@@ -64,44 +63,84 @@ syllabus: [
     {
         title: '元宇宙空间搭建入门',
         description: '快速创建在线虚拟场景，掌握全球领先的styly元宇宙平台在线编辑器',
-        img:"http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5abacbac97ecbf0cd37938df92d34028?imageView2"
+        img:"http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5abacbac97ecbf0cd37938df92d34028?imageView2",
+        fullSyllabus:["完整大纲内容第一条",
+        "完整大纲内容第二条",
+        "完整大纲内容第三条",
+        "完整大纲内容第四条",
+        ]
     },
     {
         title:'基础虚拟空间',
         description:'搭建基础VR空间场景，学习最多人使用的交互引擎Uniy，掌握Unity与styly结合工作流',
-        img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_de2faf658af13ed8e13ee430f7c1f6e0?imageView2'
+        img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_de2faf658af13ed8e13ee430f7c1f6e0?imageView2',
+        fullSyllabus:["完整大纲内容第一条",
+        "完整大纲内容第二条",
+        "完整大纲内容第三条",
+        "完整大纲内容第四条",
+        ]
     },
     {
         title:'高级虚拟场景渲染',
         description:'制作真实感VR场景，学习场景灯光和渲染技术，并用Post Processing Stack技术场景添加后期滤镜特效',
-        img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_01024513886bdf754bd949a7bb960f23?imageView2'
+        img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_01024513886bdf754bd949a7bb960f23?imageView2',
+        fullSyllabus:["完整大纲内容第一条",
+        "完整大纲内容第二条",
+        "完整大纲内容第三条",
+        "完整大纲内容第四条",
+        ]
     },
     {
         title:'互动虚拟场景',
         description:'完成互动VR场景搭建，掌握playmaker可视化互动插件核心技术-有限状态机',
-        img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_d307267fb2ee54076ce1263e1ff80c10?imageView2'
+        img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_d307267fb2ee54076ce1263e1ff80c10?imageView2',
+        fullSyllabus:["完整大纲内容第一条",
+        "完整大纲内容第二条",
+        "完整大纲内容第三条",
+        "完整大纲内容第四条",
+        ]
     },
     {
         title:'剧情式虚拟场景',
         description:'完成互动剧情场景设计，掌握剧情场景的核心设计方法，学习Playmaker可视化编程内容',
-        img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2e668456fe97a86d514a783e01d3af42?imageView2'
+        img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2e668456fe97a86d514a783e01d3af42?imageView2',
+        fullSyllabus:["完整大纲内容第一条",
+        "完整大纲内容第二条",
+        "完整大纲内容第三条",
+        "完整大纲内容第四条",
+        ]
 
     },
     {
         title: "虚拟场景特效",
         description: '场景中添加雨/雪/火焰等特效，掌握VFX graph插件，学习如何制作粒子效果',
-        img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_47781cd7383316c0b80f5521bd1f4d1c?imageView2'
+        img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_47781cd7383316c0b80f5521bd1f4d1c?imageView2',
+        fullSyllabus:["完整大纲内容第一条",
+        "完整大纲内容第二条",
+        "完整大纲内容第三条",
+        "完整大纲内容第四条",
+        ]
     },
     {
         title: '制作超体验元宇宙世界',
         description: '完成超体验元宇宙世界制作，掌握Unity中XR模式设定，学会如何将作品上传到VR眼镜中',
-        img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_234708551f227242592b6a279c939eab?imageView2'
+        img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_234708551f227242592b6a279c939eab?imageView2',
+        fullSyllabus:["完整大纲内容第一条",
+        "完整大纲内容第二条",
+        "完整大纲内容第三条",
+        "完整大纲内容第四条",
+        ]
 
     },
     {
         title:'完成最终作品',
         description:'完成最终作品，学会如何发布到PC或手机平台，了解或参与价值2万美金的Styly全球虚拟实境大赛',
-        img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_61640ab2507efef78425b33e354b9e7d?imageView2'
+        img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_61640ab2507efef78425b33e354b9e7d?imageView2',
+        fullSyllabus:["完整大纲内容第一条",
+        "完整大纲内容第二条",
+        "完整大纲内容第三条",
+        "完整大纲内容第四条",
+        ]
     }
 ],
 
@@ -109,7 +148,7 @@ syllabus: [
 mainPoster:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_bd4d3d5a7f7d93f4dcf2840e20c7b8da?imageView2',
 mainPosterMobile:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_9f0ac4620469950c8cffb825493d1a82?imageView2',
 classVideo: 'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_v_d41d8cd98f00b204e9800998ecf8427e',
-videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ad68276b80d59bf7f1da024e5d9ad606?imageView2',
+videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_37ea31e068b9fea1ac78a7099781b56b?imageView2',
 showCase: ["http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_ea50ef589cbd97ce394acccbebbf981a?imageView2",
             "http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7b6be75398f1d7f03fc3b90f7702202f?imageView2",
             "http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_61640ab2507efef78425b33e354b9e7d?imageView2",
@@ -143,9 +182,6 @@ studentWork: ['http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_dadf8069
             'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5e338c6b05cb46709abff6f4181bb1e2?imageView2'
             ],
 }
-
-
-
 
 
 
@@ -257,7 +293,7 @@ syllabus: [
 mainPoster:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_0d4e357b323b77556f11d5ddcac5b237?imageView2',
 mainPosterMobile:'手机版海报url',
 classVideo: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_3fdbd58904d8e62156d0b5c05764ece5',
-videoPoster: '课程宣导片封面图片url',
+videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_365b9d76291d753f61fa000ce94aa21e?imageView2',
 showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_fb897c44519816b003cc93abe74d7455?imageView2",
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_bc94f93d23b418ba1412ef21ad29972e?imageView2",
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_1bdd2e160366b6f2e8f10abb9c2fcc09?imageView2",
@@ -400,7 +436,7 @@ syllabus: [
 // 以下是图片内容填充
 mainPoster:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_acc49d3441d3d248c064024d494afbb0?imageView2',
 mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bfa89f5ecdca524e64d30ca3bd109b96?imageView2',
-classVideo: '课程宣导片url',
+classVideo: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_c53a00fe5097d32a1aaf06cb274b235a',
 videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bffda6a769e2214df9c5c38717949395?imageView2',
 showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_22148e031966170973794695ae65586d?imageView2",
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ee51779a24c0cf24e912588cfea8ed7f?imageView2",
@@ -582,19 +618,19 @@ let ai = {
 
 let unrealLandScape = {
     classID: "unityVR(不要修改)",
-    classNameEng:'STYLIZED 3D ENVIRONMENT WITH UE5',
+    classNameEng:'Environment&Character Art with UE5',
     classNameCn: 'UE5场景人物大师班',
-    price:'4999',
-    installmentValue:'416',
+    price:'5980',
+    installmentValue:'498',
     installmentTime: "12",
-    classSlogan:'制作超写实场景人物，从入门到精通UE5场景搭建流程',
-    classHeader:"掌握UE5超写实风格三维场景搭建<br/>成为UE高级场景设计师",
+    classSlogan:'UE5次时代艺术专精课程，创作超写实场景与虚拟人',
+    classHeader:"掌握UE5三维场景与数字人制作<br/>成为UE5次时代艺术家设计师",
     classSeries:'Unreal元宇宙课程系列',
     classSeriesLink:'课程系列链接',
     prepClass:'Unreal快速筑基课程',
     prepClassLink:'前置课程链接',
     requirements:'课程硬件需求',
-    classOverview: '你想成为UE高级动画设计师吗？你想进入米哈游、腾讯或网易等顶尖游戏企业吗？你梦想过创作像《原神》一样的风格化游戏场景吗？那么快加入UE5风格化场景大师班吧！本课程由全美排名Top1的设计学院帕森斯设计学院设计与科技硕士任督老师亲自授课。课程传授最新的UE5技术，你不仅会学到全球领先实时游戏引擎UE5的使用方法，还会掌握UE5风格化场景动画制作流程，通过美术风格为主导，技术为辅助，设计为过程，学习场景制作全流程。在学习结束之后，在静帧镜头的基础上，结合虚拟制片技术，还原《原神》风格场景的搭建，并具备在未来创作实践中，能够针对性地管理资产，规划方案，实现UE5 CCD工业流程。成为UE高级动画设计师开，入职顶尖游戏企业，并有机会参加各种科技艺术展览，接UE动画相关项目，获得丰厚兼职收入。',
+    classOverview: '你想成为超级酷的UE5次时代艺术家吗？你想进入米哈游、腾讯或网易等顶尖梦幻企业吗？你想过创作像《柳夜熙》一样的超写实虚拟人吗？那么快加入UE5场景与人物大师班吧！本课程由全美排名Top1的设计学院帕森斯设计学院设计与科技硕士任督老师亲自授课。课程传授最新的UE5技术，你不仅会学到全球领先实时游戏引擎UE5的使用方法，还会掌握UE5艺术创作全流程。课程以艺术为切入点，技术为辅助，设计为过程，学习UE5艺术创作手法。在超写实场景的基础上，逐步深入单个知识点，如niagara特效系统和Metahuman虚拟人制作技术等，最终完成一个包含数字人的次时代场景。课程还为没有3D基础的学员增设了录播课程，包括Maya、八猴、substance painter和Zabrush等创作工具，老师也会讲解这些工具与UE的结合方式。完成本门课程，你将由机会入职顶尖企业，参加各种科技艺术展览，还能接UE场景与数字人相关外包工作，获取丰厚兼职收入',
     mentorNameEng:'Ren Du',
     mentorNameCn:'任督',
     mentorTitle:["UE开发者",
@@ -642,43 +678,43 @@ let unrealLandScape = {
     ],
 syllabus: [
     {
-        title: '创建第三人称场景',
-        description: '开发一个第三人称场景并进行测试，掌握UE5场景搭建流程',
+        title: '创建概念场景',
+        description: '开发辅助概念设计的基础场景，使用quixel bridge、world machine、多通道材质球以及工具包，完成该流程在现有工业环境下的场景制作',
         img:"http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_80b670e47c51db8c8b9ede9f1dbde724?imageView2"
     },
     {
-        title:'创建风格化废墟场景',
-        description:'开发一个基于静物的废墟场景，完成多边形静物模型制作并用绘图工具对模型素材和场景材质进行绘制',
+        title:'创建场景道具',
+        description:'开发场景所需的道具，使用3D工具如Maya、八猴进行模型搭建和动画输出，完成材质、贴图甚至包含动画的道具制作',
         img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_4236c09d42ae94a1849f77b97c1a4fff?imageView2'
     },
     {
-        title:'创建风格化森林场景',
-        description:'开发一个风格化森林场景，掌握模型UV贴图和场景光线的风格化制作技巧，使用SpeedTree插件快速制作风格化植被',
+        title:'创建写实场景',
+        description:'开发一个中国风写实场景，掌握Zbrush次世代数字精雕与substance 3D上色方案，并完成场景搭建',
         img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_623c003904ee45993d67dab258e1c8ed?imageView2'
     },
     {
-        title:'创建风格化城镇场景',
-        description:'开发一个参数化生成的城市场景，掌握蓝图系统自动生成场景内容的技巧，使用蓝图快速制作墙面、弧面和材质。',
+        title:'创建蓝图控制场景',
+        description:'开发基于蓝图控制的场景，掌握蓝图系统与人工智能的使用方法，制作实时控制场景画面的GUI界面',
         img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_5a39e636c657525f1d265b5d3ae08766?imageView2'
     },
     {
-        title:'创建风格化碰撞场景',
-        description:'开发一个模拟碰撞的风格化场景，掌握蓝图系统模拟物理碰撞和风力碰撞的技巧，全面打通LandScape设计工业全流程',
+        title:'创建音画交互场景',
+        description:'开发一款音画互动作品，掌握虚幻引擎高级粒子系统和与Arduino通讯方法，制作使用麦克风控制的互动作品',
         img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_918a24856e5d317f4c92e1d259be15c4?imageView2'
     },
     {
-        title: "创建风格化人物场景",
-        description: '开发一个风格化人物场景，掌握人物数字精雕和骨骼绑定技术，实现头发、衣服和披风的动画效果',
+        title: "创建数字人模型",
+        description: '开个一个UE可以使用的数字人，掌握次世代角色制作流程和骨骼绑定，实现用UE数字人动画',
         img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_5c53a6bd19800547ddef8d99b868b6ac?imageView2'
     },
     {
-        title: '创建风格化特效场景',
-        description: ' 开发一个拥有多种特效的风格化场景，掌握niagara system粒子特效系统，实现模拟自然的水面动态、体积云、火焰等特效',
+        title: '创建实时交互数字人',
+        description: ' 开发一个超写实数字人，掌握Metahuman数字人面部制作和面部动作捕捉系统，实现可以可实时互动的数字人',
         img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_290cee53eaf927e209d19cb6f9cfee5b?imageView2'
     },
     {
-        title:'创建多镜头风格化场景',
-        description:'完成最终风格化场景动画作品，掌握虚拟制片技术，结合之前所学内容，利用多镜头拍摄技巧，实现最终动画渲染',
+        title:'创建高画质场景',
+        description:'完成最终场景作品，掌握UE画面优化流程和声音系统，实现用Sequence系统输出高品质动画',
         img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_76fc620752a93861a6c9c6f110b614ea?imageView2'
     }
 ],
@@ -718,6 +754,149 @@ studentWork: ['学生作品01url',
             '学生作品10url',
             '学生作品11url',
             '学生作品12url'
+            ],
+}
+
+
+let tdArduino = {
+    // 以下是文字内容填充
+classID: "unityVR(不要修改)",
+classNameEng:'Mastering Interactive Installation with TouchDesigner',
+classNameCn: 'TD交互装置大师班',
+price:'6718',
+installmentValue:'560',
+installmentTime: "12",
+classSlogan:'学习TD硬件装置开发，打造TD有形交互体系',
+classHeader:"掌握TouchDesigner硬件开发<br/>成为抢手的交互装置设计师",
+classSeries:'TouchDesigner元宇宙系列',
+classSeriesLink:'课程系列链接',
+prepClass:'TouchDesigner快速筑基班',
+prepClassLink:'前置课程链接',
+requirements:'课程硬件需求',
+classOverview: '你想成为高级交互装置设计师吗？你想加入互联网大厂做交互装置设计吗？你想创作出震撼人心的交互装置艺术作品吗？那么快加入TD交互装置大师班吧！本课程由全国音乐院校排名TOP3的上海音乐学院特聘讲师凯尔·杜菲尔德老师亲自授课。你可以零基础学习新世代实时交互工具TouchDesigner，快速掌握TD与 Arduino之间的通讯，精通复杂传感器系统的搭建技巧，独立制作完整的交互装置艺术作品。最终你会成为交互装置设计师，入职数字交互企业，或成为装置艺术家举办展览，接交互装置相关项目获得丰厚收入。',
+mentorNameEng:'Kyle Duffiled',
+mentorNameCn:'凯尔 杜菲尔德',
+mentorTitle:["交互体验设计师",
+            "上海音乐学院特聘讲师",
+            "Cycling 74认证教师"
+        ],
+mentorText:'上海音乐学院特聘讲师，多伦多互动体验设计专家，Cycling 74 MaxMSP认证教师，多伦多新媒体工作室 Electric Perfume 的教育与技术总监。他与北美、英国、上海等知名机构、画廊和大学开展了互动媒体课程和研讨会，此外还为育碧制作互动装置。他的作品曾被Vice，YouTube，Arduino等多家媒体进行大规模报道，并曾于加拿大当代艺术博物馆、汉密尔顿美术馆、加拿大广播中心展出。',
+freeClassTitle:'凯尔老师公开课「TouchDesigner快速筑基班」',
+studentReviewMain: {
+    name: "张同学",
+    title:'游戏大厂交互设计师',
+    review: "我是在国内某互联网游戏大厂的一名交互设计师，虽然本职也是从事交互设计的，但是公司近期想做一个需要交互装置的线下快闪活动。这块我和同组小伙伴都不太熟悉，偶然间发现了这个课程，涉及了一些我之前了解较浅的电路元件和开关触发，抱着试一试的态度就入手了。结果当然是超出预料，本来是单纯为了完成项目报的班，后面我却真的对线下交互产生了浓厚的兴趣。最终，我们小组成功在线下开展了快闪活动，而我也决定继续开拓其他交互内容的学习，不断提高自己的行业竞争力。谢谢Klye老师，也谢谢OF！",
+},
+studentReview:[
+        {
+            name: '任同学',
+            title:'往期学员',
+            review:'报名课程是为了做毕业设计，2个月的学习过程中也给了我很多的启发，毕业了也希望能继续往交互设 计师的职业发展。'
+        },
+        {
+            name: '王同学',
+            title:'往期学员',
+            review:'⼀次性学习两个软件以及电路电子知识确实很有挑战，但是⽼师和助教都很用心，会帮忙debug。最后完成了几个小装置作品还是很有成就感的！'
+        },
+        {
+            name: '刘同学',
+            title:'往期学员',
+            review:'很需要这种小白也能看懂的课，之前也看过很多免费课程，但是每次到关键地方就会被跳过，所以这次坚定地报了个完整的课程，果然讲得细致多了。'
+        },
+        {
+            name: '苏同学',
+            title:'往期学员',
+            review:'我算个斜杠青年，主要是自己创作一些音乐、电影作品，之前有朋友在做交互装置这块的展览，我了解过后非常喜欢，决定报班系统学习一下。希望不远的将来，我会将我之前的作品用交互的形式展示出来。'
+        },
+        {
+            name: '陈同学',
+            title:'往期学员',
+            review:'我算半个小白吧，之前有自学过一段时间的TouchDesigner，后来发现自己的动手能力比较弱，而网上又缺少这种逐步讲解的操作视频。Kyle老师的课程非常有趣，而且也符合我的预期，如今我的作品已经在线上艺术展览中进行展出了。'
+        },
+        {
+            name: '林同学',
+            title:'往期学员',
+            review:'我目前还是一名艺术院校的大二学生，课余时间想接一些项目来赚点生活费，我室友经常做交互设计的单，我也想加入他。听过Kyle老师的课之后，我对TouchDesigner有了更深入的了解，现在副业也慢慢进入状态了。'
+        },
+],
+syllabus: [
+    {
+        title: '创作生成视觉特效',
+        description: '制作生成视觉特效，快速从0到1入门 TouchDesigner节点式编程和操作方式',
+        img:"http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_999a01ba9ab88b58a76ad537106e4dd0?imageView2"
+    },
+    {
+        title:'自定义UI交互界面',
+        description:'制作实时视频控制器，掌握TD中TOP和CHOP元件，运用Firmata通讯协议与Arduino通讯',
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_db0601ec5d1de84513db6c9b7321b849?imageView2'
+    },
+    {
+        title:'电路的原型制作',
+        description:'制作实时控制的LED交互灯光装置，掌握Arduino电子电路知识，运用TD实时控制LED灯光系统',
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_79f2d1a66f424fcf918544d503bc7e18?imageView2'
+    },
+    {
+        title:'Arduino与TD的通讯',
+        description:'制作实时控制的RGB LED交互界面，掌握Arduino的PWM输出和Servo输出，运用TD实时控制RGB LED电路和舵机马达',
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_92f78445f7bceb41bf9644dd10f05287?imageView2'
+    },
+    {
+        title:'触发机制 - 开关墙',
+        description:'制作多通道数字信号控制的TD装置，掌握Arduino数字信号输入和多种数字开关设计技巧，运用Arduino数字开关控制TD视频内容',
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c2bcf5cf3b08eda47ae28888fa23b41a?imageView2'
+    },
+    {
+        title: "创作DIY触发机",
+        description: '制作基于电位器控制的VJ控制器，掌握Arduino模拟信号输入和TD高级CHOP逻辑，运用Arduino电位计控制TD实时VJ内容',
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c697a0c7b1e834e2ece25dc88114b327?imageView2'
+    },
+    {
+        title: '传感器 - 光控制',
+        description: '制作多种传感器控制的TD交互装置，掌握多种传感器系统及物理计算，运用光敏传感器、距离传感器、弯曲度传感器等创作专业级交互应用',
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d6f4e6f7f8c3b64d2d59bd172ea9619c?imageView2'
+    },
+    {
+        title:'复杂交互系统',
+        description:'讨论最终交互装置作品创意，掌握TD输入和输出映射功能，运用TD和Arduino双向输入与输出创作交互装置作品',
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_968c5a799df87ca3c87a544c22da3cd1?imageView2'
+    }
+],
+
+// 以下是图片内容填充
+mainPoster:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_0d4e357b323b77556f11d5ddcac5b237?imageView2',
+mainPosterMobile:'手机版海报url',
+classVideo: '课程宣导片url',
+videoPoster: '课程宣导片封面图片url',
+showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_fb897c44519816b003cc93abe74d7455?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_bc94f93d23b418ba1412ef21ad29972e?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_1bdd2e160366b6f2e8f10abb9c2fcc09?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_7048a22a9523b2af3659d84be9076189?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_80b7a8d2a829029e27744825a52946c0?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_40713f0f01ae99029ac1bb713acc9f8e?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_8101a7fd613c034f8f21ed7e76c4fe4d?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d4e445b0129e0545edb569897cdc6820?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d2c35f6bfca25f3366fd48380bc73b7d?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_e1981fba5223d9aac55740cf99e9ff01?imageView2"],
+mentorImg: 'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ddcf823280887ea27282c4c1dfba804a?imageView2',
+mentorVideo:"精彩瞬间视频 url",
+teacherCase:['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_730f430fa438db4de7d6b6cc6624ded0?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_cf3cba12673cfe44cb3ce84dceb189a2?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_73e0a91db43a8f509dfef28e94bcc9cd?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_3db52b3c6d7c45483cad3732176c3a99?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_b969d925e72e61579d8204e4e2336dee?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_6c2c75081d3b81deb5c037ca4ae049c7?imageView2'],
+studentWork: ['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_944e3f957fd6ea55f828109658ade78a?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_227a2b63e52d70b12e0fe2d7e887e081?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ed2491cd31d521aeea52544cac28a069?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_72c0b0dcf3218f4bc5c4f18c00f8b1f7?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_871c75d34d4c17d2f19363832aa41fe2?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_25ffee87830c4868dbcbd5bd702e5b53?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_997bace94cad221a8f9cc09693b2c49b?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_60c4ec6054bb6dc830c4e4f5567d8d44?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_798d2160dd9c388d6ab893348eb91c37?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_1978b8b20886ffbc6901ea377cb4deb1?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d0c18091ab03addcf5dec83a4df3b7ef?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_175ee5a78be1067e03ab48dfdeda99ca?imageView2'
             ],
 }
 
