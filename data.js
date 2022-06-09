@@ -148,7 +148,7 @@ syllabus: [
 mainPoster:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_bd4d3d5a7f7d93f4dcf2840e20c7b8da?imageView2',
 mainPosterMobile:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_9f0ac4620469950c8cffb825493d1a82?imageView2',
 classVideo: 'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_v_d41d8cd98f00b204e9800998ecf8427e',
-videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_37ea31e068b9fea1ac78a7099781b56b?imageView2',
+videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a75b38e3cd16e01284b8eb12518d7529?imageView2',
 showCase: ["http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_ea50ef589cbd97ce394acccbebbf981a?imageView2",
             "http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7b6be75398f1d7f03fc3b90f7702202f?imageView2",
             "http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_61640ab2507efef78425b33e354b9e7d?imageView2",
@@ -293,7 +293,7 @@ syllabus: [
 mainPoster:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_0d4e357b323b77556f11d5ddcac5b237?imageView2',
 mainPosterMobile:'手机版海报url',
 classVideo: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_3fdbd58904d8e62156d0b5c05764ece5',
-videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_365b9d76291d753f61fa000ce94aa21e?imageView2',
+videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d91ac87f851039b4c9b2f8dbfee449f5?imageView2',
 showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_fb897c44519816b003cc93abe74d7455?imageView2",
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_bc94f93d23b418ba1412ef21ad29972e?imageView2",
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_1bdd2e160366b6f2e8f10abb9c2fcc09?imageView2",
@@ -437,7 +437,7 @@ syllabus: [
 mainPoster:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_acc49d3441d3d248c064024d494afbb0?imageView2',
 mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bfa89f5ecdca524e64d30ca3bd109b96?imageView2',
 classVideo: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_c53a00fe5097d32a1aaf06cb274b235a',
-videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bffda6a769e2214df9c5c38717949395?imageView2',
+videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_654bdda12a1981c0930540a5fd9924a0?imageView2',
 showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_22148e031966170973794695ae65586d?imageView2",
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ee51779a24c0cf24e912588cfea8ed7f?imageView2",
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_6063614f2b66a9375b204a782d3cfa49?imageView2",
@@ -537,80 +537,82 @@ let ai = {
         {
             title: '创作鼠标互动生成艺术',
             description: '制作鼠标互动的绘画工具，掌握全球领先的网页创意编程工具P5.js，运用mouseX和mouseY进行生成互动',
-            img:"http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_999a01ba9ab88b58a76ad537106e4dd0?imageView2"
+            img:"http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ea73191e8c386df8fa8a0cb2aec0fa11?imageView2",
         },
         {
             title:'创作二维图形生成艺术',
             description:'制作基于图形的生成特效，掌握运用广泛的复杂函数运算和For循环逻辑，运用for循环生成二维图形',
-            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_db0601ec5d1de84513db6c9b7321b849?imageView2'
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_cc122f6493fcbefba020be59bc49e68d?imageView2',
+
         },
         {
             title:'创作视错觉生成艺术',
             description:'制作模块化视错觉特效，掌握自定义构造函数及代码模块化，运用p5.js的转换功能进行绘制',
-            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_79f2d1a66f424fcf918544d503bc7e18?imageView2'
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_f27db372de3a09268bf99d3d33617f43?imageView2',
         },
         {
             title:'创作粒子特效生成艺术',
             description:'制作粒子特效生成艺术作品，掌握面向对象的编程和互动数组，运用OOP生成粒子特效',
-            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_92f78445f7bceb41bf9644dd10f05287?imageView2'
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_570d78758fd16593b54c3f68c4f3026c?imageView2',
         },
         {
             title:'创作风格迁移生成艺术',
             description:'制作风格迁移肖像画作品，掌握像素处理及一维数据和二维数据的使用，运用摄像头进行实时捕捉',
-            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c2bcf5cf3b08eda47ae28888fa23b41a?imageView2'
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_570d78758fd16593b54c3f68c4f3026c?imageView2',
+
         },
         {
             title: "创作体感互动生成艺术",
             description: '制作实体感互动生成艺术作品，掌握ml5.js网页机器学习工具，运用PoseNet机器学习模型进行人体捕捉',
-            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c697a0c7b1e834e2ece25dc88114b327?imageView2'
-        },
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_fdb8782a28ee6fd425ef384092247218?imageView2',
+            },
         {
             title: '创作实时抠像生成艺术',
             description: ' 制作高级体感互动，掌握进行AI实时背景抠图技术，运用BodyPix机器学习模型获得身体轮廓和部位',
-            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d6f4e6f7f8c3b64d2d59bd172ea9619c?imageView2'
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_4888928d8df1693b9123cf7d6ecf9cdc?imageView2',
         },
         {
             title:'创作生成艺术NFT',
             description:'完成最终生成艺术作品，掌握ArtBlocks等NFT平台特性，学习如何发表自己的生成艺术NFT作品',
-            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_968c5a799df87ca3c87a544c22da3cd1?imageView2'
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_a6dd289be2efc94d9f6cfcd4a3a9d49b?imageView2',
         }
     ],
 
     // 以下是图片内容填充
-    mainPoster:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_0d4e357b323b77556f11d5ddcac5b237?imageView2',
-    mainPosterMobile:'手机版海报url',
+    mainPoster:'海报url',
+    mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bfa89f5ecdca524e64d30ca3bd109b96?imageView2',
     classVideo: '课程宣导片url',
     videoPoster: '课程宣导片封面图片url',
-    showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_fb897c44519816b003cc93abe74d7455?imageView2",
-                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_bc94f93d23b418ba1412ef21ad29972e?imageView2",
-                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_1bdd2e160366b6f2e8f10abb9c2fcc09?imageView2",
-                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_7048a22a9523b2af3659d84be9076189?imageView2",
-                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_80b7a8d2a829029e27744825a52946c0?imageView2",
-                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_40713f0f01ae99029ac1bb713acc9f8e?imageView2",
-                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_8101a7fd613c034f8f21ed7e76c4fe4d?imageView2",
-                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d4e445b0129e0545edb569897cdc6820?imageView2",
-                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d2c35f6bfca25f3366fd48380bc73b7d?imageView2",
-                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_e1981fba5223d9aac55740cf99e9ff01?imageView2"],
-    mentorImg: 'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ddcf823280887ea27282c4c1dfba804a?imageView2',
+    showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_8cc405d239d99667484901ebfd9fc469?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_79a1956974c4828aa31078b2b6833638?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_96d64d64cc247a89a11e8a255d66b1ae?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_a2dc409424b6e5987b02c80a997484c3?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_9a32876d444e0aa5d871c6257ddccbcf?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_b86d06b6949660c61cf5c39bce03a706?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_5185799ddd8ed0a9a9b4902482cc036b?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_dac6581906269f5d3ff46e1f7a655898?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_a36b80bd33095bd2960c1470da13ef3b?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_70eee613825301fe57aaf1f389073b19?imageView2"],
+    mentorImg: '导师照片url',
     mentorVideo:"精彩瞬间视频 url",
-    teacherCase:['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_730f430fa438db4de7d6b6cc6624ded0?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_cf3cba12673cfe44cb3ce84dceb189a2?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_73e0a91db43a8f509dfef28e94bcc9cd?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_3db52b3c6d7c45483cad3732176c3a99?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_b969d925e72e61579d8204e4e2336dee?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_6c2c75081d3b81deb5c037ca4ae049c7?imageView2'],
-    studentWork: ['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_944e3f957fd6ea55f828109658ade78a?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_227a2b63e52d70b12e0fe2d7e887e081?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ed2491cd31d521aeea52544cac28a069?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_72c0b0dcf3218f4bc5c4f18c00f8b1f7?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_871c75d34d4c17d2f19363832aa41fe2?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_25ffee87830c4868dbcbd5bd702e5b53?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_997bace94cad221a8f9cc09693b2c49b?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_60c4ec6054bb6dc830c4e4f5567d8d44?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_798d2160dd9c388d6ab893348eb91c37?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_1978b8b20886ffbc6901ea377cb4deb1?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d0c18091ab03addcf5dec83a4df3b7ef?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_175ee5a78be1067e03ab48dfdeda99ca?imageView2'
+    teacherCase:['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_b548a6c103af6e8f638cb1fce1366ee0?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_69c5f266d9d3c104e366affb6568950c?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d5aa22c11efb3808b5dfe7b10f814a51?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_6f8eb3650ce862b7bbf36f3f160357d0?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_6245c6977917e7bdcae279df797388b3?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_0188d692c0b48f4648dace8c4277c80d?imageView2'],
+    studentWork: ['学生作品01url',
+                '学生作品02url',
+                '学生作品03url',
+                '学生作品04url',
+                '学生作品05url',
+                '学生作品06url',
+                '学生作品07url',
+                '学生作品08url',
+                '学生作品09url',
+                '学生作品10url',
+                '学生作品11url',
+                '学生作品12url'
                 ],
 }
 
@@ -723,7 +725,7 @@ syllabus: [
 mainPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1b7a84c878fb62cdbd641df10994cf1c?imageView2',
 mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bfa89f5ecdca524e64d30ca3bd109b96?imageView2',
 classVideo: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_d1dad6d62004749497315ee884c605b9',
-videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7ab0f387c752e15d6b95afcfa982479f?imageView2',
+videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b688fd1c74eba82779982c9b1f882a86?imageView2',
 showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c30066649070dd9b55131678fa07d39f?imageView2",
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_75f6cfc71073fd65b15b62e6bcf8fc84?imageView2",
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_3964e521b51d0151f666ba13adc1f966?imageView2",
@@ -758,7 +760,7 @@ studentWork: ['学生作品01url',
 }
 
 
-let tdArduino = {
+let TDArduino = {
     // 以下是文字内容填充
 classID: "unityVR(不要修改)",
 classNameEng:'Mastering Interactive Installation with TouchDesigner',

@@ -116,18 +116,18 @@ this is the first HTML code, load font and style!
     }
 
     a:visited {
-        color: black;
+        color:inherit;
         text-decoration: none;
     } /* Visited link    */
     
 
     a:active {
-        color: black;
+        color: inherit;
         text-decoration: none;
     }
 
     a{
-        color: black;
+        color: inherit;
         text-decoration: none;
     }
 
@@ -331,6 +331,7 @@ this is the first HTML code, load font and style!
         height: 46px;
         float: right;
         border:none;
+        width: 200px;
     }
 
     .buttonBlack:hover{
@@ -423,7 +424,14 @@ this is the first HTML code, load font and style!
         font-family: "XYZL";
 		font-weight: 290;
 		margin-left: 22px;
+        cursor:pointer;
 	}
+
+    .courseButton:hover{
+        transform: translateY(-5px) scale(1.005) translateZ(0);
+        box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+            0 24px 46px rgba(0,0,0,0.11);
+    }
 
 
     #courseDisplayContainer{
@@ -543,7 +551,7 @@ this is the first HTML code, load font and style!
         height:532px;
         background-color: black;
         border-radius: 15px;
-
+        overflow: hidden;
     }
 
 
@@ -694,6 +702,10 @@ this is the first HTML code, load font and style!
         border-radius: 15px;
     }
 
+    .social3Text{
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.09);;
+    }
 
 
 
@@ -805,13 +817,25 @@ this is the first HTML code, load font and style!
         font-size: 20px;
         font-family: "XYZL";
         font-weight: 290;
-        color: #222222;
-        background-color: #E2E2E2;
+        color: white;
+        background-color: #CBCCCD;
         border-radius: 6px;
         display: inline-block;
-        /*height:37px;*/
         padding: 4px 20px 4px 20px;
     }
+
+    .tag:hover{
+        /* text-shadow:0px 0px 1px #222222; */
+        font-weight: 400;
+        cursor: pointer;
+        background-color: #B77EFF;
+    }
+
+    /* .service:hover {
+
+    } */
+
+
 
     .advisorTitle{
         color:rgba(0, 0, 0, 0.45);
@@ -1891,7 +1915,9 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize'>2022 Interactive Art Summer BootCamp</div>
                         <div class='header3 header3Resize'>2022国际交互艺术夏令营</div>
                     </div>
-                    <div><div class='tag'>#Metaverse</div></div>
+                    <div>
+                        <a href="courseList.html?filter=metaverse"><div class='tag'>#Metaverse</div></a>
+                    </div>
                 </div>
             </div>
             <!-- end of card 6 -->
@@ -1903,7 +1929,9 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unityAR">Mastering Augmented Reality with Unity</a></div>
                         <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unityAR">AR增强现实大师班</a></div>
                     </div>
-                    <div><div class='tag'>#Augmented Reality</div></div>
+                    <div>
+                        <a href="courseList.html?filter=ar"><div class='tag'>#Augmented Reality</div></a>
+                    </div>
                 </div>
             </div>
             <!-- end of card 3 -->
@@ -1915,7 +1943,9 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize'>Mastering AudioVisual with TouchDesigner</div>
                         <div class='header3 header3Resize'>TD音画互动大师班</div>
                     </div>
-                    <div><div class='tag'>#TouchDesigner</div></div>
+                    <div>
+                        <a href="courseList.html?filter=td"><div class='tag'>#TouchDesigner</div></a>
+                    </div>
                 </div>
             </div>
             <!-- end of card 5 -->
@@ -1928,7 +1958,9 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=ai">AI Generative Art Master Course</a></div>
                         <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=ai">AI生成艺术大师班</a></div>
                     </div>
-                    <div><div class='tag'>#p5.js</div></div>
+                    <div>
+                        <a href="courseList.html?filter=p5"><div class='tag'>#p5.js</div></a>
+                    </div>
                 </div>
     		</div>
             <!-- end of card 1 -->
@@ -1939,7 +1971,9 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unrealStylized">Matering 3D Stylized Environment with UE5</a></div>
                         <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unrealStylized">UE5风格化场景师班</a></div>
                     </div>
-                    <div><div class='tag'>#UE5</div></div>
+                    <div>
+                        <a href="courseList.html?filter=unreal"><div class='tag'>#UE5</div></a>
+                    </div>
                 </div>
             </div>
             <!-- end of card 2 -->
@@ -1951,7 +1985,9 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unityVR">Mastering Virtual Reality with Unity</a></div>
                         <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unityVR">VR虚拟实境大师班</a></div>
                     </div>
-                    <div><div class='tag'>#Virtual Reality</div></div>
+                    <div>
+                        <a href="courseList.html?filter=vr"><div class='tag'>#Virtual Reality</div></a>
+                    </div>
                 </div>
             </div>
             <!-- end of card 4 -->
@@ -1959,7 +1995,7 @@ this is the first HTML code, load font and style!
 
     	</div>
         <div class='buttonDiv'>
-            <a href="courseList.html"><button class='buttonBlack'><span class="eng">View Course List</span><span class="cn">课程列表</span></button></a>   
+            <a href="courseList.html"><button class='buttonBlack'><span class="eng">View Course List</span><span class="cn">更多课程</span></button></a>   
         </div>
     </div>
     <!-- end of course container -->
@@ -2025,7 +2061,9 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unityVR">Mastering Virtual Reality with Unity</a></div>
                         <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unityVR">VR虚拟实境大师班</a></div>
                     </div>
-                    <div><div class='tag'>#Virtual Reality</div></div>
+                    <div>
+                        <a href="courseList.html?filter=vr"><div class='tag'>#Virtual Reality</div></a>
+                    </div>
                 </div>
             </div>
 
@@ -2036,7 +2074,9 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize'>Mastering AudioVisual with TouchDesigner</div>
                         <div class='header3 header3Resize'>TD音画互动大师班</div>
                     </div>
-                    <div><div class='tag'>#TouchDesigner</div></div>
+                    <div>
+                        <a href="courseList.html?filter=td"><div class='tag'>#TouchDesigner</div></a>
+                    </div>
                 </div>
             </div>
 
@@ -2047,7 +2087,9 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unityAR">Mastering Augmented Reality with Unity</a></div>
                         <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unityAR">AR增强现实大师班</a></div>
                     </div>
-                    <div><div class='tag'>#Augmented Reality</div></div>
+                    <div>
+                        <a href="courseList.html?filter=ar"><div class='tag'>#Augmented Reality</div></a>
+                    </div>
                 </div>
             </div>
 
@@ -2070,7 +2112,12 @@ this is the first HTML code, load font and style!
                 <!-- <span id='readmore'>read more...</span> -->
             </div>
         </div>
-        <div id='videoContainer'></div>
+        <div id='videoContainer'>
+            <video id='aboutVideo' width='100%' controls poster=''>
+                <source src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_b8ae7a83bc4cd49c9b176c4d7832a476" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+        </div>
     </div>
 <!-- end of about container -->
 
@@ -2085,21 +2132,21 @@ this is the first HTML code, load font and style!
         <div id='newsContentContainer'>
             <div class='newContent'>
                 <div class='date'>2022.06.02</div>
-                <div class='newsTitle'>第三期TD互动装置大师班今日正式发布，上海音乐学院外教亲自授课，12周硬核掌握TD硬件开发，成为最抢手的交互装置设计师！</div>
+                <div class='newsTitle'>第三期TD互动装置大师班今日正式发布，上海音乐学院外教亲自授课，12周掌握TD硬件开发，成为最抢手交互装置设计师！</div>
                 <div class='more'>>></div>
             </div>
             <!-- end of new card 1 -->
 
             <div class='newContent'>
                 <div class='date'>2022.06.01</div>
-                <div class='newsTitle'>OF COURSE官方平台2022年6月1日换新升级，携3大课程类型，8大元宇宙技术体系，以及n+1跨平台模式，打造只属于你的元宇宙知识库！</div>
+                <div class='newsTitle'>OF 官方平台于6月1日换新升级，携3大课程类型，8大元宇宙技术体系，及n+1跨平台模式，打造属于你的元宇宙知识库！</div>
                 <div class='more'>>></div>
             </div>
             <!-- end of new card 2 -->
 
             <div class='newContent'>
                 <div class='date'>2022.05.31</div>
-                <div class='newsTitle'>OF COURSE创始人程鹏先生受邀参加由中国美术学院新设计学院媒介与交互研究所与蓬莱科幻学院举办的“东方幻想”元宇宙科幻大会</div>
+                <div class='newsTitle'>OF 创始人程鹏先生受邀参加中国美术学院新设计学院媒介与交互研究所与蓬莱科幻学院举办的“东方幻想”元宇宙科幻大会</div>
                 <div class='more'>>></div>
             </div>
             <!-- end of new card 3 -->
@@ -2107,7 +2154,7 @@ this is the first HTML code, load font and style!
 
             <div class='newContent'>
                 <div class='date'>2022.05.25</div>
-                <div class='newsTitle'>2022国际交互艺术夏令营定档7月18日，18位全球顶尖教授专家挂帅，9种前沿交互技术，110小时高品质学习，将带给你前所未有的沉浸式学习体验！</div>
+                <div class='newsTitle'>2022国际交互艺术夏令营定档7月18日，18位全球顶尖教授专家，9种前沿交互技术，110小时高品质学习，带给你前所未有的沉浸式学习体验！</div>
                 <div class='more'>>></div>
             </div>
             <!-- end of new card 4 -->
@@ -2517,13 +2564,14 @@ this is the first HTML code, load font and style!
 </html>
 
 
-<!-- 主页宣传片 （视频收集） -->
 <!-- 课程页面链接 - 没有页面的先链接小鹅通 -->
-<!-- footer 加链接， logo + cursor pointer -->
-<!-- 加入我们可以使用金数据表单的页面 -->
-<!-- tag 手一动上去有点效果辩护 -->
 <!-- courselist 切换的时候模块变化 -->
 <!-- https://sfpc.io/people/#filter=.student -->
-<!-- filter 手一动上去的时候有下划线 -->
-<!-- filter 点击出来之后 icon 变 X -->
-<!-- about us 页面 -->
+
+
+
+
+<!-- new issues  -->
+<!-- 1. 主页aboutus的video需要添加一个封面？ -->
+<!-- 2. 加入我们可以使用金数据表单的页面 -->
+

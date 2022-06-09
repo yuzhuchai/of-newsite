@@ -6,6 +6,8 @@
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- <script type="text/javascript" src='data.js'></script> -->
 </head>
 <body>
@@ -201,6 +203,7 @@ this is the first HTML code, load font and style!
         height:30px;
         /*border:1px solid black;*/
         align-self: center;
+        position:relative;
     }
 
     #filterImg{
@@ -249,6 +252,9 @@ this is the first HTML code, load font and style!
 
     .buttonList:hover{
         cursor:pointer;
+        transform: translateY(-5px) scale(1.005) translateZ(0);
+        box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+            0 24px 46px rgba(0,0,0,0.11);
     }
 
     #all{
@@ -264,9 +270,7 @@ this is the first HTML code, load font and style!
         margin-bottom: 50px;
         color: #222222;
         flex-direction: column;
-        /*align-content: center;*/
-
-        /*padding: 20px;*/
+        position: relative;
     }
 
     #filterDisplay > div {
@@ -860,16 +864,23 @@ this is the first HTML code, load font and style!
 
     .tag{
         font-size: 20px;
-        font-family:  "XYZL";
+        font-family: "XYZL";
         font-weight: 290;
-        color: #222222;
-        background-color: #E2E2E2;
+        color: white;
+        background-color: #CBCCCD;
         border-radius: 6px;
         display: inline-block;
-        margin-right:10px;
-        /*height:37px;*/
         padding: 4px 20px 4px 20px;
+        margin-right:3px;
     }
+
+    .tag:hover{
+        /* text-shadow:0px 0px 1px #222222; */
+        font-weight: 400;
+        cursor: pointer;
+        background-color: #B77EFF;
+    }
+
 
     .advisorTitle{
         color:rgba(0, 0, 0, 0.45);
@@ -1749,6 +1760,36 @@ this is the first HTML code, load font and style!
     right:2px;
 }
 
+.closeFilterTab{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display:none;
+}
+
+.closeFilterTab:before, .closeFilterTab:after{
+    content:'';
+    position:absolute;
+    width:30px;
+    height:4px;
+    background-color:#ACACAC;
+    border-radius:2px;
+    top:16px;
+    /* box-shadow:0 0 2px 0 #222222; */
+}
+.closeFilterTab:before{
+    transform:rotate(45deg);
+    /* left:2px; */
+}
+.closeFilterTab:after{
+    transform:rotate(-45deg);
+    /* right:2px; */
+}
+
+
 
 </style>
 
@@ -1942,13 +1983,17 @@ this is the first HTML code, load font and style!
     		</div>
     		
             <div id='filterContainer'>
-                <div id='filterIcon'><img id='filterImg' src='http://cdn0.ofcourse.io/8657289f999a42ff903c31f6036a2294_02fe3b72fa38f7f553bdd3bd7b835b96?imageView2'></div>
+                <div id='filterIcon'>
+                    <img id='filterImg' src='http://cdn0.ofcourse.io/8657289f999a42ff903c31f6036a2294_02fe3b72fa38f7f553bdd3bd7b835b96?imageView2'>
+                    <div class="closeFilterTab"></div>
+                </div>
                 <div id='filterText'>Filter</div>
             </div>
     	</div>
 
 
         <div class='container' id='filterDisplay'>
+
             <div>
                 <div class='filterContent'>
                     <div class='filterTitle'>Sort By</div>
@@ -2016,7 +2061,9 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">2022 Interactive Art Summer BootCamp</a></div>
                         <div class='header3 header3Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">2022国际交互艺术夏令营</a></div>
                     </div>
-                    <div><div class='tag p5'>#metaverse</div> <div class='tag unity'>#ai</div></div>
+                    <div>
+                        <div class='tag p5'>#metaverse</div> <div class='tag unity'>#ai</div>
+                    </div>
                 </div>
     		</div>
 
@@ -2038,7 +2085,7 @@ this is the first HTML code, load font and style!
                         <div class='vrClick header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unityVR">Mastering Virtual Reality with Unity</a></div>
                         <div class='vrClick header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unityVR">VR虚拟实境大师班</a></div>
                     </div>
-                    <div><div class='tag vr'>#VR</div><div class='tag unity'>#unity</div></div>
+                    <div><div class='tag vr'>#VR</div> <div class='tag unity'>#unity</div></div>
                 </div>
             </div>
             <!-- end of card 2 -->
@@ -2049,7 +2096,7 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unrealLandScape">Matering Landscape and Human with UE</a></div>
                         <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unrealLandScape">Unreal场景人物大师班</a></div>
                     </div>
-                    <div><div class='tag ue'>#Unreal Engine</div><div class="tag dHuman">Digital Human</div></div>
+                    <div><div class='tag unreal'>#Unreal Engine</div> <div class="tag dh">#Digital Human</div></div>
                 </div>
             </div>
             <!-- end of card 3 -->
@@ -2061,7 +2108,7 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unrealLandScape">Matering 3D Stylized Environment with UE5</a></div>
                         <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unrealLandScape">UE5 3D风格化场景师班</a></div>
                     </div>
-                    <div><div class='tag ue'>#Unreal Engine</div><div class="tag dHuman">Digital Human</div></div>
+                    <div><div class='tag unreal'>#Unreal Engine</div> <div class="tag dh">#Digital Human</div></div>
                 </div>
             </div>
 
@@ -2074,7 +2121,7 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=ai">Mastering AI Generative Art With P5.js</a></div>
                         <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=ai">AI生成艺术大师班</a></div>
                     </div>
-                    <div><div class='tag p5'>#p5.js</div><div class='tag ai'>#p5.js</div></div>
+                    <div><div class='tag p5'>#p5.js</div> <div class='tag ai'>#AI</div></div>
                 </div>
             </div>
             <!-- end of card 4 -->
@@ -2085,7 +2132,7 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize'>Mastering Interactive Lighting with Processing</div>
                         <div class='header3 header3Resize'>互动灯光编程大师班</div>
                     </div>
-                    <div><div class='tag processing'>#Processing</div><div class='tag lighting'>#Lighting Design</div></div>
+                    <div><div class='tag processing'>#Processing</div> <div class='tag light'>#Lighting Design</div></div>
                 </div>
             </div>
             <!-- end of card 5 -->
@@ -2096,7 +2143,7 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=tdArduino">Mastering interactive Installation with TD</a></div>
                         <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=tdArduino">TD交互装置大师班</a></div>
                     </div>
-                    <div><div class='tag td'>#touchDesigner</div><div class='tag arduino'>#arduino</div></div>
+                    <div><div class='tag td'>#touchDesigner</div> <div class='tag arduino'>#arduino</div></div>
                 </div>
             </div>
             <!-- end of card 6 -->
@@ -2109,7 +2156,7 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize'>Mastering Museum Interaction Design</div>
                         <div class='header3 header3Resize'>博物馆体验设计大师班</div>
                     </div>
-                    <div><div class='tag museum'>#Museum Interaction</div><div class='tag figma'>#figma</div></div>
+                    <div><div class='tag museum'>#Museum Interaction</div> <div class='tag figma'>#figma</div></div>
                 </div>
             </div>
             <!-- end of card 7 -->
@@ -2120,7 +2167,7 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize'>Mastering Commercial Design with TouchDesigner</div>
                         <div class='header3 header3Resize'>TD商业项目大师班</div>
                     </div>
-                    <div><div class='tag td'>#touchDesigner</div><div class='tag kinect'>#kinect</div></div>
+                    <div><div class='tag td'>#touchDesigner</div> <div class='tag kinect'>#kinect</div></div>
                 </div>
             </div>
             <!-- end of card 8 -->
@@ -2131,7 +2178,7 @@ this is the first HTML code, load font and style!
                         <div class='header2 header2Resize'>Mastering AudioVisual with TouchDesigner</div>
                         <div class='header3 header3Resize'>TD音画互动大师班</div>
                     </div>
-                    <div><div class='tag td'>#touchDesigner</div><div class='tag avs'>#AudioVisual</div></div>
+                    <div><div class='tag td'>#touchDesigner</div> <div class='tag avs'>#AudioVisual</div></div>
                 </div>
             </div>
             <!-- end of card 9 -->
@@ -2204,21 +2251,28 @@ this is the first HTML code, load font and style!
 
         let filterDisplay = false;
         $('#filterContainer').click(function(){
+            // console.log('clicked')
             if(!filterDisplay){
                 $('#filterText').css({'color':'#ACACAC'})
                 $('#filterDisplay').css({'display':'flex'})
+                // $('#filterImg').attr('src',"http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0bd902bde4c7f20be91c20be6eb96c8e?imageView2")
+                $('#filterImg').hide();
+                $('.closeFilterTab').show();
                 filterDisplay = true;
 
             } else {
                 $('#filterText').css({'color':'#222222'})
                 $('#filterDisplay').css({'display':'none'})
+                $('.closeFilterTab').hide();
+                $('#filterImg').show();
+                // $('#filterImg').attr('src',"http://cdn0.ofcourse.io/8657289f999a42ff903c31f6036a2294_02fe3b72fa38f7f553bdd3bd7b835b96?imageView2")
                 filterDisplay = false;
-
             }
         }) 
 
+
         if(filter == 'newest'){
-            $('.course').hide();
+            $('.course').hide('slide',1000);
             $('.newestCourse').show();
             $('.buttonList').css({
                 'color':'black',
@@ -2292,6 +2346,25 @@ this is the first HTML code, load font and style!
             $('.course').hide();
             $('.p5Course').show();
             $('.empty').show();
+        } else if (filter == 'metaverse'){
+            $('.buttonList').css({
+                'color':'black',
+                'background-color':'white'
+            })
+            $('#metaverse').css({
+                'color':'white',
+                'background-color':'black'
+            })
+            $('.course').hide('slide');
+            $('.metaverseCourse').show('slide');
+        } else if (filter =='ar'){
+            $('.course').hide('slide');
+            $('.arCourse').show('slide');
+            $('.empty').show();
+        } else if (filter=='vr'){
+            $('.course').hide('slide');
+            $('.vrCourse').show('slide');
+            $('.empty').show();
         }
 
 
@@ -2322,156 +2395,156 @@ this is the first HTML code, load font and style!
 
         // click event
         $('.all').click(function(){
-            $('.course').show();
+            $('.course').show('slide');
         })
 
         $('.recommand').click(function(){
-            $('.course').hide();
-            $('.recommandCourse').show();
+            let $show = $('.recommandCourse').show('slide');
+            $('.course').not($show).hide('slide');            
             // $('.empty').show();
         })
 
         $('.unity').click(function(){
-            $('.course').hide();
-            $('.unityCourse').show();
+            $('.course').hide('slide');
+            $('.unityCourse').show('slide');
             $('.empty').show();
         })
 
         $('.unreal').click(function(){
-            $('.course').hide();
-            $('.unrealCourse').show();
+            $('.course').hide('slide');
+            $('.unrealCourse').show('slide');
             $('.empty').show();
         })
 
         $('.td').click(function(){
-            $('.course').hide();
-            $('.tdCourse').show();
+            $('.course').hide('slide');
+            $('.tdCourse').show('slide');
         })
 
         $('.arduino').click(function(){
-            $('.course').hide();
-            $('.arduinoCourse').show();
+            $('.course').hide('slide');
+            $('.arduinoCourse').show('slide');
         })
 
         $('.processing').click(function(){
-            $('.course').hide();
-            $('.processingCourse').show();
+            $('.course').hide('slide');
+            $('.processingCourse').show('slide');
         })
 
         $('.ml5').click(function(){
-            $('.course').hide();
-            $('.ml5Course').show();
+            $('.course').hide('slide');
+            $('.ml5Course').show('slide');
             $('.empty').show();
         })
 
         $('.js').click(function(){
-            $('.course').hide();
-            $('.jsCourse').show();
+            $('.course').hide('slide');
+            $('.jsCourse').show('slide');
             $('.empty').show();
         })
 
         $('.shader').click(function(){
-            $('.course').hide();
-            $('.shaderCourse').show();
+            $('.course').hide('slide');
+            $('.shaderCourse').show('slide');
             $('.empty').show();
         })
 
         $('#ai').click(function(){
-            $('.course').hide();
-            $('.aiCourse').show();
+            $('.course').hide('slide');
+            $('.aiCourse').show('slide');
             $('.empty').show();
         })
         $('.xr').click(function(){
-            $('.course').hide();
-            $('.xrCourse').show();
+            $('.course').hide('slide');
+            $('.xrCourse').show('slide');
             $('.empty').show();
         })
         $('.nft').click(function(){
-            $('.course').hide();
-            $('.nftCourse').show();
+            $('.course').hide('slide');
+            $('.nftCourse').show('slide');
             $('.empty').show();
         })
         $('.p5').click(function(){
-            $('.course').hide();
-            $('.p5Course').show();
+            $('.course').hide('slide');
+            $('.p5Course').show('slide');
             $('.empty').show();
         })
         $('.metaverse').click(function(){
-            $('.course').hide();
-            $('.metaverseCourse').show();
+            $('.course').hide('slide');
+            $('.metaverseCourse').show('slide');
         })
         $('.museum').click(function(){
-            $('.course').hide();
-            $('.museumCourse').show();
+            $('.course').hide('slide');
+            $('.museumCourse').show('slide');
         })
         $('.light').click(function(){
-            $('.course').hide();
-            $('.lightCourse').show();
+            $('.course').hide('slide');
+            $('.lightCourse').show('slide');
         })
 
         $('.highTech').click(function(){
-            $('.course').hide();
-            $('.empty').show();
+            $('.course').hide('slide');
+            $('.empty').show('slide');
             $('.highTechCourse').show();
         })
 
         $('.exhibition').click(function(){
-            $('.course').hide();
-            $('.empty').show();
+            $('.course').hide('slide');
+            $('.empty').show('slide');
             $('.exhibitionCourse').show();
         })
 
         $('.brand').click(function(){
-            $('.course').hide();
-            $('.empty').show();
+            $('.course').hide('slide');
+            $('.empty').show('slide');
             $('.brandCourse').show();
         })
 
         $('.stage').click(function(){
-            $('.course').hide();
-            $('.empty').show();
+            $('.course').hide('slide');
+            $('.empty').show('slide');
             $('.stageCourse').show();
         })
 
         $('.avs').click(function(){
-            $('.course').hide();
-            $('.empty').show();
+            $('.course').hide('slide');
+            $('.empty').show('slide');
             $('.avsCourse').show();
         })
 
         $('.interactive').click(function(){
-            $('.course').hide();
-            $('.interactiveCourse').show();
+            $('.course').hide('slide');
+            $('.interactiveCourse').show('slide');
             $('.empty').show();
         })
 
         $('.game').click(function(){
-            $('.course').hide();
-            $('.gameCourse').show();
+            $('.course').hide('slide');
+            $('.gameCourse').show('slide');
             $('.empty').show();
         })
 
         $('.ar').click(function(){
-            $('.course').hide();
-            $('.arCourse').show();
+            $('.course').hide('slide');
+            $('.arCourse').show('slide');
             $('.empty').show();
         })
 
         $('.vr').click(function(){
-            $('.course').hide();
-            $('.vrCourse').show();
+            $('.course').hide('slide');
+            $('.vrCourse').show('slide');
             $('.empty').show();
         })
 
         $('.immersive').click(function(){
-            $('.course').hide();
-            $('.immersiveCourse').show();
+            $('.course').hide('slide');
+            $('.immersiveCourse').show('slide');
             $('.empty').show();
         })
 
         $('.dh').click(function(){
-            $('.course').hide();
-            $('.dhCourse').show();
+            $('.course').hide('slide');
+            $('.dhCourse').show('slide');
             $('.empty').show();
         })
 
@@ -2538,6 +2611,8 @@ this is the first HTML code, load font and style!
         $('.closeTab').click(function(){
             $('#loginPopupBg').hide()
         })
+
+
     </script>
 </body>
 </html>

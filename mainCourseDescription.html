@@ -2461,6 +2461,64 @@ this is the first HTML code, load font and style!
 }
 
 
+#consultantImgBg{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-content: center;
+}
+
+#consultImgContainer{
+    height: 70%;
+    margin-top:7.5%;
+    position: relative;
+    display: inline-block;
+    width:auto;
+    margin:auto;
+}
+
+#consultImgContainer > img{
+    margin:auto;
+    height: 100%;
+}
+
+
+.closeTabShop{
+    position: absolute;
+    right: 3px;
+    top:3px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.closeTabShop:before, .closeTabShop:after{
+    content:'';
+    position:absolute;
+    width:20px;
+    height:4px;
+    background-color:#7c7c7c;
+    border-radius:2px;
+    top:14px;
+    /* box-shadow:0 0 2px 0 #222222; */
+}
+.closeTabShop:before{
+    transform:rotate(45deg);
+    left:2px;
+}
+.closeTabShop:after{
+    transform:rotate(-45deg);
+    right:2px;
+}
+
+
+
 
 </style>
 
@@ -2632,6 +2690,14 @@ this is the first HTML code, load font and style!
 
 </div>
 
+
+<div id="consultantImgBg">
+    <div id="consultImgContainer">
+        <div class="closeTabShop"></div>
+        <img id="buyImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2a43e6be51489ff3b257d29556652ced?imageView2">
+        <img id="consultImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3fd184b8aff1c554f7ebeaf4eb25ec0a?imageView2">
+    </div>
+</div>
 
 
 
@@ -3474,20 +3540,20 @@ this is the first HTML code, load font and style!
         })
 
 
+        $('.closeTabShop').click(function(){
+            $('#consultantImgBg').hide();
+        })
+
         $('#buttonTop').click(function(){
-            $('#loginPopupBg').show()
-            $('#loginHeader').text('微信扫码添加课程顾问')
-            $('#loginText').text('咨询课程顾问获得更多课程详情')
-            $('.loginImgreplace').attr('src','http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e950ca602dff0d8892959e863522f3e3?imageView2')
-            $('.loginTextSmall').hide();
+            $('#consultantImgBg').css('display','flex')
+            $('#buyImg').show()
+            $('#consultImg').hide();
         })
 
         $('#buttonBottom').click(function(){
-            $('#loginPopupBg').show()
-            $('#loginHeader').text('微信扫码添加课程顾问')
-            $('#loginText').text('添加课程顾问获得课程购买链接')
-            $('.loginImgreplace').attr('src','http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7c3b8e66111ec3dd6ad601c83dd65077?imageView2')
-            $('.loginTextSmall').hide();
+            $('#consultantImgBg').css('display','flex')
+            $('#buyImg').hide()
+            $('#consultImg').show();
         })
 
 
@@ -3567,28 +3633,15 @@ this is the first HTML code, load font and style!
 
 
 
-<!-- header icon大小 -->
-<!-- 搜索框微调接近 -->
-<!-- login 小鹅通登陆二维码 -->
-<!-- syllabus 黑底灰字 -->
-<!-- 搜索字体颜色 淡 -->
-<!-- 购买不成功返回详情页 -->
-<!-- 购买成功：熊的二维码，+ 立即学习跳转到小鹅通页面 -->
 
 
-<!-- 视频封面 阴影 -->
+
+
 <!-- 按钮广告语 命令行 -->
-<!-- 二维码 购买和咨询颜色区分 -->
-<!-- teaching feature VS - 一个单词 -->
 <!-- 英文字号小，weight细 -->
-<!-- footer 中英文 -->
 <!-- class header 英文全大写 -->
-<!-- 自定义页面url 夏老师 -->
 
-<!-- （menu背景图替换） -->
-<!-- metaverse cours tag的选择范围在整个按钮 + 按钮反应（阴影变深） -->
+
+<!-- （menu课程的背景图替换） -->
 <!-- 课程里的tag 链接到courselist的分组 -->
-<!-- 课程列表改为更多课程 -->
-<!-- 主页上的按钮 保持英文按钮的大小，中文之后字句中 -->
-<!-- news 上面的字数保持一行 -->
 <!-- 导师照片背景统一 -->
