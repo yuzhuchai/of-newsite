@@ -9,9 +9,10 @@
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- <script type="text/javascript" src='./courseDes/unrealStyle_data.js'></script> -->
   <script type="text/javascript" src='data.js'></script>
-  <script>(function() {var _53code = document.createElement("script");_53code.src = "https://tb.53kf.com/code/code/4e0cdfc37674bec55a629614368073db3/1";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(_53code, s);})();</script>
 
 </head>
 <body>
@@ -84,10 +85,6 @@ this is the first HTML code, load font and style!
             courseDisplay = unityAR
         } else if(courseID == 'unityVR'){
             courseDisplay = unityVR
-        } else if (courseID == 'unrealStylized'){
-            courseDisplay = unrealStylized
-            $('#commentsContainer').hide();
-            $('#studentWorkContainer').hide();
         } else if(courseID == 'ai'){
             courseDisplay = ai
             $('#courseVideo').hide();
@@ -95,10 +92,14 @@ this is the first HTML code, load font and style!
         } else if(courseID == 'unrealLandScape'){
             courseDisplay = unrealLandScape
             $('#commentsContainer').hide();
-            $('#studentWorkContainer').hide();
+            // $('#studentWorkContainer').hide();
         } else if(courseID == 'tdArduino'){
             courseDisplay = tdArduino
-        }
+        } else if(courseID == 'museum'){
+            courseDisplay = museum
+            $('#courseVideo').hide();
+            $('#studentWorkContainer').hide();
+        } 
 
         // below is displaying the correct contents:
         $('#mainPoster').css("background-image", "url(" + courseDisplay.mainPoster + ")");
@@ -134,8 +135,10 @@ this is the first HTML code, load font and style!
         }
 
 
-        for (let i = 0; i < 12; i++){
-            $('#studentWork' + i).attr('src',courseDisplay.studentWork[i])
+        let workLength = courseDisplay.studentWork.length
+
+        for (let i = 0; i < workLength; i++){
+            $('#studentWork' + i).attr('src',courseDisplay.studentWork[i]).parent().removeClass('hide')
         }
 
         $('#mentorNameEng').text(courseDisplay.mentorNameEng)
@@ -169,7 +172,7 @@ this is the first HTML code, load font and style!
             // $('#syllabusList')
             let syllabusList = courseDisplay.syllabus[i].fullSyllabus
             console.log()
-            for(let j =0; j < 4; j++){
+            for(let j =0; j < 3; j++){
                 $('.syllabusLists' + i).append("<li>" + syllabusList[j] + "</li>")
             }
         }
@@ -179,10 +182,6 @@ this is the first HTML code, load font and style!
                 $(this).children('#fillVideo').get(0).play();   
                 $(this).children(".playButton").fadeOut();
             }
-            // else if($(this).children('#fillVideo').get(0).play){       
-            //     $(this).children('#fillVideo').get(0).pause();
-            //     $(this).children(".playButton").fadeIn();
-            // }
         });
 
         $('#mentorVideo').click(function () {
@@ -190,10 +189,6 @@ this is the first HTML code, load font and style!
                 $(this).children('#fillteacherVideo').get(0).play();   
                 $(this).children(".playButton").fadeOut();
             }
-            // else if($(this).children('#fillteacherVideo').get(0).play){       
-            //     $(this).children('#fillteacherVideo').get(0).pause();
-            //     $(this).children(".playButton").fadeIn();
-            // }
         });
 
     })
@@ -243,6 +238,21 @@ this is the first HTML code, load font and style!
     video{
         display: block;
     }
+
+    a:visited{
+        color:inherit;
+        text-decoration: none;
+    }
+
+    a:active{
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a {
+        color:inherit;
+        text-decoration: none;
+    } 
 
     .playButton{
         background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6b771ccb8bedba5b1a81bfb198df2352?imageView2);
@@ -651,29 +661,34 @@ this is the first HTML code, load font and style!
 
     .overlay{
         width: 100%;
-        background: rgba(0,0,0, .6);
+        height: 100%;
+        background: rgba(0,0,0, .4);
         color: #E2E2E2;
-        opacity: 0;
-        display: block;
+        display: none;
         font-size: 1.2em;
         position: absolute;
-        height: 0;
         bottom: 0;
-        overflow-y: scroll;
-        transition: 1s;
-        transition-timing-function: ease-in-out;
     }
 
     .overlay > div{
         margin:20px;
     }
 
-    .overlayBottom:hover .overlay{
-        cursor: pointer;
-        opacity: 1;
-        height:100%;
+    /* .overlay:hover + .overlay > div>li {
+        margin-left:-5px;
+        animation: slidein 7s infinite;
     }
 
+    @keyframes slidein {
+        0% { margin-left:-800px; }
+        20% { margin-left:-800px; }
+        35% { margin-left:0px; }
+        100% { margin-left:0px; }
+    } */
+
+    /* .overlayHover:hover + .overlay{
+        display: block;
+    } */
  
 
 
@@ -968,7 +983,7 @@ this is the first HTML code, load font and style!
 
 
     .columnItem:hover{
-        background-color:#c4c4c4;
+        background-color:#E2E2E2;
     }
 
     .noAnimation:hover{
@@ -1032,12 +1047,14 @@ this is the first HTML code, load font and style!
     	height: 250px;
     	padding-top:50px;
     	padding-bottom: 50px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
     }
 
     .service:hover {
-        transform: translateY(-5px) scale(1.005) translateZ(0);
-        box-shadow: 0 24px 36px rgba(0,0,0,0.11),
-            0 24px 46px rgba(0,0,0,0.11);
+        transform: translateY(2px) translateX(2px) scale(1) translateZ(0);
+        /* box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+            0 24px 46px rgba(0,0,0,0.11); */
     }
 
 
@@ -2467,15 +2484,16 @@ this is the first HTML code, load font and style!
     top:0;
     width:100vw;
     height:100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 10;
     display: none;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
 }
 
 #consultImgContainer{
-    height: 70%;
+    height: 70vh;
     margin-top:7.5%;
     position: relative;
     display: inline-block;
@@ -2483,13 +2501,54 @@ this is the first HTML code, load font and style!
     margin:auto;
 }
 
-#consultImgContainer > img{
-    margin:auto;
+
+.consultImgDiv{
     height: 100%;
+    position: relative;
+    /* align-self: center; */
+}
+
+.consultImgDiv > img {
+    height:100%;
+}
+
+.imgText{
+    position: absolute;
+    z-index: 10;
+    width:100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 63px;
+    letter-spacing: 0.045em;
+    font-family:'XYZB';
 }
 
 
-.closeTabShop{
+
+#buyText{
+    color:#D99659;
+    bottom: 19%;
+}
+
+#askText{
+    color: #4949FF;
+    bottom: 18%;
+}
+
+#closePopUp{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin:auto;
+}
+
+#closePopUp > img{
+    width: 100%;
+}
+
+
+/* .closeTabShop{
     position: absolute;
     right: 3px;
     top:3px;
@@ -2506,7 +2565,7 @@ this is the first HTML code, load font and style!
     background-color:#7c7c7c;
     border-radius:2px;
     top:14px;
-    /* box-shadow:0 0 2px 0 #222222; */
+    /* box-shadow:0 0 2px 0 #222222; 
 }
 .closeTabShop:before{
     transform:rotate(45deg);
@@ -2515,15 +2574,21 @@ this is the first HTML code, load font and style!
 .closeTabShop:after{
     transform:rotate(-45deg);
     right:2px;
+} */
+
+.hide{
+    display: none;
 }
 
-
+li{
+    display: none;
+}
 
 
 </style>
 
 <div id="header">
-    <div id="headerlogo"><a href="webpage.html"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
+    <div id="headerlogo"><a href="./home.html"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
     <div id="menu">
         <div>
             <input type='text' id='search' placeholder="processing"> 
@@ -2570,120 +2635,165 @@ this is the first HTML code, load font and style!
 <div id='menuPopUp'>
     <div id='menuPopUpContents'>
         <div id='menuButtonContainer'>
-            <a href="courselist.html"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
-            <a href="webpage.html#aboutContainer"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
-            <a href="news.html"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
-            <a href="blogs.html"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
-            <a href="webpage.html#mentorContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
+            <a href="./courselist.html"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
+            <a href="./aboutus.html"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
+            <a href="./news.html"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
+            <a href="./blogs.html"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
+            <a href="./aboutus.html#advisorsContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
         </div> 
 
         <div id='menuCategoryContainer'>
-            <div class='menuCategory' id="allClass"><div><span class="cn">全部课程</span><span class="eng">All Course</span></div></div>
-            <div class='menuCategory' id="aiClass"><div><span class="cn">快速筑基班</span><span class="eng">Foundation Course</span></div></div>
-            <div class='menuCategory' id="masterClass"><div><span class="cn">大师班</span><span class="eng">Master Class</span></div></div>
-            <div class='menuCategory' id="bootCampClass"><div><span class="cn">冲刺营</span><span class="eng">BootCamp</span></div></div>
+            <a class="cursorPointer" href="./courseList.html">
+                <div class='menuCategory' id="allClass">
+                    <div>
+                        <span class="cn">全部课程</span>
+                        <span class="eng">All Course</span>
+                    </div>
+                </div>
+            </a>
+            <a class="cursorPointer" href="./courseList.html">
+                <div class='menuCategory' id="aiClass">
+                    <div>
+                        <span class="cn">快速筑基班</span>
+                        <span class="eng">Foundation Course</span>
+                    </div>
+                </div>
+            </a>
+            <a class="cursorPointer" href="./courseList.html">
+                <div class='menuCategory' id="masterClass">
+                    <div>
+                        <span class="cn">大师班</span>
+                        <span class="eng">Master Class</span>
+                    </div>
+                </div>
+            </a>
+            <a class="cursorPointer" href="./courseList.html">
+                <div class='menuCategory' id="bootCampClass">
+                    <div>
+                        <span class="cn">冲刺营</span>
+                        <span class="eng">BootCamp</span>
+                    </div>
+                </div>
+            </a>
         </div>
 
 
         <div id='menuSoftwareContainer'>
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7087f5df4e170bebc4a04b354ecb3326?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>TouchDesigner</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">基于节点式的视觉话编程语言</span>
-                        <span class="eng">Node-based programming language</span>
-                    </span>
+            <a class="cursorPointer" href="./courseList.html?filter=td">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7087f5df4e170bebc4a04b354ecb3326?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>TouchDesigner</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">基于节点式的视觉话编程语言</span>
+                            <span class="eng">Node-based programming language</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
             
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6a9a77d5b3c9675c16167fe8d2c7766f?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>Unity</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">实时内容开发平台</span>
-                        <span class="eng">real-time content delivery platform</span>
-                    </span>
+            
+            <a class="cursorPointer" href="./courseList.html?filter=unity">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6a9a77d5b3c9675c16167fe8d2c7766f?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>Unity</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">实时内容开发平台</span>
+                            <span class="eng">real-time content delivery platform</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
-
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fb9262b4ac760ea1c2b8af813272b48e?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>Unreal Engine</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">实时3D创作工具</span>
-                        <span class="eng">real-time 3D platfrom</span>
-                    </span>
+            </a>
+            
+            <a class="cursorPointer" href="./courseList.html?filter=unreal">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fb9262b4ac760ea1c2b8af813272b48e?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>Unreal Engine</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">实时3D创作工具</span>
+                            <span class="eng">real-time 3D platfrom</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fc889440b6caa0f1c0e430bbe4176df9?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>Processing</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">新兴计算机语言</span>
-                        <span class="eng">creative coding language</span>
-                    </span>
+            <a class="cursorPointer" href="./courseList.html?filter=processing">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fc889440b6caa0f1c0e430bbe4176df9?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>Processing</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">新兴计算机语言</span>
+                            <span class="eng">creative coding language</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9cc784f659f8498a1a1d563758feaa5d?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>P5.js</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">创意编码的 JavaScript 库</span>
-                        <span class="eng">JS creative coding library</span>
-                    </span>
+            <a class="cursorPointer" href="./courseList.html?filter=p5">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9cc784f659f8498a1a1d563758feaa5d?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>P5.js</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">创意编码的 JavaScript 库</span>
+                            <span class="eng">JS creative coding library</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f647742a09d5fbe44d69d0a497b05ead?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>MaxMSP</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">交互式编程语言与开发环境</span>
-                        <span class="eng">interactive creative codeing language</span>
-                    </span>
-                </div>
-            </div>
 
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_094f651765e5162a3a7aa953faa18311?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>OpenFrameworks</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">是C++为基准的简洁开发框架,擅长开发图像和动画</span>
-                        <span class="eng">C++ creative coding framework</span>
-                    </span>
+            <a class="cursorPointer" href="./courseList.html?filter=max">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f647742a09d5fbe44d69d0a497b05ead?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>MaxMSP</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">交互式编程语言与开发环境</span>
+                            <span class="eng">interactive creative codeing language</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>JavaScript</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">直译式脚本语言</span>
-                        <span class="eng">Code for web-deveopment</span>
-                    </span>
+            <a class="cursorPointer" href="./courseList.html?filter=of">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_094f651765e5162a3a7aa953faa18311?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>OpenFrameworks</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">是C++为基准的简洁开发框架,擅长开发图像和动画</span>
+                            <span class="eng">C++ creative coding framework</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
+
+            <a class="cursorPointer" href="./courseList.html?filter=js">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>JavaScript</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">直译式脚本语言</span>
+                            <span class="eng">Code for web-deveopment</span>
+                        </span>
+                    </div>
+                </div>
+            </a>
             
         </div>
 
         <div id="weChatCodeMenu"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
 
         <div id='menuSocialContainer'>
-            <div class="shadow"><img id='showCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1e150b94ecd5b631b3ebea4157f66c4?imageView2'></div>
-            <div class="shadow"><a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5f3de3726fafd5fec8227fdb837ff092?imageView2'></a></div>
-            <div class="shadow"><a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'></a></div>
-            <div class="shadow"><a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'></a></div>
+            <div><img id='showCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1e150b94ecd5b631b3ebea4157f66c4?imageView2'></div>
+            <div><a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5f3de3726fafd5fec8227fdb837ff092?imageView2'></a></div>
+            <div><a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'></a></div>
+            <div><a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'></a></div>
         </div>
 
     </div>
@@ -2693,10 +2803,23 @@ this is the first HTML code, load font and style!
 
 <div id="consultantImgBg">
     <div id="consultImgContainer">
-        <div class="closeTabShop"></div>
-        <img id="buyImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2a43e6be51489ff3b257d29556652ced?imageView2">
-        <img id="consultImg" src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3fd184b8aff1c554f7ebeaf4eb25ec0a?imageView2">
+        <!-- <div class="closeTabShop"></div> -->
+        <div class='consultImgDiv' id="buyImg">
+            <div class="imgText" id="buyText">
+                <img class='inlineImg' src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a8844a5a0ca41eaa5bd3b6dc605c3947?imageView2"> <span id="fillBuyText">立即报名</span>
+            </div>
+            <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ae6f991f71be27985cc002d5be78bdeb?imageView2">
+        </div>
+        <div class='consultImgDiv' id="consultImg">
+            <div class="imgText" id="askText">
+                <img class='inlineImg' src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_4d33a89c1231cac30fe740b4928c1d61?imageView2">
+                 <span id="fillConsultText">详细咨询</span>
+            </div>
+            <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8e28beb03596f3ab475e518a2880c93f?imageView2">
+        </div>
     </div>
+
+    <div id="closePopUp"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_c57d73635e6067f405b6f57820eef421?imageView2"></div>
 </div>
 
 
@@ -2733,12 +2856,12 @@ this is the first HTML code, load font and style!
     		</div>
     		<div id='priceRow2'>
     	    	<div class='priceLeft' id='tags'>
-    	    		<div class='priceTag'>导师亲自授课</div>
+    	    		<div class='priceTag'><span class="eng">Connect Teachers</span><span class="cn">导师亲自授课</span></div>
     	    		<div class='priceTag'><span class="cn">支持反复观看</span><span class="eng">support replay</span></div>
-    	    		<div class='priceTag'>录播+直播</div>
-    	    		<div class='priceTag mobileHide'>作业点评</div>
-    	    		<div class='priceTag mobileHide'>学习群答疑</div>
-    	    		<div class='priceTag'>支持分期</div>
+    	    		<div class='priceTag'><span class="cn">录播+直播</span><span class="eng">Video + livestream</span></div>
+    	    		<div class='priceTag mobileHide'><span class="cn">作业点评</span><span class="eng">project support</span></div>
+    	    		<div class='priceTag mobileHide'><span class="cn">学习群答疑</span><span class="eng">Study Group</span></div>
+    	    		<div class='priceTag'><span class="cn">支持分期</span><span class="eng">payment installment</span></div>
     	    	</div>
     			<div class='priceRight mobileHide' id='social'>
     				<div class='priceSocial'>
@@ -2818,7 +2941,7 @@ this is the first HTML code, load font and style!
 		<div id='syllabusContents'>
 			<div class='syllabus myCard'>
                 <div class="overlayBottom">
-                    <img id='fillSyllabusImg1' src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'>
+                    <img class='overlayHover' id='fillSyllabusImg1' src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'>
                     <div class="overlay">
                         <div class="syllabusLists0">
                         </div>
@@ -2831,7 +2954,7 @@ this is the first HTML code, load font and style!
 			</div>
 			<div class='syllabus myCard'>
                 <div class="overlayBottom">
-                    <img id='fillSyllabusImg2' src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'>
+                    <img class='overlayHover' id='fillSyllabusImg2' src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'>
                     <div class="overlay">
                         <div class="syllabusLists1">
                         </div>
@@ -2845,7 +2968,7 @@ this is the first HTML code, load font and style!
 
 			<div class='syllabus myCard'>
                 <div class="overlayBottom">
-                    <img id='fillSyllabusImg3' src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'>
+                    <img class='overlayHover' id='fillSyllabusImg3' src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'>
                     <div class="overlay">
                         <div class="syllabusLists2">
                         </div>
@@ -2859,7 +2982,7 @@ this is the first HTML code, load font and style!
 
 			<div class='syllabus myCard'>
                 <div class="overlayBottom">
-                    <img id='fillSyllabusImg4' src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'>
+                    <img class='overlayHover' id='fillSyllabusImg4' src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'>
                     <div class="overlay">
                         <div class="syllabusLists3">
                         </div>
@@ -2873,7 +2996,7 @@ this is the first HTML code, load font and style!
 
 			<div class='syllabus myCard'>
                 <div class="overlayBottom">
-                    <img id='fillSyllabusImg5' src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'>
+                    <img class='overlayHover' id='fillSyllabusImg5' src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'>
                     <div class="overlay">
                         <div class="syllabusLists4">
                         </div>
@@ -2887,7 +3010,7 @@ this is the first HTML code, load font and style!
 
 			<div class='syllabus myCard'>
                 <div class="overlayBottom">
-                    <img id='fillSyllabusImg6' src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'>
+                    <img class='overlayHover' id='fillSyllabusImg6' src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'>
                     <div class="overlay">
                         <div class="syllabusLists5">
                         </div>
@@ -2901,7 +3024,7 @@ this is the first HTML code, load font and style!
 
 			<div class='syllabus myCard'>
                 <div class="overlayBottom">
-                    <img id='fillSyllabusImg7' src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'>
+                    <img class='overlayHover' id='fillSyllabusImg7' src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'>
                     <div class="overlay">
                         <div class="syllabusLists6">
                         </div>
@@ -2915,7 +3038,7 @@ this is the first HTML code, load font and style!
 
 			<div class='syllabus myCard'>
                 <div class="overlayBottom">
-                    <img id='fillSyllabusImg8' src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'>
+                    <img class='overlayHover' id='fillSyllabusImg8' src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'>
                     <div class="overlay">
                         <div class="syllabusLists7">
                         </div>
@@ -3050,22 +3173,22 @@ this is the first HTML code, load font and style!
 	</div>
 
 
-	<div class='container' id='studentWorkContainer'>
+    <div class='container' id='studentWorkContainer'>
 		<div class='titleText header1'>STUDENT WORK<br/><span class='headerChinese'>部分学员作品</span></div>
 			
 		<div id='studentWorkContents'>
-			<div class='studentWork'><img id='studentWork0' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
-			<div class='studentWork'><img id='studentWork1' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
-			<div class='studentWork'><img id='studentWork2' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
-			<div class='studentWork'><img id='studentWork3' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
-			<div class='studentWork'><img id='studentWork4' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
-			<div class='studentWork'><img id='studentWork5' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
-			<div class='studentWork mobileHide'><img id='studentWork6' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
-			<div class='studentWork mobileHide'><img id='studentWork7' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
-			<div class='studentWork mobileHide'><img id='studentWork8' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
-			<div class='studentWork mobileHide'><img id='studentWork9' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
-			<div class='studentWork mobileHide'><img id='studentWork10' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
-			<div class='studentWork mobileHide'><img id='studentWork11' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
+			<div class='hide studentWork'><img id='studentWork0' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
+			<div class='hide studentWork'><img id='studentWork1' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
+			<div class='hide studentWork'><img id='studentWork2' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
+			<div class='hide studentWork'><img id='studentWork3' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
+			<div class='hide studentWork'><img id='studentWork4' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
+			<div class='hide studentWork'><img id='studentWork5' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
+			<div class='hide studentWork mobileHide'><img id='studentWork6' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
+			<div class='hide studentWork mobileHide'><img id='studentWork7' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
+			<div class='hide studentWork mobileHide'><img id='studentWork8' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
+			<div class='hide studentWork mobileHide'><img id='studentWork9' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
+			<div class='hide studentWork mobileHide'><img id='studentWork10' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
+			<div class='hide studentWork mobileHide'><img id='studentWork11' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_1a801a14080fc55e5e9eae9bbf8e8e22?imageView2'></div>
 		</div>
 
 		<button class='buttonOrange' id="getStudentWork"><img class='inlineImg' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_d32b778e68cff33a4e5d4af4b23f5816?imageView2'> <span class="eng">more students works</span><span class="cn">更多学员作品</span></button>
@@ -3207,31 +3330,31 @@ this is the first HTML code, load font and style!
 				<div class='columnTitle' id='column3Title'><span class='cn'>普通培训营</span><span class='eng'>Other training Camp</span></div>
 				<div class='columnItem'>
 					<span class='cn'>定价虚高或含隐性费用</span>
-					<span class='eng'>non-transparent</span>
+					<span class='eng'>Non-transparent</span>
 				</div>
 				<div class='columnItem'>
 					<span class='cn'>自己课余完成作品</span>
-					<span class='eng'>outcome depend on oneself</span>
+					<span class='eng'>Outcome depend on oneself</span>
 				</div>
 				<div class='columnItem'>
 					<span class='cn'>师资力量薄弱</span>
-					<span class='eng'></span>
+					<span class='eng'>Average teaching resource</span>
 				</div>
 				<div class='columnItem'>
 					<span class='cn'>缺乏明显职业规划</span>
-					<span class='eng'>lack career planning</span>
+					<span class='eng'>Lack career planning</span>
 				</div>
 				<div class='columnItem'>
 					<span class='cn'>无作品展出机会</span>
-					<span class='eng'>no exhibition opportunities</span>
+					<span class='eng'>No exhibition opportunities</span>
 				</div>
 				<div class='columnItem'>
 					<span class='cn'>无学位证书</span>
-					<span class='eng'>no certificate</span>
+					<span class='eng'>No certificate</span>
 				</div>
 				<div class='columnItem'>
 					<span class='cn'>机械化软件教学</span>
-					<span class='eng'>software learning</span>
+					<span class='eng'>Software learning</span>
 				</div>
 				<div class='columnItem'>
 					<span class='cn'>助教答疑</span>
@@ -3239,11 +3362,11 @@ this is the first HTML code, load font and style!
 				</div>
 				<div class='columnItem'>
 					<span class='cn'>无活跃社群氛围</span>
-					<span class='eng'>lack of comunity</span>
+					<span class='eng'>Lack of comunity</span>
 				</div>
 				<div class='columnItem'>
 					<span class='cn'>无个人成长指导</span>
-					<span class='eng'>no personal growth guidance</span>
+					<span class='eng'>No personal growth guidance</span>
 				</div>
 			</div>
 
@@ -3257,32 +3380,32 @@ this is the first HTML code, load font and style!
 		<div class='titleText header1'>OTHER FEATURES<br/><span class='headerChinese'>增值服务</span></div>
 
 		<div id='servicesContents'>
-			<div class='shadow service'> 
+			<div class=' service'> 
 				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_50c71d26db5e44c1e5ae5c2c0789077e?imageView2'></div>
 				<div class='serviceText'>OF COURSE<br/><span class="cn">光子结业证书</span><span class="eng">Certificate</span></div>
 			</div>
 
-			<div class='shadow service'> 
+			<div class=' service'> 
 				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_f928d98257f69ff0bc030086366238d2?imageView2'></div>
 				<div class='serviceText'><span class="cn">推荐就业</span><span class="eng">Job<br/>Recommendation</span></div>
 			</div>
 
-			<div class='shadow service'> 
+			<div class=' service'> 
 				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_f55529baa1a78f80bd2df66e600852c0?imageView2'></div>
-				<div class='serviceText'><span class="cn">全方位<br/>服务辅导</span> <span class="eng">all-round<br/>counseling</span></div>
+				<div class='serviceText'><span class="cn">全方位<br/>服务辅导</span> <span class="eng">All-round<br/>counseling</span></div>
 			</div>
 
-			<div class='shadow service'> 
+			<div class=' service'> 
 				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_24b06df610dc66edd3ee3e298b544f67?imageView2'></div>
-				<div class='serviceText'><span class="cn">专属<br/>学习平台 </span> <span class="eng">exclusive<br/>Learning platform</span></div>
+				<div class='serviceText'><span class="cn">专属<br/>学习平台 </span> <span class="eng">Exclusive<br/>Learning platform</span></div>
 			</div>
 
-			<div class='shadow service'> 
+			<div class=' service'> 
 				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_673f2527bfd637cafbe5dc7cbafd8980?imageView2'></div>
 				<div class='serviceText'><span class="cn">附赠全套<br/>配置文件</span><span class="eng">Complete <br/>Course Files</span></div>
 			</div>
 
-			<div class='shadow service'> 
+			<div class=' service'> 
 				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_6a862f0e8043056be5a2a512c5fe2385?imageView2'></div>
 				<div class='serviceText'><span class="cn">就业指导</span><span class="eng">Career<br/>Guidance</span></div>
 			</div>
@@ -3534,6 +3657,17 @@ this is the first HTML code, load font and style!
             $('.loginTextSmall').show();
             $('.loginTextSmall').text('（首次登陆成功即完成注册）');
         })
+
+        let cardShow = false 
+
+        $('#consultantImgBg').click(function(){
+            console.log('clicked')
+            // if(cardShow){
+                $('#loginPopupBg').hide()
+                $('#consultantImgBg').hide();
+            // }
+            cardShow = false
+        })
         
         $('.closeTab').click(function(){
             $('#loginPopupBg').hide()
@@ -3545,85 +3679,100 @@ this is the first HTML code, load font and style!
         })
 
         $('#buttonTop').click(function(){
-            $('#consultantImgBg').css('display','flex')
-            $('#buyImg').show()
-            $('#consultImg').hide();
-        })
-
-        $('#buttonBottom').click(function(){
+            cardShow = true
             $('#consultantImgBg').css('display','flex')
             $('#buyImg').hide()
             $('#consultImg').show();
+            $('#fillConsultText').text('立即咨询课程顾问')
+        })
+
+        $('#buttonBottom').click(function(){
+            cardShow = true
+            $('#consultantImgBg').css('display','flex')
+            $('#buyImg').show()
+            $('#consultImg').hide();
+            $('#fillBuyText').text('立即报名')
         })
 
 
         $('#requirements').click(function(){
-            $('#loginPopupBg').show()
-            $('#loginHeader').text('微信扫码添加课程顾问')
-            $('#loginText').text('咨询课顾问了解学习要求')
-            $('.loginImgreplace').attr('src','http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e950ca602dff0d8892959e863522f3e3?imageView2')
-            $('.loginTextSmall').text('(咨询课程顾问获得更多课程详情)');
-            $('.loginTextSmall').show();
+            cardShow = true
+            $('#consultantImgBg').css('display','flex')
+            $('#buyImg').hide()
+            $('#consultImg').show();
+            $('#fillConsultText').text('了解学习要求')
         })
 
 
         $('#getSyllabus').click(function(){
-            $('#loginPopupBg').show()
-            $('#loginHeader').text('微信扫码添加课程顾问')
-            $('#loginText').text('咨询课顾问获取完整课程大纲')
-            $('.loginImgreplace').attr('src','http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e950ca602dff0d8892959e863522f3e3?imageView2')
-            $('.loginTextSmall').text('(咨询课程顾问获得更多课程详情)');
-            $('.loginTextSmall').show();
+            cardShow = true
+            $('#consultantImgBg').css('display','flex')
+            $('#buyImg').hide()
+            $('#consultImg').show();
+            $('#fillConsultText').text('立即获取大纲')
         })
 
         $('#getShowCase').click(function(){
-            $('#loginPopupBg').show()
-            $('#loginHeader').text('微信扫码添加课程顾问')
-            $('#loginText').text('咨询课顾问查看更多案例')
-            $('.loginImgreplace').attr('src','http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e950ca602dff0d8892959e863522f3e3?imageView2')
-            $('.loginTextSmall').text('(咨询课程顾问获得更多课程详情)');
-            $('.loginTextSmall').show();
+            cardShow = true
+            $('#consultantImgBg').css('display','flex')
+            $('#buyImg').hide()
+            $('#consultImg').show();
+            $('#fillConsultText').text('查看更多案例')
         })
 
         $('#getTeacherShowCase').click(function(){
-            $('#loginPopupBg').show()
-            $('#loginHeader').text('微信扫码添加课程顾问')
-            $('#loginText').text('咨询课顾问获取导师资料')
-            $('.loginImgreplace').attr('src','http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e950ca602dff0d8892959e863522f3e3?imageView2')
-            $('.loginTextSmall').text('(咨询课程顾问获得更多课程详情)');
-            $('.loginTextSmall').show();
+            cardShow = true
+            $('#consultantImgBg').css('display','flex')
+            $('#buyImg').hide()
+            $('#consultImg').show();
+            $('#fillConsultText').text('欣赏导师作品')
         })
         
         $('#getDiscountCode').click(function(){
-            $('#loginPopupBg').show()
-            $('#loginHeader').text('微信扫码添加课程顾问')
-            $('#loginText').text('添加课程顾问获取优惠')
-            $('.loginImgreplace').attr('src','http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7c3b8e66111ec3dd6ad601c83dd65077?imageView2')
-            $('.loginTextSmall').text('(咨询课程顾问咨询优惠力度)');
-            $('.loginTextSmall').show();
+            cardShow = true
+            $('#consultantImgBg').css('display','flex')
+            $('#buyImg').hide()
+            $('#consultImg').show();
+            $('#fillConsultText').text('立即享受优惠')
         })
 
 
         $('#getStudentWork').click(function(){
-            $('#loginPopupBg').show()
-            $('#loginHeader').text('微信扫码添加课程顾问')
-            $('#loginText').text('咨询课顾问获取更多学员作品')
-            $('.loginImgreplace').attr('src','http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e950ca602dff0d8892959e863522f3e3?imageView2')
-            $('.loginTextSmall').text('(咨询课程顾问获得更多课程详情)');
-            $('.loginTextSmall').show();
+            cardShow = true
+            $('#consultantImgBg').css('display','flex')
+            $('#buyImg').hide()
+            $('#consultImg').show();
+            $('#fillConsultText').text('回顾学员作品')
         })
 
         
 
         $('#applyNowButton').click(function(){
-            $('#loginPopupBg').show()
-            $('#loginHeader').text('微信扫码添加课程顾问')
-            $('#loginText').text('添加课程顾立即报名')
-            $('.loginImgreplace').attr('src','http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7c3b8e66111ec3dd6ad601c83dd65077?imageView2')
-            $('.loginTextSmall').text('(咨询课程顾问获取报名链接)');
-            $('.loginTextSmall').show();
+            cardShow = true
+            $('#consultantImgBg').css('display','flex')
+            $('#buyImg').show()
+            $('#consultImg').hide();
+            $('#fillBuyText').text('抢占席位')
         })
 
+        $('#fullVideoLink').click(function(){
+            cardShow = true
+            $('#consultantImgBg').css('display','flex')
+            $('#buyImg').hide()
+            $('#consultImg').show();
+            $('#fillBuyText').text('立即试听公开课')
+        })
+
+
+        $('.syllabus').hover(function(){
+            $(this).find('.overlay').show();
+            $(this).find("li").each(function(i){
+                $(this).delay((i++)*((i)*50)).show('slide')
+            })
+        },function(){
+            $(this).find('.overlay').hide();
+            $(this).find("li").hide()
+        })
 
         
 
@@ -3645,3 +3794,7 @@ this is the first HTML code, load font and style!
 <!-- （menu课程的背景图替换） -->
 <!-- 课程里的tag 链接到courselist的分组 -->
 <!-- 导师照片背景统一 -->
+
+
+
+ <!-- price 参数可以份两行 -->

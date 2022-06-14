@@ -1,4 +1,148 @@
 
+
+// let unrealStylized = {
+//     // 以下是文字内容填充
+// classID: "unrealStyle(不要修改)",
+// classNameEng:'MASTERING STYLIZED 3D ENVIRONMENT WITH UE5',
+// classNameCn: 'UE5风格化场景大师班',
+// price:'4999',
+// installmentValue:'416',
+// installmentTime: "12",
+// classSlogan:'制作原神风格三维场景，从入门到精通UE5高级动画设计流程',
+// classHeader:"掌握UE5原神风格三维场景技术<br/>成为UE动画设计师",
+// classSeries:'Unreal元宇宙课程系列',
+// classSeriesLink:'课程系列链接',
+// prepClass:'Unreal快速筑基课程',
+// prepClassLink:'前置课程链接',
+// requirements:'课程硬件需求',
+// classOverview: '你想成为UE高级动画设计师吗？你想进入米哈游、腾讯或网易等顶尖游戏企业吗？你梦想过创作像《原神》一样的风格化游戏场景吗？那么快加入UE5风格化场景大师班吧！本课程由全美排名Top1的设计学院帕森斯设计学院设计与科技硕士任督老师亲自授课。课程传授最新的UE5技术，你不仅会学到全球领先实时游戏引擎UE5的使用方法，还会掌握UE5风格化场景动画制作流程，通过美术风格为主导，技术为辅助，设计为过程，学习场景制作全流程。在学习结束之后，在静帧镜头的基础上，结合虚拟制片技术，还原《原神》风格场景的搭建，并具备在未来创作实践中，能够针对性地管理资产，规划方案，实现UE5 CCD工业流程。成为UE高级动画设计师开，入职顶尖游戏企业，并有机会参加各种科技艺术展览，接UE动画相关项目，获得丰厚兼职收入。',
+// mentorNameEng:'Ren Du',
+// mentorNameCn:'任督',
+// mentorTitle:["UE开发者",
+//             "新媒体艺术家",
+//             "帕森斯设计学院设计与科技硕士"
+//         ],
+// mentorText:'UE开发者，新媒体艺术家，游戏设计师。本科毕业于中国美术学院上海设计学院就读视觉传达专业，研究生毕业于帕森斯设计学院设计与科技专业。专注于数字IP设计与开发，善于融合多学科知识包括—游戏理论、用户体验设计甚至心理学等，运用于多媒体沉浸式设计中。长期与国内外先锋艺术家合作，创作了大量有影响力的新媒体作品。',
+// freeClassTitle:'任督老师公开课「10分钟学会创建风格化场景」',
+// studentReviewMain: {
+//     name: "陈同学",
+//     title:'互联网设计师',
+//     review: "非常庆幸报名了俞老师的课程，以前也摸过很多教程，但是总觉的不得精髓，做项目的时候手忙脚乱，还好遇到了俞老师，能够跟随老师手把手的做AR项目，每周答疑为我分析项目要点，提出建议和修改意见，让我豁然开朗。 俞老师对UnityAR相关各大模块都做了非常细致的介绍，每周群里会分享最新行业见闻，在课堂里面讲解最新案例，从跨现实叙事逻辑到技术应用，每点每滴都透漏了循序渐进的教学风格，非常耐心负责，推荐大家一起来学习本门课程。",
+// },
+// studentReview:[
+//         {
+//             name: '顾同学',
+//             title:'技术美术',
+//             review:'俞老师课堂中讲了多国内外案例，几乎涉及到了AR创作的各个方面，我有由基础的所以这个也算是系统性提高了，学了很多，感觉课程超值。'
+//         },
+//         {
+//             name: '张同学',
+//             title:'AR开发者',
+//             review:'我算是AR的老手了，这次来主要是想学习跨现实叙事流程，传统的流程已经“肝”不过这群小年轻了，我也需要与时俱进，不然终有一天要被拍死在沙滩上。'
+//         },
+//         {
+//             name: '林同学',
+//             title:'数媒学生',
+//             review:'老师讲解的很基础，从原理出发，然后到案例，逐步加深，我学到了很多，不仅会做教程里的案例练习，还能自己创意，按自己的想法来做AR APP，我学到了很多，谢谢老师。'
+//         },
+//         {
+//             name: '王同学',
+//             title:'创业者',
+//             review:'我把自己开了家新媒体互动公司，是有Unity基础的，也有点动画基础，但是对Unity做AR的流程不熟悉，AR吧，大家都知道的，导入导出一堆问题，不同平台之间的衔接是‘重灾区’，我就图个技术顾问的服务，我感觉就值了。'
+//         },
+//         {
+//             name: '张同学',
+//             title:'互动公司职业',
+//             review:'看到有其他学员，时不时在群里问有没有谁要换工作，我这边主管叫我过来挖人，我就感觉这个学习群很有爱，不仅仅是学习，还附带讨论行业知识和升职加薪的属性，传说中的‘肥水不流外人田’，自产自销太有爱了。'
+//         },
+//         {
+//             name: '范同学',
+//             title:'自由职业者',
+//             review:'我是想做商业AR互动，我学过OF的Unity快速筑基班，现在正在学Unity VR虚拟实境大师班，平时接接互动项目外包，学会了后准备自己开一家互动公司，课程感觉很不错，学到了很多技术方法，很实用，也很容易出效果，感谢俞老师的无私奉献。'
+//         },
+// ],
+// syllabus: [
+//     {
+//         title: '创建第三人称场景',
+//         description: '开发一个第三人称场景并进行测试，掌握UE5场景搭建流程',
+//         img:"http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_aa4c0500df11dc8de4883a132f51b16c?imageView2"
+//     },
+//     {
+//         title:'创建风格化废墟场景',
+//         description:'开发一个基于静物的废墟场景，完成多边形静物模型制作并用绘图工具对模型素材和场景材质进行绘制',
+//         img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_41dae4f6821d3bbfaa128392975de64d?imageView2'
+//     },
+//     {
+//         title:'创建风格化森林场景',
+//         description:'开发一个风格化森林场景，掌握模型UV贴图和场景光线的风格化制作技巧，使用SpeedTree插件快速制作风格化植被',
+//         img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ec25de9e647860590b0217f1433a0281?imageView2'
+//     },
+//     {
+//         title:'创建风格化城镇场景',
+//         description:'开发一个参数化生成的城市场景，掌握蓝图系统自动生成场景内容的技巧，使用蓝图快速制作墙面、弧面和材质。',
+//         img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_9c88b8710b882b72cf5bb32e8e3d854c?imageView2'
+//     },
+//     {
+//         title:'创建风格化碰撞场景',
+//         description:'开发一个模拟碰撞的风格化场景，掌握蓝图系统模拟物理碰撞和风力碰撞的技巧，全面打通LandScape设计工业全流程',
+//         img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_85e62b1fa1b4189c6b4fb1b8bb510aff?imageView2'
+//     },
+//     {
+//         title: "创建风格化人物场景",
+//         description: '开发一个风格化人物场景，掌握人物数字精雕和骨骼绑定技术，实现头发、衣服和披风的动画效果',
+//         img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d0b29214d89d6cf01096d64e839e71b8?imageView2'
+//     },
+//     {
+//         title: '创建风格化特效场景',
+//         description: ' 开发一个拥有多种特效的风格化场景，掌握niagara system粒子特效系统，实现模拟自然的水面动态、体积云、火焰等特效',
+//         img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c5a27c850b56087c1f781865788b7dd2?imageView2'
+//     },
+//     {
+//         title:'创建多镜头风格化场景',
+//         description:'完成最终风格化场景动画作品，掌握虚拟制片技术，结合之前所学内容，利用多镜头拍摄技巧，实现最终动画渲染',
+//         img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_f3cb7db391a7275391a64bf0df242bff?imageView2'
+//     }
+// ],
+
+// // 以下是图片内容填充
+// mainPoster:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_acc49d3441d3d248c064024d494afbb0?imageView2',
+// mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bfa89f5ecdca524e64d30ca3bd109b96?imageView2',
+// classVideo: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_c53a00fe5097d32a1aaf06cb274b235a',
+// videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_654bdda12a1981c0930540a5fd9924a0?imageView2',
+// showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_22148e031966170973794695ae65586d?imageView2",
+//             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ee51779a24c0cf24e912588cfea8ed7f?imageView2",
+//             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_6063614f2b66a9375b204a782d3cfa49?imageView2",
+//             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_65d3c6e7c2f2baf8a66067c837e01faf?imageView2",
+//             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_0b2f4946441ab16f1441ec41f52b6e20?imageView2",
+//             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_be8e8987530cb710fdad5e306a8dcd3d?imageView2",
+//             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_8f7c81deadebfae13551b0627f801813?imageView2",
+//             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_17b7f3920a2d1939e4007b446ca33f4a?imageView2",
+//             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d86125d85ac2269e138d1dc9953d1f7d?imageView2",
+//             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_5f85550cfcf4a018216eca2ffd7bd6ae?imageView2"],
+// mentorImg: 'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_aff05f163451a7be324c3ffe1c99baf3?imageView2',
+// mentorVideo:"http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_8a9c6deaa027158476adad0465094078",
+// teacherCase:['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_05587ef4dec82facd843e9ae334facd9?imageView2',
+//             'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_f2440f83bd04bac3f3b77617679cf444?imageView2',
+//             'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_cae10a4916d3324553b2ad72321ad5a8?imageView2',
+//             'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_db06fd206c16b74c45d4bf6f7a8ca3a6?imageView2',
+//             'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_53b653869a188b9faeedffeb7898b060?imageView2',
+//             'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_628d9ebdd1c5cddb6a785e887dead62a?imageView2'],
+// studentWork: ['学生作品01url',
+//             '学生作品02url',
+//             '学生作品03url',
+//             '学生作品04url',
+//             '学生作品05url',
+//             '学生作品06url',
+//             '学生作品07url',
+//             '学生作品08url',
+//             '学生作品09url',
+//             '学生作品10url',
+//             '学生作品11url',
+//             '学生作品12url'
+//             ],
+// }
+
+
 let unityVR = {
     // 以下是文字内容填充
 classID: "unityVR",
@@ -64,50 +208,45 @@ syllabus: [
         title: '元宇宙空间搭建入门',
         description: '快速创建在线虚拟场景，掌握全球领先的styly元宇宙平台在线编辑器',
         img:"http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5abacbac97ecbf0cd37938df92d34028?imageView2",
-        fullSyllabus:["完整大纲内容第一条",
-        "完整大纲内容第二条",
-        "完整大纲内容第三条",
-        "完整大纲内容第四条",
+        fullSyllabus:["了解VR概念和发展历程",
+        "了解StylyVR线上编辑器",
+        "了解沉浸式虚拟世界及元宇宙概念",
         ]
     },
     {
         title:'基础虚拟空间',
         description:'搭建基础VR空间场景，学习最多人使用的交互引擎Uniy，掌握Unity与styly结合工作流',
         img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_de2faf658af13ed8e13ee430f7c1f6e0?imageView2',
-        fullSyllabus:["完整大纲内容第一条",
-        "完整大纲内容第二条",
-        "完整大纲内容第三条",
-        "完整大纲内容第四条",
+        fullSyllabus:["掌握户外地图的创建",
+        "掌握WhiteBoxing的操作",
+        "掌握Unity 3D中模块化3D资产的使用",
         ]
     },
     {
         title:'高级虚拟场景渲染',
         description:'制作真实感VR场景，学习场景灯光和渲染技术，并用Post Processing Stack技术场景添加后期滤镜特效',
         img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_01024513886bdf754bd949a7bb960f23?imageView2',
-        fullSyllabus:["完整大纲内容第一条",
-        "完整大纲内容第二条",
-        "完整大纲内容第三条",
-        "完整大纲内容第四条",
+        fullSyllabus:["掌握Unity中的realtime灯光、bake灯光及mix灯光",
+        "掌握PostProcessing后期制作特效的运用",
+        "掌握不同渲染管道、颜色和滤镜的使用",
         ]
     },
     {
         title:'互动虚拟场景',
         description:'完成互动VR场景搭建，掌握playmaker可视化互动插件核心技术-有限状态机',
         img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_d307267fb2ee54076ce1263e1ff80c10?imageView2',
-        fullSyllabus:["完整大纲内容第一条",
-        "完整大纲内容第二条",
-        "完整大纲内容第三条",
-        "完整大纲内容第四条",
+        fullSyllabus:["掌握可视化编程的核心概念",
+        "掌握有限机状态及Playmaker逻辑",
+        "利用Playmaker搭建互动场景",
         ]
     },
     {
         title:'剧情式虚拟场景',
         description:'完成互动剧情场景设计，掌握剧情场景的核心设计方法，学习Playmaker可视化编程内容',
         img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2e668456fe97a86d514a783e01d3af42?imageView2',
-        fullSyllabus:["完整大纲内容第一条",
-        "完整大纲内容第二条",
-        "完整大纲内容第三条",
-        "完整大纲内容第四条",
+        fullSyllabus:["掌握剧情界面与非剧情界面设计区别",
+        "掌握Playmaker进阶逻辑",
+        "掌握在场景中添加可交互物件的方法",
         ]
 
     },
@@ -115,20 +254,18 @@ syllabus: [
         title: "虚拟场景特效",
         description: '场景中添加雨/雪/火焰等特效，掌握VFX graph插件，学习如何制作粒子效果',
         img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_47781cd7383316c0b80f5521bd1f4d1c?imageView2',
-        fullSyllabus:["完整大纲内容第一条",
-        "完整大纲内容第二条",
-        "完整大纲内容第三条",
-        "完整大纲内容第四条",
+        fullSyllabus:["掌握纹理、材质和着色器的使用",
+        "掌握3D音效的使用",
+        "掌握粒子系统的互动效果制",
         ]
     },
     {
         title: '制作超体验元宇宙世界',
         description: '完成超体验元宇宙世界制作，掌握Unity中XR模式设定，学会如何将作品上传到VR眼镜中',
         img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_234708551f227242592b6a279c939eab?imageView2',
-        fullSyllabus:["完整大纲内容第一条",
-        "完整大纲内容第二条",
-        "完整大纲内容第三条",
-        "完整大纲内容第四条",
+        fullSyllabus:["掌握VR眼睛的配置",
+        "掌握XR-plug in的使用",
+        "掌握从舞台场景设计来解构世界架构的技巧",
         ]
 
     },
@@ -136,10 +273,9 @@ syllabus: [
         title:'完成最终作品',
         description:'完成最终作品，学会如何发布到PC或手机平台，了解或参与价值2万美金的Styly全球虚拟实境大赛',
         img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_61640ab2507efef78425b33e354b9e7d?imageView2',
-        fullSyllabus:["完整大纲内容第一条",
-        "完整大纲内容第二条",
-        "完整大纲内容第三条",
-        "完整大纲内容第四条",
+        fullSyllabus:["掌握虚拟世界的冒险式叙事设计",
+        "构建超体验世界场景",
+        "了解如何将作品发布到各大VR平台",
         ]
     }
 ],
@@ -250,42 +386,74 @@ syllabus: [
     {
         title: '创建无需标识的AR应用',
         description: '开发一款Markless AR App，快速掌握Unity工程搭建，SDK部署以及如何在ios与Android等移动端发布AR应用',
-        img:"http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_999a01ba9ab88b58a76ad537106e4dd0?imageView2"
+        img:"http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_999a01ba9ab88b58a76ad537106e4dd0?imageView2",
+        fullSyllabus:["了解Unity及ARFoundation",
+        "掌握搭建工程和部署SDK的方法",
+        "了解一款Markless AR APP的开发流程",
+        ]
     },
     {
         title:'创建基于特征点的AR应用',
         description:'开发一款Marker-based AR App，理解特征点对于检测的优劣影响，横向研究Unity和其它AR工具',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_db0601ec5d1de84513db6c9b7321b849?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_db0601ec5d1de84513db6c9b7321b849?imageView2',
+        fullSyllabus:["掌握特征点对检测的优劣影响",
+        "横向研究Unity及其他AR创作工具",
+        "搭建WebAR本地架构",
+        ]
     },
     {
         title:'创建真实光影的AR应用',
         description:'开发一款拥有真实阴影与现实感的AR应用，掌握Unity实时光线检测与环境检测的原理与部署方法，研究后期画面处理技术',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_79f2d1a66f424fcf918544d503bc7e18?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_79f2d1a66f424fcf918544d503bc7e18?imageView2',
+        fullSyllabus:["掌握实时光线检测与环境检测的原理与部署方法",
+        "掌握真实阴影添加方法与屏幕后期处理方法",
+        "掌握PBR全流程制作",
+        ]
     },
     {
         title:'创建实时交互的AR应用',
         description:'开发一款可以互动的AR音乐应用，掌握Unity脚本开发技巧，学会导入动画模型、材质和声音',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_92f78445f7bceb41bf9644dd10f05287?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_92f78445f7bceb41bf9644dd10f05287?imageView2',
+        fullSyllabus:["掌握脚本开发技巧",
+        "掌握带动画与材质的模型文件的导入方法",
+        "使用Animation制作出场动画",
+        ]
     },
     {
         title:'创建空间漫游AR应用',
         description:'开发一款可以在真实环境中漫游的AR应用，掌握UnityAR体积摄影的原理与方法，学会如何识别真实世界中的三维空间',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c2bcf5cf3b08eda47ae28888fa23b41a?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c2bcf5cf3b08eda47ae28888fa23b41a?imageView2',
+        fullSyllabus:["了解体积摄影的原理与方法",
+        "掌握动画基础：Animation、Animator和Timeline",
+        "实现交互动画：Parameter",
+        ]
     },
     {
         title: "创建有视觉特效的AR应用",
         description: '开发一款水淹效果的AR应用，掌握Unity粒子系统以及VFX Graph，学会shader的基础使用方法',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c697a0c7b1e834e2ece25dc88114b327?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c697a0c7b1e834e2ece25dc88114b327?imageView2',
+        fullSyllabus:["了解Shader的操作",
+        "掌握粒子系统以及VFX Graph",
+        "使用shader graph开发一款水淹效果AR APP",
+        ]
     },
     {
         title: '创建有UI系统的AR应用',
         description: ' 开发一款拥有UI系统的AR应用，掌握AR中的UI系统设计方法，实现高自由度的AR交互，学习iOS上App的测试流程',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d6f4e6f7f8c3b64d2d59bd172ea9619c?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d6f4e6f7f8c3b64d2d59bd172ea9619c?imageView2',
+        fullSyllabus:["掌握AR中的UI系统设计",
+        "掌握更自由的AR交互技术实现方法",
+        "进行项目内测testflight",
+        ]
     },
     {
         title:'创建跨现实叙事AR应用',
         description:'完成最终的跨现实叙事AR作品，掌握AR跨现叙事方法，实现脚本控制的刚体碰撞，学会AR传送门关键技术：Stencil Buffer',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_968c5a799df87ca3c87a544c22da3cd1?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_968c5a799df87ca3c87a544c22da3cd1?imageView2',
+        fullSyllabus:["掌握AR传送门关键技术：Stencil Buffer",
+        "实现刚体碰撞脚本控制",
+        "完成一个AR传送门作品",
+        ]
     }
 ],
 
@@ -328,148 +496,6 @@ studentWork: ['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_944e3f95
             ],
 }
 
-
-let unrealStylized = {
-    // 以下是文字内容填充
-classID: "unrealStyle(不要修改)",
-classNameEng:'MASTERING STYLIZED 3D ENVIRONMENT WITH UE5',
-classNameCn: 'UE5风格化场景大师班',
-price:'4999',
-installmentValue:'416',
-installmentTime: "12",
-classSlogan:'制作原神风格三维场景，从入门到精通UE5高级动画设计流程',
-classHeader:"掌握UE5原神风格三维场景技术<br/>成为UE动画设计师",
-classSeries:'Unreal元宇宙课程系列',
-classSeriesLink:'课程系列链接',
-prepClass:'Unreal快速筑基课程',
-prepClassLink:'前置课程链接',
-requirements:'课程硬件需求',
-classOverview: '你想成为UE高级动画设计师吗？你想进入米哈游、腾讯或网易等顶尖游戏企业吗？你梦想过创作像《原神》一样的风格化游戏场景吗？那么快加入UE5风格化场景大师班吧！本课程由全美排名Top1的设计学院帕森斯设计学院设计与科技硕士任督老师亲自授课。课程传授最新的UE5技术，你不仅会学到全球领先实时游戏引擎UE5的使用方法，还会掌握UE5风格化场景动画制作流程，通过美术风格为主导，技术为辅助，设计为过程，学习场景制作全流程。在学习结束之后，在静帧镜头的基础上，结合虚拟制片技术，还原《原神》风格场景的搭建，并具备在未来创作实践中，能够针对性地管理资产，规划方案，实现UE5 CCD工业流程。成为UE高级动画设计师开，入职顶尖游戏企业，并有机会参加各种科技艺术展览，接UE动画相关项目，获得丰厚兼职收入。',
-mentorNameEng:'Ren Du',
-mentorNameCn:'任督',
-mentorTitle:["UE开发者",
-            "新媒体艺术家",
-            "帕森斯设计学院设计与科技硕士"
-        ],
-mentorText:'UE开发者，新媒体艺术家，游戏设计师。本科毕业于中国美术学院上海设计学院就读视觉传达专业，研究生毕业于帕森斯设计学院设计与科技专业。专注于数字IP设计与开发，善于融合多学科知识包括—游戏理论、用户体验设计甚至心理学等，运用于多媒体沉浸式设计中。长期与国内外先锋艺术家合作，创作了大量有影响力的新媒体作品。',
-freeClassTitle:'任督老师公开课「10分钟学会创建风格化场景」',
-studentReviewMain: {
-    name: "陈同学",
-    title:'互联网设计师',
-    review: "非常庆幸报名了俞老师的课程，以前也摸过很多教程，但是总觉的不得精髓，做项目的时候手忙脚乱，还好遇到了俞老师，能够跟随老师手把手的做AR项目，每周答疑为我分析项目要点，提出建议和修改意见，让我豁然开朗。 俞老师对UnityAR相关各大模块都做了非常细致的介绍，每周群里会分享最新行业见闻，在课堂里面讲解最新案例，从跨现实叙事逻辑到技术应用，每点每滴都透漏了循序渐进的教学风格，非常耐心负责，推荐大家一起来学习本门课程。",
-},
-studentReview:[
-        {
-            name: '顾同学',
-            title:'技术美术',
-            review:'俞老师课堂中讲了多国内外案例，几乎涉及到了AR创作的各个方面，我有由基础的所以这个也算是系统性提高了，学了很多，感觉课程超值。'
-        },
-        {
-            name: '张同学',
-            title:'AR开发者',
-            review:'我算是AR的老手了，这次来主要是想学习跨现实叙事流程，传统的流程已经“肝”不过这群小年轻了，我也需要与时俱进，不然终有一天要被拍死在沙滩上。'
-        },
-        {
-            name: '林同学',
-            title:'数媒学生',
-            review:'老师讲解的很基础，从原理出发，然后到案例，逐步加深，我学到了很多，不仅会做教程里的案例练习，还能自己创意，按自己的想法来做AR APP，我学到了很多，谢谢老师。'
-        },
-        {
-            name: '王同学',
-            title:'创业者',
-            review:'我把自己开了家新媒体互动公司，是有Unity基础的，也有点动画基础，但是对Unity做AR的流程不熟悉，AR吧，大家都知道的，导入导出一堆问题，不同平台之间的衔接是‘重灾区’，我就图个技术顾问的服务，我感觉就值了。'
-        },
-        {
-            name: '张同学',
-            title:'互动公司职业',
-            review:'看到有其他学员，时不时在群里问有没有谁要换工作，我这边主管叫我过来挖人，我就感觉这个学习群很有爱，不仅仅是学习，还附带讨论行业知识和升职加薪的属性，传说中的‘肥水不流外人田’，自产自销太有爱了。'
-        },
-        {
-            name: '范同学',
-            title:'自由职业者',
-            review:'我是想做商业AR互动，我学过OF的Unity快速筑基班，现在正在学Unity VR虚拟实境大师班，平时接接互动项目外包，学会了后准备自己开一家互动公司，课程感觉很不错，学到了很多技术方法，很实用，也很容易出效果，感谢俞老师的无私奉献。'
-        },
-],
-syllabus: [
-    {
-        title: '创建第三人称场景',
-        description: '开发一个第三人称场景并进行测试，掌握UE5场景搭建流程',
-        img:"http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_aa4c0500df11dc8de4883a132f51b16c?imageView2"
-    },
-    {
-        title:'创建风格化废墟场景',
-        description:'开发一个基于静物的废墟场景，完成多边形静物模型制作并用绘图工具对模型素材和场景材质进行绘制',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_41dae4f6821d3bbfaa128392975de64d?imageView2'
-    },
-    {
-        title:'创建风格化森林场景',
-        description:'开发一个风格化森林场景，掌握模型UV贴图和场景光线的风格化制作技巧，使用SpeedTree插件快速制作风格化植被',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ec25de9e647860590b0217f1433a0281?imageView2'
-    },
-    {
-        title:'创建风格化城镇场景',
-        description:'开发一个参数化生成的城市场景，掌握蓝图系统自动生成场景内容的技巧，使用蓝图快速制作墙面、弧面和材质。',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_9c88b8710b882b72cf5bb32e8e3d854c?imageView2'
-    },
-    {
-        title:'创建风格化碰撞场景',
-        description:'开发一个模拟碰撞的风格化场景，掌握蓝图系统模拟物理碰撞和风力碰撞的技巧，全面打通LandScape设计工业全流程',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_85e62b1fa1b4189c6b4fb1b8bb510aff?imageView2'
-    },
-    {
-        title: "创建风格化人物场景",
-        description: '开发一个风格化人物场景，掌握人物数字精雕和骨骼绑定技术，实现头发、衣服和披风的动画效果',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d0b29214d89d6cf01096d64e839e71b8?imageView2'
-    },
-    {
-        title: '创建风格化特效场景',
-        description: ' 开发一个拥有多种特效的风格化场景，掌握niagara system粒子特效系统，实现模拟自然的水面动态、体积云、火焰等特效',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c5a27c850b56087c1f781865788b7dd2?imageView2'
-    },
-    {
-        title:'创建多镜头风格化场景',
-        description:'完成最终风格化场景动画作品，掌握虚拟制片技术，结合之前所学内容，利用多镜头拍摄技巧，实现最终动画渲染',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_f3cb7db391a7275391a64bf0df242bff?imageView2'
-    }
-],
-
-// 以下是图片内容填充
-mainPoster:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_acc49d3441d3d248c064024d494afbb0?imageView2',
-mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bfa89f5ecdca524e64d30ca3bd109b96?imageView2',
-classVideo: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_c53a00fe5097d32a1aaf06cb274b235a',
-videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_654bdda12a1981c0930540a5fd9924a0?imageView2',
-showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_22148e031966170973794695ae65586d?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ee51779a24c0cf24e912588cfea8ed7f?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_6063614f2b66a9375b204a782d3cfa49?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_65d3c6e7c2f2baf8a66067c837e01faf?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_0b2f4946441ab16f1441ec41f52b6e20?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_be8e8987530cb710fdad5e306a8dcd3d?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_8f7c81deadebfae13551b0627f801813?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_17b7f3920a2d1939e4007b446ca33f4a?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d86125d85ac2269e138d1dc9953d1f7d?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_5f85550cfcf4a018216eca2ffd7bd6ae?imageView2"],
-mentorImg: 'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_aff05f163451a7be324c3ffe1c99baf3?imageView2',
-mentorVideo:"http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_8a9c6deaa027158476adad0465094078",
-teacherCase:['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_05587ef4dec82facd843e9ae334facd9?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_f2440f83bd04bac3f3b77617679cf444?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_cae10a4916d3324553b2ad72321ad5a8?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_db06fd206c16b74c45d4bf6f7a8ca3a6?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_53b653869a188b9faeedffeb7898b060?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_628d9ebdd1c5cddb6a785e887dead62a?imageView2'],
-studentWork: ['学生作品01url',
-            '学生作品02url',
-            '学生作品03url',
-            '学生作品04url',
-            '学生作品05url',
-            '学生作品06url',
-            '学生作品07url',
-            '学生作品08url',
-            '学生作品09url',
-            '学生作品10url',
-            '学生作品11url',
-            '学生作品12url'
-            ],
-}
 
 
 let ai = {
@@ -538,48 +564,78 @@ let ai = {
             title: '创作鼠标互动生成艺术',
             description: '制作鼠标互动的绘画工具，掌握全球领先的网页创意编程工具P5.js，运用mouseX和mouseY进行生成互动',
             img:"http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ea73191e8c386df8fa8a0cb2aec0fa11?imageView2",
+            fullSyllabus:["了解P5.js",
+            "掌握简单图形的绘制: circle( ), rectangle( ), line( )",
+            "掌握颜色的运用: fill(), RGBA",
+            ]
         },
         {
             title:'创作二维图形生成艺术',
             description:'制作基于图形的生成特效，掌握运用广泛的复杂函数运算和For循环逻辑，运用for循环生成二维图形',
             img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_cc122f6493fcbefba020be59bc49e68d?imageView2',
-
+            fullSyllabus:["学习程序分支",
+            "掌握For Loop和双重For Loop",
+            "掌握Console.log功能排错",
+            ]
         },
         {
             title:'创作视错觉生成艺术',
             description:'制作模块化视错觉特效，掌握自定义构造函数及代码模块化，运用p5.js的转换功能进行绘制',
             img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_f27db372de3a09268bf99d3d33617f43?imageView2',
+            fullSyllabus:["掌握转换功能和定义功能",
+            "掌握模块化和可重用性",
+            "掌握class的定义：构造函数、添加属性和方法",
+            ]
         },
         {
             title:'创作粒子特效生成艺术',
             description:'制作粒子特效生成艺术作品，掌握面向对象的编程和互动数组，运用OOP生成粒子特效',
             img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_570d78758fd16593b54c3f68c4f3026c?imageView2',
+            fullSyllabus:["掌握面向对象的编程（OOP）",
+            "掌握类并构造对象的定义",
+            "掌握多个对象的生成和操作",
+            ]
         },
         {
             title:'创作风格迁移生成艺术',
             description:'制作风格迁移肖像画作品，掌握像素处理及一维数据和二维数据的使用，运用摄像头进行实时捕捉',
             img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_570d78758fd16593b54c3f68c4f3026c?imageView2',
-
+            fullSyllabus:["掌握图像（帧）和像素的处理n",
+            "掌握一维数据与二维数据的处理",
+            "掌握像素迭代和操纵",
+            ]
         },
         {
             title: "创作体感互动生成艺术",
             description: '制作实体感互动生成艺术作品，掌握ml5.js网页机器学习工具，运用PoseNet机器学习模型进行人体捕捉',
             img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_fdb8782a28ee6fd425ef384092247218?imageView2',
-            },
+            fullSyllabus:["了解JavaScript及其学习库ml5.js",
+            "掌握PoseNet基本操作",
+            "利用PoseNet中的关键点替换鼠标交互",
+            ]
+        },
         {
             title: '创作实时抠像生成艺术',
             description: ' 制作高级体感互动，掌握进行AI实时背景抠图技术，运用BodyPix机器学习模型获得身体轮廓和部位',
             img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_4888928d8df1693b9123cf7d6ecf9cdc?imageView2',
+            fullSyllabus:["使用BodyPix进行背景扣图",
+            "掌握身体分割的操作以获取身体的特定部位",
+            "利用Pixel Manipulation和BodyPix开发交互式肖像画",
+            ]
         },
         {
             title:'创作生成艺术NFT',
             description:'完成最终生成艺术作品，掌握ArtBlocks等NFT平台特性，学习如何发表自己的生成艺术NFT作品',
             img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_a6dd289be2efc94d9f6cfcd4a3a9d49b?imageView2',
+            fullSyllabus:["了解生成艺术概念和发展史",
+            "拓展生成艺术的应用",
+            "掌握不同NFT平台调性并发布自己的NFT作品",
+            ]
         }
     ],
 
     // 以下是图片内容填充
-    mainPoster:'海报url',
+    mainPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_82bc45f363db6606515aee3f6789eece?imageView2',
     mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bfa89f5ecdca524e64d30ca3bd109b96?imageView2',
     classVideo: '课程宣导片url',
     videoPoster: '课程宣导片封面图片url',
@@ -593,7 +649,7 @@ let ai = {
                 "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_dac6581906269f5d3ff46e1f7a655898?imageView2",
                 "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_a36b80bd33095bd2960c1470da13ef3b?imageView2",
                 "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_70eee613825301fe57aaf1f389073b19?imageView2"],
-    mentorImg: '导师照片url',
+    mentorImg: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_075552dba03fb0cad22cfed7c274a879?imageView2',
     mentorVideo:"精彩瞬间视频 url",
     teacherCase:['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_b548a6c103af6e8f638cb1fce1366ee0?imageView2',
                 'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_69c5f266d9d3c104e366affb6568950c?imageView2',
@@ -682,50 +738,82 @@ syllabus: [
     {
         title: '创建概念场景',
         description: '开发辅助概念设计的基础场景，使用quixel bridge、world machine、多通道材质球以及工具包，完成该流程在现有工业环境下的场景制作',
-        img:"http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_80b670e47c51db8c8b9ede9f1dbde724?imageView2"
+        img:"http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_80b670e47c51db8c8b9ede9f1dbde724?imageView2",
+        fullSyllabus:["了解UE5虚幻引擎",
+        "掌握Quixel Bridge等工具包的使用",
+        "利用打光、阴影和烟雾进行场景氛围渲染",
+        ]
     },
     {
         title:'创建场景道具',
         description:'开发场景所需的道具，使用3D工具如Maya、八猴进行模型搭建和动画输出，完成材质、贴图甚至包含动画的道具制作',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_4236c09d42ae94a1849f77b97c1a4fff?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_4236c09d42ae94a1849f77b97c1a4fff?imageView2',
+        fullSyllabus:["掌握技术变现的十种方式",
+        "掌握Maya基础：建模、材质、贴图、输出和动画",
+        "掌握简便的预设场景搭建",
+        ]
     },
     {
         title:'创建写实场景',
         description:'开发一个中国风写实场景，掌握Zbrush次世代数字精雕与substance 3D上色方案，并完成场景搭建',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_623c003904ee45993d67dab258e1c8ed?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_623c003904ee45993d67dab258e1c8ed?imageView2',
+        fullSyllabus:["掌握ZBrush的生物和道具数字精雕与贴图生成",
+        "掌握Substance painter的3D上色方案与流程解析",
+        "掌握资产导入和设置和场景的搭建",
+        ]
     },
     {
         title:'创建蓝图控制场景',
         description:'开发基于蓝图控制的场景，掌握蓝图系统与人工智能的使用方法，制作实时控制场景画面的GUI界面',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_5a39e636c657525f1d265b5d3ae08766?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_5a39e636c657525f1d265b5d3ae08766?imageView2',
+        fullSyllabus:["掌握材质的蓝图系统使用和通讯",
+        "掌握Level BP和BP Class的操作",
+        "掌握基本AI的运用",
+        ]
     },
     {
         title:'创建音画交互场景',
         description:'开发一款音画互动作品，掌握虚幻引擎高级粒子系统和与Arduino通讯方法，制作使用麦克风控制的互动作品',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_918a24856e5d317f4c92e1d259be15c4?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_918a24856e5d317f4c92e1d259be15c4?imageView2',
+        fullSyllabus:["掌握Niagara系统的操作",
+        "掌握高级粒子系统及触发",
+        "掌握Arduino和音频触发",
+        ]
     },
     {
         title: "创建数字人模型",
         description: '开个一个UE可以使用的数字人，掌握次世代角色制作流程和骨骼绑定，实现用UE数字人动画',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_5c53a6bd19800547ddef8d99b868b6ac?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_5c53a6bd19800547ddef8d99b868b6ac?imageView2',
+        fullSyllabus:["掌握基本角色制作流程",
+        "掌握Maya骨骼的建立、绑定和蒙皮",
+        "掌握Control Rig的运用",
+        ]
     },
     {
         title: '创建实时交互数字人',
         description: ' 开发一个超写实数字人，掌握Metahuman数字人面部制作和面部动作捕捉系统，实现可以可实时互动的数字人',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_290cee53eaf927e209d19cb6f9cfee5b?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_290cee53eaf927e209d19cb6f9cfee5b?imageView2',
+        fullSyllabus:["利用Metahuman制作角色面部表情",
+        "利用X-gen 和Groom系统制作角色真实毛发",
+        "利用Livelink实施捕捉面部动画",
+        ]
     },
     {
         title:'创建高画质场景',
         description:'完成最终场景作品，掌握UE画面优化流程和声音系统，实现用Sequence系统输出高品质动画',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_76fc620752a93861a6c9c6f110b614ea?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_76fc620752a93861a6c9c6f110b614ea?imageView2',
+        fullSyllabus:["掌握虚幻引擎5的Lumen 和 Nanite",
+        "掌握UE5的声音系统Chaos",
+        "利用Sequence系统输出高品质动画",
+        ]
     }
 ],
 
 // 以下是图片内容填充
-mainPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1b7a84c878fb62cdbd641df10994cf1c?imageView2',
+mainPoster:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_acc49d3441d3d248c064024d494afbb0?imageView2',
 mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bfa89f5ecdca524e64d30ca3bd109b96?imageView2',
 classVideo: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_d1dad6d62004749497315ee884c605b9',
-videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b688fd1c74eba82779982c9b1f882a86?imageView2',
+videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d421d808dac8e17e6a078bcfc77e6589?imageView2',
 showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c30066649070dd9b55131678fa07d39f?imageView2",
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_75f6cfc71073fd65b15b62e6bcf8fc84?imageView2",
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_3964e521b51d0151f666ba13adc1f966?imageView2",
@@ -737,30 +825,27 @@ showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c3006664907
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_5a33f7f8e38c6542980a6c68af85e345?imageView2",
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_07d329d60f504275a3e3259b1cd828a1?imageView2"],
 mentorImg: 'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_aff05f163451a7be324c3ffe1c99baf3?imageView2',
-mentorVideo:"精彩瞬间视频 url",
+mentorVideo:"http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_8a9c6deaa027158476adad0465094078",
+mentorPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d3f354c3552b230590c228194c41967b?imageView2',
 teacherCase:['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_05587ef4dec82facd843e9ae334facd9?imageView2',
             'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_f2440f83bd04bac3f3b77617679cf444?imageView2',
             'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_cae10a4916d3324553b2ad72321ad5a8?imageView2',
             'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_db06fd206c16b74c45d4bf6f7a8ca3a6?imageView2',
             'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_53b653869a188b9faeedffeb7898b060?imageView2',
             'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_628d9ebdd1c5cddb6a785e887dead62a?imageView2'],
-studentWork: ['学生作品01url',
-            '学生作品02url',
-            '学生作品03url',
-            '学生作品04url',
-            '学生作品05url',
-            '学生作品06url',
-            '学生作品07url',
-            '学生作品08url',
-            '学生作品09url',
-            '学生作品10url',
-            '学生作品11url',
-            '学生作品12url'
+studentWork: ['http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_acfa6d51c59d5fbb551ce94cddb39234?imageView2',
+            'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b18bd507f212ba18322d89eb5e5f2406?imageView2',
+            'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fcc15025263d13e2e6111dff45906782?imageView2',
+            'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d0c0c0388d419264338198cc7c05393f?imageView2',
+            'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ba53d71ea90b4f083425c82c456e7155?imageView2',
+            'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_18b8c4b31b13f2ea5a7cf5b1e510a292?imageView2',
+            'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_22b86c0a18d07cdd7d8234e80b66a39a?imageView2',
+            'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7454801db8e8a7695ca2f990ff452226?imageView2',
             ],
 }
 
 
-let TDArduino = {
+let tdArduino = {
     // 以下是文字内容填充
 classID: "unityVR(不要修改)",
 classNameEng:'Mastering Interactive Installation with TouchDesigner',
@@ -825,84 +910,288 @@ syllabus: [
     {
         title: '创作生成视觉特效',
         description: '制作生成视觉特效，快速从0到1入门 TouchDesigner节点式编程和操作方式',
-        img:"http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_999a01ba9ab88b58a76ad537106e4dd0?imageView2"
+        img:"http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_2a149785ab8842baa1edda6bd24d6977?imageView2",
+        fullSyllabus:["了解TouchDesigner的基本界⾯",
+        "了解节点编程和节点网络",
+        "运用TouchDesigner管理文件和使用视频",
+        ]
     },
     {
         title:'自定义UI交互界面',
         description:'制作实时视频控制器，掌握TD中TOP和CHOP元件，运用Firmata通讯协议与Arduino通讯',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_db0601ec5d1de84513db6c9b7321b849?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_a018d1363f4cce44660834b6cc1086e9?imageView2',
+        fullSyllabus:["掌握Arduino基本操作成",
+        "掌握GUI按钮控制和Firmata模块",
+        "掌握Arduino与TouchDesigner的通讯",
+        ]
     },
     {
         title:'电路的原型制作',
         description:'制作实时控制的LED交互灯光装置，掌握Arduino电子电路知识，运用TD实时控制LED灯光系统',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_79f2d1a66f424fcf918544d503bc7e18?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_795257a997d3e21e683152f77f69f0d7?imageView2',
+        fullSyllabus:["掌握Arduino电子元件和电路",
+        "掌握Arduino Sketch的操作",
+        "利用串联电路链接LED",
+        ]
     },
     {
         title:'Arduino与TD的通讯',
         description:'制作实时控制的RGB LED交互界面，掌握Arduino的PWM输出和Servo输出，运用TD实时控制RGB LED电路和舵机马达',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_92f78445f7bceb41bf9644dd10f05287?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_77b1870cd6fb749e6a824a89003e2f7b?imageView2',
+        fullSyllabus:["掌握正确的排错方式",
+        "掌握TD中摄像头的调用和像素处理",
+        "掌握RGB LED颜色的控制",
+        ]
     },
     {
         title:'触发机制 - 开关墙',
         description:'制作多通道数字信号控制的TD装置，掌握Arduino数字信号输入和多种数字开关设计技巧，运用Arduino数字开关控制TD视频内容',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c2bcf5cf3b08eda47ae28888fa23b41a?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_33f680fcfc80f9e60c875663aacc5d6e?imageView2',
+        fullSyllabus:["了解PWM输出",
+        "掌握舵机的链接",
+        "掌握TD中的图形Transformation和Feedback TOP",
+        ]
     },
     {
         title: "创作DIY触发机",
         description: '制作基于电位器控制的VJ控制器，掌握Arduino模拟信号输入和TD高级CHOP逻辑，运用Arduino电位计控制TD实时VJ内容',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c697a0c7b1e834e2ece25dc88114b327?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_3e991a51ebb39cfa10134477cfd328e3?imageView2',
+        fullSyllabus:["利用上拉电阻和下拉电阻控制TD输出",
+        "掌握创新开关机制的搭建",
+        "掌握电位器使用及开关的自定义",
+        ]
     },
     {
         title: '传感器 - 光控制',
         description: '制作多种传感器控制的TD交互装置，掌握多种传感器系统及物理计算，运用光敏传感器、距离传感器、弯曲度传感器等创作专业级交互应用',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d6f4e6f7f8c3b64d2d59bd172ea9619c?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_612e4a04b08f46298a26f33e307deb71?imageView2',
+        fullSyllabus:["了解各种传感器及其实际应用的场景",
+        "使用光敏传感器控制TD画面的明暗程度",
+        "使用IR红外传感器获取距离数据",
+        ]
     },
     {
         title:'复杂交互系统',
         description:'讨论最终交互装置作品创意，掌握TD输入和输出映射功能，运用TD和Arduino双向输入与输出创作交互装置作品',
-        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_968c5a799df87ca3c87a544c22da3cd1?imageView2'
+        img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_eed7860168144edc3b01ac9c8ccd1520?imageView2',
+        fullSyllabus:["掌握多个传感器和输出的结合应用",
+        "利用软件输入控制数字和PWM输出",
+        "制作光敏传感器案例",
+        ]
     }
 ],
 
 // 以下是图片内容填充
-mainPoster:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_0d4e357b323b77556f11d5ddcac5b237?imageView2',
-mainPosterMobile:'手机版海报url',
-classVideo: '课程宣导片url',
-videoPoster: '课程宣导片封面图片url',
-showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_fb897c44519816b003cc93abe74d7455?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_bc94f93d23b418ba1412ef21ad29972e?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_1bdd2e160366b6f2e8f10abb9c2fcc09?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_7048a22a9523b2af3659d84be9076189?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_80b7a8d2a829029e27744825a52946c0?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_40713f0f01ae99029ac1bb713acc9f8e?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_8101a7fd613c034f8f21ed7e76c4fe4d?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d4e445b0129e0545edb569897cdc6820?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d2c35f6bfca25f3366fd48380bc73b7d?imageView2",
-            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_e1981fba5223d9aac55740cf99e9ff01?imageView2"],
-mentorImg: 'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ddcf823280887ea27282c4c1dfba804a?imageView2',
+mainPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7bb29b57a90f8ea953d993c28bdebb2d?imageView2',
+mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bfa89f5ecdca524e64d30ca3bd109b96?imageView2',
+classVideo: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_9e29155594d4e83af5012b365cc01552',
+videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_44f7f46f32041430c78d540c984aa0e5?imageView2',
+showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_7db6a541fca47e07ce4bcb865cdc1165?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_0980fc26c0cde29f7dd13d549c8b4cc6?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_80083dbeac27ad997c90703cb4a3d2b8?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_0a3100e8e386ff0106a040e26cc3dbd9?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_2eea4815f1973f2af32285b2258f41c6?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_24f50eb1069fb1faa4e6eb3f607d24a0?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_5b2d7aef111bd729fc80116af7f3c28d?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_8011938b24aea7dc7571b4e387963ce8?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_4a38395e918c9ca53be1dd71c7074176?imageView2",
+            "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_2b272269473b086aed75af9a226dbb6b?imageView2"],
+mentorImg: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e763221160efaee351111a1510ec1032?imageView2',
 mentorVideo:"精彩瞬间视频 url",
-teacherCase:['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_730f430fa438db4de7d6b6cc6624ded0?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_cf3cba12673cfe44cb3ce84dceb189a2?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_73e0a91db43a8f509dfef28e94bcc9cd?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_3db52b3c6d7c45483cad3732176c3a99?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_b969d925e72e61579d8204e4e2336dee?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_6c2c75081d3b81deb5c037ca4ae049c7?imageView2'],
-studentWork: ['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_944e3f957fd6ea55f828109658ade78a?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_227a2b63e52d70b12e0fe2d7e887e081?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ed2491cd31d521aeea52544cac28a069?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_72c0b0dcf3218f4bc5c4f18c00f8b1f7?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_871c75d34d4c17d2f19363832aa41fe2?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_25ffee87830c4868dbcbd5bd702e5b53?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_997bace94cad221a8f9cc09693b2c49b?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_60c4ec6054bb6dc830c4e4f5567d8d44?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_798d2160dd9c388d6ab893348eb91c37?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_1978b8b20886ffbc6901ea377cb4deb1?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d0c18091ab03addcf5dec83a4df3b7ef?imageView2',
-            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_175ee5a78be1067e03ab48dfdeda99ca?imageView2'
+teacherCase:['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_28cb813220ddb23dcbff73625e761f01?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_098216a3d93186d90f91ac08a0d7c8a9?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_636e63f562545cbaf50ff13948b52a21?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_1b9e05c5741560834b7059b13ae37853?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_7a27dfad3a3aeec2578499cd660f1e4b?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_73a66a0d8e467f7545c42424a107a5d2?imageView2'],
+studentWork: ['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_efbb8f83a95b3d8343d5f133e9ba1742?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_9fe46e7c05213573ee2b66a0a3aff036?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_3ca0ff3ae4250fad0d837e38523ced6e?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_73b782f5456e54f5d0f121c4a9059d90?imageView2',
             ],
 }
 
 
+let museum = {
+    // 以下是文字内容填充
+    classID: "unityVR(不要修改)",
+    classNameEng:'Mastering Interaction Design for Museum',
+    classNameCn: '博物馆体验设计大师班',
+    price:'6718',
+    installmentValue:'560',
+    installmentTime: "12",
+    classSlogan:'打造元宇宙虚拟展厅，突破静默式看展方式',
+    classHeader:"掌握博物馆设计思维方法论<br/>成为线上展馆体验设计师",
+    classSeries:'元宇宙展览系列课程',
+    classSeriesLink:'课程系列链接',
+    prepClass:'Processing创意编程指南',
+    prepClassLink:'前置课程链接',
+    requirements:'课程硬件需求',
+    classOverview: '你想成为大型展馆体验设计师吗？你想进入PICO笔克、风语筑、ProExhibits等海内外知名展厅设计公司吗？你想创作出美感与实用并存的交互展览吗？那么快加入博物馆体验设计大师班吧！本课程由美国排名Top3的帕森斯设计学院艺术家郭俊谷老师和郑晴老师共同亲自授课。你可以从零开始认知新世代视觉展现工具Figma，全过程了解博物馆情景下的体验设计的要素和方法论，学习接触点、体验层级和情绪版的创建，掌握博物馆交互技术和游戏设计，结合实际的博物馆案例进行分析，运用AE, C4D，Webflow等工具独立制作完整的线上展览作品。最终你会成为体验设计师，入职顶尖展厅设计企业或国家级博物馆，或成为元宇宙策展人举办线上个展，接博物馆体验设计相关项目获得丰厚收入。',
+    mentorNameEng:'Jungu Guo',
+    mentorNameCn:'郭俊谷',
+    mentorTitle:["芝加哥科技工业博物馆创意工程师",
+                "纽约帕森斯设计与技术硕士",
+                "日本teamLab交互组实习"
+            ],
+    mentorText:'纽约帕森斯设计与技术硕士，芝加哥科技工业博物馆创意工程师，日本teamLab交互组实习。曾为中国科学技术馆开发交互装置，也曾设计出使用数字物理互动装置的《颜色粉碎》项目以及了解飞机如何运作的《Take Flight》项目引导互动动画。',
+    freeClassTitle:'郑晴&郭俊顾老师公开课「博物馆体验设计」',
+    studentReviewMain: {
+        name: "张同学",
+        title:'博物馆业内设计人士',
+        review: "我是在国内某博物馆工作的一名设计师，现在由于疫情，我馆线下无法接纳观众进行参观，所以准备着手做一个线上展览。可能因为自己不太了解年轻人的想法，我做出的设计总是被驳回。为了让项目继续进行，我和一名团队成员共同报名了郭老师和郑老师的课程。在课程里学到了很多理论知识，老师也细心地解答关于我们项目的一些设计交互问题。正所谓师傅领进门，修行靠个人。在未来，我一定会继续吸收新知识，活到老学到老，争取不被后浪拍在沙滩上。谢谢两位老师不厌其烦地指导，希望有机会能一起合作。",
+    },
+    studentReview:[
+            {
+                name: '林同学',
+                title:'往期学员',
+                review:'报名课程是为了做线上展览的毕业设计，2个月的学习过程一点也不枯燥，希望以后能成功进入博物馆工作。'
+            },
+            {
+                name: '王同学',
+                title:'往期学员',
+                review:'本来对这种线上课程持有怀疑态度，但是体验下来非常好。特别是学习氛围，没有那种培训班的感觉，更像国外那种小班授课，很有意思。'
+            },
+            {
+                name: '刘同学',
+                title:'往期学员',
+                review:'我是一名漫画爱好者，特别想做一个跟漫画相关的线上博物馆，奈何我是个技术小白，理论什么也不懂。经过两个月的学习，我的漫画博物馆马上就要上线啦，非常感谢两位老师的耐心答疑解惑。 '
+            },
+            {
+                name: '王同学',
+                title:'往期学员',
+                review:'再次感谢两位老师，这两个多月学到了非常非常多，收获了很多可以学以致用的理念。也感谢一起上课的同学们，在大家身上也学到很多，感恩，希望我们保持联系！'
+            },
+            {
+                name: '成同学',
+                title:'往期学员',
+                review:'多谢两位老师，辛苦了！感觉真是一路拉着我们往前走，经过两个月的学习拓宽了我们的设计视野，无论在职业发展还是专业知识上面都收获太多了~'
+            },
+            {
+                name: '蔡同学',
+                title:'往期学员',
+                review:'非常感谢两位老师，让我系统地学习到了博物馆设计的底层理论框架，他们还将自己的实践经验传授给了大家，让我少走了许多弯路！'
+            },
+    ],
+    syllabus: [
+        {
+            title: '创建博物馆体验地图',
+            description: '通过设计提纲理解博物馆设计项目背景，掌握Persona和体验地图设计规律，了解博物馆体验受众和宏观博物馆体验',
+            img:"http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_b46c03bf00f96bbf70dd7e36ca10c714?imageView2",
+            fullSyllabus:["通过设计提要把握博物馆体验项目的背景",
+            "通过Persona来深入了解你的博物馆体验受众",
+            "通过体验旅程和地图来规划你的宏观博物馆体验",
+            ]
+        },
+        {
+            title:'创建接触点与体验层级',
+            description:'通过体验层级来把握体验的情绪节奏，掌握博物馆体验设计的8大设计手法，设计和编排宏观体验的接触点',
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_114f6110ab0b8e721682eb2e4bd9a902?imageView2',
+            fullSyllabus:["通过体验层级来掌握情绪节奏并丰富层次",
+            "通过案例了解博物馆体验设计常用的八种设计手法",
+            "掌握设计和编排构成宏观体验的接触点",
+            ]
+        },
+        {
+            title:'掌握设计思维方法论',
+            description:'学习通用的设计思维方法论：共情、定义、脑暴、原型、测试，掌握体验设计的流程，了解如何将设计思维运用在博物馆项目里',
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_3886aed6d51fdfd777c51de2cbdd62cb?imageView2',
+            fullSyllabus:["了解体验设计的流程学习通用的设计思维的方法论",
+            "学习通用的设计思维的方法论：共情、 定义、脑暴、原型、测试",
+            "学习如何将设计思维运用于博物馆项目设计中",
+            ]
+        },
+        {
+            title:'掌握设计提案技巧',
+            description:'学习情绪版的设计，掌握概念设计提案和交互设计提案的制作方法和技巧，了解作品展示的完整性、叙事逻辑以及架构',
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_b06d4baaa18265fbbadfbb4a6239de40?imageView2',
+            fullSyllabus:["学习概念和交互设计提案的制作技巧",
+            "学习项目的完整展示方法以及叙事逻辑的搭建",
+            "学习Moodboard情绪版的创建及其应用",
+            ]
+        },
+        {
+            title:'掌握博物馆交互技术',
+            description:'介绍博物馆常见交互技术和应用形式（创意编程、AR/VR、传感器交互、人工智能等），使用storyboard或wireframes描绘整个交互过程',
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_5463448df1ffadeecd689a32cacb2c98?imageView2',
+            fullSyllabus:["介绍博物馆常见交互技术和应用形式",
+            "拓展学习创意编程、AR/VR、前端/移动端等内容",
+            "使用storyboard或wireframes描绘整个交互过程",
+            ]
+        },
+        {
+            title: "掌握博物馆游戏设计",
+            description: '制作博物馆中的游戏设计，掌握迭代式的游戏设计流程：想法、原型、测试和评估，结合具体博物馆里的游戏实例进行开发设计',
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_7339f8235e7a2a38f141f81a1677ca4e?imageView2',
+            fullSyllabus:["了解游戏的定义及博物馆独特游戏类型",
+            "掌握迭代式的游戏设计流程：想法、原型、测试和评估",
+            "结合具体博物馆里的游戏实例进行开发设计",
+            ]
+        },
+        {
+            title: '创建低保真模型制作',
+            description: '制作线上展览项目的低保真模型，掌握低保真模型制作的方法论，使用Figma或者Webflow制作低保真的线上展览原型',
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_7e41c23ed8f6e5904e0b2767f9095f14?imageView2',
+            fullSyllabus:["掌握低保真模型制作的方法论",
+            "学习线上展览项目的低保真模型制作",
+            "使用Figma或Webflow制作低保真的线上展览原型",
+            ]
+        },
+        {
+            title:'创建最终在线博物馆',
+            description:'制作在线博物馆高保原型和html交互式页面作品，拓展博物馆设计中的包容性设计、感官设计、适童化设计、跨媒介叙事',
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_88cc90fbc7b08a607a6d16df0e82bd1d?imageView2',
+            fullSyllabus:["完善低保真原型的制作",
+            "拓展掌握其他博物馆设计中的包容性设计与适童化设计等设计",
+            "制作在线博物馆高保原型和html交互式页面作品",
+            ]
+        }
+    ],
+
+    // 以下是图片内容填充
+    mainPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8b5061701dffdc5465e5acaedf158dc2?imageView2',
+    mainPosterMobile:'手机版海报url',
+    classVideo: '课程宣导片url',
+    videoPoster: '课程宣导片封面图片url',
+    showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_03a49cb93e6415208cd28a13c68f563f?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_e8c2c7b113a8810631fb9dc90976f657?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ee11e87ab6183d08ada6516df7a87e30?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_8bffc8aac45382467926586e76baeda8?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_e20f4672df88f8591ab050c4309d11e4?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c27fd0162a24511cf64e2e3f2bf8c7cd?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_4b2aa5aa19b5aba7493caa8b9fea7ec2?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_f30be2d7d60577bffe692d33ad0c423e?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_aff6f171ba896664b7ba97c9dfaeb17d?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_76808f2166c0b804fb1826935354609b?imageView2"],
+    mentorImg: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ab7e97dcceaf927f163b9ce53c3902cf?imageView2',
+    mentorVideo:"http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_6a9297ba572a68b9638c250529868633",
+    mentorPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_655298a20a5727a9859615d59a23fc60?imageView2',
+    teacherCase:['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_15c3c91130ccf6d5f894064af742eb13?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_a5c6048087c91eae701fe0d8ed0f8468?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d9f2a05c54a702bdab8b2e216242876e?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_1ca12516606fd84d6d198fb75e519664?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_5a0d48802b0dbc6c438ee96d562f165e?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_5c45ed9c6e3c4b167d411046f4f0501a?imageView2'],
+    studentWork: ['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_944e3f957fd6ea55f828109658ade78a?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_227a2b63e52d70b12e0fe2d7e887e081?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ed2491cd31d521aeea52544cac28a069?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_72c0b0dcf3218f4bc5c4f18c00f8b1f7?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_871c75d34d4c17d2f19363832aa41fe2?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_25ffee87830c4868dbcbd5bd702e5b53?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_997bace94cad221a8f9cc09693b2c49b?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_60c4ec6054bb6dc830c4e4f5567d8d44?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_798d2160dd9c388d6ab893348eb91c37?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_1978b8b20886ffbc6901ea377cb4deb1?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d0c18091ab03addcf5dec83a4df3b7ef?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_175ee5a78be1067e03ab48dfdeda99ca?imageView2'
+                ],
+
+                
+}
+
+// 小晴老师照片：http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a05df2a42eb8019208f075db323f983d?imageView2
+// 小晴老师视频：http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_960011b858cd2b0b1394804cc31ccc12
+// 小晴老师poster：http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a6eed49a478e07d0698026978547635b?imageView2
 
 
 let courseDisplay 

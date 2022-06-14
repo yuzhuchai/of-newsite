@@ -140,6 +140,20 @@ this is the first HTML code, load font and style!
         display:block;
     }
 
+    a:visited{
+        color:inherit;
+        text-decoration: none;
+    }
+
+    a:active{
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a {
+        color:inherit;
+        text-decoration: none;
+    } 
 
     #navigation > span > a:visited {
         color:#ACACAC;
@@ -157,7 +171,7 @@ this is the first HTML code, load font and style!
         text-decoration: none;
     }
 
-    a:visited {
+    /* a:visited {
         color:black;
         text-decoration: none;
     } 
@@ -171,7 +185,7 @@ this is the first HTML code, load font and style!
     a{
         color:black;
         text-decoration: none;
-    }
+    } */
     
 
 
@@ -1284,14 +1298,6 @@ this is the first HTML code, load font and style!
             /*border: 1px solid black;*/
         }
 
-/*        .socialCard > img{
-            display: none;
-            border: 1px solid black;
-        }
-
-        #socialCard3{
-            height: 156px;
-        }*/
 
         #footer{
             max-width:100%;
@@ -1679,7 +1685,7 @@ this is the first HTML code, load font and style!
 
 
 <div id="header">
-    <div id="headerlogo"><a href="webpage.html"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
+    <div id="headerlogo"><a href="./home.html"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
     <div id="menu">
         <div>
             <input type='text' id='search' placeholder="processing"> 
@@ -1718,110 +1724,155 @@ this is the first HTML code, load font and style!
 <div id='menuPopUp'>
     <div id='menuPopUpContents'>
         <div id='menuButtonContainer'>
-            <a href="courselist.html"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
-            <a href="webpage.html#aboutContainer"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
-            <a href="news.html"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
-            <a href="blogs.html"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
-            <a href="webpage.html#mentorContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
+            <a href="./courselist.html"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
+            <a href="./aboutus.html"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
+            <a href="./news.html"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
+            <a href="./blogs.html"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
+            <a href="./aboutus.html#advisorsContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
         </div> 
 
         <div id='menuCategoryContainer'>
-            <div class='menuCategory' id="allClass"><div><span class="cn">全部课程</span><span class="eng">All Course</span></div></div>
-            <div class='menuCategory' id="aiClass"><div><span class="cn">快速筑基班</span><span class="eng">Foundation Course</span></div></div>
-            <div class='menuCategory' id="masterClass"><div><span class="cn">大师班</span><span class="eng">Master Class</span></div></div>
-            <div class='menuCategory' id="bootCampClass"><div><span class="cn">冲刺营</span><span class="eng">BootCamp</span></div></div>
+            <a class="cursorPointer" href="./courseList.html">
+                <div class='menuCategory' id="allClass">
+                    <div>
+                        <span class="cn">全部课程</span>
+                        <span class="eng">All Course</span>
+                    </div>
+                </div>
+            </a>
+            <a class="cursorPointer" href="./courseList.html">
+                <div class='menuCategory' id="aiClass">
+                    <div>
+                        <span class="cn">快速筑基班</span>
+                        <span class="eng">Foundation Course</span>
+                    </div>
+                </div>
+            </a>
+            <a class="cursorPointer" href="./courseList.html">
+                <div class='menuCategory' id="masterClass">
+                    <div>
+                        <span class="cn">大师班</span>
+                        <span class="eng">Master Class</span>
+                    </div>
+                </div>
+            </a>
+            <a class="cursorPointer" href="./courseList.html">
+                <div class='menuCategory' id="bootCampClass">
+                    <div>
+                        <span class="cn">冲刺营</span>
+                        <span class="eng">BootCamp</span>
+                    </div>
+                </div>
+            </a>
         </div>
 
 
         <div id='menuSoftwareContainer'>
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7087f5df4e170bebc4a04b354ecb3326?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>TouchDesigner</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">基于节点式的视觉话编程语言</span>
-                        <span class="eng">Node-based programming language</span>
-                    </span>
+            <a class="cursorPointer" href="./courseList.html?filter=td">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7087f5df4e170bebc4a04b354ecb3326?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>TouchDesigner</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">基于节点式的视觉话编程语言</span>
+                            <span class="eng">Node-based programming language</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
             
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6a9a77d5b3c9675c16167fe8d2c7766f?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>Unity</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">实时内容开发平台</span>
-                        <span class="eng">real-time content delivery platform</span>
-                    </span>
+            
+            <a class="cursorPointer" href="./courseList.html?filter=unity">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6a9a77d5b3c9675c16167fe8d2c7766f?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>Unity</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">实时内容开发平台</span>
+                            <span class="eng">real-time content delivery platform</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
-
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fb9262b4ac760ea1c2b8af813272b48e?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>Unreal Engine</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">实时3D创作工具</span>
-                        <span class="eng">real-time 3D platfrom</span>
-                    </span>
+            </a>
+            
+            <a class="cursorPointer" href="./courseList.html?filter=unreal">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fb9262b4ac760ea1c2b8af813272b48e?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>Unreal Engine</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">实时3D创作工具</span>
+                            <span class="eng">real-time 3D platfrom</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fc889440b6caa0f1c0e430bbe4176df9?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>Processing</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">新兴计算机语言</span>
-                        <span class="eng">creative coding language</span>
-                    </span>
+            <a class="cursorPointer" href="./courseList.html?filter=processing">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fc889440b6caa0f1c0e430bbe4176df9?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>Processing</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">新兴计算机语言</span>
+                            <span class="eng">creative coding language</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9cc784f659f8498a1a1d563758feaa5d?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>P5.js</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">创意编码的 JavaScript 库</span>
-                        <span class="eng">JS creative coding library</span>
-                    </span>
+            <a class="cursorPointer" href="./courseList.html?filter=p5">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9cc784f659f8498a1a1d563758feaa5d?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>P5.js</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">创意编码的 JavaScript 库</span>
+                            <span class="eng">JS creative coding library</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f647742a09d5fbe44d69d0a497b05ead?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>MaxMSP</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">交互式编程语言与开发环境</span>
-                        <span class="eng">interactive creative codeing language</span>
-                    </span>
-                </div>
-            </div>
 
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_094f651765e5162a3a7aa953faa18311?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>OpenFrameworks</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">是C++为基准的简洁开发框架,擅长开发图像和动画</span>
-                        <span class="eng">C++ creative coding framework</span>
-                    </span>
+            <a class="cursorPointer" href="./courseList.html?filter=max">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f647742a09d5fbe44d69d0a497b05ead?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>MaxMSP</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">交互式编程语言与开发环境</span>
+                            <span class="eng">interactive creative codeing language</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>JavaScript</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">直译式脚本语言</span>
-                        <span class="eng">Code for web-deveopment</span>
-                    </span>
+            <a class="cursorPointer" href="./courseList.html?filter=of">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_094f651765e5162a3a7aa953faa18311?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>OpenFrameworks</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">是C++为基准的简洁开发框架,擅长开发图像和动画</span>
+                            <span class="eng">C++ creative coding framework</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
+
+            <a class="cursorPointer" href="./courseList.html?filter=js">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>JavaScript</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">直译式脚本语言</span>
+                            <span class="eng">Code for web-deveopment</span>
+                        </span>
+                    </div>
+                </div>
+            </a>
             
         </div>
 
@@ -1847,7 +1898,7 @@ this is the first HTML code, load font and style!
     </div>
 
     <div class='container' id="navigation">
-        <span><a href="webpage.html"><span class="eng">HOME</span><span class="cn">主页</span></a></span> > <span class="eng">NEWS</span><span class="cn">新闻</span>
+        <span><a href="./home.html"><span class="eng">HOME</span><span class="cn">主页</span></a></span> > <span class="eng">NEWS</span><span class="cn">新闻</span>
     </div>
 
     <div class="container" id="courseContainer">
@@ -1864,21 +1915,30 @@ this is the first HTML code, load font and style!
             <div id='newsContentContainer'>
                 <div class='newContent'>
                     <div class='date'>2022.06.02</div>
-                    <div class='newsTitle'>第三期TD互动装置大师班今日正式发布，上海音乐学院外教亲自授课，12周硬核掌握TD硬件开发，成为最抢手的交互装置设计师！</div>
+                    <div class='newsTitle'>
+                        <span class="cn">第三期TD互动装置大师班今日正式发布，上海音乐学院外教亲自授课，12周掌握TD硬件开发，成为最抢手交互装置设计师！</span>
+                        <span class="eng">The third <i>Mastering Interactive Installation with TD</i> officially released today. Mastered TD hardware development in 12 weeks, and became the most sought-after interactive installation designer!</span>
+                    </div>
                     <div class='more'>>></div>
                 </div>
                 <!-- end of new card 1 -->
     
                 <div class='newContent'>
                     <div class='date'>2022.06.01</div>
-                    <div class='newsTitle'>OF COURSE官方平台2022年6月1日换新升级，携3大课程类型，8大元宇宙技术体系，以及n+1跨平台模式，打造只属于你的元宇宙知识库！</div>
+                    <div class='newsTitle'>
+                        <span class="cn">OF 官方平台于6月1日换新升级，携3大课程类型，8大元宇宙技术体系，及n+1跨平台模式，打造属于你的元宇宙知识库！</span>
+                        <span class="eng">The OF official platform was updated and upgraded on June 1st, with 3 major course types, 8 major metaverse technology systems, and n+1 cross-platform mode to create your own metaverse knowledge base!</span>
+                    </div>
                     <div class='more'>>></div>
                 </div>
                 <!-- end of new card 2 -->
     
                 <div class='newContent'>
                     <div class='date'>2022.05.31</div>
-                    <div class='newsTitle'>OF COURSE创始人程鹏先生受邀参加由中国美术学院新设计学院媒介与交互研究所与蓬莱科幻学院举办的“东方幻想”元宇宙科幻大会</div>
+                    <div class='newsTitle'>
+                        <span class="cn">OF 创始人程鹏先生受邀参加中国美术学院新设计学院媒介与交互研究所与蓬莱科幻学院举办的“东方幻想”元宇宙科幻大会</span>
+                        <span class="eng">Paul Cheng, the founder of OF COURSE was invited to participate in the "Oriental Fantasy" Metaverse Science Fiction Conference</span>
+                    </div>
                     <div class='more'>>></div>
                 </div>
                 <!-- end of new card 3 -->
@@ -1886,7 +1946,10 @@ this is the first HTML code, load font and style!
     
                 <div class='newContent'>
                     <div class='date'>2022.05.25</div>
-                    <div class='newsTitle'>2022国际交互艺术夏令营定档7月18日，18位全球顶尖教授专家挂帅，9种前沿交互技术，110小时高品质学习，将带给你前所未有的沉浸式学习体验！</div>
+                    <div class='newsTitle'>
+                        <span class="cn">2022国际交互艺术夏令营定档7月18日，18位全球顶尖教授专家，9种前沿交互技术，110小时高品质学习，带给你前所未有的沉浸式学习体验！</span>
+                        <span class="eng">The 2022 International Interactive Art SummerCamp is scheduled for July 18th. 18 top professors and experts in the world, 9 cutting-edge interactive technologies will bring you an unprecedented immersive learning experience!</span>
+                    </div>
                     <div class='more'>>></div>
                 </div>
                 <!-- end of new card 5 -->
@@ -1903,25 +1966,25 @@ this is the first HTML code, load font and style!
 
 
     
-
     <div class='' id="footer">
         <div>
-            <div id='footerLogo'><a href="webpage.html"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
+            <div id='footerLogo'><a href="./home.html"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
             <div id='footerMenu'>
                 <div>
-                    <div class='footerMenuItem'><span class='eng'>Course</span><span class="cn">课程</span></div>
-                    <div class='footerMenuItem'><span class='eng'>Career</span><span class="cn">职业</span></div>
-                    <div class='footerMenuItem'><span class='eng'>News</span><span class="cn">新闻</span></div>
-                    <div class='footerMenuItem'><span class='eng'>Blog</span><span class="cn">博客</span></div>
+                    <div class='footerMenuItem'><a href="./courselist.html"><span class='eng'>Course</span><span class="cn">课程</span></a></div>
+                    <div class='footerMenuItem'><a href="./home.html"><span class='eng'>Career</span><span class="cn">职业</span></a></div>
+                    <div class='footerMenuItem'><a href="./news.html"><span class='eng'>News</span><span class="cn">新闻</span></a></div>
+                    <div class='footerMenuItem'><a href="blog.html"><span class='eng'>Blog</span><span class="cn">博客</span></a></div>
                 </div>
 
                 <div>                
-                    <div class='footerMenuItem'><span class='eng'>About Us</span><span class="cn">关于我们</span></div>
-                    <div class='footerMenuItem'><span class='eng'>Advisors</span><span class="cn">导师信息</span></div>
-                    <div class='footerMenuItem'><span class='eng'>Join Us</span><span class="cn">加入我们</span></div>    
+                    <div class='footerMenuItem'><a href="./about.html"><span class='eng'>About Us</span><span class="cn">关于我们</span></a></div>
+                    <div class='footerMenuItem'><a href="./about.html#advidorsContainer"><span class='eng'>Advisors</span><span class="cn">导师信息</span></a></div>
+                    <div class='footerMenuItem'><a href="https://jinshuju.net/f/YzGMtG"><span class='eng'>Join Us</span><span class="cn">加入我们</span></a></div>    
                 </div>
-
             </div>
+
+
             <div id='footerSocial'>
                 <div id='footerCode'>
                     <div><span class="cn">关注我们</span><span class="eng">Follow Us</span></div>

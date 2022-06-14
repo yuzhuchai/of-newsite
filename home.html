@@ -331,7 +331,7 @@ this is the first HTML code, load font and style!
         height: 46px;
         float: right;
         border:none;
-        width: 200px;
+        min-width: 250px;
     }
 
     .buttonBlack:hover{
@@ -428,9 +428,11 @@ this is the first HTML code, load font and style!
 	}
 
     .courseButton:hover{
-        transform: translateY(-5px) scale(1.005) translateZ(0);
-        box-shadow: 0 24px 36px rgba(0,0,0,0.11),
-            0 24px 46px rgba(0,0,0,0.11);
+        transform: translateY(1px) translateX(1px) scale(1) translateZ(0);
+        /* font-weight: 400; */
+        /* text-decoration: underline; */
+        /* box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+            0 24px 46px rgba(0,0,0,0.11); */
     }
 
 
@@ -580,6 +582,10 @@ this is the first HTML code, load font and style!
         letter-spacing: 1.09em;
         color:#222222;
         line-height: 100%;
+    }
+
+    .letterSpaceing{
+        letter-spacing: 0.4em;
     }
 
 
@@ -1704,7 +1710,7 @@ this is the first HTML code, load font and style!
 </style>
 
 <div id="header">
-    <div id="headerlogo"><a href="webpage.html"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
+    <div id="headerlogo"><a href="./home.html"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
     <div id="menu">
         <div>
             <input type='text' id='search' placeholder="processing"> 
@@ -1743,110 +1749,155 @@ this is the first HTML code, load font and style!
 <div id='menuPopUp'>
     <div id='menuPopUpContents'>
         <div id='menuButtonContainer'>
-            <a href="courselist.html"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
-            <a href="webpage.html#aboutContainer"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
-            <a href="news.html"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
-            <a href="blogs.html"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
-            <a href="webpage.html#mentorContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
+            <a href="./courselist.html"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
+            <a href="./about.html"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
+            <a href="./news.html"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
+            <a href="./blogs.html"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
+            <a href="./about.html#advisorsContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
         </div> 
 
         <div id='menuCategoryContainer'>
-            <div class='menuCategory' id="allClass"><div><span class="cn">全部课程</span><span class="eng">All Course</span></div></div>
-            <div class='menuCategory' id="aiClass"><div><span class="cn">快速筑基班</span><span class="eng">Foundation Course</span></div></div>
-            <div class='menuCategory' id="masterClass"><div><span class="cn">大师班</span><span class="eng">Master Class</span></div></div>
-            <div class='menuCategory' id="bootCampClass"><div><span class="cn">冲刺营</span><span class="eng">BootCamp</span></div></div>
+            <a class="cursorPointer" href="./courseList.html">
+                <div class='menuCategory' id="allClass">
+                    <div>
+                        <span class="cn">全部课程</span>
+                        <span class="eng">All Course</span>
+                    </div>
+                </div>
+            </a>
+            <a class="cursorPointer" href="./courseList.html">
+                <div class='menuCategory' id="aiClass">
+                    <div>
+                        <span class="cn">快速筑基班</span>
+                        <span class="eng">Foundation Course</span>
+                    </div>
+                </div>
+            </a>
+            <a class="cursorPointer" href="./courseList.html">
+                <div class='menuCategory' id="masterClass">
+                    <div>
+                        <span class="cn">大师班</span>
+                        <span class="eng">Master Class</span>
+                    </div>
+                </div>
+            </a>
+            <a class="cursorPointer" href="./courseList.html">
+                <div class='menuCategory' id="bootCampClass">
+                    <div>
+                        <span class="cn">冲刺营</span>
+                        <span class="eng">BootCamp</span>
+                    </div>
+                </div>
+            </a>
         </div>
 
 
         <div id='menuSoftwareContainer'>
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7087f5df4e170bebc4a04b354ecb3326?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>TouchDesigner</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">基于节点式的视觉话编程语言</span>
-                        <span class="eng">Node-based programming language</span>
-                    </span>
+            <a class="cursorPointer" href="./courseList.html?filter=td">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7087f5df4e170bebc4a04b354ecb3326?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>TouchDesigner</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">基于节点式的视觉话编程语言</span>
+                            <span class="eng">Node-based programming language</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
             
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6a9a77d5b3c9675c16167fe8d2c7766f?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>Unity</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">实时内容开发平台</span>
-                        <span class="eng">real-time content delivery platform</span>
-                    </span>
+            
+            <a class="cursorPointer" href="./courseList.html?filter=unity">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6a9a77d5b3c9675c16167fe8d2c7766f?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>Unity</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">实时内容开发平台</span>
+                            <span class="eng">real-time content delivery platform</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
-
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fb9262b4ac760ea1c2b8af813272b48e?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>Unreal Engine</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">实时3D创作工具</span>
-                        <span class="eng">real-time 3D platfrom</span>
-                    </span>
+            </a>
+            
+            <a class="cursorPointer" href="./courseList.html?filter=unreal">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fb9262b4ac760ea1c2b8af813272b48e?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>Unreal Engine</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">实时3D创作工具</span>
+                            <span class="eng">real-time 3D platfrom</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fc889440b6caa0f1c0e430bbe4176df9?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>Processing</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">新兴计算机语言</span>
-                        <span class="eng">creative coding language</span>
-                    </span>
+            <a class="cursorPointer" href="./courseList.html?filter=processing">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fc889440b6caa0f1c0e430bbe4176df9?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>Processing</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">新兴计算机语言</span>
+                            <span class="eng">creative coding language</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9cc784f659f8498a1a1d563758feaa5d?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>P5.js</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">创意编码的 JavaScript 库</span>
-                        <span class="eng">JS creative coding library</span>
-                    </span>
+            <a class="cursorPointer" href="./courseList.html?filter=p5">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9cc784f659f8498a1a1d563758feaa5d?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>P5.js</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">创意编码的 JavaScript 库</span>
+                            <span class="eng">JS creative coding library</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f647742a09d5fbe44d69d0a497b05ead?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>MaxMSP</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">交互式编程语言与开发环境</span>
-                        <span class="eng">interactive creative codeing language</span>
-                    </span>
-                </div>
-            </div>
 
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_094f651765e5162a3a7aa953faa18311?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>OpenFrameworks</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">是C++为基准的简洁开发框架,擅长开发图像和动画</span>
-                        <span class="eng">C++ creative coding framework</span>
-                    </span>
+            <a class="cursorPointer" href="./courseList.html?filter=max">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f647742a09d5fbe44d69d0a497b05ead?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>MaxMSP</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">交互式编程语言与开发环境</span>
+                            <span class="eng">interactive creative codeing language</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <div class='software'>
-                <img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> 
-                <div class='softwareDescription'>
-                    <span class='softwareh1'>JavaScript</span><br/>
-                    <span class='softwareh2'>
-                        <span class="cn">直译式脚本语言</span>
-                        <span class="eng">Code for web-deveopment</span>
-                    </span>
+            <a class="cursorPointer" href="./courseList.html?filter=of">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_094f651765e5162a3a7aa953faa18311?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>OpenFrameworks</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">是C++为基准的简洁开发框架,擅长开发图像和动画</span>
+                            <span class="eng">C++ creative coding framework</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
+
+            <a class="cursorPointer" href="./courseList.html?filter=js">
+                <div class='software'>
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> 
+                    <div class='softwareDescription'>
+                        <span class='softwareh1'>JavaScript</span><br/>
+                        <span class='softwareh2'>
+                            <span class="cn">直译式脚本语言</span>
+                            <span class="eng">Code for web-deveopment</span>
+                        </span>
+                    </div>
+                </div>
+            </a>
             
         </div>
 
@@ -1865,7 +1916,6 @@ this is the first HTML code, load font and style!
 
 
 
-
 <div id="contentContainer">
 
 
@@ -1878,10 +1928,10 @@ this is the first HTML code, load font and style!
 
     <div class="container hiddenforOnepointO" id="adContainer">
     	<div class="adContent">
-    		<a href="mainCourseDescription.html?courseDisplay=unrealLandScape"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_30399843385fc464023880bccd336334?imageView2'></a>
+    		<a href="./course.html?courseDisplay=unrealLandScape"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_30399843385fc464023880bccd336334?imageView2'></a>
     	</div>
     	<div class="adContent">
-    		<a href="mainCourseDescription.html?courseDisplay=unityVR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ebbd934d258ba30d603ac2bc8e9ca4d1?imageView2'></a>
+    		<a href="./course.html?courseDisplay=unityVR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ebbd934d258ba30d603ac2bc8e9ca4d1?imageView2'></a>
     	</div>
     	<div class="adContent">
     		<a><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7508903cabc56de3b297a73c789493d0?imageView2'></a>
@@ -1899,52 +1949,52 @@ this is the first HTML code, load font and style!
     		</div>
     		
     		<div id='courseButtonContainer'>
-    			<div class='courseButton'><a href="courseList.html?filter=newest">New</a></div>
-    			<div class='courseButton'><a href="courseList.html?filter=unity">Unity</a></div>
-    			<div class='courseButton'><a href="courseList.html?filter=unreal">Unreal</a></div>
-    			<div class='courseButton'><a href="courseList.html?filter=td">TouchDesigner</a></div>
-    			<div class='courseButton'><a href="courseList.html?filter=processing">Processing</a></div>
+    			<div class='courseButton'><a href="./courseList.html?filter=newest">New</a></div>
+    			<div class='courseButton'><a href="./courseList.html?filter=unity">Unity</a></div>
+    			<div class='courseButton'><a href="./courseList.html?filter=unreal">Unreal</a></div>
+    			<div class='courseButton'><a href="./courseList.html?filter=td">TouchDesigner</a></div>
+    			<div class='courseButton'><a href="./courseList.html?filter=processing">Processing</a></div>
     		</div>
     	</div>
     	<div id="courseDisplayContainer">
 
             <div class="myCard course" >
-                <div><a href="mainCourseDescription.html?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f453a6c13ea8d61f9b3b8f84efa0e086?imageView2'></a></div>
+                <div><a href="./course.html?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f453a6c13ea8d61f9b3b8f84efa0e086?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
                         <div class='header2 header2Resize'>2022 Interactive Art Summer BootCamp</div>
                         <div class='header3 header3Resize'>2022国际交互艺术夏令营</div>
                     </div>
                     <div>
-                        <a href="courseList.html?filter=metaverse"><div class='tag'>#Metaverse</div></a>
+                        <a href="./courseList.html?filter=metaverse"><div class='tag'>#Metaverse</div></a>
                     </div>
                 </div>
             </div>
             <!-- end of card 6 -->
 
             <div class="myCard course">
-                <div class="arClick"><a href="mainCourseDescription.html?courseDisplay=unityAR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_48d23e3e95a4297037652fc25aaa7008?imageView2'></a></div>
+                <div class="arClick"><a href="./course.html?courseDisplay=unityAR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_48d23e3e95a4297037652fc25aaa7008?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unityAR">Mastering Augmented Reality with Unity</a></div>
-                        <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unityAR">AR增强现实大师班</a></div>
+                        <div class='header2 header2Resize'><a href="./course.html?courseDisplay=unityAR">Mastering Augmented Reality with Unity</a></div>
+                        <div class='header3 header3Resize'><a href="./course.html?courseDisplay=unityAR">AR增强现实大师班</a></div>
                     </div>
                     <div>
-                        <a href="courseList.html?filter=ar"><div class='tag'>#Augmented Reality</div></a>
+                        <a href="./courseList.html?filter=ar"><div class='tag'>#Augmented Reality</div></a>
                     </div>
                 </div>
             </div>
             <!-- end of card 3 -->
 
             <div class="myCard course" >
-                <div><a href="mainCourseDescription.htmll?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_db15f3774704ad3f71879539f669469a?imageView2'></a></div>
+                <div><a href="./course.htmll?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_db15f3774704ad3f71879539f669469a?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
                         <div class='header2 header2Resize'>Mastering AudioVisual with TouchDesigner</div>
                         <div class='header3 header3Resize'>TD音画互动大师班</div>
                     </div>
                     <div>
-                        <a href="courseList.html?filter=td"><div class='tag'>#TouchDesigner</div></a>
+                        <a href="./courseList.html?filter=td"><div class='tag'>#TouchDesigner</div></a>
                     </div>
                 </div>
             </div>
@@ -1952,41 +2002,41 @@ this is the first HTML code, load font and style!
 
 
     		<div class="myCard course courseExtra">
-    			<div><a href="mainCourseDescription.html?courseDisplay=ai"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ba53ef10b2fd1320874bac0d34c2c46f?imageView2'></a></div>
+    			<div><a href="./course.html?courseDisplay=ai"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ba53ef10b2fd1320874bac0d34c2c46f?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=ai">AI Generative Art Master Course</a></div>
-                        <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=ai">AI生成艺术大师班</a></div>
+                        <div class='header2 header2Resize'><a href="./course.html?courseDisplay=ai">AI Generative Art Master Course</a></div>
+                        <div class='header3 header3Resize'><a href="./course.html?courseDisplay=ai">AI生成艺术大师班</a></div>
                     </div>
                     <div>
-                        <a href="courseList.html?filter=p5"><div class='tag'>#p5.js</div></a>
+                        <a href="./courseList.html?filter=p5"><div class='tag'>#p5.js</div></a>
                     </div>
                 </div>
     		</div>
             <!-- end of card 1 -->
     		<div class="myCard course courseExtra">
-                <div><a href="mainCourseDescription.html?courseDisplay=unrealStylized"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f38e77aa21e05249ed286a50d5ad0e24?imageView2'></a></div>
+                <div><a href="./course.html?courseDisplay=unrealStylized"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f38e77aa21e05249ed286a50d5ad0e24?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unrealStylized">Matering 3D Stylized Environment with UE5</a></div>
-                        <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unrealStylized">UE5风格化场景师班</a></div>
+                        <div class='header2 header2Resize'><a href="./course.html?courseDisplay=unrealStylized">Matering 3D Stylized Environment with UE5</a></div>
+                        <div class='header3 header3Resize'><a href="./course.html?courseDisplay=unrealStylized">UE5风格化场景师班</a></div>
                     </div>
                     <div>
-                        <a href="courseList.html?filter=unreal"><div class='tag'>#UE5</div></a>
+                        <a href="./courseList.html?filter=unreal"><div class='tag'>#UE5</div></a>
                     </div>
                 </div>
             </div>
             <!-- end of card 2 -->
 
             <div class="myCard course courseExtra">
-                <div class="vrClick"><a href="mainCourseDescription.html?courseDisplay=unityVR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ebbd934d258ba30d603ac2bc8e9ca4d1?imageView2'></a></div>
+                <div class="vrClick"><a href="./course.html?courseDisplay=unityVR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ebbd934d258ba30d603ac2bc8e9ca4d1?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unityVR">Mastering Virtual Reality with Unity</a></div>
-                        <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unityVR">VR虚拟实境大师班</a></div>
+                        <div class='header2 header2Resize'><a href="./course.html?courseDisplay=unityVR">Mastering Virtual Reality with Unity</a></div>
+                        <div class='header3 header3Resize'><a href="./course.html?courseDisplay=unityVR">VR虚拟实境大师班</a></div>
                     </div>
                     <div>
-                        <a href="courseList.html?filter=vr"><div class='tag'>#Virtual Reality</div></a>
+                        <a href="./courseList.html?filter=vr"><div class='tag'>#Virtual Reality</div></a>
                     </div>
                 </div>
             </div>
@@ -1995,7 +2045,7 @@ this is the first HTML code, load font and style!
 
     	</div>
         <div class='buttonDiv'>
-            <a href="courseList.html"><button class='buttonBlack'><span class="eng">View Course List</span><span class="cn">更多课程</span></button></a>   
+            <a href="./courseList.html"><button class='buttonBlack'><span class="eng">View Course List</span><span class="cn">更多课程</span></button></a>   
         </div>
     </div>
     <!-- end of course container -->
@@ -2055,40 +2105,40 @@ this is the first HTML code, load font and style!
 
         <div class=cardsContainer>
             <div class='myCard course'>
-                <div class="vrClick"><a href="mainCourseDescription.html?courseDisplay=unityVR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ebbd934d258ba30d603ac2bc8e9ca4d1?imageView2'></a></div>
+                <div class="vrClick"><a href="./course.html?courseDisplay=unityVR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ebbd934d258ba30d603ac2bc8e9ca4d1?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unityVR">Mastering Virtual Reality with Unity</a></div>
-                        <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unityVR">VR虚拟实境大师班</a></div>
+                        <div class='header2 header2Resize'><a href="./course.html?courseDisplay=unityVR">Mastering Virtual Reality with Unity</a></div>
+                        <div class='header3 header3Resize'><a href="./course.html?courseDisplay=unityVR">VR虚拟实境大师班</a></div>
                     </div>
                     <div>
-                        <a href="courseList.html?filter=vr"><div class='tag'>#Virtual Reality</div></a>
+                        <a href="./courseList.html?filter=vr"><div class='tag'>#Virtual Reality</div></a>
                     </div>
                 </div>
             </div>
 
             <div class='myCard course'>
-                <div><a href="mainCourseDescription.htmll?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_db15f3774704ad3f71879539f669469a?imageView2'></a></div>
+                <div><a href="./course.htmll?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_db15f3774704ad3f71879539f669469a?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
                         <div class='header2 header2Resize'>Mastering AudioVisual with TouchDesigner</div>
                         <div class='header3 header3Resize'>TD音画互动大师班</div>
                     </div>
                     <div>
-                        <a href="courseList.html?filter=td"><div class='tag'>#TouchDesigner</div></a>
+                        <a href="./courseList.html?filter=td"><div class='tag'>#TouchDesigner</div></a>
                     </div>
                 </div>
             </div>
 
             <div class='myCard course'>
-                <div class="arClick"><a href="mainCourseDescription.html?courseDisplay=unityAR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_48d23e3e95a4297037652fc25aaa7008?imageView2'></a></div>
+                <div class="arClick"><a href="./course.html?courseDisplay=unityAR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_48d23e3e95a4297037652fc25aaa7008?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unityAR">Mastering Augmented Reality with Unity</a></div>
-                        <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unityAR">AR增强现实大师班</a></div>
+                        <div class='header2 header2Resize'><a href="./course.html?courseDisplay=unityAR">Mastering Augmented Reality with Unity</a></div>
+                        <div class='header3 header3Resize'><a href="./course.html?courseDisplay=unityAR">AR增强现实大师班</a></div>
                     </div>
                     <div>
-                        <a href="courseList.html?filter=ar"><div class='tag'>#Augmented Reality</div></a>
+                        <a href="./courseList.html?filter=ar"><div class='tag'>#Augmented Reality</div></a>
                     </div>
                 </div>
             </div>
@@ -2105,15 +2155,16 @@ this is the first HTML code, load font and style!
                 <div class='header1'>ABOUT US</div>
                 <div class='header3'>关于我们</div>
                 <div id='aboutTitle'>OF COURSE <br/>想当然</div>
-                <div id='aboutDes'>让想到就能做到</div>      
+                <div id='aboutDes'><span class="cn">让想到就能做到</span><span class="eng letterSpaceing">OF COURSE WE CAN</span></div>      
             </div>
 
-            <div id='aboutText'>创立于2014年，中国第一家元宇宙科技学院。核心成员来自世界顶尖高校，为18-48岁成年人提供下一代互联网生存所需的视界与技能。
+            <div id='aboutText'><span class="cn">创立于2014年，中国第一家元宇宙科技学院。核心成员来自世界顶尖高校，为18-48岁成年人提供下一代互联网生存所需的视界与技能。</span>
+                <span class="eng">Founded in 2014, OF Course is China's first Metaverse Institute of Science and Technology.The core members are from the world's top universities, providing adults with the vision and skills needed for the next generation of Internet.</span>
                 <!-- <span id='readmore'>read more...</span> -->
             </div>
         </div>
         <div id='videoContainer'>
-            <video id='aboutVideo' width='100%' controls poster=''>
+            <video id='aboutVideo' width='100%' controls poster='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2f280ce2c9efbbdd726dfee38c350c40?imageView2'>
                 <source src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_b8ae7a83bc4cd49c9b176c4d7832a476" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -2132,21 +2183,30 @@ this is the first HTML code, load font and style!
         <div id='newsContentContainer'>
             <div class='newContent'>
                 <div class='date'>2022.06.02</div>
-                <div class='newsTitle'>第三期TD互动装置大师班今日正式发布，上海音乐学院外教亲自授课，12周掌握TD硬件开发，成为最抢手交互装置设计师！</div>
+                <div class='newsTitle'>
+                    <span class="cn">第三期TD互动装置大师班今日正式发布，上海音乐学院外教亲自授课，12周掌握TD硬件开发，成为最抢手交互装置设计师！</span>
+                    <span class="eng">The third <i>Mastering Interactive Installation with TD</i> officially released today. Mastered TD hardware development in 12 weeks, and became the most sought-after interactive installation designer!</span>
+                </div>
                 <div class='more'>>></div>
             </div>
             <!-- end of new card 1 -->
 
             <div class='newContent'>
                 <div class='date'>2022.06.01</div>
-                <div class='newsTitle'>OF 官方平台于6月1日换新升级，携3大课程类型，8大元宇宙技术体系，及n+1跨平台模式，打造属于你的元宇宙知识库！</div>
+                <div class='newsTitle'>
+                    <span class="cn">OF 官方平台于6月1日换新升级，携3大课程类型，8大元宇宙技术体系，及n+1跨平台模式，打造属于你的元宇宙知识库！</span>
+                    <span class="eng">The OF official platform was updated and upgraded on June 1st, with 3 major course types, 8 major metaverse technology systems, and n+1 cross-platform mode to create your own metaverse knowledge base!</span>
+                </div>
                 <div class='more'>>></div>
             </div>
             <!-- end of new card 2 -->
 
             <div class='newContent'>
                 <div class='date'>2022.05.31</div>
-                <div class='newsTitle'>OF 创始人程鹏先生受邀参加中国美术学院新设计学院媒介与交互研究所与蓬莱科幻学院举办的“东方幻想”元宇宙科幻大会</div>
+                <div class='newsTitle'>
+                    <span class="cn">OF 创始人程鹏先生受邀参加中国美术学院新设计学院媒介与交互研究所与蓬莱科幻学院举办的“东方幻想”元宇宙科幻大会</span>
+                    <span class="eng">Paul Cheng, the founder of OF COURSE was invited to participate in the "Oriental Fantasy" Metaverse Science Fiction Conference</span>
+                </div>
                 <div class='more'>>></div>
             </div>
             <!-- end of new card 3 -->
@@ -2154,7 +2214,10 @@ this is the first HTML code, load font and style!
 
             <div class='newContent'>
                 <div class='date'>2022.05.25</div>
-                <div class='newsTitle'>2022国际交互艺术夏令营定档7月18日，18位全球顶尖教授专家，9种前沿交互技术，110小时高品质学习，带给你前所未有的沉浸式学习体验！</div>
+                <div class='newsTitle'>
+                    <span class="cn">2022国际交互艺术夏令营定档7月18日，18位全球顶尖教授专家，9种前沿交互技术，110小时高品质学习，带给你前所未有的沉浸式学习体验！</span>
+                    <span class="eng">The 2022 International Interactive Art SummerCamp is scheduled for July 18th. 18 top professors and experts in the world, 9 cutting-edge interactive technologies will bring you an unprecedented immersive learning experience!</span>
+                </div>
                 <div class='more'>>></div>
             </div>
             <!-- end of new card 4 -->
@@ -2205,7 +2268,7 @@ this is the first HTML code, load font and style!
         </div>
 
         <div class='buttonDiv'>
-            <a href="news.html"><button class='buttonBlack'><span class="eng">View All News</span><span class="cn">更多新闻</span></button></a> 
+            <a href="./news.html"><button class='buttonBlack'><span class="eng">View All News</span><span class="cn">更多新闻</span></button></a> 
         </div>
     </div>
 <!-- end of news container -->
@@ -2220,33 +2283,64 @@ this is the first HTML code, load font and style!
 
         <div class='cardsContainer'>
             <div class="myCard blog">
-    			<div class="bootCampClick"><a href="mainCourseDescription.html?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f82e99e49cc9930ec6b3f0d8ae1aa84f?imageView2'></a></div>
+    			<div class="bootCampClick"><a href="./course.html?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f82e99e49cc9930ec6b3f0d8ae1aa84f?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div class="titles">
-                        <div class='header2 header2Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">数字艺术的“世界之最”在中国！</a></div>
-                        <div class='header3 header3Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">NDG画廊联合Stratosphere DAO加密社区举办了全球最大的数字艺术周！</a></div>
+                        <div class='header2 header2Resize arClick'>
+                            <a href="">
+                                <span class='cn'>数字艺术的“世界之最”在中国！</span> 
+                                <span class='eng'>The "World's Best" of Digital Art is in China!</span>
+                            </a>
+                        </div>
+                        <div class='header3 header3Resize arClick'>
+                            <a href="">
+                                <span class='cn'>NDG画廊联合Stratosphere DAO加密社区举办了全球最大的数字艺术周！</span>
+                                <span class='eng'>NDG Gallery and Stratosphere DAO held the world's largest digital art week!</span>
+                            </a>
+                        </div>
                     </div>
                     <div><div class='tag p5'>#NFT</div></div>
                 </div>
     		</div>
 
             <div class="myCard blog">
-    			<div class="bootCampClick"><a href="mainCourseDescription.html?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a75c6c8b4502c99625b3aea16f2c9768?imageView2'></a></div>
+    			<div class="bootCampClick"><a href="./course.html?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a75c6c8b4502c99625b3aea16f2c9768?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div class="titles">
-                        <div class='header2 header2Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">把“宇宙奥秘”带进威尼斯双年展！</a></div>
-                        <div class='header3 header3Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">韩国传奇科学家、艺术家金允哲的“活体”装置大赏</a></div>
+                        <div class='header2 header2Resize arClick'>
+                            <a href="">
+                                <span class='cn'>把“宇宙奥秘”带进威尼斯双年展！</span>
+                                <span class='eng'>Bringing "Cosmic Mysteries" to the Venice Biennale!</span>
+                            </a>
+                        </div>
+                        <div class='header3 header3Resize arClick'>
+                            <a href="">
+                                <span class='cn'>韩国传奇科学家、艺术家金允哲的“活体”装置大赏</span>
+                                <span class='eng'>The "Living" Installation Award of Legendary Korean Scientist and Artist Kim Yoon-chul</span>
+                            </a>
+                        </div>
                     </div>
                     <div><div class='tag p5'>#installation</div></div>
                 </div>
     		</div>
 
             <div class="myCard blog">
-    			<div class="bootCampClick"><a href="mainCourseDescription.html?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_77fb775307924534df3011723d6411d9?imageView2'></a></div>
+    			<div class="bootCampClick"><a href="./course.html?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_77fb775307924534df3011723d6411d9?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div class="titles">
-                        <div class='header2 header2Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">Gather town！聊八卦、谈公事、玩游戏</a></div>
-                        <div class='header3 header3Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">超有临场感的虚拟办公室模拟生活</a></div>
+                        <div class='header2 header2Resize arClick'>
+                            <a href=" ">
+                                <span class='cn'>Gather town！聊八卦、谈公事、玩游戏</span>
+                                <span class='eng'>Gather town! Gossip, talk about business, play games</span>
+                            </a>
+                        </div>
+                        <div class='header3 header3Resize arClick'>
+                            <a href=" ">
+                                <span class='cn'>超有临场感的虚拟办公室模拟生活</span>
+                                <span class='eng'>Super realistic virtual office life simulation</span>
+
+                            </a>
+                        </div>
                     </div>
                     <div><div class='tag p5'>#metaverse</div></div>
                 </div>
@@ -2254,7 +2348,7 @@ this is the first HTML code, load font and style!
         </div>
 
         <div class='buttonDiv'>
-            <a href="blog.html"><button class='buttonBlack'><span class="eng">View All Blogs</span><span class="cn">更多博客</span></button></a>
+            <a href="./blogs.html"><button class='buttonBlack'><span class="eng">View All Blogs</span><span class="cn">更多博客</span></button></a>
         </div>
     </div>
 <!-- end of blog container -->
@@ -2277,8 +2371,11 @@ this is the first HTML code, load font and style!
                     
                     <div>
                         <div class='advisorTitle'>
-                            纽约大学特聘研究生导师<br/>
-                            人工智能艺术家
+                            <span class="cn">纽约大学特聘研究生导师</span>
+                            <span class="eng">Adjunct Instructor at NYU </span>
+                            <br/>
+                            <span class="cn">人工智能艺术家</span>
+                            <span class="eng">AI Artist</span>
                         </div>
                     </div>
                 </div>
@@ -2294,8 +2391,11 @@ this is the first HTML code, load font and style!
                     
                     <div>
                         <div class='advisorTitle'>
-                            皇家艺术学院硕士<br/>
-                            AR开发者
+                            <span class="cn">皇家艺术学院硕士</span>
+                            <span class="eng">Royal College of Art</span>
+                            <br/>
+                            <span class="cn">AR开发者</span>
+                            <span class="eng">AR Developer</span>
                         </div>
                     </div>
                 </div>
@@ -2311,8 +2411,11 @@ this is the first HTML code, load font and style!
                     
                     <div>
                         <div class='advisorTitle'>
-                            分号C联合创始人<br/>
-                            新媒体艺术家
+                            <span class="cn">分号C联合创始人</span>
+                            <span class="eng">Co-founder of Semicolon C</span>
+                            <br/>
+                            <span class="cn">新媒体艺术家</span>
+                            <span class="eng">New Media Artist</span>
                         </div>
                     </div>
                 </div>
@@ -2328,8 +2431,11 @@ this is the first HTML code, load font and style!
                     
                     <div>
                         <div class='advisorTitle'>
-                            帕森斯设计学院副教授<br/>
-                            互动与体验设计师
+                            <span class="cn">帕森斯设计学院副教授</span>
+                            <span class="eng">Adjunct Professor at Parsons</span>
+                            <br/>
+                            <span class="cn">互动与体验设计师</span>
+                            <span class="eng">Interactive Experience Designer</span>    
                         </div>
                     </div>
                 </div>
@@ -2464,22 +2570,23 @@ this is the first HTML code, load font and style!
 
     <div class='' id="footer">
         <div>
-            <div id='footerLogo'><a href="webpage.html"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
+            <div id='footerLogo'><a href="./home.html"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
             <div id='footerMenu'>
                 <div>
-                    <div class='footerMenuItem'><a href="courselist.html"><span class='eng'>Course</span><span class="cn">课程</span></a></div>
-                    <div class='footerMenuItem'><span class='eng'>Career</span><span class="cn">职业</span></div>
-                    <div class='footerMenuItem'><span class='eng'>News</span><span class="cn">新闻</span></div>
-                    <div class='footerMenuItem'><span class='eng'>Blog</span><span class="cn">博客</span></div>
+                    <div class='footerMenuItem'><a href="./courselist.html"><span class='eng'>Course</span><span class="cn">课程</span></a></div>
+                    <div class='footerMenuItem'><a href="./home.html"><span class='eng'>Career</span><span class="cn">职业</span></a></div>
+                    <div class='footerMenuItem'><a href="./news.html"><span class='eng'>News</span><span class="cn">新闻</span></a></div>
+                    <div class='footerMenuItem'><a href="blog.html"><span class='eng'>Blog</span><span class="cn">博客</span></a></div>
                 </div>
 
                 <div>                
-                    <div class='footerMenuItem'><span class='eng'>About Us</span><span class="cn">关于我们</span></div>
-                    <div class='footerMenuItem'><span class='eng'>Advisors</span><span class="cn">导师信息</span></div>
-                    <div class='footerMenuItem'><span class='eng'>Join Us</span><span class="cn">加入我们</span></div>    
+                    <div class='footerMenuItem'><a href="./about.html"><span class='eng'>About Us</span><span class="cn">关于我们</span></a></div>
+                    <div class='footerMenuItem'><a href="./about.html#advidorsContainer"><span class='eng'>Advisors</span><span class="cn">导师信息</span></a></div>
+                    <div class='footerMenuItem'><a href="https://jinshuju.net/f/YzGMtG"><span class='eng'>Join Us</span><span class="cn">加入我们</span></a></div>    
                 </div>
-
             </div>
+
+
             <div id='footerSocial'>
                 <div id='footerCode'>
                     <div><span class="cn">关注我们</span><span class="eng">Follow Us</span></div>
@@ -2495,7 +2602,6 @@ this is the first HTML code, load font and style!
             </div>
         </div>
     </div>
-
 
 </div> 
 <!-- end of content container -->

@@ -155,18 +155,18 @@ this is the first HTML code, load font and style!
 
 
     a:visited {
-        color: black;
+        color: inherit;
         text-decoration: none;
     } /* Visited link    */
     
 
     a:active {
-        color: black;
+        color: inherit;
         text-decoration: none;
     }
 
     a{
-        color: black;
+        color: inherit;
         text-decoration: none;
     }
 
@@ -194,7 +194,7 @@ this is the first HTML code, load font and style!
     #filterText{
         font-weight: 400;
         font-size: 30px;
-        color: #222222;
+        color: rgb(172, 172, 172);;
         align-self: center;
     }
 
@@ -207,6 +207,7 @@ this is the first HTML code, load font and style!
     }
 
     #filterImg{
+        display: none;
         width:100%;
     }
 
@@ -252,9 +253,7 @@ this is the first HTML code, load font and style!
 
     .buttonList:hover{
         cursor:pointer;
-        transform: translateY(-5px) scale(1.005) translateZ(0);
-        box-shadow: 0 24px 36px rgba(0,0,0,0.11),
-            0 24px 46px rgba(0,0,0,0.11);
+        transform: translateY(1px) translateX(1px) scale(1) translateZ(0);
     }
 
     #all{
@@ -266,11 +265,12 @@ this is the first HTML code, load font and style!
         height: 510px;
         border-radius: 15px;
         box-shadow: 0px 4px 40px rgba(0,0,0,0.08);
-        display: none; 
+        /*display: none; */
         margin-bottom: 50px;
         color: #222222;
         flex-direction: column;
         position: relative;
+        display: flex;
     }
 
     #filterDisplay > div {
@@ -1767,7 +1767,6 @@ this is the first HTML code, load font and style!
     width: 32px;
     height: 32px;
     cursor: pointer;
-    display:none;
 }
 
 .closeFilterTab:before, .closeFilterTab:after{
@@ -1790,13 +1789,52 @@ this is the first HTML code, load font and style!
 }
 
 
+    #navigation{
+            margin-top: 42px;
+            color:#ACACAC;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 26px;
+            letter-spacing: 0.005em;
+            cursor:pointer;
+        }
+
+
+        #navigation> span > a:visited {
+            color:#ACACAC;
+        text-decoration: none;
+    } /* Visited link    */
+    
+
+    #navigation> span > a:active {
+        color:#ACACAC;
+        text-decoration: none;
+    }
+
+    #navigation> span > a {
+        color:#ACACAC;
+    }
+
+
+
+    .is-animated {
+      animation: .6s zoom-in;
+    }
+
+    @keyframes zoom-in {
+      0% {
+       transform: scale(.1);
+      } 
+      100% {
+        transform: none;
+      }
+    }
 
 </style>
 
 
-
 <div id="header">
-    <div id="headerlogo"><a href="webpage.html"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
+    <div id="headerlogo"><a href="./home.html"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
     <div id="menu">
         <div>
             <input type='text' id='search' placeholder="processing"> 
@@ -1804,16 +1842,16 @@ this is the first HTML code, load font and style!
 
 
         <div class="btn-container">
-			<label class="switch btn-color-mode-switch">
-		        <input type="checkbox" name="color_mode" id="color_mode" value="1">
-		        <label for="color_mode" data-on="英文" data-off="中文" class="btn-color-mode-switch-inner"></label>
-		    </label>
+            <label class="switch btn-color-mode-switch">
+                <input type="checkbox" name="color_mode" id="color_mode" value="1">
+                <label for="color_mode" data-on="英文" data-off="中文" class="btn-color-mode-switch-inner"></label>
+            </label>
         </div>
 
         <div id='login'><img id='loginIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_86ceb5932e24e2383cce79506f18ef8a?imageView2'>&nbsp <span class="cn">登陆</span><span class="eng">Log In</span></div> 
         <div id='menuIconContainer'>
-        	<div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
-        	<div id='menuText'><span class="eng">Menu</span><span class="cn">菜单</span></div>
+            <div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
+            <div id='menuText'><span class="eng">Menu</span><span class="cn">菜单</span></div>
         </div>
     </div>
 </div>
@@ -1830,25 +1868,55 @@ this is the first HTML code, load font and style!
     </div>
 </div>
 
-    <div id='menuPopUp'>
-        <div id='menuPopUpContents'>
-            <div id='menuButtonContainer'>
-                <a href="courselist.html"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
-                <a href="webpage.html#aboutContainer"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
-                <a href="news.html"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
-                <a href="blogs.html"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
-                <a href="webpage.html#mentorContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
-            </div> 
+   
+<div id='menuPopUp'>
+    <div id='menuPopUpContents'>
+        <div id='menuButtonContainer'>
+            <a href="./courselist.html"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
+            <a href="./about.html"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
+            <a href="./news.html"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
+            <a href="./blogs.html"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
+            <a href="./about.html#advisorsContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
+        </div> 
 
-            <div id='menuCategoryContainer'>
-                <div class='menuCategory' id="allClass"><div><span class="cn">全部课程</span><span class="eng">All Course</span></div></div>
-                <div class='menuCategory' id="aiClass"><div><span class="cn">快速筑基班</span><span class="eng">Foundation Course</span></div></div>
-                <div class='menuCategory' id="masterClass"><div><span class="cn">大师班</span><span class="eng">Master Class</span></div></div>
-                <div class='menuCategory' id="bootCampClass"><div><span class="cn">冲刺营</span><span class="eng">BootCamp</span></div></div>
-            </div>
+        <div id='menuCategoryContainer'>
+            <a class="cursorPointer" href="./courseList.html">
+                <div class='menuCategory' id="allClass">
+                    <div>
+                        <span class="cn">全部课程</span>
+                        <span class="eng">All Course</span>
+                    </div>
+                </div>
+            </a>
+            <a class="cursorPointer" href="./courseList.html">
+                <div class='menuCategory' id="aiClass">
+                    <div>
+                        <span class="cn">快速筑基班</span>
+                        <span class="eng">Foundation Course</span>
+                    </div>
+                </div>
+            </a>
+            <a class="cursorPointer" href="./courseList.html">
+                <div class='menuCategory' id="masterClass">
+                    <div>
+                        <span class="cn">大师班</span>
+                        <span class="eng">Master Class</span>
+                    </div>
+                </div>
+            </a>
+            <a class="cursorPointer" href="./courseList.html">
+                <div class='menuCategory' id="bootCampClass">
+                    <div>
+                        <span class="cn">冲刺营</span>
+                        <span class="eng">BootCamp</span>
+                    </div>
+                </div>
+            </a>
+        </div>
 
 
-            <div id='menuSoftwareContainer'>
+        <div id='menuSoftwareContainer'>
+            <a class="cursorPointer" href="./courseList.html?filter=td">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7087f5df4e170bebc4a04b354ecb3326?imageView2'> 
                     <div class='softwareDescription'>
@@ -1859,7 +1927,10 @@ this is the first HTML code, load font and style!
                         </span>
                     </div>
                 </div>
-                
+            </a>
+            
+            
+            <a class="cursorPointer" href="./courseList.html?filter=unity">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6a9a77d5b3c9675c16167fe8d2c7766f?imageView2'> 
                     <div class='softwareDescription'>
@@ -1870,7 +1941,9 @@ this is the first HTML code, load font and style!
                         </span>
                     </div>
                 </div>
-
+            </a>
+            
+            <a class="cursorPointer" href="./courseList.html?filter=unreal">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fb9262b4ac760ea1c2b8af813272b48e?imageView2'> 
                     <div class='softwareDescription'>
@@ -1881,8 +1954,9 @@ this is the first HTML code, load font and style!
                         </span>
                     </div>
                 </div>
+            </a>
 
-
+            <a class="cursorPointer" href="./courseList.html?filter=processing">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fc889440b6caa0f1c0e430bbe4176df9?imageView2'> 
                     <div class='softwareDescription'>
@@ -1893,7 +1967,9 @@ this is the first HTML code, load font and style!
                         </span>
                     </div>
                 </div>
+            </a>
 
+            <a class="cursorPointer" href="./courseList.html?filter=p5">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9cc784f659f8498a1a1d563758feaa5d?imageView2'> 
                     <div class='softwareDescription'>
@@ -1904,7 +1980,10 @@ this is the first HTML code, load font and style!
                         </span>
                     </div>
                 </div>
+            </a>
 
+
+            <a class="cursorPointer" href="./courseList.html?filter=max">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f647742a09d5fbe44d69d0a497b05ead?imageView2'> 
                     <div class='softwareDescription'>
@@ -1915,7 +1994,9 @@ this is the first HTML code, load font and style!
                         </span>
                     </div>
                 </div>
+            </a>
 
+            <a class="cursorPointer" href="./courseList.html?filter=of">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_094f651765e5162a3a7aa953faa18311?imageView2'> 
                     <div class='softwareDescription'>
@@ -1926,7 +2007,9 @@ this is the first HTML code, load font and style!
                         </span>
                     </div>
                 </div>
+            </a>
 
+            <a class="cursorPointer" href="./courseList.html?filter=js">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> 
                     <div class='softwareDescription'>
@@ -1937,25 +2020,26 @@ this is the first HTML code, load font and style!
                         </span>
                     </div>
                 </div>
-                
-            </div>
-
-            <div id="weChatCodeMenu"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
-
-            <div id='menuSocialContainer'>
-                <div><img id='showCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1e150b94ecd5b631b3ebea4157f66c4?imageView2'></div>
-                <div><a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5f3de3726fafd5fec8227fdb837ff092?imageView2'></a></div>
-                <div><a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'></a></div>
-                <div><a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'></a></div>
-            </div>
-
+            </a>
+            
         </div>
-   
+
+        <div id="weChatCodeMenu"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
+
+        <div id='menuSocialContainer'>
+            <div><img id='showCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1e150b94ecd5b631b3ebea4157f66c4?imageView2'></div>
+            <div><a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5f3de3726fafd5fec8227fdb837ff092?imageView2'></a></div>
+            <div><a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'></a></div>
+            <div><a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'></a></div>
+        </div>
     </div>
+</div>
 
 
 
 <div id="contentContainer">
+
+
 
     <div  class='container' id='buttonListContainer'>
         <div class='buttonList all' id="all">全部</div>
@@ -1972,6 +2056,11 @@ this is the first HTML code, load font and style!
         <div class='buttonList metaverse' id="metaverse">Metaverse</div>
         <div class='buttonList museum' id="museum">Museum Design</div>
         <!-- <div class='buttonList light' id="light">Lighting Design</div> -->
+    </div>
+
+
+    <div class='container' id="navigation">
+        <span><a href="./home.html"><span class="cn">主页</span><span class="eng">HOME</span></a></span> > <span><span class="eng">COURSE LIST</span><span class="cn">课程</span></span>
     </div>
 
 
@@ -2054,12 +2143,12 @@ this is the first HTML code, load font and style!
 
     	<div id="courseDisplayContainer">
 
-            <div class="myCard course recommandCourse unrealCourse metaverseCourse aiCourse nftCourse p5Course tdCourse newestCourse highCourse popularCourse ml5Course jsCourse highTechCourse interactiveCourse immersiveCourse">
-    			<div class="bootCampClick"><a href="mainCourseDescription.html?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f453a6c13ea8d61f9b3b8f84efa0e086?imageView2'></a></div>
+            <div class="myCard is-animated course recommandCourse unrealCourse metaverseCourse aiCourse nftCourse p5Course tdCourse newestCourse highCourse popularCourse ml5Course jsCourse highTechCourse interactiveCourse immersiveCourse">
+    			<div class="bootCampClick"><a href="./course.html?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f453a6c13ea8d61f9b3b8f84efa0e086?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">2022 Interactive Art Summer BootCamp</a></div>
-                        <div class='header3 header3Resize arClick'><a href="mainCourseDescription.html?courseDisplay=">2022国际交互艺术夏令营</a></div>
+                        <div class='header2 header2Resize arClick'><a href="./course.html?courseDisplay=">2022 Interactive Art Summer BootCamp</a></div>
+                        <div class='header3 header3Resize arClick'><a href="./course.html?courseDisplay=">2022国际交互艺术夏令营</a></div>
                     </div>
                     <div>
                         <div class='tag p5'>#metaverse</div> <div class='tag unity'>#ai</div>
@@ -2067,66 +2156,66 @@ this is the first HTML code, load font and style!
                 </div>
     		</div>
 
-    		<div class="myCard course recommandCourse unityCourse xrCourse metaverseCourse highCourse popularCourse shaderCourse highTechCourse stageCourse interactiveCourse arCourse">
-    			<div class="arClick"><a href="mainCourseDescription.html?courseDisplay=unityAR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_48d23e3e95a4297037652fc25aaa7008?imageView2'></a></div>
+    		<div class="myCard is-animated course recommandCourse unityCourse xrCourse metaverseCourse highCourse popularCourse shaderCourse highTechCourse stageCourse interactiveCourse arCourse">
+    			<div class="arClick"><a href=" ./course.html?courseDisplay=unityAR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_48d23e3e95a4297037652fc25aaa7008?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize arClick'><a href="mainCourseDescription.html?courseDisplay=unityAR">Mastering Augmented Reality with Unity</a></div>
-                        <div class='header3 header3Resize arClick'><a href="mainCourseDescription.html?courseDisplay=unityAR">AR增强现实大师班</a></div>
+                        <div class='header2 header2Resize arClick'><a href=" ./course.html?courseDisplay=unityAR">Mastering Augmented Reality with Unity</a></div>
+                        <div class='header3 header3Resize arClick'><a href=" ./course.html?courseDisplay=unityAR">AR增强现实大师班</a></div>
                     </div>
                     <div><div class='tag p5'>#AR</div> <div class='tag unity'>#unity</div></div>
                 </div>
     		</div>
             <!-- end of card 1 -->
-    		<div class="myCard course recommandCourse unityCourse xrCourse metaverseCourse highCourse popularCourse highTechCourse interactiveCourse gameCourse vrCourse">
-                <div class="vrClick"><a href="mainCourseDescription.html?courseDisplay=unityVR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ebbd934d258ba30d603ac2bc8e9ca4d1?imageView2'></a></div>
+    		<div class="myCard is-animated course recommandCourse unityCourse xrCourse metaverseCourse highCourse popularCourse highTechCourse interactiveCourse gameCourse vrCourse">
+                <div class="vrClick"><a href=" ./course.html?courseDisplay=unityVR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ebbd934d258ba30d603ac2bc8e9ca4d1?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='vrClick header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unityVR">Mastering Virtual Reality with Unity</a></div>
-                        <div class='vrClick header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unityVR">VR虚拟实境大师班</a></div>
+                        <div class='vrClick header2 header2Resize'><a href=" ./course.html?courseDisplay=unityVR">Mastering Virtual Reality with Unity</a></div>
+                        <div class='vrClick header3 header3Resize'><a href=" ./course.html?courseDisplay=unityVR">VR虚拟实境大师班</a></div>
                     </div>
                     <div><div class='tag vr'>#VR</div> <div class='tag unity'>#unity</div></div>
                 </div>
             </div>
             <!-- end of card 2 -->
-            <div class="myCard course unrealCourse metaverseCourse highTechCourse interactiveCourse gameCourse dhCourse">
-                <div><a href="mainCourseDescription.html?courseDisplay=unrealLandScape"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_30399843385fc464023880bccd336334?imageView2'></a></div>
+            <div class="myCard is-animated course unrealCourse metaverseCourse highTechCourse interactiveCourse gameCourse dhCourse">
+                <div><a href=" ./course.html?courseDisplay=unrealLandScape"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_30399843385fc464023880bccd336334?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unrealLandScape">Matering Landscape and Human with UE</a></div>
-                        <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unrealLandScape">Unreal场景人物大师班</a></div>
+                        <div class='header2 header2Resize'><a href=" ./course.html?courseDisplay=unrealLandScape">Matering Landscape and Human with UE</a></div>
+                        <div class='header3 header3Resize'><a href=" ./course.html?courseDisplay=unrealLandScape">Unreal场景人物大师班</a></div>
                     </div>
                     <div><div class='tag unreal'>#Unreal Engine</div> <div class="tag dh">#Digital Human</div></div>
                 </div>
             </div>
             <!-- end of card 3 -->
             
-            <div class="myCard course unrealCourse metaverseCourse newestCourse popularCourse highTechCourse interactiveCourse gameCourse">
-                <div><a href="mainCourseDescription.html?courseDisplay=unrealStylized"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f38e77aa21e05249ed286a50d5ad0e24?imageView2'></a></div>
+            <!-- <div class="myCard is-animated course unrealCourse metaverseCourse newestCourse popularCourse highTechCourse interactiveCourse gameCourse">
+                <div><a href=" ./course.html?courseDisplay=unrealStylized"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f38e77aa21e05249ed286a50d5ad0e24?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=unrealLandScape">Matering 3D Stylized Environment with UE5</a></div>
-                        <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=unrealLandScape">UE5 3D风格化场景师班</a></div>
+                        <div class='header2 header2Resize'><a href=" ./course.html?courseDisplay=unrealLandScape">Matering 3D Stylized Environment with UE5</a></div>
+                        <div class='header3 header3Resize'><a href=" ./course.html?courseDisplay=unrealLandScape">UE5 3D风格化场景师班</a></div>
                     </div>
                     <div><div class='tag unreal'>#Unreal Engine</div> <div class="tag dh">#Digital Human</div></div>
                 </div>
-            </div>
+            </div> -->
 
 
 
-            <div class="myCard course recommandCourse aiCourse nftCourse p5Course metaverseCourse popularCourse ml5Course jsCourse stageCourse interactiveCourse">
-                <div><a href="mainCourseDescription.html?courseDisplay=ai"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ba53ef10b2fd1320874bac0d34c2c46f?imageView2'></a></div>
+            <div class="myCard is-animated course recommandCourse aiCourse nftCourse p5Course metaverseCourse popularCourse ml5Course jsCourse stageCourse interactiveCourse">
+                <div><a href=" ./course.html?courseDisplay=ai"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ba53ef10b2fd1320874bac0d34c2c46f?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=ai">Mastering AI Generative Art With P5.js</a></div>
-                        <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=ai">AI生成艺术大师班</a></div>
+                        <div class='header2 header2Resize'><a href=" ./course.html?courseDisplay=ai">Mastering AI Generative Art With P5.js</a></div>
+                        <div class='header3 header3Resize'><a href=" ./course.html?courseDisplay=ai">AI生成艺术大师班</a></div>
                     </div>
                     <div><div class='tag p5'>#p5.js</div> <div class='tag ai'>#AI</div></div>
                 </div>
             </div>
             <!-- end of card 4 -->
-            <div class="myCard course processingCourse lightCourse stageCourse interactiveCourse immersiveCourse" >
-                <div><a href="mainCourseDescription.html"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8f84b748917a0fac32dfcef36cc09a1e?imageView2'></a></div>
+            <div class="myCard is-animated course processingCourse lightCourse stageCourse interactiveCourse immersiveCourse" >
+                <div><a href=" ./course.html"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8f84b748917a0fac32dfcef36cc09a1e?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
                         <div class='header2 header2Resize'>Mastering Interactive Lighting with Processing</div>
@@ -2136,12 +2225,12 @@ this is the first HTML code, load font and style!
                 </div>
             </div>
             <!-- end of card 5 -->
-            <div class="myCard course tdCourse arduinoCourse interactiveCourse" >
-                <div><a href="mainCourseDescription.html?courseDisplay=tdArduino"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_5c9a5541110ef3c6313434abe4820e89?imageView2'></a></div>
+            <div class="myCard is-animated course tdCourse arduinoCourse interactiveCourse" >
+                <div><a href=" ./course.html?courseDisplay=tdArduino"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_5c9a5541110ef3c6313434abe4820e89?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href="mainCourseDescription.html?courseDisplay=tdArduino">Mastering interactive Installation with TD</a></div>
-                        <div class='header3 header3Resize'><a href="mainCourseDescription.html?courseDisplay=tdArduino">TD交互装置大师班</a></div>
+                        <div class='header2 header2Resize'><a href=" ./course.html?courseDisplay=tdArduino">Mastering interactive Installation with TD</a></div>
+                        <div class='header3 header3Resize'><a href=" ./course.html?courseDisplay=tdArduino">TD交互装置大师班</a></div>
                     </div>
                     <div><div class='tag td'>#touchDesigner</div> <div class='tag arduino'>#arduino</div></div>
                 </div>
@@ -2149,19 +2238,19 @@ this is the first HTML code, load font and style!
             <!-- end of card 6 -->
 
 
-            <div class="myCard course museumCourse highCourse exhibitionCourse interactiveCourse">
-                <div><a href="mainCourseDescription.html"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_48fd995ba3a597f1bfdc44cc1968571f?imageView2'></a></div>
+            <div class="myCard is-animated course museumCourse highCourse exhibitionCourse uxCourse interactiveCourse">
+                <div><a href=" ./course.html?courseDisplay=museum"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_48fd995ba3a597f1bfdc44cc1968571f?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'>Mastering Museum Interaction Design</div>
-                        <div class='header3 header3Resize'>博物馆体验设计大师班</div>
+                        <div class='header2 header2Resize'><a href="./course.html?courseDisplay=museum">Mastering Museum Interaction Design</a></div>
+                        <div class='header3 header3Resize'><a href="./course.html?courseDisplay=museum">博物馆体验设计大师班</a></div>
                     </div>
                     <div><div class='tag museum'>#Museum Interaction</div> <div class='tag figma'>#figma</div></div>
                 </div>
             </div>
             <!-- end of card 7 -->
-            <div class="myCard course recommandCourse tdCourse newestCourse popularCourse exhibitionCourse brandCourse interactiveCourse">
-                <div><a href="mainCourseDescription.html"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7508903cabc56de3b297a73c789493d0?imageView2'></a></div>
+            <div class="myCard is-animated course recommandCourse tdCourse newestCourse popularCourse exhibitionCourse brandCourse interactiveCourse">
+                <div><a href=" ./course.html"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7508903cabc56de3b297a73c789493d0?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
                         <div class='header2 header2Resize'>Mastering Commercial Design with TouchDesigner</div>
@@ -2171,8 +2260,8 @@ this is the first HTML code, load font and style!
                 </div>
             </div>
             <!-- end of card 8 -->
-            <div class="myCard course recommandCourse tdCourse highCourse popularCourse stageCourse avsCourse interactiveCourse immersiveCourse">
-                <div><a href="mainCourseDescription.html"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_db15f3774704ad3f71879539f669469a?imageView2'></a></div>
+            <div class="myCard is-animated course recommandCourse tdCourse highCourse popularCourse stageCourse avsCourse interactiveCourse immersiveCourse">
+                <div><a href=" ./course.html"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_db15f3774704ad3f71879539f669469a?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
                         <div class='header2 header2Resize'>Mastering AudioVisual with TouchDesigner</div>
@@ -2196,26 +2285,25 @@ this is the first HTML code, load font and style!
 
 
 
-    
-
     <div class='' id="footer">
         <div>
-            <div id='footerLogo'><a href="webpage.html"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
+            <div id='footerLogo'><a href="./home.html"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
             <div id='footerMenu'>
                 <div>
-                    <div class='footerMenuItem'><span class='eng'>Course</span><span class="cn">课程</span></div>
-                    <div class='footerMenuItem'><span class='eng'>Career</span><span class="cn">职业</span></div>
-                    <div class='footerMenuItem'><span class='eng'>News</span><span class="cn">新闻</span></div>
-                    <div class='footerMenuItem'><span class='eng'>Blog</span><span class="cn">博客</span></div>
+                    <div class='footerMenuItem'><a href="./courselist.html"><span class='eng'>Course</span><span class="cn">课程</span></a></div>
+                    <div class='footerMenuItem'><a href="./home.html"><span class='eng'>Career</span><span class="cn">职业</span></a></div>
+                    <div class='footerMenuItem'><a href="./news.html"><span class='eng'>News</span><span class="cn">新闻</span></a></div>
+                    <div class='footerMenuItem'><a href="./blogs.html"><span class='eng'>Blog</span><span class="cn">博客</span></a></div>
                 </div>
 
                 <div>                
-                    <div class='footerMenuItem'><span class='eng'>About Us</span><span class="cn">关于我们</span></div>
-                    <div class='footerMenuItem'><span class='eng'>Advisors</span><span class="cn">导师信息</span></div>
-                    <div class='footerMenuItem'><span class='eng'>Join Us</span><span class="cn">加入我们</span></div>    
+                    <div class='footerMenuItem'><a href="./about.html"><span class='eng'>About Us</span><span class="cn">关于我们</span></a></div>
+                    <div class='footerMenuItem'><a href="./about.html#advidorsContainer"><span class='eng'>Advisors</span><span class="cn">导师信息</span></a></div>
+                    <div class='footerMenuItem'><a href="https://jinshuju.net/f/YzGMtG"><span class='eng'>Join Us</span><span class="cn">加入我们</span></a></div>    
                 </div>
-
             </div>
+
+
             <div id='footerSocial'>
                 <div id='footerCode'>
                     <div><span class="cn">关注我们</span><span class="eng">Follow Us</span></div>
@@ -2231,7 +2319,6 @@ this is the first HTML code, load font and style!
             </div>
         </div>
     </div>
-
 </div> 
 <!-- end of content container -->
 
@@ -2249,7 +2336,7 @@ this is the first HTML code, load font and style!
             }
         })
 
-        let filterDisplay = false;
+        let filterDisplay = true;
         $('#filterContainer').click(function(){
             // console.log('clicked')
             if(!filterDisplay){
@@ -2272,8 +2359,10 @@ this is the first HTML code, load font and style!
 
 
         if(filter == 'newest'){
-            $('.course').hide('slide',1000);
-            $('.newestCourse').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.newestCourse').addClass('is-animated').fadeIn();
+              $('.empty').addClass('is-animated').fadeIn();
+            });
             $('.buttonList').css({
                 'color':'black',
                 'background-color':'white'
@@ -2282,7 +2371,6 @@ this is the first HTML code, load font and style!
                 'color':'white',
                 'background-color':'black'
             })
-
         } else if(filter == 'td'){
             $('.buttonList').css({
                 'color':'black',
@@ -2355,21 +2443,68 @@ this is the first HTML code, load font and style!
                 'color':'white',
                 'background-color':'black'
             })
-            $('.course').hide('slide');
-            $('.metaverseCourse').show('slide');
+            $('.course').hide( );
+            $('.metaverseCourse').show();
         } else if (filter =='ar'){
-            $('.course').hide('slide');
-            $('.arCourse').show('slide');
+            $('.course').hide();
+            $('.arCourse').show();
             $('.empty').show();
         } else if (filter=='vr'){
-            $('.course').hide('slide');
-            $('.vrCourse').show('slide');
+            $('.course').hide();
+            $('.vrCourse').show();
+            $('.empty').show();
+        } else if (filter == 'ai'){
+            $('.buttonList').css({
+                'color':'black',
+                'background-color':'white'
+            })
+            $('#ai').css({
+                'color':'white',
+                'background-color':'black'
+            })
+            $('.course').hide();
+            $('.aiCourse').show();
+            $('.empty').show();
+        } else if (filter == 'xr') {
+            $('.buttonList').css({
+                'color':'black',
+                'background-color':'white'
+            })
+            $('#xr').css({
+                'color':'white',
+                'background-color':'black'
+            })
+            $('.course').hide();
+            $('.xrCourse').show();
+            $('.empty').show();
+        } else if (filter == 'nft'){
+            $('.buttonList').css({
+                'color':'black',
+                'background-color':'white'
+            })
+            $('#nft').css({
+                'color':'white',
+                'background-color':'black'
+            })
+            $('.course').hide();
+            $('.nftCourse').show();
+            $('.empty').show();
+        } else if (filter == 'ux'){
+            $('.course').hide( );
+            $('.uxCourse').show( );
             $('.empty').show();
         }
 
 
 
+
+
+
+
+
+
         $('.buttonList').click(function(){
+            $('.clickFilter').css({'color':'#222222','background-color':'white'})
             $('.buttonList').css({
                 'color':'black',
                 'background-color':'white'
@@ -2395,157 +2530,192 @@ this is the first HTML code, load font and style!
 
         // click event
         $('.all').click(function(){
-            $('.course').show('slide');
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.course').addClass('is-animated').fadeIn();
+            });
+            // $('.course').show().addClass('is-animated');/
+            // $('.course').addClass('is-animated');
         })
 
         $('.recommand').click(function(){
-            let $show = $('.recommandCourse').show('slide');
-            $('.course').not($show).hide('slide');            
-            // $('.empty').show();
+             $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.recommandCourse').addClass('is-animated').fadeIn();
+            });
+            // $('.course').hide();
+            // $('.coruse').hide().removeClass('is-animated')
+            // $('.recommandCourse').show().addClass("is-animated")
+            // show( );
         })
 
         $('.unity').click(function(){
-            $('.course').hide('slide');
-            $('.unityCourse').show('slide');
-            $('.empty').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.unityCourse').addClass('is-animated').fadeIn();
+              $('.empty').addClass('is-animated').fadeIn();
+            });
+            // $('.course').hide( );
+            // $('.unityCourse').show( );
+            // $('.empty').show();
         })
 
         $('.unreal').click(function(){
-            $('.course').hide('slide');
-            $('.unrealCourse').show('slide');
-            $('.empty').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.unrealCourse').addClass('is-animated').fadeIn();
+            });
         })
 
         $('.td').click(function(){
-            $('.course').hide('slide');
-            $('.tdCourse').show('slide');
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.tdCourse').addClass('is-animated').fadeIn();
+            });
         })
 
         $('.arduino').click(function(){
-            $('.course').hide('slide');
-            $('.arduinoCourse').show('slide');
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.arduinoCourse').addClass('is-animated').fadeIn();
+            });
         })
 
         $('.processing').click(function(){
-            $('.course').hide('slide');
-            $('.processingCourse').show('slide');
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.processingCourse').addClass('is-animated').fadeIn();
+            });
         })
 
         $('.ml5').click(function(){
-            $('.course').hide('slide');
-            $('.ml5Course').show('slide');
-            $('.empty').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.ml5Course').addClass('is-animated').fadeIn();
+              $('.empty').addClass('is-animated').fadeIn();
+
+            });
         })
 
         $('.js').click(function(){
-            $('.course').hide('slide');
-            $('.jsCourse').show('slide');
-            $('.empty').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.jsCourse').addClass('is-animated').fadeIn();
+              $('.empty').addClass('is-animated').fadeIn();
+
+            });
         })
 
         $('.shader').click(function(){
-            $('.course').hide('slide');
-            $('.shaderCourse').show('slide');
-            $('.empty').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.shaderCourse').addClass('is-animated').fadeIn();
+            });
         })
 
-        $('#ai').click(function(){
-            $('.course').hide('slide');
-            $('.aiCourse').show('slide');
-            $('.empty').show();
+        $('.ai').click(function(){
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.aiCourse').addClass('is-animated').fadeIn();
+              $('.empty').addClass('is-animated').fadeIn();
+
+            });
         })
         $('.xr').click(function(){
-            $('.course').hide('slide');
-            $('.xrCourse').show('slide');
-            $('.empty').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.xrCourse').addClass('is-animated').fadeIn();
+              $('.empty').addClass('is-animated').fadeIn();
+
+            });
         })
         $('.nft').click(function(){
-            $('.course').hide('slide');
-            $('.nftCourse').show('slide');
-            $('.empty').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.nftCourse').addClass('is-animated').fadeIn();
+              $('.empty').addClass('is-animated').fadeIn();
+            });
         })
         $('.p5').click(function(){
-            $('.course').hide('slide');
-            $('.p5Course').show('slide');
-            $('.empty').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.p5Course').addClass('is-animated').fadeIn();
+              $('.empty').addClass('is-animated').fadeIn();
+
+            });
         })
         $('.metaverse').click(function(){
-            $('.course').hide('slide');
-            $('.metaverseCourse').show('slide');
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.metaverseCourse').addClass('is-animated').fadeIn();
+            });
         })
         $('.museum').click(function(){
-            $('.course').hide('slide');
-            $('.museumCourse').show('slide');
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.museumCourse').addClass('is-animated').fadeIn();
+            });
         })
         $('.light').click(function(){
-            $('.course').hide('slide');
-            $('.lightCourse').show('slide');
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.lightCourse').addClass('is-animated').fadeIn();
+            });
         })
 
         $('.highTech').click(function(){
-            $('.course').hide('slide');
-            $('.empty').show('slide');
-            $('.highTechCourse').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.highTechCourse').addClass('is-animated').fadeIn();
+              $('.empty').addClass('is-animated').fadeIn();
+
+            });
         })
 
         $('.exhibition').click(function(){
-            $('.course').hide('slide');
-            $('.empty').show('slide');
-            $('.exhibitionCourse').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.exhibitionCourse').addClass('is-animated').fadeIn();
+              $('.empty').addClass('is-animated').fadeIn();
+
+            });
         })
 
         $('.brand').click(function(){
-            $('.course').hide('slide');
-            $('.empty').show('slide');
-            $('.brandCourse').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.brandCourse').addClass('is-animated').fadeIn();
+            });
         })
 
         $('.stage').click(function(){
-            $('.course').hide('slide');
-            $('.empty').show('slide');
-            $('.stageCourse').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.stageCourse').addClass('is-animated').fadeIn();
+            });
         })
 
         $('.avs').click(function(){
-            $('.course').hide('slide');
-            $('.empty').show('slide');
-            $('.avsCourse').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.avsCourse').addClass('is-animated').fadeIn();
+            });
         })
 
         $('.interactive').click(function(){
-            $('.course').hide('slide');
-            $('.interactiveCourse').show('slide');
-            $('.empty').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.interactiveCourse').addClass('is-animated').fadeIn();
+              $('.empty').addClass('is-animated').fadeIn();
+
+            });
         })
 
         $('.game').click(function(){
-            $('.course').hide('slide');
-            $('.gameCourse').show('slide');
-            $('.empty').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.gameCourse').addClass('is-animated').fadeIn();
+            });
         })
 
         $('.ar').click(function(){
-            $('.course').hide('slide');
-            $('.arCourse').show('slide');
-            $('.empty').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.arCourse').addClass('is-animated').fadeIn();
+            });
         })
 
         $('.vr').click(function(){
-            $('.course').hide('slide');
-            $('.vrCourse').show('slide');
-            $('.empty').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.vrCourse').addClass('is-animated').fadeIn();
+            });
         })
 
         $('.immersive').click(function(){
-            $('.course').hide('slide');
-            $('.immersiveCourse').show('slide');
-            $('.empty').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.immersiveCourse').addClass('is-animated').fadeIn();
+            });
         })
 
         $('.dh').click(function(){
-            $('.course').hide('slide');
-            $('.dhCourse').show('slide');
-            $('.empty').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.dhCourse').addClass('is-animated').fadeIn();
+            });
         })
 
         
@@ -2553,21 +2723,24 @@ this is the first HTML code, load font and style!
         // ar vr immersive dh
 
         $('.newest').click(function(){
-            $('.course').hide();
-            $('.newestCourse').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.newestCourse').addClass('is-animated').fadeIn();
+            });
         })
 
   
         $('.high').click(function(){
-            $('.course').hide();
-            $('.highCourse').show();
-            $('.empty').show();
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.highCourse').addClass('is-animated').fadeIn();
+              $('.empty').addClass('is-animated').fadeIn();
+
+            });
         })
 
         $('.popular').click(function(){
-            $('.course').hide();
-            $('.popularCourse').show();
-            $('.empty').show();
+             $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.popularCourse').addClass('is-animated').fadeIn();
+            });
         })
 
 
@@ -2616,3 +2789,14 @@ this is the first HTML code, load font and style!
     </script>
 </body>
 </html>
+
+
+
+
+
+<!-- filter 默认打开 -->
+<!-- 卡片下方X 任一点击关闭 -->
+<!-- 博物馆推荐课程 processing创意编程指南 -->
+
+<!-- 大纲 先上划（1秒 再快一点）字滑动出现 -->
+<!-- 渐变灰度不上华 -->
