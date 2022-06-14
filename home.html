@@ -554,6 +554,7 @@ this is the first HTML code, load font and style!
         background-color: black;
         border-radius: 15px;
         overflow: hidden;
+        position: relative;
     }
 
 
@@ -585,7 +586,7 @@ this is the first HTML code, load font and style!
     }
 
     .letterSpaceing{
-        letter-spacing: 0.4em;
+        letter-spacing: 0.2em;
     }
 
 
@@ -601,7 +602,11 @@ this is the first HTML code, load font and style!
 
     #readmore{
         color:#ACACAC;
+    }
+
+    #readmore:hover{
         text-decoration: underline;
+        cursor: pointer;
     }
 
     #newsContainer{
@@ -665,8 +670,8 @@ this is the first HTML code, load font and style!
         font-family: "XYZL";
         font-weight: 290;
         /* flex-grow: 2; */
-        min-width: 75%;
-        max-width: 75%;
+        /* min-width: 75%;
+        max-width: 75%; */
         margin-left: 66px;
     }
 
@@ -809,14 +814,14 @@ this is the first HTML code, load font and style!
         font-size: 30px;
         font-family: "XYZB";
         font-weight: 700;
-        line-height: 30px;
+        line-height: 38px;
     }
 
     .header3{
     	font-size: 20px;
         font-family: "XYZL";
     	font-weight: 290;
-        margin-top: 20px;
+        margin-top: 12px;
     }
 
     .tag{
@@ -1707,6 +1712,26 @@ this is the first HTML code, load font and style!
         box-shadow: 0px 4px 40px rgba(0,0,0,0.08);
     }
 
+    .playButton{
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6b771ccb8bedba5b1a81bfb198df2352?imageView2);
+        background-repeat:no-repeat;
+        width:200px;
+        height:200px;
+        position:absolute;
+        left:0%;
+        right:0%;
+        top:0%;
+        bottom:0%;
+        margin:auto;
+        background-size:contain;
+        background-position: center;
+    }
+
+    .playButton:hover{
+        cursor: pointer;
+    }
+
+
 </style>
 
 <div id="header">
@@ -1959,11 +1984,11 @@ this is the first HTML code, load font and style!
     	<div id="courseDisplayContainer">
 
             <div class="myCard course" >
-                <div><a href="./course.html?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f453a6c13ea8d61f9b3b8f84efa0e086?imageView2'></a></div>
+                <div><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/page/3029220"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f453a6c13ea8d61f9b3b8f84efa0e086?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'>2022 Interactive Art Summer BootCamp</div>
-                        <div class='header3 header3Resize'>2022国际交互艺术夏令营</div>
+                        <div class='header2 header2Resize'><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/page/3029220">2022 Interactive Art Summer BootCamp</a></div>
+                        <div class='header3 header3Resize'><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/page/3029220">2022国际交互艺术夏令营</a></div>
                     </div>
                     <div>
                         <a href="./courseList.html?filter=metaverse"><div class='tag'>#Metaverse</div></a>
@@ -1987,11 +2012,11 @@ this is the first HTML code, load font and style!
             <!-- end of card 3 -->
 
             <div class="myCard course" >
-                <div><a href="./course.htmll?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_db15f3774704ad3f71879539f669469a?imageView2'></a></div>
+                <div><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/page/2987037"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_db15f3774704ad3f71879539f669469a?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'>Mastering AudioVisual with TouchDesigner</div>
-                        <div class='header3 header3Resize'>TD音画互动大师班</div>
+                        <div class='header2 header2Resize'><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/page/2987037">Mastering AudioVisual with TouchDesigner</a></div>
+                        <div class='header3 header3Resize'><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/page/2987037">TD音画互动大师班</a></div>
                     </div>
                     <div>
                         <a href="./courseList.html?filter=td"><div class='tag'>#TouchDesigner</div></a>
@@ -2015,11 +2040,11 @@ this is the first HTML code, load font and style!
     		</div>
             <!-- end of card 1 -->
     		<div class="myCard course courseExtra">
-                <div><a href="./course.html?courseDisplay=unrealStylized"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f38e77aa21e05249ed286a50d5ad0e24?imageView2'></a></div>
+                <div><a href="./course.html?courseDisplay=unrealLandScape"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f38e77aa21e05249ed286a50d5ad0e24?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href="./course.html?courseDisplay=unrealStylized">Matering 3D Stylized Environment with UE5</a></div>
-                        <div class='header3 header3Resize'><a href="./course.html?courseDisplay=unrealStylized">UE5风格化场景师班</a></div>
+                        <div class='header2 header2Resize'><a href="./course.html?courseDisplay=unrealLandScape">Environment&Character Art with UE5</a></div>
+                        <div class='header3 header3Resize'><a href="./course.html?courseDisplay=unrealLandScape">UE5场景人物大师班</a></div>
                     </div>
                     <div>
                         <a href="./courseList.html?filter=unreal"><div class='tag'>#UE5</div></a>
@@ -2118,11 +2143,11 @@ this is the first HTML code, load font and style!
             </div>
 
             <div class='myCard course'>
-                <div><a href="./course.htmll?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_db15f3774704ad3f71879539f669469a?imageView2'></a></div>
+                <div><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/page/2987037"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_db15f3774704ad3f71879539f669469a?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'>Mastering AudioVisual with TouchDesigner</div>
-                        <div class='header3 header3Resize'>TD音画互动大师班</div>
+                        <div class='header2 header2Resize'><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/page/2987037">Mastering AudioVisual with TouchDesigner</a></div>
+                        <div class='header3 header3Resize'><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/page/2987037">TD音画互动大师班</a></div>
                     </div>
                     <div>
                         <a href="./courseList.html?filter=td"><div class='tag'>#TouchDesigner</div></a>
@@ -2160,14 +2185,15 @@ this is the first HTML code, load font and style!
 
             <div id='aboutText'><span class="cn">创立于2014年，中国第一家元宇宙科技学院。核心成员来自世界顶尖高校，为18-48岁成年人提供下一代互联网生存所需的视界与技能。</span>
                 <span class="eng">Founded in 2014, OF Course is China's first Metaverse Institute of Science and Technology.The core members are from the world's top universities, providing adults with the vision and skills needed for the next generation of Internet.</span>
-                <!-- <span id='readmore'>read more...</span> -->
+                <a href="./about.html"><span id='readmore'><span class="eng">read more...</span><span class="cn">了解更多...</span></span></a>
             </div>
         </div>
         <div id='videoContainer'>
-            <video id='aboutVideo' width='100%' controls poster='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2f280ce2c9efbbdd726dfee38c350c40?imageView2'>
+            <video id='aboutVideo' width='100%' controls poster='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_626616fba3a21195a7cd285989197bb9?imageView2'>
                 <source src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_b8ae7a83bc4cd49c9b176c4d7832a476" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+             <div class="playButton"></div>
         </div>
     </div>
 <!-- end of about container -->
@@ -2187,7 +2213,7 @@ this is the first HTML code, load font and style!
                     <span class="cn">第三期TD互动装置大师班今日正式发布，上海音乐学院外教亲自授课，12周掌握TD硬件开发，成为最抢手交互装置设计师！</span>
                     <span class="eng">The third <i>Mastering Interactive Installation with TD</i> officially released today. Mastered TD hardware development in 12 weeks, and became the most sought-after interactive installation designer!</span>
                 </div>
-                <div class='more'>>></div>
+                <!-- <div class='more'>>></div> -->
             </div>
             <!-- end of new card 1 -->
 
@@ -2197,7 +2223,7 @@ this is the first HTML code, load font and style!
                     <span class="cn">OF 官方平台于6月1日换新升级，携3大课程类型，8大元宇宙技术体系，及n+1跨平台模式，打造属于你的元宇宙知识库！</span>
                     <span class="eng">The OF official platform was updated and upgraded on June 1st, with 3 major course types, 8 major metaverse technology systems, and n+1 cross-platform mode to create your own metaverse knowledge base!</span>
                 </div>
-                <div class='more'>>></div>
+                <!-- <div class='more'>>></div> -->
             </div>
             <!-- end of new card 2 -->
 
@@ -2207,7 +2233,7 @@ this is the first HTML code, load font and style!
                     <span class="cn">OF 创始人程鹏先生受邀参加中国美术学院新设计学院媒介与交互研究所与蓬莱科幻学院举办的“东方幻想”元宇宙科幻大会</span>
                     <span class="eng">Paul Cheng, the founder of OF COURSE was invited to participate in the "Oriental Fantasy" Metaverse Science Fiction Conference</span>
                 </div>
-                <div class='more'>>></div>
+                <!-- <div class='more'>>></div> -->
             </div>
             <!-- end of new card 3 -->
 
@@ -2218,7 +2244,7 @@ this is the first HTML code, load font and style!
                     <span class="cn">2022国际交互艺术夏令营定档7月18日，18位全球顶尖教授专家，9种前沿交互技术，110小时高品质学习，带给你前所未有的沉浸式学习体验！</span>
                     <span class="eng">The 2022 International Interactive Art SummerCamp is scheduled for July 18th. 18 top professors and experts in the world, 9 cutting-edge interactive technologies will bring you an unprecedented immersive learning experience!</span>
                 </div>
-                <div class='more'>>></div>
+                <!-- <div class='more'>>></div> -->
             </div>
             <!-- end of new card 4 -->
         </div>
@@ -2443,8 +2469,8 @@ this is the first HTML code, load font and style!
             <!-- end of card 4 -->
         </div>
 
-        <div class='buttonDiv hiddenforOnepointO'>
-            <button class='buttonBlack'>More Advisors</button>   
+        <div class='buttonDiv'>
+            <a href="./about.html#advisorsContainer"><button class='buttonBlack'><span class="eng">More Advisors</span><span class="cn">更过导师</span></button></a>   
         </div>
     </div>
 <!-- end of advisor contaienr -->
@@ -2498,7 +2524,7 @@ this is the first HTML code, load font and style!
                     </div>
                 </div>
             </a>
-            <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI4NzQzMjYwMQ==&action=getalbum&album_id=2173312120812027907#wechat_redirect">
+            <a href="https://mp.weixin.qq.com/s/eiwpTbJzvp9cPbHwNp4FMg">
                 <div class='socialCard shadow'>
                     <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_80673e5b8bf9b7b28cf9fdacffbf2bd2?imageView2'>
                     <div class="SocaialCardText">
@@ -2532,7 +2558,7 @@ this is the first HTML code, load font and style!
                     </div>
                 </a>
                 
-                <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=409850">
+                <a href="https://space.bilibili.com/25081666">
                     <div class="social3Text ">
                         <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ff71f5c98da627465610fece1a90dba6?imageView2'>
                         <div class="SocaialCardText">
@@ -2574,14 +2600,14 @@ this is the first HTML code, load font and style!
             <div id='footerMenu'>
                 <div>
                     <div class='footerMenuItem'><a href="./courselist.html"><span class='eng'>Course</span><span class="cn">课程</span></a></div>
-                    <div class='footerMenuItem'><a href="./home.html"><span class='eng'>Career</span><span class="cn">职业</span></a></div>
+                    <div class='footerMenuItem'><a href="./aboutus.html"><span class='eng'>Career</span><span class="cn">职业</span></a></div>
                     <div class='footerMenuItem'><a href="./news.html"><span class='eng'>News</span><span class="cn">新闻</span></a></div>
-                    <div class='footerMenuItem'><a href="blog.html"><span class='eng'>Blog</span><span class="cn">博客</span></a></div>
+                    <div class='footerMenuItem'><a href="./blogs.html"><span class='eng'>Blog</span><span class="cn">博客</span></a></div>
                 </div>
 
                 <div>                
-                    <div class='footerMenuItem'><a href="./about.html"><span class='eng'>About Us</span><span class="cn">关于我们</span></a></div>
-                    <div class='footerMenuItem'><a href="./about.html#advidorsContainer"><span class='eng'>Advisors</span><span class="cn">导师信息</span></a></div>
+                    <div class='footerMenuItem'><a href="./aboutus.html"><span class='eng'>About Us</span><span class="cn">关于我们</span></a></div>
+                    <div class='footerMenuItem'><a href="./aboutus.html#advidorsContainer"><span class='eng'>Advisors</span><span class="cn">导师信息</span></a></div>
                     <div class='footerMenuItem'><a href="https://jinshuju.net/f/YzGMtG"><span class='eng'>Join Us</span><span class="cn">加入我们</span></a></div>    
                 </div>
             </div>
@@ -2595,6 +2621,7 @@ this is the first HTML code, load font and style!
                         <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_40eaac48e1a318aef9ee5339d733ee29?imageView2'></a>
                         <a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_378188cd01c79c408f43c6f96e9887fc?imageView2'></a>
                         <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2feb65fd9eeacf98cc6e7cd2b939a1ce?imageView2'></a>
+                        <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9"><img src=" "></a>
                     </div>
                     <div id="weChatCode"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
                 </div>
@@ -2665,19 +2692,24 @@ this is the first HTML code, load font and style!
             $('#loginPopupBg').hide()
         })
 
+
+        $(window).scroll(function(){
+            // console.log("hi")
+            $("#header").css({"box-shadow":"0px 4px 20px rgba(0,0,0,0.09)"})
+        })
+
+        $('#videoContainer').click(function () {
+            if($(this).children('#aboutVideo').get(0).paused){        
+                $(this).children('#aboutVideo').get(0).play();   
+                $(this).children(".playButton").fadeOut();
+            }
+        });
+
     </script>
 </body>
 </html>
 
 
-<!-- 课程页面链接 - 没有页面的先链接小鹅通 -->
-<!-- courselist 切换的时候模块变化 -->
-<!-- https://sfpc.io/people/#filter=.student -->
 
 
-
-
-<!-- new issues  -->
-<!-- 1. 主页aboutus的video需要添加一个封面？ -->
-<!-- 2. 加入我们可以使用金数据表单的页面 -->
 

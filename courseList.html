@@ -194,7 +194,8 @@ this is the first HTML code, load font and style!
     #filterText{
         font-weight: 400;
         font-size: 30px;
-        color: rgb(172, 172, 172);;
+        /* color: rgb(172, 172, 172);; */
+        color: #222222;
         align-self: center;
     }
 
@@ -207,7 +208,7 @@ this is the first HTML code, load font and style!
     }
 
     #filterImg{
-        display: none;
+        /* display: none; */
         width:100%;
     }
 
@@ -265,12 +266,12 @@ this is the first HTML code, load font and style!
         height: 510px;
         border-radius: 15px;
         box-shadow: 0px 4px 40px rgba(0,0,0,0.08);
-        /*display: none; */
+        display: none;
         margin-bottom: 50px;
         color: #222222;
         flex-direction: column;
         position: relative;
-        display: flex;
+        /* display: flex; */
     }
 
     #filterDisplay > div {
@@ -850,17 +851,18 @@ this is the first HTML code, load font and style!
 
     .header2{
         font-size: 30px;
-        font-family:  "XYZB";
+        font-family: "XYZB";
         font-weight: 700;
-        line-height: 30px;
+        line-height: 38px;
     }
 
     .header3{
     	font-size: 20px;
-        font-family:  "XYZL";
+        font-family: "XYZL";
     	font-weight: 290;
-        margin-top: 20px;
+        margin-top: 12px;
     }
+
 
     .tag{
         font-size: 20px;
@@ -1761,6 +1763,7 @@ this is the first HTML code, load font and style!
 }
 
 .closeFilterTab{
+    display:none;
     position: absolute;
     right: 0px;
     top: 0px;
@@ -2285,20 +2288,21 @@ this is the first HTML code, load font and style!
 
 
 
+
     <div class='' id="footer">
         <div>
             <div id='footerLogo'><a href="./home.html"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
             <div id='footerMenu'>
                 <div>
                     <div class='footerMenuItem'><a href="./courselist.html"><span class='eng'>Course</span><span class="cn">课程</span></a></div>
-                    <div class='footerMenuItem'><a href="./home.html"><span class='eng'>Career</span><span class="cn">职业</span></a></div>
+                    <div class='footerMenuItem'><a href="./aboutus.html"><span class='eng'>Career</span><span class="cn">职业</span></a></div>
                     <div class='footerMenuItem'><a href="./news.html"><span class='eng'>News</span><span class="cn">新闻</span></a></div>
                     <div class='footerMenuItem'><a href="./blogs.html"><span class='eng'>Blog</span><span class="cn">博客</span></a></div>
                 </div>
 
                 <div>                
-                    <div class='footerMenuItem'><a href="./about.html"><span class='eng'>About Us</span><span class="cn">关于我们</span></a></div>
-                    <div class='footerMenuItem'><a href="./about.html#advidorsContainer"><span class='eng'>Advisors</span><span class="cn">导师信息</span></a></div>
+                    <div class='footerMenuItem'><a href="./aboutus.html"><span class='eng'>About Us</span><span class="cn">关于我们</span></a></div>
+                    <div class='footerMenuItem'><a href="./aboutus.html#advidorsContainer"><span class='eng'>Advisors</span><span class="cn">导师信息</span></a></div>
                     <div class='footerMenuItem'><a href="https://jinshuju.net/f/YzGMtG"><span class='eng'>Join Us</span><span class="cn">加入我们</span></a></div>    
                 </div>
             </div>
@@ -2312,6 +2316,7 @@ this is the first HTML code, load font and style!
                         <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_40eaac48e1a318aef9ee5339d733ee29?imageView2'></a>
                         <a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_378188cd01c79c408f43c6f96e9887fc?imageView2'></a>
                         <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2feb65fd9eeacf98cc6e7cd2b939a1ce?imageView2'></a>
+                        <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9"><img src=" "></a>
                     </div>
                     <div id="weChatCode"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
                 </div>
@@ -2319,6 +2324,7 @@ this is the first HTML code, load font and style!
             </div>
         </div>
     </div>
+
 </div> 
 <!-- end of content container -->
 
@@ -2336,7 +2342,7 @@ this is the first HTML code, load font and style!
             }
         })
 
-        let filterDisplay = true;
+        let filterDisplay = false;
         $('#filterContainer').click(function(){
             // console.log('clicked')
             if(!filterDisplay){
