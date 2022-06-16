@@ -1029,13 +1029,21 @@ let museum = {
     requirements:'课程硬件需求',
     classOverview: '你想成为大型展馆体验设计师吗？你想进入PICO笔克、风语筑、ProExhibits等海内外知名展厅设计公司吗？你想创作出美感与实用并存的交互展览吗？那么快加入博物馆体验设计大师班吧！本课程由美国排名Top3的帕森斯设计学院艺术家郭俊谷老师和郑晴老师共同亲自授课。你可以从零开始认知新世代视觉展现工具Figma，全过程了解博物馆情景下的体验设计的要素和方法论，学习接触点、体验层级和情绪版的创建，掌握博物馆交互技术和游戏设计，结合实际的博物馆案例进行分析，运用AE, C4D，Webflow等工具独立制作完整的线上展览作品。最终你会成为体验设计师，入职顶尖展厅设计企业或国家级博物馆，或成为元宇宙策展人举办线上个展，接博物馆体验设计相关项目获得丰厚收入。',
     mentorNameEng:'Jungu Guo',
+    mentorNameEng2:'Joyce Zheng',
     mentorNameCn:'郭俊谷',
+    mentorNameCn2:'郑晴',
     mentorTitle:["芝加哥科技工业博物馆创意工程师",
                 "纽约帕森斯设计与技术硕士",
                 "日本teamLab交互组实习"
             ],
+    mentorTitle2:["跨媒体设计师和互动设计师",
+        "纽约Unified Field多媒体设计工作室设计师",
+        "纽约帕森斯设计与技术硕士"
+    ],
     mentorText:'纽约帕森斯设计与技术硕士，芝加哥科技工业博物馆创意工程师，日本teamLab交互组实习。曾为中国科学技术馆开发交互装置，也曾设计出使用数字物理互动装置的《颜色粉碎》项目以及了解飞机如何运作的《Take Flight》项目引导互动动画。',
+    mentorText2:'跨媒体设计师和互动设计师，纽约Unified Field多媒体设计工作室设计师。曾为洛杉矶托伦斯博物馆中的社会实验室设计整套的用户交互体验系统，专注于跨移动、Web 和体验的 UI/UX 设计，在品牌、数字设计和艺术指导领域有着丰厚的经验。',
     freeClassTitle:'郑晴&郭俊顾老师公开课「博物馆体验设计」',
+    freeClassTitle2:'郑晴&郭俊顾老师公开课「博物馆体验设计」',
     studentReviewMain: {
         name: "张同学",
         title:'博物馆业内设计人士',
@@ -1164,8 +1172,11 @@ let museum = {
                 "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_aff6f171ba896664b7ba97c9dfaeb17d?imageView2",
                 "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_76808f2166c0b804fb1826935354609b?imageView2"],
     mentorImg: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ab7e97dcceaf927f163b9ce53c3902cf?imageView2',
+    mentorImg2: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a05df2a42eb8019208f075db323f983d?imageView2',
     mentorVideo:"http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_6a9297ba572a68b9638c250529868633",
+    mentorVideo2:"http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_960011b858cd2b0b1394804cc31ccc12",
     mentorPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_655298a20a5727a9859615d59a23fc60?imageView2',
+    mentorPoster2:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a6eed49a478e07d0698026978547635b?imageView2',
     teacherCase:['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_15c3c91130ccf6d5f894064af742eb13?imageView2',
                 'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_a5c6048087c91eae701fe0d8ed0f8468?imageView2',
                 'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d9f2a05c54a702bdab8b2e216242876e?imageView2',
@@ -1189,9 +1200,9 @@ let museum = {
                 
 }
 
-// 小晴老师照片：http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a05df2a42eb8019208f075db323f983d?imageView2
-// 小晴老师视频：http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_960011b858cd2b0b1394804cc31ccc12
-// 小晴老师poster：http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a6eed49a478e07d0698026978547635b?imageView2
+// 小晴老师照片：
+// 小晴老师视频：
+// 小晴老师poster：
 
 
 let courseDisplay 

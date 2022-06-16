@@ -99,6 +99,7 @@ this is the first HTML code, load font and style!
             courseDisplay = museum
             $('#courseVideo').hide();
             $('#studentWorkContainer').hide();
+            $('.teacher2').css('display','block');
         } 
 
         // below is displaying the correct contents:
@@ -112,7 +113,11 @@ this is the first HTML code, load font and style!
         $('#fillVideo').attr('poster', courseDisplay.videoPoster)
 
         $('#fillteacherVideo').attr('src', courseDisplay.mentorVideo)
+        $('#fillteacherVideo2').attr('src', courseDisplay.mentorVideo2)
+
         $('#fillteacherVideo').attr('poster', courseDisplay.mentorPoster)
+        $('#fillteacherVideo2').attr('poster', courseDisplay.mentorPoster2)
+
 
         $('#overViewContent').html(courseDisplay.classOverview)
 
@@ -142,16 +147,29 @@ this is the first HTML code, load font and style!
         }
 
         $('#mentorNameEng').text(courseDisplay.mentorNameEng)
+        $('#mentorNameEng2').text(courseDisplay.mentorNameEng2)
+
         $('#mentorNameCn').text(courseDisplay.mentorNameCn)
+        $('#mentorNameCn2').text(courseDisplay.mentorNameCn2)
+
         let mentorTitle = courseDisplay.mentorTitle[0] + "<br/>" + courseDisplay.mentorTitle[1] + "<br/>" + courseDisplay.mentorTitle[2]
+        let mentorTitle2 = courseDisplay.mentorTitle2[0] + "<br/>" + courseDisplay.mentorTitle2[1] + "<br/>" + courseDisplay.mentorTitle2[2]
 
         $('#mentorTitle').html(mentorTitle)
+        $('#mentorTitle2').html(mentorTitle2)
+
 
         $('#fillMentorImg').attr('src',courseDisplay.mentorImg)
+        $('#fillMentorImg2').attr('src',courseDisplay.mentorImg2)
+
 
         $('#mentorTopLeftBottom').text(courseDisplay.mentorText)
+        $('#mentorTopLeftBottom2').text(courseDisplay.mentorText2)
+
 
         $('#fillCourseTitle').text(courseDisplay.freeClassTitle)
+        $('#fillCourseTitle2').text(courseDisplay.freeClassTitle2)
+
 
         $('#mobilePosterImg').attr('src',courseDisplay.mainPosterMobile)
 
@@ -1626,18 +1644,19 @@ this is the first HTML code, load font and style!
     }
 
 
-    #mentorContent{
+    #mentorContent, #mentorContent2{
         margin-top: 42px;
         border-radius: 8px;
     }
 
-    #mentorTop{
+
+    #mentorTop, #mentorTop2{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 
-    #mentorBottom{
+    #mentorBottom, #mentorBottom2{
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -1665,7 +1684,7 @@ this is the first HTML code, load font and style!
     }
 
 
-    #freeCourseTitle{
+    #freeCourseTitle, #freeCourseTitle2{
         margin-left: 20px;
         margin-right:60px;
         flex-grow: 2;
@@ -1681,20 +1700,20 @@ this is the first HTML code, load font and style!
         align-items: center;
     }
 
-    #mentorTopLeft{
+    #mentorTopLeft, #mentorTopLeft2{
         display: flex;
         flex-direction: column;
         /* justify-content: space-between; */
         width: 35%;
     }
 
-    #mentorTopLeftTop{
+    #mentorTopLeftTop,#mentorTopLeftTop2{
         display: flex;
         flex-direction: row;
         /* justify-content: space-between; */
     }
 
-    #mentorImg{
+    #mentorImg,#mentorImg2{
         max-height:350px;
         width: 281px;
         border-radius: 8px;
@@ -1702,19 +1721,19 @@ this is the first HTML code, load font and style!
         margin-right: 50px;
     }
 
-    #mentorImg > img{
+    #mentorImg > img, #mentorImg2>img{
         width:100%;
         display: block
     }
 
-    #mentorheader{
+    #mentorheader, #mentorheader2{
         font-family: 'XYZL';
         font-weight: 400;
         font-size: 30px;
         line-height: 40px;
     }
 
-    #mentorNameEng{
+    #mentorNameEng,#mentorNameEng2{
         margin-top: 20px;
         font-family: "XYZB";
 
@@ -1723,7 +1742,7 @@ this is the first HTML code, load font and style!
         line-height: 40px;
     }
 
-    #mentorNameCn{
+    #mentorNameCn, #mentorNameCn2{
         font-family: 'XYZL';
         font-weight: 300;
         font-size: 20px;
@@ -1731,7 +1750,7 @@ this is the first HTML code, load font and style!
         letter-spacing: 0.045em;
     }
 
-    #mentorTitle{
+    #mentorTitle, #mentorTitle2{
         margin-top: 40px;
         font-family: 'XYZL';
         font-weight: 300;
@@ -1741,7 +1760,7 @@ this is the first HTML code, load font and style!
         letter-spacing: 0.045em;
     }
 
-    #mentorTopLeftBottom{
+    #mentorTopLeftBottom, #mentorTopLeftBottom2{
         font-family: 'XYZL';
         font-weight: 300;
         font-size: 20px;
@@ -1751,7 +1770,7 @@ this is the first HTML code, load font and style!
         margin-top: 49px;
     }
 
-    #mentorVideo{
+    #mentorVideo, #mentorVideo2{
         width: 946px;
         /*height: 532px;*/
         border-radius: 15px;
@@ -2583,6 +2602,10 @@ li{
     display: none;
 }
 
+.teacher2{
+    display: none;
+}
+
 
 </style>
 
@@ -3144,6 +3167,43 @@ li{
                 </div>
             </div>
         </div>
+
+        <div id='mentorContent2' class="teacher2">
+            <div id='mentorTop2'>
+                <div id='mentorTopLeft2'>
+                    <div id='mentorTopLeftTop2'>
+                        <div id='mentorImg2'><img id='fillMentorImg2' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_e3add361a84d3477ce312f6f923c48e8?imageView2'></div>
+                        <div>
+                            <div id='mentorheader2'><span class="cn">主讲老师</span><span class="eng">Instructor</span></div>
+                            <div id='mentorNameEng2'>Kyle Li</div>
+                            <div id='mentorNameCn2'>李肃纲</div>
+                            <div id='mentorTitle2'>
+                                帕森斯设计学院副教授<br/>研究生导师<br/>帕森斯设计与科技前系主任<br/>STYLY官方讲师
+                            </div>                             
+                        </div>      
+                    </div>
+                    
+
+                    <div id='mentorTopLeftBottom2'>
+                        授课细致耐心，实战经验丰富，擅于总结，擅长将一线工作流程融入课堂，运用深入浅出的教学方法，从原理讲解到一通百通，逐步让你成为大佬。
+                    </div>
+                </div>
+                <div id='mentorVideo2'>
+                    <video id='fillteacherVideo2' width='100%' controls>
+                      <source src="" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="playButton"></div>
+                </div>
+            </div>
+            <div id='mentorBottom2' class='shadow'>
+                <div id='freeCourseButton'><span class="cn">免费领取</span><span class="eng">Preview</span></div>
+                <div id='freeCourseTitle2'>
+                    <div id='fillCourseTitle2'>UE4 动画角色模型的处理技巧</div>
+                    <div id='fullVideoLink2'><span class='mobileHide'><span class="cn">立即获得</span><span class="eng">Get it now</span></span> >></div>
+                </div>
+            </div>
+        </div>
         
     </div>
 
@@ -3448,7 +3508,7 @@ li{
                         <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_40eaac48e1a318aef9ee5339d733ee29?imageView2'></a>
                         <a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_378188cd01c79c408f43c6f96e9887fc?imageView2'></a>
                         <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2feb65fd9eeacf98cc6e7cd2b939a1ce?imageView2'></a>
-                        <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9"><img src=" "></a>
+                        <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b753e9f7cb1dd55fd025cff18508ef5b?imageView2"></a>
                     </div>
                     <div id="weChatCode"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
                 </div>
@@ -3763,7 +3823,7 @@ li{
             $('#consultantImgBg').css('display','flex')
             $('#buyImg').hide()
             $('#consultImg').show();
-            $('#fillBuyText').text('立即试听公开课')
+            $('#fillConsultText').text('立即试听公开课')
         })
 
 
