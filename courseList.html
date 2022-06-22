@@ -90,11 +90,15 @@ this is the first HTML code, load font and style!
 
     // console.log(filter)
 
-    $(window).scroll(function(){
+    $('.sections').scroll(function(){
         // console.log("hi")
-        $("#header").css({"box-shadow":"0px 4px 20px rgba(0,0,0,0.09)"})
-        
+        $("#header").css({"box-shadow":"0px 4px 10px rgba(0,0,0,0.05)"})
+        if($('#contentContainer').position().top == 80){
+            console.log('hit')
+            $("#header").css({"box-shadow":"0px 0px 0px rgba(0,0,0,0.09)"})
+        }   
     })
+
 
     $('#hiddenLen').click(function(){
         console.log('this is clickedd')
@@ -146,8 +150,15 @@ this is the first HTML code, load font and style!
 		/*font-family: "Microsoft YaHei";*/
 		font-family:"XYZ";
         max-width: 100%;
-        overflow-x: hidden;
+        overflow-x: hidden; 
+        /* disable scrollbar */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
 	}
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
 
     img{
         display:block;
@@ -171,15 +182,23 @@ this is the first HTML code, load font and style!
     }
 
 
+
     .sections{
         position: fixed;
         left: 0;
         top: 0;
         width: 100vw;
         height: 100vh;
-        overflow: auto;
+        /* overflow: auto; */
+        overflow-x: hidden; 
+        /* disable scrollbar */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
     }
 
+    .section::-webkit-scrollbar {
+        display: none;
+    }
 
 
     #filterContainer{
@@ -761,15 +780,15 @@ this is the first HTML code, load font and style!
     }
 
     #footerSocialLogo > img{
-        width:100%;
-        margin-right: 20px;
-        width: 30px;
+        /* width:100%; */
+        margin-right: 30px;
+        height: 60px;
     }
 
     #footerSocialLogo > a > img{
-        width:100%;
-        margin-right: 20px;
-        width: 30px;
+        /* width:100%; */
+        margin-right: 30px;
+        height: 60px;
     }
 
     #footerMenu{
@@ -952,22 +971,22 @@ this is the first HTML code, load font and style!
     }
 
     #bootCampClass{
-        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b534a64279e9adc5bcbc8d50d8f336bd?imageView2);
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_dd7d9434df225aa9136b6283486b5f85?imageView2);
         background-size: cover;
     }
 
     #aiClass{
-        background-image: url(http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_a7c819e9f710c667b73d5dc75a7030e7?imageView2);
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_5ec7c6681d1c080cb13639e9c106003a?imageView2);
         background-size: cover;
     }
 
     #allClass{
-        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_49fb4e49f39071013077a807732bdbcd?imageView2);
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ce4b10a8eda02d3ad174d966d86187b4?imageView2);
         background-size: cover;
     }
 
     #masterClass{
-        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bd9a7823df742b73a693edc3e218e980?imageView2);
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_150e40217ad5734398dcd75a310275b6?imageView2);
         background-size: cover;
     }
 
@@ -1839,7 +1858,9 @@ this is the first HTML code, load font and style!
     <div id="headerlogo"><a href="./home.html"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
     <div id="menu">
         <div>
-            <input type='text' id='search' placeholder="processing"> 
+            <form id="form" action="./courseList.html">
+                <input type='text' id='search' name='filter' placeholder="processing"> 
+            </form>
         </div>
 
 
@@ -1862,10 +1883,10 @@ this is the first HTML code, load font and style!
     <div id="loginPopup">
         <div class="closeTab"></div>
         <div class="loginContent">
-            <div class="loginText">微信/QQ登陆</div>
+            <div class="loginText"><span class="cn">微信登陆</span><span class="eng">WeChat Login</span></div>
             <div class="loginImg"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d0df37497ebafdf8a7a9fc4a6071ad8b?imageView2"></div>
-            <div class="loginText">请打开微信/QQ扫描二维码登陆</div>
-            <div class="loginTextSmall">（首次登陆成功即完成注册）</div>
+            <div class="loginText"><span class="eng">Scan Code With WeChat Complete Login</span><span class="cn">请打开微信扫描二维码登陆</span></div>
+            <div class="loginTextSmall"><span class="cn">（首次登陆成功即完成注册）</span> <span class="eng">(Login to Complete Sign up)</span></div>
         </div>
     </div>
 </div>
@@ -1874,15 +1895,15 @@ this is the first HTML code, load font and style!
 <div id='menuPopUp'>
     <div id='menuPopUpContents'>
         <div id='menuButtonContainer'>
-            <a href="./courselist.html"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
-            <a href="./about.html"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
-            <a href="./news.html"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
-            <a href="./blogs.html"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
-            <a href="./about.html#advisorsContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
+            <a href="./courselist"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
+            <a href="./about"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
+            <a href="./news"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
+            <a href="./blogs"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
+            <a href="./about#advisorsContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
         </div> 
 
         <div id='menuCategoryContainer'>
-            <a class="cursorPointer" href="./courseList.html">
+            <a class="cursorPointer" href="./courseList">
                 <div class='menuCategory' id="allClass">
                     <div>
                         <span class="cn">全部课程</span>
@@ -1890,7 +1911,7 @@ this is the first HTML code, load font and style!
                     </div>
                 </div>
             </a>
-            <a class="cursorPointer" href="./courseList.html">
+            <a class="cursorPointer" href="./courseList">
                 <div class='menuCategory' id="aiClass">
                     <div>
                         <span class="cn">快速筑基班</span>
@@ -1898,7 +1919,7 @@ this is the first HTML code, load font and style!
                     </div>
                 </div>
             </a>
-            <a class="cursorPointer" href="./courseList.html">
+            <a class="cursorPointer" href="./courseList">
                 <div class='menuCategory' id="masterClass">
                     <div>
                         <span class="cn">大师班</span>
@@ -1906,7 +1927,7 @@ this is the first HTML code, load font and style!
                     </div>
                 </div>
             </a>
-            <a class="cursorPointer" href="./courseList.html">
+            <a class="cursorPointer" href="./courseList">
                 <div class='menuCategory' id="bootCampClass">
                     <div>
                         <span class="cn">冲刺营</span>
@@ -1918,7 +1939,7 @@ this is the first HTML code, load font and style!
 
 
         <div id='menuSoftwareContainer'>
-            <a class="cursorPointer" href="./courseList.html?filter=td">
+            <a class="cursorPointer" href="./courseList?filter=td">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7087f5df4e170bebc4a04b354ecb3326?imageView2'> 
                     <div class='softwareDescription'>
@@ -1932,7 +1953,7 @@ this is the first HTML code, load font and style!
             </a>
             
             
-            <a class="cursorPointer" href="./courseList.html?filter=unity">
+            <a class="cursorPointer" href="./courseList?filter=unity">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6a9a77d5b3c9675c16167fe8d2c7766f?imageView2'> 
                     <div class='softwareDescription'>
@@ -1945,7 +1966,7 @@ this is the first HTML code, load font and style!
                 </div>
             </a>
             
-            <a class="cursorPointer" href="./courseList.html?filter=unreal">
+            <a class="cursorPointer" href="./courseList?filter=unreal">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fb9262b4ac760ea1c2b8af813272b48e?imageView2'> 
                     <div class='softwareDescription'>
@@ -1958,7 +1979,7 @@ this is the first HTML code, load font and style!
                 </div>
             </a>
 
-            <a class="cursorPointer" href="./courseList.html?filter=processing">
+            <a class="cursorPointer" href="./courseList?filter=processing">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fc889440b6caa0f1c0e430bbe4176df9?imageView2'> 
                     <div class='softwareDescription'>
@@ -1971,7 +1992,7 @@ this is the first HTML code, load font and style!
                 </div>
             </a>
 
-            <a class="cursorPointer" href="./courseList.html?filter=p5">
+            <a class="cursorPointer" href="./courseList?filter=p5">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9cc784f659f8498a1a1d563758feaa5d?imageView2'> 
                     <div class='softwareDescription'>
@@ -1985,7 +2006,7 @@ this is the first HTML code, load font and style!
             </a>
 
 
-            <a class="cursorPointer" href="./courseList.html?filter=max">
+            <a class="cursorPointer" href="./courseList?filter=max">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f647742a09d5fbe44d69d0a497b05ead?imageView2'> 
                     <div class='softwareDescription'>
@@ -1998,7 +2019,7 @@ this is the first HTML code, load font and style!
                 </div>
             </a>
 
-            <a class="cursorPointer" href="./courseList.html?filter=of">
+            <a class="cursorPointer" href="./courseList?filter=of">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_094f651765e5162a3a7aa953faa18311?imageView2'> 
                     <div class='softwareDescription'>
@@ -2011,7 +2032,7 @@ this is the first HTML code, load font and style!
                 </div>
             </a>
 
-            <a class="cursorPointer" href="./courseList.html?filter=js">
+            <a class="cursorPointer" href="./courseList?filter=js">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> 
                     <div class='softwareDescription'>
@@ -2034,9 +2055,9 @@ this is the first HTML code, load font and style!
             <div><a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'></a></div>
             <div><a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'></a></div>
         </div>
+
     </div>
 </div>
-
 
 
 <div id="contentContainer">
@@ -2146,11 +2167,11 @@ this is the first HTML code, load font and style!
     	<div id="courseDisplayContainer">
 
             <div class="myCard is-animated course recommandCourse unrealCourse metaverseCourse aiCourse nftCourse p5Course tdCourse newestCourse highCourse popularCourse ml5Course jsCourse highTechCourse interactiveCourse immersiveCourse">
-    			<div class="bootCampClick"><a href="./course.html?courseDisplay="><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f453a6c13ea8d61f9b3b8f84efa0e086?imageView2'></a></div>
+    			<div class="bootCampClick"><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/detail/p_628efaffe4b01a48520415f1/6"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f453a6c13ea8d61f9b3b8f84efa0e086?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize arClick'><a href="./course.html?courseDisplay=">2022 Interactive Art Summer BootCamp</a></div>
-                        <div class='header3 header3Resize arClick'><a href="./course.html?courseDisplay=">2022国际交互艺术夏令营</a></div>
+                        <div class='header2 header2Resize arClick'><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/detail/p_628efaffe4b01a48520415f1/6">2022 Interactive Art Summer BootCamp</a></div>
+                        <div class='header3 header3Resize arClick'><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/detail/p_628efaffe4b01a48520415f1/6">2022国际交互艺术夏令营</a></div>
                     </div>
                     <div>
                         <div class='tag p5'>#metaverse</div> <div class='tag unity'>#ai</div>
@@ -2217,11 +2238,11 @@ this is the first HTML code, load font and style!
             </div>
             <!-- end of card 4 -->
             <div class="myCard is-animated course processingCourse lightCourse stageCourse interactiveCourse immersiveCourse" >
-                <div><a href=" ./course.html"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8f84b748917a0fac32dfcef36cc09a1e?imageView2'></a></div>
+                <div><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/detail/p_62aa9cc2e4b0ba331dc8b671/6?fromH5=true"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8f84b748917a0fac32dfcef36cc09a1e?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'>Mastering Interactive Lighting with Processing</div>
-                        <div class='header3 header3Resize'>互动灯光编程大师班</div>
+                        <div class='header2 header2Resize'><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/detail/p_62aa9cc2e4b0ba331dc8b671/6?fromH5=true">Mastering Interactive Lighting with Processing</a></div>
+                        <div class='header3 header3Resize'><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/detail/p_62aa9cc2e4b0ba331dc8b671/6?fromH5=true">互动灯光编程大师班</a></div>
                     </div>
                     <div><div class='tag processing'>#Processing</div> <div class='tag light'>#Lighting Design</div></div>
                 </div>
@@ -2252,22 +2273,22 @@ this is the first HTML code, load font and style!
             </div>
             <!-- end of card 7 -->
             <div class="myCard is-animated course recommandCourse tdCourse newestCourse popularCourse exhibitionCourse brandCourse interactiveCourse">
-                <div><a href=" ./course.html"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7508903cabc56de3b297a73c789493d0?imageView2'></a></div>
+                <div><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/detail/p_6268d4a1e4b01a4851f79d17/6?fromH5=true"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7508903cabc56de3b297a73c789493d0?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'>Mastering Commercial Design with TouchDesigner</div>
-                        <div class='header3 header3Resize'>TD商业项目大师班</div>
+                        <div class='header2 header2Resize'><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/detail/p_6268d4a1e4b01a4851f79d17/6?fromH5=true">Mastering Commercial Design with TouchDesigner</a></div>
+                        <div class='header3 header3Resize'><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/detail/p_6268d4a1e4b01a4851f79d17/6?fromH5=true">TD商业项目大师班</a></div>
                     </div>
                     <div><div class='tag td'>#touchDesigner</div> <div class='tag kinect'>#kinect</div></div>
                 </div>
             </div>
             <!-- end of card 8 -->
             <div class="myCard is-animated course recommandCourse tdCourse highCourse popularCourse stageCourse avsCourse interactiveCourse immersiveCourse">
-                <div><a href=" ./course.html"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_db15f3774704ad3f71879539f669469a?imageView2'></a></div>
+                <div><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/detail/p_6271fd92e4b0cedf38acf6da/6?fromH5=true"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_db15f3774704ad3f71879539f669469a?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'>Mastering AudioVisual with TouchDesigner</div>
-                        <div class='header3 header3Resize'>TD音画互动大师班</div>
+                        <div class='header2 header2Resize'><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/detail/p_6271fd92e4b0cedf38acf6da/6?fromH5=true">Mastering AudioVisual with TouchDesigner</a></div>
+                        <div class='header3 header3Resize'><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/detail/p_6271fd92e4b0cedf38acf6da/6?fromH5=true">TD音画互动大师班</a></div>
                     </div>
                     <div><div class='tag td'>#touchDesigner</div> <div class='tag avs'>#AudioVisual</div></div>
                 </div>
@@ -2287,7 +2308,7 @@ this is the first HTML code, load font and style!
 
 
 
-
+    
     <div class='' id="footer">
         <div>
             <div id='footerLogo'><a href="./home.html"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
@@ -2311,11 +2332,24 @@ this is the first HTML code, load font and style!
                 <div id='footerCode'>
                     <div><span class="cn">关注我们</span><span class="eng">Follow Us</span></div>
                     <div id='footerSocialLogo'>
-                        <img id='displayCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_c3fda0b5b340c124079c6e9e4d0099ef?imageView2'>
-                        <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_40eaac48e1a318aef9ee5339d733ee29?imageView2'></a>
-                        <a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_378188cd01c79c408f43c6f96e9887fc?imageView2'></a>
-                        <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2feb65fd9eeacf98cc6e7cd2b939a1ce?imageView2'></a>
-                        <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9"><img src=" "></a>
+                        <!-- wechat -->
+                        <img id='displayCode' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ca7e148ffaa0dddeedffb10f7c80a392?imageView2'>
+                        <!-- bilibili -->
+                        <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048">
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d3031dd5e026a1c35906ee627b3021ce?imageView2'>
+                        </a>
+                        <!-- weibo -->
+                        <a href="https://weibo.com/u/7126820846">
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_4a425023fccb27c3c816c64ec67c67d5?imageView2'>
+                        </a>
+                        <!-- 小红书 -->
+                        <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515">
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e35086209607f49957993a682e0025c4?imageView2'>
+                        </a>
+                        <!-- 小宇宙 -->
+                        <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9">
+                            <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0a3342aa250a760309903f3fe3026fc4?imageView2">
+                        </a>
                     </div>
                     <div id="weChatCode"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
                 </div>

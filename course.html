@@ -100,6 +100,7 @@ this is the first HTML code, load font and style!
             $('#courseVideo').hide();
             $('#studentWorkContainer').hide();
             $('.teacher2').css('display','block');
+            $('#mentorBottom').hide();
         } 
 
         // below is displaying the correct contents:
@@ -146,29 +147,30 @@ this is the first HTML code, load font and style!
             $('#studentWork' + i).attr('src',courseDisplay.studentWork[i]).parent().removeClass('hide')
         }
 
-        $('#mentorNameEng').text(courseDisplay.mentorNameEng)
-        $('#mentorNameEng2').text(courseDisplay.mentorNameEng2)
+        if(courseDisplay == museum){
+            $('#mentorNameEng2').text(courseDisplay.mentorNameEng2)
+            $('#mentorNameCn2').text(courseDisplay.mentorNameCn2)
+            let mentorTitle2 = courseDisplay.mentorTitle2[0] + "<br/>" + courseDisplay.mentorTitle2[1] + "<br/>" + courseDisplay.mentorTitle2[2]
+            $('#mentorTitle2').html(mentorTitle2)
+            $('#fillMentorImg2').attr('src',courseDisplay.mentorImg2)
+            $('#mentorTopLeftBottom2').text(courseDisplay.mentorText2)
+            $('#fillCourseTitle2').text(courseDisplay.freeClassTitle2)
+        }
 
+        $('#mentorNameEng').text(courseDisplay.mentorNameEng)
         $('#mentorNameCn').text(courseDisplay.mentorNameCn)
-        $('#mentorNameCn2').text(courseDisplay.mentorNameCn2)
 
         let mentorTitle = courseDisplay.mentorTitle[0] + "<br/>" + courseDisplay.mentorTitle[1] + "<br/>" + courseDisplay.mentorTitle[2]
-        let mentorTitle2 = courseDisplay.mentorTitle2[0] + "<br/>" + courseDisplay.mentorTitle2[1] + "<br/>" + courseDisplay.mentorTitle2[2]
-
         $('#mentorTitle').html(mentorTitle)
-        $('#mentorTitle2').html(mentorTitle2)
 
 
         $('#fillMentorImg').attr('src',courseDisplay.mentorImg)
-        $('#fillMentorImg2').attr('src',courseDisplay.mentorImg2)
 
 
         $('#mentorTopLeftBottom').text(courseDisplay.mentorText)
-        $('#mentorTopLeftBottom2').text(courseDisplay.mentorText2)
 
 
         $('#fillCourseTitle').text(courseDisplay.freeClassTitle)
-        $('#fillCourseTitle2').text(courseDisplay.freeClassTitle2)
 
 
         $('#mobilePosterImg').attr('src',courseDisplay.mainPosterMobile)
@@ -241,13 +243,19 @@ this is the first HTML code, load font and style!
     }
 
 
-
 	html, body{
 		/*font-family: "Microsoft YaHei";*/
 		font-family:"XYZ";
         max-width: 100%;
-        overflow-x: hidden;
+        overflow-x: hidden; 
+        /* disable scrollbar */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
 	}
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
 
     img{
         display:block;
@@ -689,7 +697,12 @@ this is the first HTML code, load font and style!
     }
 
     .overlay > div{
-        margin:20px;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        margin-left:20px;
+        margin-right:20px;
     }
 
     /* .overlay:hover + .overlay > div>li {
@@ -1171,15 +1184,15 @@ this is the first HTML code, load font and style!
 
 
     #footerSocialLogo > img{
-        width:100%;
-        margin-right: 20px;
-        width: 30px;
+        /* width:100%; */
+        margin-right: 30px;
+        height: 60px;
     }
 
     #footerSocialLogo > a > img{
-        width:100%;
-        margin-right: 20px;
-        width: 30px;
+        /* width:100%; */
+        margin-right: 30px;
+        height: 60px;
     }
 
 
@@ -1289,22 +1302,22 @@ this is the first HTML code, load font and style!
     }
 
     #bootCampClass{
-        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b534a64279e9adc5bcbc8d50d8f336bd?imageView2);
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_dd7d9434df225aa9136b6283486b5f85?imageView2);
         background-size: cover;
     }
 
     #aiClass{
-        background-image: url(http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_a7c819e9f710c667b73d5dc75a7030e7?imageView2);
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_5ec7c6681d1c080cb13639e9c106003a?imageView2);
         background-size: cover;
     }
 
     #allClass{
-        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_49fb4e49f39071013077a807732bdbcd?imageView2);
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ce4b10a8eda02d3ad174d966d86187b4?imageView2);
         background-size: cover;
     }
 
     #masterClass{
-        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bd9a7823df742b73a693edc3e218e980?imageView2);
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_150e40217ad5734398dcd75a310275b6?imageView2);
         background-size: cover;
     }
 
@@ -1511,6 +1524,7 @@ this is the first HTML code, load font and style!
     	display: flex;
     	flex-direction: row;
     	align-items: center;
+        flex-wrap: wrap;
     	/*justify-content: space-between;*/
     }
 
@@ -2516,7 +2530,7 @@ this is the first HTML code, load font and style!
     position: relative;
     display: inline-block;
     width:auto;
-    margin:auto;
+    margin:0 auto;
 }
 
 
@@ -2558,7 +2572,7 @@ this is the first HTML code, load font and style!
     cursor: pointer;
     width: 40px;
     height: 40px;
-    margin:auto;
+    margin:40px auto;
 }
 
 #closePopUp > img{
@@ -2566,44 +2580,34 @@ this is the first HTML code, load font and style!
 }
 
 
-/* .closeTabShop{
-    position: absolute;
-    right: 3px;
-    top:3px;
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-}
-
-.closeTabShop:before, .closeTabShop:after{
-    content:'';
-    position:absolute;
-    width:20px;
-    height:4px;
-    background-color:#7c7c7c;
-    border-radius:2px;
-    top:14px;
-    /* box-shadow:0 0 2px 0 #222222; 
-}
-.closeTabShop:before{
-    transform:rotate(45deg);
-    left:2px;
-}
-.closeTabShop:after{
-    transform:rotate(-45deg);
-    right:2px;
-} */
-
 .hide{
-    display: none;
-}
-
-li{
     display: none;
 }
 
 .teacher2{
     display: none;
+}
+
+li:nth-child(1) {
+  transition-delay: 0s;
+}
+
+li:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+li:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.overlay> div > li {
+  opacity: 0;
+  font-size: 15px;
+  /* transition: opacity 5s; */
+}
+
+.overlay.transition > div > li {
+  opacity: 1;
 }
 
 
@@ -2641,15 +2645,14 @@ li{
 
 <!-- end of header  -->
 
-
 <div id="loginPopupBg">
     <div id="loginPopup">
         <div class="closeTab"></div>
         <div class="loginContent">
-            <div class="loginText" id="loginHeader">微信登陆</div>
-            <div class="loginImg"><img class='loginImgreplace' src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d0df37497ebafdf8a7a9fc4a6071ad8b?imageView2"></div>
-            <div class="loginText" id="loginText">请打开微信扫描二维码登陆</div>
-            <div class="loginTextSmall">（首次登陆成功即完成注册）</div>
+            <div class="loginText"><span class="cn">微信登陆</span><span class="eng">WeChat Login</span></div>
+            <div class="loginImg"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d0df37497ebafdf8a7a9fc4a6071ad8b?imageView2"></div>
+            <div class="loginText"><span class="eng">Scan Code With WeChat Complete Login</span><span class="cn">请打开微信扫描二维码登陆</span></div>
+            <div class="loginTextSmall"><span class="cn">（首次登陆成功即完成注册）</span> <span class="eng">(Login to Complete Sign up)</span></div>
         </div>
     </div>
 </div>
@@ -2830,14 +2833,14 @@ li{
             <div class="imgText" id="buyText">
                 <img class='inlineImg' src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a8844a5a0ca41eaa5bd3b6dc605c3947?imageView2"> <span id="fillBuyText">立即报名</span>
             </div>
-            <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ae6f991f71be27985cc002d5be78bdeb?imageView2">
+            <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_315a7abefe693f5da8e54882fd36299e?imageView2">
         </div>
         <div class='consultImgDiv' id="consultImg">
             <div class="imgText" id="askText">
                 <img class='inlineImg' src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_4d33a89c1231cac30fe740b4928c1d61?imageView2">
                  <span id="fillConsultText">详细咨询</span>
             </div>
-            <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8e28beb03596f3ab475e518a2880c93f?imageView2">
+            <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f6b272e2c6c99c629e1b95fc006288f3?imageView2">
         </div>
     </div>
 
@@ -3504,11 +3507,24 @@ li{
                 <div id='footerCode'>
                     <div><span class="cn">关注我们</span><span class="eng">Follow Us</span></div>
                     <div id='footerSocialLogo'>
-                        <img id='displayCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_c3fda0b5b340c124079c6e9e4d0099ef?imageView2'>
-                        <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_40eaac48e1a318aef9ee5339d733ee29?imageView2'></a>
-                        <a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_378188cd01c79c408f43c6f96e9887fc?imageView2'></a>
-                        <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2feb65fd9eeacf98cc6e7cd2b939a1ce?imageView2'></a>
-                        <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b753e9f7cb1dd55fd025cff18508ef5b?imageView2"></a>
+                        <!-- wechat -->
+                        <img id='displayCode' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ca7e148ffaa0dddeedffb10f7c80a392?imageView2'>
+                        <!-- bilibili -->
+                        <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048">
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d3031dd5e026a1c35906ee627b3021ce?imageView2'>
+                        </a>
+                        <!-- weibo -->
+                        <a href="https://weibo.com/u/7126820846">
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_4a425023fccb27c3c816c64ec67c67d5?imageView2'>
+                        </a>
+                        <!-- 小红书 -->
+                        <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515">
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e35086209607f49957993a682e0025c4?imageView2'>
+                        </a>
+                        <!-- 小宇宙 -->
+                        <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9">
+                            <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0a3342aa250a760309903f3fe3026fc4?imageView2">
+                        </a>
                     </div>
                     <div id="weChatCode"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
                 </div>
@@ -3615,7 +3631,7 @@ li{
             $("#headerMobile").css({"box-shadow":"0px 4px 20px rgba(0,0,0,0.09)"})
             // console.log($(window).scrollTop())
             let scrollPos = $(window).scrollTop()
-            console.log(scrollPos)
+            // console.log(scrollPos)
             if(scrollPos > 0 && scrollPos < $('#syllabusContainer').position().top){
                 $('#disMenu').css({'color':'#FF7C32'})
                 $('#menuMenu').css({'color':'black'})
@@ -3717,8 +3733,6 @@ li{
             $('#loginHeader').text('微信扫码登录')
             $('#loginText').text('请打开微信扫描二维码登陆')
             $('.loginImgreplace').attr('src','http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d0df37497ebafdf8a7a9fc4a6071ad8b?imageView2')
-            $('.loginTextSmall').show();
-            $('.loginTextSmall').text('（首次登陆成功即完成注册）');
         })
 
         let cardShow = false 
@@ -3746,15 +3760,25 @@ li{
             $('#consultantImgBg').css('display','flex')
             $('#buyImg').hide()
             $('#consultImg').show();
-            $('#fillConsultText').text('立即咨询课程顾问')
+            if(lan == 'CN'){
+                $('#fillConsultText').text("立即免费咨询")
+            } else {
+                $('#fillConsultText').text('Get Free Consultation')
+            }
         })
+
+
 
         $('#buttonBottom').click(function(){
             cardShow = true
             $('#consultantImgBg').css('display','flex')
             $('#buyImg').show()
             $('#consultImg').hide();
-            $('#fillBuyText').text('立即报名')
+            if(lan == 'CN'){
+                $('#fillBuyText').text('立即报名')
+            } else {
+                $('#fillBuyText').text('Apply Now')
+            }
         })
 
 
@@ -3763,7 +3787,11 @@ li{
             $('#consultantImgBg').css('display','flex')
             $('#buyImg').hide()
             $('#consultImg').show();
-            $('#fillConsultText').text('了解学习要求')
+            if(lan == 'CN'){
+                $('#fillConsultText').text('了解学习要求')
+            } else {
+                $('#fillConsultText').text('Learn More')
+            }
         })
 
 
@@ -3772,7 +3800,11 @@ li{
             $('#consultantImgBg').css('display','flex')
             $('#buyImg').hide()
             $('#consultImg').show();
-            $('#fillConsultText').text('立即获取大纲')
+            if(lan == 'CN'){
+                $('#fillConsultText').text('免费领取大纲')
+            } else {
+                $('#fillConsultText').text('Get Syllabus')
+            }
         })
 
         $('#getShowCase').click(function(){
@@ -3780,7 +3812,11 @@ li{
             $('#consultantImgBg').css('display','flex')
             $('#buyImg').hide()
             $('#consultImg').show();
-            $('#fillConsultText').text('查看更多案例')
+            if(lan == 'CN'){
+                $('#fillConsultText').text('更多免费案例')
+            } else {
+                $('#fillConsultText').text('Get Free Examples')
+            }
         })
 
         $('#getTeacherShowCase').click(function(){
@@ -3788,7 +3824,11 @@ li{
             $('#consultantImgBg').css('display','flex')
             $('#buyImg').hide()
             $('#consultImg').show();
-            $('#fillConsultText').text('欣赏导师作品')
+            if(lan == 'CN'){
+                $('#fillConsultText').text('欣赏导师作品')
+            } else {
+                $('#fillConsultText').text('Get Instructor Portfolio')
+            }
         })
         
         $('#getDiscountCode').click(function(){
@@ -3796,16 +3836,23 @@ li{
             $('#consultantImgBg').css('display','flex')
             $('#buyImg').hide()
             $('#consultImg').show();
-            $('#fillConsultText').text('立即享受优惠')
+            if(lan == 'CN'){
+                $('#fillConsultText').text('立即享受优惠')
+            } else {
+                $('#fillConsultText').text('Get Discount Now')
+            }
         })
-
 
         $('#getStudentWork').click(function(){
             cardShow = true
             $('#consultantImgBg').css('display','flex')
             $('#buyImg').hide()
             $('#consultImg').show();
-            $('#fillConsultText').text('回顾学员作品')
+            if(lan == 'CN'){
+                $('#fillConsultText').text('获得学员作品')
+            } else {
+                $('#fillConsultText').text('Get Student Work')
+            }
         })
 
         
@@ -3815,7 +3862,11 @@ li{
             $('#consultantImgBg').css('display','flex')
             $('#buyImg').show()
             $('#consultImg').hide();
-            $('#fillBuyText').text('抢占席位')
+            if(lan == 'CN'){
+                $('#fillBuyText').text('抢占席位')
+            } else {
+                $('#fillBuyText').text('Sign Up Now')
+            }
         })
 
         $('#fullVideoLink').click(function(){
@@ -3823,18 +3874,18 @@ li{
             $('#consultantImgBg').css('display','flex')
             $('#buyImg').hide()
             $('#consultImg').show();
-            $('#fillConsultText').text('立即试听公开课')
+            if(lan == 'CN'){
+                $('#fillConsultText').text('免费领取公开课')
+            } else {
+                $('#fillConsultText').text('Get Free Public Class')
+            }
         })
 
 
         $('.syllabus').hover(function(){
-            $(this).find('.overlay').show();
-            $(this).find("li").each(function(i){
-                $(this).delay((i++)*((i)*50)).show('slide')
-            })
+            $(this).find('.overlay').first().addClass('transition').show();
         },function(){
-            $(this).find('.overlay').hide();
-            $(this).find("li").hide()
+            $(this).find('.overlay').first().removeClass('transition')
         })
 
         

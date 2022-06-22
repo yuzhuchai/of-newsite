@@ -77,11 +77,16 @@ this is the first HTML code, load font and style!
 
     // console.log(filter)
 
-    $(window).scroll(function(){
+
+    $('.sections').scroll(function(){
         // console.log("hi")
-        $("#header").css({"box-shadow":"0px 4px 20px rgba(0,0,0,0.09)"})
-        
+        $("#header").css({"box-shadow":"0px 4px 10px rgba(0,0,0,0.05)"})
+        if($('#contentContainer').position().top == 80){
+            console.log('hit')
+            $("#header").css({"box-shadow":"0px 0px 0px rgba(0,0,0,0.09)"})
+        }   
     })
+
 
     $('#hiddenLen').click(function(){
             console.log('this is clickedd')
@@ -133,8 +138,15 @@ this is the first HTML code, load font and style!
 		/*font-family: "Microsoft YaHei";*/
 		font-family:"XYZ";
         max-width: 100%;
-        overflow-x: hidden;
+        overflow-x: hidden; 
+        /* disable scrollbar */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
 	}
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
 
     img{
         display:block;
@@ -214,7 +226,7 @@ this is the first HTML code, load font and style!
         height: 80px;
         z-index: 1;
         background-color: white;
-        box-shadow:0px 4px 20px rgba(0,0,0,0.09);
+        /* box-shadow:0px 4px 20px rgba(0,0,0,0.09); */
     }
    
     #headerlogo{
@@ -640,15 +652,15 @@ this is the first HTML code, load font and style!
     }
 
     #footerSocialLogo > img{
-        width:100%;
-        margin-right: 20px;
-        width: 30px;
+        /* width:100%; */
+        margin-right: 30px;
+        height: 60px;
     }
 
     #footerSocialLogo > a > img{
-        width:100%;
-        margin-right: 20px;
-        width: 30px;
+        /* width:100%; */
+        margin-right: 30px;
+        height: 60px;
     }
 
     #footerMenu{
@@ -828,26 +840,25 @@ this is the first HTML code, load font and style!
     }
 
 
-   #bootCampClass{
-        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b534a64279e9adc5bcbc8d50d8f336bd?imageView2);
+    #bootCampClass{
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_dd7d9434df225aa9136b6283486b5f85?imageView2);
         background-size: cover;
     }
 
     #aiClass{
-        background-image: url(http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_a7c819e9f710c667b73d5dc75a7030e7?imageView2);
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_5ec7c6681d1c080cb13639e9c106003a?imageView2);
         background-size: cover;
     }
 
     #allClass{
-        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_49fb4e49f39071013077a807732bdbcd?imageView2);
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ce4b10a8eda02d3ad174d966d86187b4?imageView2);
         background-size: cover;
     }
 
     #masterClass{
-        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bd9a7823df742b73a693edc3e218e980?imageView2);
+        background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_150e40217ad5734398dcd75a310275b6?imageView2);
         background-size: cover;
     }
-
 
 
     
@@ -1670,6 +1681,65 @@ this is the first HTML code, load font and style!
     right:2px;
 }
 
+
+
+    .is-animated {
+        animation: .6s zoom-in;
+    }
+
+    @keyframes zoom-in {
+      0% {
+       transform: scale(.1);
+      } 
+      100% {
+        transform: none;
+      }
+    }
+
+
+    .buttonList{
+        height:46px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;   
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: #222222;
+        font-size: 20px;
+        font-family:  "XYZL";
+
+        font-weight: 290;
+        /*margin-left: 22px;*/
+        padding-left: 10px;
+        padding-right:10px;
+        min-width:60px;
+        margin-right: 20px;
+    }
+
+    .buttonList:hover{
+        cursor:pointer;
+        transform: translateY(1px) translateX(1px) scale(1) translateZ(0);
+    }
+
+
+    #all{
+        color: white;
+        background-color: black;
+    }
+
+
+
+    #buttonListContainer{
+        display: flex;
+        flex-direction: row;
+        /* justify-content: space-between; */
+        margin-top: 20px;
+        /*margin-left: 0;*/
+    }
+
+
 </style>
 
 
@@ -1678,7 +1748,9 @@ this is the first HTML code, load font and style!
     <div id="headerlogo"><a href="./home.html"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
     <div id="menu">
         <div>
-            <input type='text' id='search' placeholder="processing"> 
+            <form id="form" action="./courseList.html">
+                <input type='text' id='search' name='filter' placeholder="processing"> 
+            </form>
         </div>
 
 
@@ -1702,14 +1774,13 @@ this is the first HTML code, load font and style!
     <div id="loginPopup">
         <div class="closeTab"></div>
         <div class="loginContent">
-            <div class="loginText">微信/QQ登陆</div>
+            <div class="loginText"><span class="cn">微信登陆</span><span class="eng">WeChat Login</span></div>
             <div class="loginImg"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d0df37497ebafdf8a7a9fc4a6071ad8b?imageView2"></div>
-            <div class="loginText">请打开微信/QQ扫描二维码登陆</div>
-            <div class="loginTextSmall">（首次登陆成功即完成注册）</div>
+            <div class="loginText"><span class="eng">Scan Code With WeChat Complete Login</span><span class="cn">请打开微信扫描二维码登陆</span></div>
+            <div class="loginTextSmall"><span class="cn">（首次登陆成功即完成注册）</span> <span class="eng">(Login to Complete Sign up)</span></div>
         </div>
     </div>
 </div>
-
 
 
 <div id='menuPopUp'>
@@ -1884,9 +1955,24 @@ this is the first HTML code, load font and style!
 
 <div id="contentContainer">
 
+
+
+
+
     <div class="container" id="headerPicContainer">
     	<img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_86d0a83a18008e282834ae69c06fa01c?imageView2">
     </div>
+
+
+    <div  class='container' id='buttonListContainer'>
+        <div class='buttonList all' id="all">全部</div>
+        <div class='buttonList recommand' id="recommand">推荐</div>
+        <div class='buttonList newest' id="newest">new</div>
+        <div class='buttonList installation' id="unity">installation</div>
+        <div class='buttonList metaverse' id="unreal">metaverse</div>
+        <div class='buttonList nft' id="td">nft</div>
+    </div>
+
 
     <div class='container' id="navigation">
         <span><a href="./home.html">HOME</a></span> > <span>BLOG</span>
@@ -1904,7 +1990,7 @@ this is the first HTML code, load font and style!
 
     	<div id="courseDisplayContainer">
 
-            <div class="myCard course">
+            <div class="myCard course is-animated nftBlog allBlog newBlog recommandBlog">
     			<div class="bootCampClick"><a href=""><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f82e99e49cc9930ec6b3f0d8ae1aa84f?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div class="titles">
@@ -1921,11 +2007,11 @@ this is the first HTML code, load font and style!
                             </a>
                         </div>
                     </div>
-                    <div><div class='tag p5'>#NFT</div></div>
+                    <div><div class='tag nft'>#NFT</div></div>
                 </div>
     		</div>
 
-            <div class="myCard course">
+            <div class="myCard course is-animated installationBlog allBlog newBlog recommandBlog">
     			<div class="bootCampClick"><a href=""><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a75c6c8b4502c99625b3aea16f2c9768?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div class="titles">
@@ -1942,11 +2028,11 @@ this is the first HTML code, load font and style!
                             </a>
                         </div>
                     </div>
-                    <div><div class='tag p5'>#installation</div></div>
+                    <div><div class='tag installation'>#installation</div></div>
                 </div>
     		</div>
 
-            <div class="myCard course">
+            <div class="myCard course metaverseBlog is-animated newBlog recommandBlog allBlog">
     			<div class="bootCampClick"><a href=" "><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_77fb775307924534df3011723d6411d9?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div class="titles">
@@ -1964,7 +2050,7 @@ this is the first HTML code, load font and style!
                             </a>
                         </div>
                     </div>
-                    <div><div class='tag p5'>#metaverse</div></div>
+                    <div><div class='tag metaverse'>#metaverse</div></div>
                 </div>
     		</div>
 
@@ -1983,8 +2069,6 @@ this is the first HTML code, load font and style!
 
 
     
-
-
     <div class='' id="footer">
         <div>
             <div id='footerLogo'><a href="./home.html"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
@@ -2008,11 +2092,24 @@ this is the first HTML code, load font and style!
                 <div id='footerCode'>
                     <div><span class="cn">关注我们</span><span class="eng">Follow Us</span></div>
                     <div id='footerSocialLogo'>
-                        <img id='displayCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_c3fda0b5b340c124079c6e9e4d0099ef?imageView2'>
-                        <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_40eaac48e1a318aef9ee5339d733ee29?imageView2'></a>
-                        <a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_378188cd01c79c408f43c6f96e9887fc?imageView2'></a>
-                        <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2feb65fd9eeacf98cc6e7cd2b939a1ce?imageView2'></a>
-                        <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9"><img src=" "></a>
+                        <!-- wechat -->
+                        <img id='displayCode' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ca7e148ffaa0dddeedffb10f7c80a392?imageView2'>
+                        <!-- bilibili -->
+                        <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048">
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d3031dd5e026a1c35906ee627b3021ce?imageView2'>
+                        </a>
+                        <!-- weibo -->
+                        <a href="https://weibo.com/u/7126820846">
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_4a425023fccb27c3c816c64ec67c67d5?imageView2'>
+                        </a>
+                        <!-- 小红书 -->
+                        <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515">
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e35086209607f49957993a682e0025c4?imageView2'>
+                        </a>
+                        <!-- 小宇宙 -->
+                        <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9">
+                            <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0a3342aa250a760309903f3fe3026fc4?imageView2">
+                        </a>
                     </div>
                     <div id="weChatCode"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
                 </div>
@@ -2074,6 +2171,58 @@ this is the first HTML code, load font and style!
             $('#weChatCode').show()
         }, function(){
             $('#weChatCode').hide()
+        })
+
+
+        // this is the filter functions
+
+        $('.buttonList').click(function(){
+            $('.clickFilter').css({'color':'#222222','background-color':'white'})
+            $('.buttonList').css({
+                'color':'black',
+                'background-color':'white'
+            })
+            $(this).css({'color':'white'});
+            $(this).css({'background-color':'black'});
+            // $('#filterFiller').text('COURSE LIST')
+        })
+
+
+
+        $('.metaverse').click(function(){
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.metaverseBlog').addClass('is-animated').fadeIn();
+            });
+        })
+
+        $('.nft').click(function(){
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.nftBlog').addClass('is-animated').fadeIn();
+            });
+        })
+
+        $('.installation').click(function(){
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.installationBlog').addClass('is-animated').fadeIn();
+            });
+        })
+
+        $('.all').click(function(){
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.allBlog').addClass('is-animated').fadeIn();
+            });
+        })
+
+        $('.newest').click(function(){
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.newBlog').addClass('is-animated').fadeIn();
+            });
+        })
+
+        $('.recommand').click(function(){
+            $('.is-animated').removeClass('is-animated').fadeOut().promise().done(function() {
+              $('.recommandBlog').addClass('is-animated').fadeIn();
+            });
         })
 
     </script>

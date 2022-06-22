@@ -8,11 +8,24 @@
     crossorigin="anonymous"></script>
     <!-- <script type="text/javascript" src='data.js'></script> -->
     </head>
-    <body onload="javascript:jumpScroll()">
+
+    <body>
         <script>
             $(window).on("load",function(){
                 $(".main_area").width($(window).width())
             })
+
+
+            $('.sections').scroll(function(){
+                // console.log("hi")
+                $("#header").css({"box-shadow":"0px 4px 10px rgba(0,0,0,0.05)"})
+                if($('#contentContainer').position().top == 80){
+                    console.log('hit')
+                    $("#header").css({"box-shadow":"0px 0px 0px rgba(0,0,0,0.09)"})
+                }   
+            })
+
+
 
         </script>
 
@@ -44,9 +57,17 @@
             }
             
             html, body{
+                /*font-family: "Microsoft YaHei";*/
                 font-family:"XYZ";
                 max-width: 100%;
-                overflow-x: hidden;
+                overflow-x: hidden; 
+                /* disable scrollbar */
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+            }
+
+            body::-webkit-scrollbar {
+                display: none;
             }
 
             img{
@@ -97,7 +118,7 @@
                 height: 80px;
                 z-index: 1;
                 background-color: white;
-                box-shadow:0px 4px 20px rgba(0,0,0,0.09);
+                /* box-shadow:0px 4px 20px rgba(0,0,0,0.09); */
             }
             
             #headerlogo{
@@ -468,22 +489,22 @@
             }
 
             #bootCampClass{
-                background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b534a64279e9adc5bcbc8d50d8f336bd?imageView2);
+                background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_dd7d9434df225aa9136b6283486b5f85?imageView2);
                 background-size: cover;
             }
 
             #aiClass{
-                background-image: url(http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_a7c819e9f710c667b73d5dc75a7030e7?imageView2);
+                background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_5ec7c6681d1c080cb13639e9c106003a?imageView2);
                 background-size: cover;
             }
 
             #allClass{
-                background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_49fb4e49f39071013077a807732bdbcd?imageView2);
+                background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ce4b10a8eda02d3ad174d966d86187b4?imageView2);
                 background-size: cover;
             }
 
             #masterClass{
-                background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bd9a7823df742b73a693edc3e218e980?imageView2);
+                background-image: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_150e40217ad5734398dcd75a310275b6?imageView2);
                 background-size: cover;
             }
 
@@ -849,6 +870,7 @@
             iframe{
                 height:calc(100% + 10px);
                 width: calc(100% + 10px);    
+                overflow:hidden;
             }
 
 
@@ -951,15 +973,15 @@
             }
 
             #footerSocialLogo > img{
-                width:100%;
-                margin-right: 20px;
-                width: 30px;
+                /* width:100%; */
+                margin-right: 30px;
+                height: 60px;
             }
 
             #footerSocialLogo > a > img{
-                width:100%;
-                margin-right: 20px;
-                width: 30px;
+                /* width:100%; */
+                margin-right: 30px;
+                height: 60px;
             }
 
             #footerMenu{
@@ -1027,6 +1049,14 @@
 
             /* footer ends =============================================== */
 
+
+            #teacherInfo{
+                margin-top: 42px;
+                font-size: 24px;
+                font-family: 'XYZL';
+                font-weight: 290;
+                line-height:180%;
+            }
         </style>
 
         
@@ -1037,7 +1067,9 @@
             <div id="headerlogo"><a href="./home.html"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
             <div id="menu">
                 <div>
-                    <input type='text' id='search' placeholder="processing"> 
+                    <form id="form" action="./courseList.html">
+                        <input type='text' id='search' name='filter' placeholder="processing"> 
+                    </form>
                 </div>
 
 
@@ -1056,32 +1088,30 @@
             </div>
         </div>
         <!-- end of header  -->
-
         <div id="loginPopupBg">
             <div id="loginPopup">
                 <div class="closeTab"></div>
                 <div class="loginContent">
-                    <div class="loginText">微信/QQ登陆</div>
+                    <div class="loginText"><span class="cn">微信登陆</span><span class="eng">WeChat Login</span></div>
                     <div class="loginImg"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d0df37497ebafdf8a7a9fc4a6071ad8b?imageView2"></div>
-                    <div class="loginText">请打开微信/QQ扫描二维码登陆</div>
-                    <div class="loginTextSmall">（首次登陆成功即完成注册）</div>
+                    <div class="loginText"><span class="eng">Scan Code With WeChat Complete Login</span><span class="cn">请打开微信扫描二维码登陆</span></div>
+                    <div class="loginTextSmall"><span class="cn">（首次登陆成功即完成注册）</span> <span class="eng">(Login to Complete Sign up)</span></div>
                 </div>
             </div>
         </div>
         
-
         <div id='menuPopUp'>
             <div id='menuPopUpContents'>
                 <div id='menuButtonContainer'>
-                    <a href="./courselist.html"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
-                    <a href="./about.html"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
-                    <a href="./news.html"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
-                    <a href="./blogs.html"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
-                    <a href="./about.html#advisorsContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
+                    <a href="./courseList"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
+                    <a href="./about"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
+                    <a href="./news"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
+                    <a href="./blogs"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
+                    <a href="./about#advisorsContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
                 </div> 
-    
+        
                 <div id='menuCategoryContainer'>
-                    <a class="cursorPointer" href="./courseList.html">
+                    <a class="cursorPointer" href="./courseList">
                         <div class='menuCategory' id="allClass">
                             <div>
                                 <span class="cn">全部课程</span>
@@ -1089,7 +1119,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="cursorPointer" href="./courseList.html">
+                    <a class="cursorPointer" href="./courseList">
                         <div class='menuCategory' id="aiClass">
                             <div>
                                 <span class="cn">快速筑基班</span>
@@ -1097,7 +1127,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="cursorPointer" href="./courseList.html">
+                    <a class="cursorPointer" href="./courseList">
                         <div class='menuCategory' id="masterClass">
                             <div>
                                 <span class="cn">大师班</span>
@@ -1105,7 +1135,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="cursorPointer" href="./courseList.html">
+                    <a class="cursorPointer" href="./courseList">
                         <div class='menuCategory' id="bootCampClass">
                             <div>
                                 <span class="cn">冲刺营</span>
@@ -1114,10 +1144,10 @@
                         </div>
                     </a>
                 </div>
-    
-    
+        
+        
                 <div id='menuSoftwareContainer'>
-                    <a class="cursorPointer" href="./courseList.html?filter=td">
+                    <a class="cursorPointer" href="./courseList?filter=td">
                         <div class='software'>
                             <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7087f5df4e170bebc4a04b354ecb3326?imageView2'> 
                             <div class='softwareDescription'>
@@ -1131,7 +1161,7 @@
                     </a>
                     
                     
-                    <a class="cursorPointer" href="./courseList.html?filter=unity">
+                    <a class="cursorPointer" href="./courseList?filter=unity">
                         <div class='software'>
                             <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6a9a77d5b3c9675c16167fe8d2c7766f?imageView2'> 
                             <div class='softwareDescription'>
@@ -1144,7 +1174,7 @@
                         </div>
                     </a>
                     
-                    <a class="cursorPointer" href="./courseList.html?filter=unreal">
+                    <a class="cursorPointer" href="./courseList?filter=unreal">
                         <div class='software'>
                             <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fb9262b4ac760ea1c2b8af813272b48e?imageView2'> 
                             <div class='softwareDescription'>
@@ -1156,8 +1186,8 @@
                             </div>
                         </div>
                     </a>
-    
-                    <a class="cursorPointer" href="./courseList.html?filter=processing">
+        
+                    <a class="cursorPointer" href="./courseList?filter=processing">
                         <div class='software'>
                             <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fc889440b6caa0f1c0e430bbe4176df9?imageView2'> 
                             <div class='softwareDescription'>
@@ -1169,8 +1199,8 @@
                             </div>
                         </div>
                     </a>
-    
-                    <a class="cursorPointer" href="./courseList.html?filter=p5">
+        
+                    <a class="cursorPointer" href="./courseList?filter=p5">
                         <div class='software'>
                             <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9cc784f659f8498a1a1d563758feaa5d?imageView2'> 
                             <div class='softwareDescription'>
@@ -1182,9 +1212,9 @@
                             </div>
                         </div>
                     </a>
-    
-
-                    <a class="cursorPointer" href="./courseList.html?filter=max">
+        
+        
+                    <a class="cursorPointer" href="./courseList">
                         <div class='software'>
                             <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f647742a09d5fbe44d69d0a497b05ead?imageView2'> 
                             <div class='softwareDescription'>
@@ -1196,8 +1226,8 @@
                             </div>
                         </div>
                     </a>
-    
-                    <a class="cursorPointer" href="./courseList.html?filter=of">
+        
+                    <a class="cursorPointer" href="./courseList">
                         <div class='software'>
                             <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_094f651765e5162a3a7aa953faa18311?imageView2'> 
                             <div class='softwareDescription'>
@@ -1209,8 +1239,8 @@
                             </div>
                         </div>
                     </a>
-
-                    <a class="cursorPointer" href="./courseList.html?filter=js">
+        
+                    <a class="cursorPointer" href="./courseList?filter=js">
                         <div class='software'>
                             <img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> 
                             <div class='softwareDescription'>
@@ -1224,20 +1254,20 @@
                     </a>
                     
                 </div>
-    
+        
                 <div id="weChatCodeMenu"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
-    
+        
                 <div id='menuSocialContainer'>
                     <div><img id='showCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1e150b94ecd5b631b3ebea4157f66c4?imageView2'></div>
                     <div><a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5f3de3726fafd5fec8227fdb837ff092?imageView2'></a></div>
                     <div><a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'></a></div>
                     <div><a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'></a></div>
                 </div>
-    
+        
             </div>
-       
+        
         </div>
-
+        
 
 
 
@@ -1282,7 +1312,7 @@
                     <div class='myCard course'>
                         <a href="./courseList.html?filter=ai">                        
                             <div>
-                                <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2401aaf19be427b1a3b10e7adb5b63ec?imageView2'>
+                                <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3651a5bd2bad2b12717a8e80069baa6e?imageView2'>
                             </div>
                         </a>
                         <div class='cardDescription'>
@@ -1294,7 +1324,7 @@
                     <div class='myCard course'>
                         <a href='./courseList.html?filter=xr'>                        
                             <div>
-                                <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3651a5bd2bad2b12717a8e80069baa6e?imageView2'>
+                                <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_5f4d603b0123dfd39aadbc63f96fb951?imageView2'>
                             </div>
                         </a>
                         <div class='cardDescription'>
@@ -1306,7 +1336,7 @@
                     <div class='myCard course'>
                         <a href='./courseList.html?filter=nft'>                        
                             <div>
-                                <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_90542fd5f32dede808afa7ba11720498?imageView2'>
+                                <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0f37cae07156d00b6c03dc4b358b2e9b?imageView2'>
                             </div>
                         </a>
                         <div class='cardDescription'>
@@ -1318,7 +1348,7 @@
                     <div class='myCard course'>
                         <a href='./courseList.html?filter=ux'>                        
                             <div>
-                                <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_74a4dda233874f92dd45f0f8cf44d5dd?imageView2'>
+                                <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_dc90bb0a096473c294451531967b1581?imageView2'>
                             </div>
                         </a>
                         <div class='cardDescription'>
@@ -1341,10 +1371,16 @@
                     <div class='header1'>ADVISORS</div>
                     <div class='header3'>顾问专家</div>
                 </div>
+
+                <div id="teacherInfo">
+                    <span class="cn">由全球TOP10名校教授及国际知名艺术家组成的全明星导师团队，将深厚理论与前沿技术巧妙融合，为你量身打造独具一格的名校教学氛围和沉浸式实操体验</span>
+                    <span class="eng">An all-star mentor team composed of professors from the world's top 10 schools and internationally renowned artists, skillfully integrates artistic theories with cutting-edge technologies to create a unique teaching atmosphere and immersive practical experience for you.</span>
+
+                </div>
         
                 <div class='cardsContainer' id="advisorsCardContainer">
                     <div class='myCard advisor'>
-                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_363d5d91f589a91aa67994a16eaea651?imageView2'></div>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2f1faed439333b3eb0ebcd6de504a2dc?imageView2'></div>
                         <div class='cardDescription'>
                             <div>
                                 <div class='header2 header2Resize'>Gene Kogan</div>
@@ -1353,15 +1389,18 @@
                             
                             <div>
                                 <div class='advisorTitle'>
-                                    纽约大学特聘研究生导师<br/>
-                                    人工智能艺术家
+                                    <span class="cn">纽约大学特聘研究生导师</span>
+                                    <span class="eng">Adjunct Instructor at NYU </span>
+                                    <br/>
+                                    <span class="cn">人工智能艺术家</span>
+                                    <span class="eng">AI Artist</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- end of card 1 -->
                     <div class='myCard advisor'>
-                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bbfee7b127fbd87a702a3b92eedaa14f?imageView2'></div>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a53c654be8cde519c843191a3d136d93?imageView2'></div>
                         <div class='cardDescription'>
                             <div>
                                 <div class='header2 header2Resize'>YUU</div>
@@ -1370,15 +1409,18 @@
                             
                             <div>
                                 <div class='advisorTitle'>
-                                    皇家艺术学院硕士<br/>
-                                    AR开发者
+                                    <span class="cn">皇家艺术学院硕士</span>
+                                    <span class="eng">Royal College of Art</span>
+                                    <br/>
+                                    <span class="cn">AR开发者</span>
+                                    <span class="eng">AR Developer</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- end of card 2 -->
                     <div class='myCard advisor'>
-                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_58c01e3ea4323f8414ae392c1f6b99d8?imageView2'></div>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7d13a56b8b4b6ee89389015a9c4dfc2d?imageView2'></div>
                         <div class='cardDescription'>
                             <div>
                                 <div class='header2 header2Resize'>Xiaotong Guo</div>
@@ -1387,15 +1429,17 @@
                             
                             <div>
                                 <div class='advisorTitle'>
-                                    分号C联合创始人<br/>
-                                    新媒体艺术家
+                                    <span class='cn'>分号C联合创始人</span>
+                                    <span class='eng'>Co-founder of Semicolon C</span><br/>
+                                    <span class='cn'>新媒体艺术家</span>
+                                    <span class='eng'>New Media Artist</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- end of card 3 -->
                     <div class='myCard advisor'>
-                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7cc75d543efbafa566713c6eee08cc41?imageView2'></div>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8c44ba4a882ddc1cc2e93441d75e96d4?imageView2'></div>
                         <div class='cardDescription'>
                             <div>
                                 <div class='header2 header2Resize'>Kyle Li</div>
@@ -1404,8 +1448,10 @@
                             
                             <div>
                                 <div class='advisorTitle'>
-                                    帕森斯设计学院副教授<br/>
-                                    互动与体验设计师
+                                    <span class='cn'>帕森斯设计学院副教授</span>
+                                    <span class='eng'>Adjunct Professor at Parsons</span><br/>
+                                    <span class='cn'>互动与体验设计师</span>
+                                    <span class='eng'>Interaction Experience Designer</span>
                                 </div>
                             </div>
                         </div>
@@ -1413,7 +1459,7 @@
                     <!-- end of card 4 -->
 
                     <div class='myCard advisor'>
-                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bf7912cfc99e7c32eda243d230ca2d39?imageView2'></div>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3b34b6eace7109020050856964c467e0?imageView2'></div>
                         <div class='cardDescription'>
                             <div>
                                 <div class='header2 header2Resize'>Chen Zeng</div>
@@ -1422,8 +1468,12 @@
                             
                             <div>
                                 <div class='advisorTitle'>
-                                    中国美术学院客座讲师<br/>
-                                    90 后新生代新媒体视觉艺术家
+                                    <span class='cn'>中国美术学院客座讲师</span>
+                                    <span class='eng'>Lecturer at China Academy of Art</span>
+                                    <br/>
+                                    <span class='cn'>90 后新生代新媒体视觉艺术家</span>
+                                    <span class='eng'>Emerging New Media Artist</span>
+
                                 </div>
                             </div>
                         </div>
@@ -1431,7 +1481,7 @@
                     <!-- end of card 5 -->
 
                     <div class='myCard advisor'>
-                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8d55a7e2663e25f15a855d3a71d92a02?imageView2'></div>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_43004c2058f89de159ed76691d6433ce?imageView2'></div>
                         <div class='cardDescription'>
                             <div>
                                 <div class='header2 header2Resize'>Ziv Cohen</div>
@@ -1440,8 +1490,12 @@
                             
                             <div>
                                 <div class='advisorTitle'>
-                                    芝加哥艺术大学讲师<br/>
-                                    多媒体跨学科装置艺术家
+                                    <span class='cn'>芝加哥艺术大学讲师</span>
+                                    <span class='eng'>Lecturer at SAIC</span>
+                                    <br/>
+                                    <span class='cn'>多媒体跨学科装置艺术家</span>
+                                    <span class='eng'>Multimedia Installation Artist</span>
+
                                 </div>
                             </div>
                         </div>
@@ -1449,7 +1503,7 @@
                     <!-- end of card 6 -->
 
                     <div class='myCard advisor'>
-                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a0c7785f241df9ad4296744e5c58d631?imageView2'></div>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_5942d55fb8592cfc7f9ad2b20bc4b570?imageView2'></div>
                         <div class='cardDescription'>
                             <div>
                                 <div class='header2 header2Resize'>Jayson Haebich</div>
@@ -1458,15 +1512,19 @@
                             
                             <div>
                                 <div class='advisorTitle'>
-                                    剑桥艺术学院副讲师<br/>
-                                    国际激光艺术家
+                                    <span class='cn'>剑桥艺术学院副讲师</span>
+                                    <span class='eng'>Lecturer at Cambridge College of Art</span>
+                                    <br/>
+                                    <span class='cn'>国际激光艺术家</span>
+                                    <span class='eng'>International Laser Artist</span>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- end of card 7 -->
                     <div class='myCard advisor'>
-                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2ce74eca6459b1b5d01b66749ac793c3?imageView2'></div>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1484159930019957884bdce11399f52d?imageView2'></div>
                         <div class='cardDescription'>
                             <div>
                                 <div class='header2 header2Resize'>Flower Wang</div>
@@ -1475,15 +1533,19 @@
                             
                             <div>
                                 <div class='advisorTitle'>
-                                    中国美术学院硕士<br/>
-                                    新媒体艺术家
+                                    <span class='cn'>中国美术学院硕士</span>
+                                    <span class='eng'>Master of China Academy of Art</span>
+                                    <br/>
+                                    <span class='cn'>新媒体艺术家</span>
+                                    <span class='eng'>New Media Artist</span>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- end of card 8 -->
                     <div class='myCard advisor'>
-                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f3875730117091be557e2a053a9180ea?imageView2'></div>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a21f9ad55de56482d1344c9b314c345d?imageView2'></div>
                         <div class='cardDescription'>
                             <div>
                                 <div class='header2 header2Resize'>Antonio Minonne</div>
@@ -1492,15 +1554,19 @@
                             
                             <div>
                                 <div class='advisorTitle'>
-                                    HAAC联合创始人<br/>
-                                    空间设计师
+                                    <span class='cn'>HAAC联合创始人</span>
+                                    <span class='eng'>Co-founder at HAAC Studio</span>
+                                    <br/>
+                                    <span class='cn'>空间设计师</span>
+                                    <span class='eng'>Space Designer</span>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- end of card 9 -->  
                     <div class='myCard advisor'>
-                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bfd4bc90a95e7956494554685129ee60?imageView2'></div>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ff364a265b14ad7c98e47d9321cf4ea3?imageView2'></div>
                         <div class='cardDescription'>
                             <div>
                                 <div class='header2 header2Resize'>Joyce Zheng</div>
@@ -1509,8 +1575,12 @@
                             
                             <div>
                                 <div class='advisorTitle'>
-                                    帕森斯设计与技术硕士<br/>
-                                    跨媒体设计师和互动设计师
+                                    <span class='cn'>帕森斯设计与技术硕士</span>
+                                    <span class='eng'>Parsons Design and Technology</span>
+                                    <br/>
+                                    <span class='cn'>跨媒体设计师和互动设计师</span>
+                                    <span class='eng'>Interaction Designer</span>
+
                                 </div>
                             </div>
                         </div>
@@ -1527,15 +1597,19 @@
                             
                             <div>
                                 <div class='advisorTitle'>
-                                    上海音乐学院客座讲师<br/>
-                                    MaxMSP认证教师
+                                    <span class='cn'>上海音乐学院客座讲师</span>
+                                    <span class='eng'>Lecturer Shanghai Conservatory of Music</span>
+                                    <br/>
+                                    <span class='cn'>MaxMSP认证教师</span>
+                                    <span class='eng'>MaxMSP Certified Teacher</span>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- end of card 11 -->
                     <div class='myCard advisor'>
-                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e0762a9615fbd9c88a820924bdb655ff?imageView2'></div>
+                        <div><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_c399f0eaa94e2dec2e56a60b6d554108?imageView2'></div>
                         <div class='cardDescription'>
                             <div>
                                 <div class='header2 header2Resize'>Jungu Guo</div>
@@ -1544,8 +1618,12 @@
                             
                             <div>
                                 <div class='advisorTitle'>
-                                    帕森斯设计与技术硕士<br/>
-                                    芝加哥科技工业博物馆创意工程师
+                                    <span class='cn'>帕森斯设计与技术硕士</span>
+                                    <span class='eng'>Parsons Design and Technology</span>
+                                    <br/>
+                                    <span class='cn'>芝加哥科技工业博物馆创意工程师</span>
+                                    <span class='eng'>Creative Engineer</span>
+
                                 </div>
                             </div>
                         </div>
@@ -1594,7 +1672,8 @@
                 </div>
 
                 <div id="map">
-                    <iframe src="https://j.map.baidu.com/be/IatJ" style="position:relative; top: -10px; left: -10px;" ></iframe>
+                    <!-- src="https://j.map.baidu.com/be/IatJ" -->
+                    <iframe  src="about:blank" style="position:relative; top: -10px; left: -10px; overflow: hidden;" scrolling="no"></iframe>
                 </div>
             </div>
 
@@ -1609,7 +1688,7 @@
                 <div class='cardsContainer' id='socialMediaContents'>
                     <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9">
                         <div class='socialCard shadow' id="wechatSocial">
-                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0c24f8bdc2fd62b054f60f47ed948e87?imageView2'>
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1c7d5b13aace3ddf7d0d740566301e9a?imageView2'>
                             <div class="SocaialCardText">
                                 <span class="socialHeader1">
                                     <span class="cn">#小宇宙</span>
@@ -1624,7 +1703,7 @@
                     </a>
                     <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI4NzQzMjYwMQ==&action=getalbum&album_id=2173312120812027907#wechat_redirect">
                         <div class='socialCard shadow'>
-                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_80673e5b8bf9b7b28cf9fdacffbf2bd2?imageView2'>
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bc43c2cbd46787b9104ceb9de3daab74?imageView2'>
                             <div class="SocaialCardText">
                                 <span class="socialHeader1">
                                     <span class="cn">#微信公众号</span>
@@ -1642,7 +1721,7 @@
                     <div class='socialCard' id='socialCard3'>
                         <a href="https://weibo.com/u/7126820846">
                             <div class="social3Text ">
-                                <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_94f50d651af413ff63a38f574f081750?imageView2'> 
+                                <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_982cf9ff321b818d852b8e01166b2597?imageView2'> 
                                 <div class="SocaialCardText">
                                     <span class="socialHeader1">
                                         <span class="cn">#微博</span>
@@ -1656,9 +1735,9 @@
                             </div>
                         </a>
                         
-                        <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=409850">
+                        <a href="https://space.bilibili.com/25081666">
                             <div class="social3Text ">
-                                <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ff71f5c98da627465610fece1a90dba6?imageView2'>
+                                <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7bc391c6a4f3c2bcb90bf09d1207a209?imageView2'>
                                 <div class="SocaialCardText">
                                     <span class="socialHeader1">
                                         <span class="cn">#哔哩哔哩</span>
@@ -1677,43 +1756,54 @@
             </div>
 
 
-
-            
-    <div class='' id="footer">
-        <div>
-            <div id='footerLogo'><a href="./home.html"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
-            <div id='footerMenu'>
+            <div class='' id="footer">
                 <div>
-                    <div class='footerMenuItem'><a href="./courselist.html"><span class='eng'>Course</span><span class="cn">课程</span></a></div>
-                    <div class='footerMenuItem'><a href="./aboutus.html"><span class='eng'>Career</span><span class="cn">职业</span></a></div>
-                    <div class='footerMenuItem'><a href="./news.html"><span class='eng'>News</span><span class="cn">新闻</span></a></div>
-                    <div class='footerMenuItem'><a href="./blogs.html"><span class='eng'>Blog</span><span class="cn">博客</span></a></div>
-                </div>
-
-                <div>                
-                    <div class='footerMenuItem'><a href="./aboutus.html"><span class='eng'>About Us</span><span class="cn">关于我们</span></a></div>
-                    <div class='footerMenuItem'><a href="./aboutus.html#advidorsContainer"><span class='eng'>Advisors</span><span class="cn">导师信息</span></a></div>
-                    <div class='footerMenuItem'><a href="https://jinshuju.net/f/YzGMtG"><span class='eng'>Join Us</span><span class="cn">加入我们</span></a></div>    
-                </div>
-            </div>
-
-
-            <div id='footerSocial'>
-                <div id='footerCode'>
-                    <div><span class="cn">关注我们</span><span class="eng">Follow Us</span></div>
-                    <div id='footerSocialLogo'>
-                        <img id='displayCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_c3fda0b5b340c124079c6e9e4d0099ef?imageView2'>
-                        <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_40eaac48e1a318aef9ee5339d733ee29?imageView2'></a>
-                        <a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_378188cd01c79c408f43c6f96e9887fc?imageView2'></a>
-                        <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2feb65fd9eeacf98cc6e7cd2b939a1ce?imageView2'></a>
-                        <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9"><img src=" "></a>
+                    <div id='footerLogo'><a href="./home"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
+                    <div id='footerMenu'>
+                        <div>
+                            <div class='footerMenuItem'><a href="./courseList"><span class='eng'>Course</span><span class="cn">课程</span></a></div>
+                            <div class='footerMenuItem'><a href="./about"><span class='eng'>Career</span><span class="cn">职业</span></a></div>
+                            <div class='footerMenuItem'><a href="./news"><span class='eng'>News</span><span class="cn">新闻</span></a></div>
+                            <div class='footerMenuItem'><a href="./blogs"><span class='eng'>Blog</span><span class="cn">博客</span></a></div>
+                        </div>
+        
+                        <div>                
+                            <div class='footerMenuItem'><a href="./about"><span class='eng'>About Us</span><span class="cn">关于我们</span></a></div>
+                            <div class='footerMenuItem'><a href="./about#advidorsContainer"><span class='eng'>Advisors</span><span class="cn">导师信息</span></a></div>
+                            <div class='footerMenuItem'><a href="https://jinshuju.net/f/YzGMtG"><span class='eng'>Join Us</span><span class="cn">加入我们</span></a></div>    
+                        </div>
                     </div>
-                    <div id="weChatCode"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
+        
+        
+                    <div id='footerSocial'>
+                        <div id='footerCode'>
+                            <div><span class="cn">关注我们</span><span class="eng">Follow Us</span></div>
+                            <div id='footerSocialLogo'>
+                                <!-- wechat -->
+                                <img id='displayCode' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ca7e148ffaa0dddeedffb10f7c80a392?imageView2'>
+                                <!-- bilibili -->
+                                <a href="https://space.bilibili.com/25081666">
+                                    <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d3031dd5e026a1c35906ee627b3021ce?imageView2'>
+                                </a>
+                                <!-- weibo -->
+                                <a href="https://weibo.com/u/7126820846">
+                                    <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_4a425023fccb27c3c816c64ec67c67d5?imageView2'>
+                                </a>
+                                <!-- 小红书 -->
+                                <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515">
+                                    <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e35086209607f49957993a682e0025c4?imageView2'>
+                                </a>
+                                <!-- 小宇宙 -->
+                                <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9">
+                                    <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0a3342aa250a760309903f3fe3026fc4?imageView2">
+                                </a>
+                            </div>
+                            <div id="weChatCode"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
+                        </div>
+                        
+                    </div>
                 </div>
-                
             </div>
-        </div>
-    </div>
 
 
 
@@ -1722,10 +1812,6 @@
 
 
         <script>
-
-            function jumpScroll() {
-                window.scroll(0,0); 
-            }
 
             let displayMenu = false;
 
@@ -1775,6 +1861,23 @@
             }, function(){
                 $('#weChatCode').hide()
             })
+
+            let iframeLoaded = false 
+            $('.sections').scroll(function(){
+                let scrollPos = $('.sections').scrollTop()
+
+// $(window).on('scroll',)
+                console.log(scrollPos)
+                if(scrollPos > $('#map').position().top - 100){
+                    if( !iframeLoaded ){
+                        console.log('display ifroma')
+                        $('iframe').attr('src', 'https://j.map.baidu.com/be/IatJ')
+                        iframeLoaded = true 
+                    }
+                }
+            })
+
+
         </script>
 
     </body>
