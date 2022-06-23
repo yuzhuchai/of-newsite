@@ -1,5 +1,3 @@
-
-
 // let unrealStylized = {
 //     // 以下是文字内容填充
 // classID: "unrealStyle(不要修改)",
@@ -500,7 +498,7 @@ studentWork: ['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_944e3f95
 
 let ai = {
         // 以下是文字内容填充
-    classID: "unityVR(不要修改)",
+    classID: "ai",
     classNameEng:'MASTERING GENERATIVE AI ART WITH P5.JS',
     classNameCn: 'AI生成艺术大师班',
     price:'6718',
@@ -650,7 +648,8 @@ let ai = {
                 "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_a36b80bd33095bd2960c1470da13ef3b?imageView2",
                 "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_70eee613825301fe57aaf1f389073b19?imageView2"],
     mentorImg: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_075552dba03fb0cad22cfed7c274a879?imageView2',
-    mentorVideo:"精彩瞬间视频 url",
+    mentorVideo:"http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_91229adfd4cdc0e523a5e9685a05a15e",
+    mentorPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f61b9da85212cd2ca27898ac1dbb08b9?imageView2',
     teacherCase:['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_b548a6c103af6e8f638cb1fce1366ee0?imageView2',
                 'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_69c5f266d9d3c104e366affb6568950c?imageView2',
                 'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d5aa22c11efb3808b5dfe7b10f814a51?imageView2',
@@ -673,9 +672,8 @@ let ai = {
 }
 
 
-
 let unrealLandScape = {
-    classID: "unityVR(不要修改)",
+    classID: "unrealLandScape",
     classNameEng:'Environment&Character Art with UE5',
     classNameCn: 'UE5场景人物大师班',
     price:'5980',
@@ -847,7 +845,7 @@ studentWork: ['http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_acfa6d51
 
 let tdArduino = {
     // 以下是文字内容填充
-classID: "unityVR(不要修改)",
+classID: "tdArduino",
 classNameEng:'Mastering Interactive Installation with TouchDesigner',
 classNameCn: 'TD交互装置大师班',
 price:'6718',
@@ -997,7 +995,8 @@ showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_7db6a541fca
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_4a38395e918c9ca53be1dd71c7074176?imageView2",
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_2b272269473b086aed75af9a226dbb6b?imageView2"],
 mentorImg: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e763221160efaee351111a1510ec1032?imageView2',
-mentorVideo:"精彩瞬间视频 url",
+mentorVideo:"http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_10b1121e0dc7afa2cf00c9a27fe4272a",
+mentorPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7526ad8babdebb6c97c1410c35dd6455?imageView2',
 teacherCase:['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_28cb813220ddb23dcbff73625e761f01?imageView2',
             'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_098216a3d93186d90f91ac08a0d7c8a9?imageView2',
             'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_636e63f562545cbaf50ff13948b52a21?imageView2',
@@ -1014,7 +1013,7 @@ studentWork: ['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_efbb8f83
 
 let museum = {
     // 以下是文字内容填充
-    classID: "unityVR(不要修改)",
+    classID: "museum",
     classNameEng:'Mastering Interaction Design for Museum',
     classNameCn: '博物馆体验设计大师班',
     price:'6718',
@@ -1200,9 +1199,178 @@ let museum = {
                 
 }
 
-// 小晴老师照片：
-// 小晴老师视频：
-// 小晴老师poster：
+let interactiveLight = {
+        // 以下是文字内容填充
+    classID: "interactiveLight",
+    classNameEng:'MASTERING INTERACTIVE LIGHTING WITH PROCESSING',
+    classNameCn: '灯光互动编程大师班',
+    price:'6718',
+    installmentValue:'560',
+    installmentTime: "12",
+    classSlogan:'制作灯光交互艺术作品，打造梦幻绚丽光影游戏',
+    classHeader:"掌握processing创意编程技术<br/>成为炙手可热的交互设计师",
+    classSeries:'AI元宇宙课程系列',
+    classSeriesLink:'课程系列链接',
+    prepClass:'Processing创意编程指南',
+    prepClassLink:'前置课程链接',
+    requirements:'课程硬件需求',
+    classOverview: '你想成为交互设计师吗？你想跨入锋尚文化、良业landsky和LDPi等灯光互动设计行业顶尖企业的大门吗？你想创作出视觉震撼的灯光交互艺术作品吗？那么快加入灯光互动编程大师班吧！本课程由全球排名TOP3的剑桥大学艺术学院副讲师杰森·哈比奇老师亲自授课。你可以零基础学习具有前瞻性的创意编程工具processing，迅速掌握和运用多元灯光互动方式，精通目前市面上最流行的音画互动、数据可视化及体感互动技术，独立制作复杂灯光系统装置艺术作品。最终你会成为灯光交互设计师，入职大型灯光设计企业，或接灯光交互相关项目以及独立办展获得丰盈收入。',
+    mentorNameEng:'Jayson Haebich',
+    mentorNameCn:'杰森 哈比奇',
+    mentorTitle:["国际激光艺术家",
+                "伦敦大学金史密斯学院计算机艺术硕士",
+                "剑桥艺术学院副讲师"
+            ],
+    mentorText:'Jayson老师目前是一名活跃在上海、香港和伦敦的墨尔本研究员、VJ和国际激光艺术家。他热衷于在艺术环境中使用最新的技术创作，将科技与艺术进行结合，利用灯光探索空间并创作沉浸式体验。通过激光、投影与其他光为基础的媒介，增强色彩与空间的表象，其作品的核心实践，是与所环境融合在一起，并增加所在物理空间的形式感。他的作品曾于英国索尔兹伯里大教堂，伦敦萨默塞特府，英国电影协会，以及中国大剧院等全球各地进行展出。',
+    freeClassTitle:'杰森老师公开课「DMX灯光交互装置大师班」',
+    studentReviewMain: {
+        name: "刘同学",
+        title:'灯光设计师',
+        review: "很开心能参加Jayson老师的课程，老师讲得很通俗易懂，课程内容从入门到最后作品呈现都包含了进去，还是比较全套的。我本职是一名灯光设计师，主要为各大舞台或活动设计灯光互动装置。虽然有过很多项目经验，但是我还是对国外的一些更前沿的设计和理论很感兴趣。Jayson老师本身也是我非常喜欢的一名艺术家，所以我毫不犹豫地选择了他的课程进行学习。实际上，灯光互动设计在国内还算是比较小众的领域，所以可选择的课也不多，能让我这种老油条感兴趣的那就更少了。由于疫情原因，线下教学的一些内容都改为了线上。然而老师并没有让我们闭门造车，反而给我们提供了新的解决方案，用模拟器进行大型灯光互动设计。这也让我体验了一把赶潮儿的感觉，做这行的最重要的是头脑，其次重要的就是如何运用新技术输出创意。这些，我在这里都有了更深的体会，谢谢一起学习的同学，也谢谢幸苦解答的老师。",
+    },
+    studentReview:[
+            {
+                name: '邹同学',
+                title:'往期学员',
+                review:'讲解得很清晰，作为小白，看这个其实就可以了，能直接入门，理论也比较扎实，实践上也很有创新，总体上不亏。'
+            },
+            {
+                name: '祁同学',
+                title:'往期学员',
+                review:'小时候就很喜欢电视上那种很漂亮的灯光，没想到长大后真的在学校里学这个专业，可惜学校教的教程都比较老旧，所以课后也来这补一补新知识~'
+            },
+            {
+                name: '李同学',
+                title:'往期学员',
+                review:'我是一名策展人，本来想把展览中的灯光互动部分外包出去，后来想了想，还是自己走个全过程更有成就感一些，希望我能成功吧！ '
+            },
+            {
+                name: '钱同学',
+                title:'往期学员',
+                review:'老师虽然是外国人，但是沟通起来还是很便利的，我英语不太好，主要是靠助教帮忙进行沟通，其实也没感觉有什么太大障碍。'
+            },
+            {
+                name: '唐同学',
+                title:'往期学员',
+                review:'在准备出国的作品集，因为想往互动装置这块继续深造，所以把能学的互动装置都学了个遍，灯光也在我的计划中~'
+            },
+            {
+                name: '张同学',
+                title:'往期学员',
+                review:'本来以为前面的那些编程会很枯燥，没想到其实挺好玩的，整套学下来，突然觉得自己可以了！'
+            },
+    ],
+    syllabus: [
+        {
+            title: '入门创意编程',
+            description: '制作鼠标互动的绘画工具，掌握灯光装置历史沿袭及颜色理论，运用mouseX和mouseY进行生成互动',
+            img:"http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_4a8c0d701ae6728f17646296e07b1eea?imageView2",
+            fullSyllabus:["掌握Processing基础代码",
+            "掌握Processing中的颜色处理、图形绘制和鼠标互动",
+            "掌握DMX for Artist库的安装",
+            ]
+        },
+        {
+            title:'掌握程序思维',
+            description:'制作基于算法思维的生成作品，掌握运用广泛的复杂函数运算和For循环逻辑，运用Processing生成作品',
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_da16cc9ef1703abb2adcf6628f277ecc?imageView2',
+            fullSyllabus:["掌握代码思维",
+            "掌握If判断语句和自定义函数",
+            "掌握Processing中制作动画效果",
+            ]
+        },
+        {
+            title:'掌握DMX灯光通讯',
+            description:'制作由鼠标控制的灯光装置，掌握DMX灯光通讯协议和Map函数，运用代码实现鼠标与灯光的互动',
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_f2cba6d7ac32e8d75c57556f03a94c87?imageView2',
+            fullSyllabus:["掌握DMX灯光通讯协议和Map函数",
+            "掌握利用代码点亮灯光的方法",
+            "掌握for循环",
+            ]
+        },
+        {
+            title:'创作声控灯光装置',
+            description:'制作声控灯光表演作品，掌握Processing中的Sound和Minim库，运用模拟器进行灯光装置设计',
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_6bb6d9535005bb5522666f246a441bb0?imageView2',
+            fullSyllabus:["掌握Sound和Minim库",
+            "掌握音频的加载和麦克风的使用",
+            "掌握FFT快速傅里叶变换算法",
+            ]
+        },
+        {
+            title:'创作算法灯光装置',
+            description:'制作动态灯光艺术作品，掌握多盏灯光的链接控制、noise及三角函数等算法，运用DMXFixture和 DMXParam打造灯光动画',
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_60450d1094b34c11b86c4485f1f64824?imageView2',
+            fullSyllabus:["掌握多盏灯光的链接和控制",
+            "掌握Array数组、Noise以及三角函数算法",
+            "掌握模拟器的操作方法",
+            ]
+        },
+        {
+            title: "创作互动建筑灯装置",
+            description: '制作使用时间轴创作的灯光互动动画，掌握pixel Mapping像素映射和摇头灯的多种运动模式，运用模拟器进行结合建筑物的灯光装置创建',
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_b0865be32de92fb8587e2d3d6e85c442?imageView2',
+            fullSyllabus:["掌握摇头灯的多种运动模式",
+            "掌握Pixel Mapping像素映射",
+            "掌握模拟器中结合建筑物灯光装置的创建",
+            ]
+        },
+        {
+            title: '创作数据可视化灯光装置',
+            description: '制作数据可视化灯光艺术作品，掌握Processing中第三方API的使用，运用数据驱动实现数据可视化灯光互动',
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_6f46448065b651ee05450a017645f1e2?imageView2',
+            fullSyllabus:["掌握Processing中第三方API的使用",
+            "掌握数据的处理、筛选和转化",
+            "掌握实现数据驱动的方法",
+            ]
+        },
+        {
+            title:'创作互动激光装置',
+            description:'制作互动激光艺术作品，掌握激光的原理和使用安全事项，运用DMX和代码控制激光机和烟雾机',
+            img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_9beb10184be84ad92b6b865c2f12c2be?imageView2',
+            fullSyllabus:["掌握激光的原理和使用安全事项",
+            "掌握DMX和代码控制激光机和烟雾机的方法",
+            "拓展互动灯光编程的应用",
+            ]
+        }
+    ],
+
+    // 以下是图片内容填充
+    mainPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f7f4909046731e84a3d76f852c5b3e41?imageView2',
+    mainPosterMobile:'手机版海报url',
+    classVideo: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_1b939b6f736cbb8b7557ea3ddb6d55dd',
+    mentorPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_655298a20a5727a9859615d59a23fc60?imageView2',
+    videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_82c90fcdb4e9bb9eb88711872f527f7a?imageView2',
+    showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_486b15ab056a28ec68bc0ce9736ea40c?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_0f7f9c17b54a4819e67441f196d48692?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_5ce35f5492d0f1f79ca769fb64664d80?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_06f48eb473abc0c0ee4a94977f72e13d?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ce5fcf19574f8892bb9900af433e9c37?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_5e3ba80e616c9fa6de04f31d17dcf25d?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_cb216ce4add1726fa5a537593e93fc7e?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_900de04f3005ae5e07981bcdedfe093a?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_350d3d736b3fee69b52bca4eb3f811ba?imageView2",
+                "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_e623db1358c8a414bec538eed4c52069?imageView2"],
+    mentorImg: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_54b2acb899765bad970df4541802224b?imageView2',
+    mentorVideo:"http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_9c5178ae7be0dae7109f9a7ad4f08d1b",
+    mentorPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ad9a52eb5e763e683fef50c73c8eab9f?imageView2',
+    teacherCase:['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_1fb4293a06dc92b3a08fae56f0e09c42?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ba9f50fa6b23aab84dd0977c89d194a8?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_463becbf21ec4124db0a9324224c17e1?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c75f812d214a2fbf5d92f8a79494dbc6?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_a9117889066caa7d6946f00954d24be4?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_6b62039d87458bedf2f2726b28372fec?imageView2'],
+    studentWork: ['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_041e83caa367b276c32da9f4ed370def?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_7c338e2359135c631779eddb5a3c81ae?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_e6550e99c4df7efa7a2ebaf75af7f31f?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c081d67ca257f3b0022d0186833113f2?imageView2',
+                ],
+}
+
+
+
+
+
 
 
 let courseDisplay 

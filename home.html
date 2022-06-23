@@ -38,7 +38,7 @@ this is the first HTML code, load font and style!
 	$(window).on("load",function(){
 		$(".main_area").width($(window).width())
         courseWidth = $('.course').width();
-        courseHeight = courseWidth * 480/474
+        courseHeight = courseWidth * 480/474 + 50
         $('.course').height(courseHeight)
 
         careerWidth = $('.career').width();
@@ -56,7 +56,7 @@ this is the first HTML code, load font and style!
         courseWidth = $('.course').width();
         // console.log(courseWidth , "<-onresize")
                 // courseWidth = $('.course').width();
-        courseHeight = courseWidth * 480/474
+        courseHeight = courseWidth * 480/474 + 50
         $('.course').height(courseHeight)
 
         socialCard3Width = $('.socialCard3').width();
@@ -1024,6 +1024,15 @@ this is the first HTML code, load font and style!
         margin-top: 42px;
     }
 
+   #menuSocialContainer > div > img {
+        margin:5% ;
+        width: 90%;
+   }
+   #menuSocialContainer > div > a > img {
+        margin:5%;
+        width: 90%;
+   }
+
     #menuSocialContainer > div{
         width: 66px;
         height: 66px;
@@ -1069,401 +1078,7 @@ this is the first HTML code, load font and style!
 
 
 
-    @media screen and (max-width: 1660px){
-        #menuPopUpContents{
-            max-width: 90%;
-        }
-
-        .container{
-            max-width:90%;
-        }
-
-        .adContent{
-            max-width:31%;
-        }
-
-        .course{
-            max-width:31%;
-        }
-
-        .socialCard{
-            max-width: 31%;
-        }
-
-        .career{
-            max-width: 23%;
-        }
-
-        .advisor{
-            max-width: 23%;
-        }
-
-        #videoContainer{
-            min-width:946px;
-            min-height:532px;
-        }
-
-        #aboutDescription{
-            min-width:533px;
-        }
-
-        #footer{
-            max-width: 100%;
-        }
-        
-        #footer > div{
-            display: flex;
-            flex-direction: row;
-            width:100%;
-            margin-left: 5%;
-        }
-
-        #footerLogo{
-            min-width:21%;
-        }
-
-        #footerLogo > img{
-            width:100%;
-        }
-
-        .footerMenuItem{
-            margin: 0px 40px 30px 40px;
-        }
-
-        #footerSocial{
-            margin-left: 40px;
-            display: flex;
-        /*flex-direction: row;*/
-            align-items: flex-end;
-        }
-
-
-        .header2Resize{
-            font-size:2vw;
-            line-height:2vw;
-        }
-
-        .header3Resize{
-            font-size: 1vw;
-            line-height: 20px
-        }
-
-        .header1{
-            /*font-size: 1.5vw;*/
-            font-family: "XYZB";
-
-            font-weight: 700;
-            line-height: 40px;
-        }
-
-        .tag{
-            display:none;
-        }
-
-        .buttonMenu{
-            float:none;
-            display: inline-block;
-            text-align: center;
-        }
-
-
-    }
-
-
-
-
-    @media screen and (max-width: 767px){
-
-        #header{
-            width: 100%;
-        }
-        
-        #language{
-            display: none;
-        }
-
-        #adContainer{
-            display: block;
-        }
-
-        .adContent{
-            margin: 0 auto 20px auto;
-            min-width: 100%;
-            border-radius: 15px;
-            overflow:hidden;
-            /*margin-bottom:20px;*/
-        }
-
-        #courseHeader{
-            display: block;
-        }
-
-        #courseButtonContainer{
-            margin-top:20px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            row-gap:20px;
-            column-gap: 20px;
-            justify-content: space-between;
-            align-items: stretch;
-            margin-left:0px;
-        }
-
-        #courseButtonContainer > div {
-            flex-grow: 2;
-            margin-left: 0px;
-        }
-
-
-        .courseExtra{
-            display: none;
-        }
-
-        #courseDisplayContainer{
-            display: block;
-        }
-
-        .myCard{
-            /*min-width:100%;*/
-            margin-right:auto;
-            margin-left:auto;
-            min-width:100%;
-            /*min-width:320px;*/
-            margin-bottom: 30px;
-        }
-
-
-        .cardsContainer{
-            display:block;
-        }
-
-        #careerContainer{
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        #metaCareerContainer{
-            margin-top: 100px;
-        }
-
-
-        .career{
-            min-width:45%;
-            height: 280px;
-            /*min-height: 480px;*/
-        }
-
-        #aboutContainer{
-            display: block;
-        }
-
-        #aboutText{
-            margin-top: 49px;
-            max-width: 100%;
-        }
-
-
-
-        .newContent{
-            display: block;;
-        }
-
-        .advisor{
-            display: flex;
-            flex-direction: row;
-            height:100%;
-            /*max-height: 245px;*/
-        }
-
-        .advisor > div > img{
-            border-top-left-radius: 15px;
-            border-top-right-radius: 0px;
-            border-bottom-left-radius: 15px;
-        }
-
-
-
-        .advisor > .cardDescription{
-            margin:20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            /*flex-grow: 2;*/
-        }
-
-        .partner{
-            width: 45%;
-        }
-
-
-        .socialCard{
-            min-width:100%;
-            max-height:150px;
-            /*border: 1px solid black;*/
-        }
-
-
-
-        #footer{
-            max-width:100%;
-            /*display:none;*/
-        }
-
-        #footerLogo{
-            /*margin-left: 10px;*/
-            max-width:21%;
-        }
-
-        .footerMenuItem{
-            margin: 0px 20px 30px 20px;
-        }
-
-        #footerSocial{
-            margin-left: 20px;
-            display: flex;
-        /*flex-direction: row;*/
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        #footerSocialLogo > img{
-            margin-right: 10px;
-        }
-
-        #footerSocialLogo{
-            margin-top: 30px;
-            margin-left: 0px;
-        }
-
-
-
-        #newsContentContainer{
-            display: none;
-        }
-
-        #newsContentContainerMobile{
-            display: block;
-            /*height: 150px;*/
-        }
-
-        .newsMobileHeader{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .newsTitleMobile{
-            font-size: 25px;
-            font-family: "XYZB";
-
-            font-weight: 700;
-        }
-
-        .newDateMobile{
-            font-size: 20px;
-            font-family: "XYZL";
-
-            font-weight: 290;
-            color:#ACACAC;
-        }
     
-        .newsContentMobile{
-            font-size: 20px;
-            font-family: "XYZL";
-
-            font-weight: 290;
-        }
-
-        .newsContentMobile > span {
-            color:#ACACAC;
-            text-decoration: underline;
-        }
-
-        .newContentMobile{
-            /*padding:20px;*/
-            height: 100px;
-        }
-
-        .newsMobileHeader{
-            margin-top: 50px;
-        }
-
-        #socialMediaContents{
-            display:none;
-        }
-
-        #socialMediaContentsMobile{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-        }
-
-        #socialCard3{
-            flex-direction: row;
-            max-width: 100%;
-        }
-
-
-        #socialCard3 > div  {
-            max-width: 45%;
-        }
-
-        #socialCard3 > div >img {
-            max-width: 100%;
-            border-radius: 15px;
-        }
-
-
-
-
-        .socialCard{
-            max-height:326px;
-            margin-bottom: 20px;
-        }
-
-        #videoContainer{
-            max-width: 100%;
-        }
-
-        .header1{
-            font-size: 40px;
-            font-family: "XYZB";
-
-            font-weight: 700;
-            line-height: 40px;
-        }
-
-        .header2{
-            font-size: 30px;
-            font-family: "XYZB";
-
-            font-weight: 700;
-            line-height: 30px;
-        }
-
-        .header3{
-            font-size: 20px;
-            font-family: "XYZL";
-
-            font-weight: 290;
-            margin-top: 20px;
-        }
-
-
-        .tag{
-            display:inline-block;
-        }
-
-        .advisorTitle{
-            margin-top: 30px;
-        }
-
-    }
-
-    
-
-
 #loginPopupBg{
     position:fixed;
     left:0;
@@ -1786,6 +1401,691 @@ this is the first HTML code, load font and style!
         flex-grow: 2;
     }
 
+
+    @media only screen and (min-width: 1023px) and (max-width: 1660px){
+
+            #menu{
+                width: 70%;
+            }
+
+            .container{
+                max-width:90%;
+            }
+
+            #courseButtonContainer{
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+            }
+
+            .header1{
+                line-height: 35px;
+            }
+
+
+            .course {
+                width: 30%;
+            }
+
+            .header2{
+                font-size: 2vw;
+                line-height: 110%;
+            }
+
+            .header3{
+                /* font-size: 1.2vw; */
+            }
+
+            .courseSystem{
+                width: 24%;
+            }
+
+            #aboutContainer{
+                flex-direction: column;
+            }
+
+            #aboutDescription{
+                /* flex-direction: row; */
+                width:100%;
+            }
+
+            #aboutText{
+                margin-top: 24px;
+            }
+
+            #videoContainer{
+                width: 100%;
+                margin-top:24px;
+                margin:24px auto;
+            }
+            
+
+            .date{
+                font-size: 2vw;
+            }
+
+            .blog{
+                width:30%;
+            }
+
+            .advisor{
+                width: 24%;
+            }
+
+            #socialMediaContents > *{
+                width:32%;
+            }
+
+            .socialCard{
+                width: 100%;
+            }
+
+            #socialMediaContents > a > div> img{
+                width:100%;
+            }
+
+            .socialHeader1{
+                font-size: 24px;
+            }
+
+            .socialHeader2{
+                font-size: 18px;
+            }
+
+            #footer > div{
+                margin-left: 5%;
+                /* flex-direction: column; */
+                /* flex-wrap: wrap; */
+            }
+
+            #footerLogo {
+                width: 10%;
+            }
+
+            #footerMenu{
+                width: 20%;
+                justify-content: space-around;
+            }
+            .footerMenuItem{
+                margin:auto;
+
+                margin-bottom:30px;
+                /* margin: 0px 20px 30px 40px; */
+            }
+
+            #menuPopUpContents{
+                width: 90%;
+            }
+
+            #menuButtonContainer,#menuCategoryContainer{
+                width:100%;
+            }
+
+            #menuButtonContainer > a {
+                max-width: 18%;
+            }
+            .buttonMenu{
+                min-width:100%;
+                max-width:100%;
+            }
+
+   
+            #menuCategoryContainer > a {
+                width:24%;
+            }
+
+            .menuCategory{
+                min-width:100%;
+                max-width:100%;
+                min-height: calc(20vw * 199 / 360)
+            }
+            #menuSoftwareContainer{
+                width:100%;     
+            }
+
+            #menuSoftwareContainer > a {
+                width:24%;     
+            }
+            .software{
+                width:100%;
+                min-height:140px;
+            }
+
+            .software > img{
+                height:50px;
+                margin-left: 15px;
+                margin-right: 20px;
+            }
+
+            .softwareh1{
+                font-size: 18px;
+            }
+
+            .softwareh2{
+                font-size: 14px;
+            }
+
+            #menuPopUp{
+                height: calc(100vh - 80px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    }
+
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        /* ipad */
+        #menu{
+            width: 80%;
+        }
+
+        #headerlogo{
+            width: 15%;
+        }
+
+        #login{
+            min-width:110px;
+        }
+
+        #headerlogo > a > img {
+            display: block;
+            width: 100%;
+        }
+
+        .container{
+            max-width:90%;
+        }
+
+        #courseButtonContainer{
+
+            margin-top: 24px;
+            justify-content: space-between;
+            /* flex-wrap: wrap; */
+            /* align-items: stretch; */
+        }
+
+        #courseHeader{
+            display: block;
+        }
+
+        .courseButton{
+            /* flex-grow: 1.5; */
+            column-gap:10px;
+            margin-left: 0;
+        }
+
+        .course {
+            width: 45%;
+        }
+
+        #courseSysCardContainer{
+            flex-wrap: wrap;
+            row-gap: 45px;
+        }
+
+        #recommandCourseContainer > .cardsContainer>div:nth-child(2){
+            display: none;
+        }
+
+        #aboutContainer{
+            flex-direction: column;
+        }
+
+        #aboutDescription{
+            /* flex-direction: row; */
+            width:100%;
+        }
+
+        #aboutText{
+            margin-top: 24px;
+        }
+
+        #videoContainer{
+            width:100%;
+            margin-top:24px;
+            margin:24px auto;
+            height: auto;
+        }
+
+        .date{
+            font-size: 2vw;
+        }
+
+        .newsTitle{
+            font-size: 18px;
+        }
+
+        #blogContainer > .cardsContainer{
+            flex-wrap: wrap;
+            row-gap: 45px;
+        }
+
+        .blog{
+            width:45%;
+        }
+
+        #advisorContainer> .cardsContainer{
+            flex-wrap: wrap;
+            row-gap: 45px;
+        }
+        .advisor{
+            width: 45%;
+        }
+
+        #socialMediaContents > *{
+            width:32%;
+        }
+
+        .socialCard{
+            width: 100%;
+        }
+
+        #socialMediaContents > a > div> img{
+            width:100%;
+        }
+
+        .socialHeader1{
+            font-size: 24px;
+        }
+
+        .socialHeader2{
+            font-size: 18px;
+        }
+
+        #footer > div{
+            margin-left: 5%;
+            /* flex-direction: column; */
+            /* flex-wrap: wrap; */
+        }
+
+        #footerLogo {
+            width: 10%;
+        }
+
+        #footerMenu{
+            width: 18%;
+            justify-content: space-around;
+        }
+        .footerMenuItem{
+            margin:auto;
+
+            margin-bottom:30px;
+            /* margin: 0px 20px 30px 40px; */
+        }
+
+        #footerSocial{
+            margin-left: 20px;
+        }
+
+        #menuPopUpContents{
+                width: 90%;
+            }
+
+            #menuButtonContainer,#menuCategoryContainer{
+                width:100%;
+            }
+
+            #menuButtonContainer > a {
+                max-width: 18%;
+            }
+            .buttonMenu{
+                min-width:100%;
+                max-width:100%;
+            }
+
+   
+            #menuCategoryContainer > a {
+                width:24%;
+            }
+
+            .menuCategory{
+                min-width:100%;
+                max-width:100%;
+                min-height: calc(20vw * 199 / 360)
+            }
+            #menuSoftwareContainer{
+                width:100%;     
+            }
+
+            #menuSoftwareContainer > a {
+                width:30%;     
+            }
+            .software{
+                width:100%;
+                min-height:140px;
+            }
+
+            .software > img{
+                height:50px;
+                margin-left: 15px;
+                margin-right: 20px;
+            }
+
+            .softwareh1{
+                font-size: 18px;
+            }
+
+            .softwareh2{
+                font-size: 14px;
+            }
+
+            #menuPopUp{
+                height: calc(100vh - 80px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #menuSoftwareContainer > a:nth-child(7){
+                display: none;
+            }
+            #menuSoftwareContainer > a:nth-child(6){
+                display: none;
+            }
+
+    }
+
+
+    @media only screen and (min-width: 200px) and (max-width: 767px)  {
+    /* iphone */
+   
+    }
+
+
+    @media screen and (max-width: 767px){
+
+        #header{
+            width: 100%;
+        }
+        
+        #language{
+            display: none;
+        }
+
+        #adContainer{
+            display: block;
+        }
+
+        .adContent{
+            margin: 0 auto 20px auto;
+            min-width: 100%;
+            border-radius: 15px;
+            overflow:hidden;
+            /*margin-bottom:20px;*/
+        }
+
+        #courseHeader{
+            display: block;
+        }
+
+        #courseButtonContainer{
+            margin-top:20px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap:20px;
+            column-gap: 20px;
+            justify-content: space-between;
+            align-items: stretch;
+            margin-left:0px;
+        }
+
+        #courseButtonContainer > div {
+            flex-grow: 2;
+            margin-left: 0px;
+        }
+
+
+        .courseExtra{
+            display: none;
+        }
+
+        #courseDisplayContainer{
+            display: block;
+        }
+
+        .myCard{
+            /*min-width:100%;*/
+            margin-right:auto;
+            margin-left:auto;
+            min-width:100%;
+            /*min-width:320px;*/
+            margin-bottom: 30px;
+        }
+
+
+        .cardsContainer{
+            display:block;
+        }
+
+        #careerContainer{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #metaCareerContainer{
+            margin-top: 100px;
+        }
+
+
+        .career{
+            min-width:45%;
+            height: 280px;
+            /*min-height: 480px;*/
+        }
+
+        #aboutContainer{
+            display: block;
+        }
+
+        #aboutText{
+            margin-top: 49px;
+            max-width: 100%;
+        }
+
+
+
+        .newContent{
+            display: block;;
+        }
+
+        .advisor{
+            display: flex;
+            flex-direction: row;
+            height:100%;
+            /*max-height: 245px;*/
+        }
+
+        .advisor > div > img{
+            border-top-left-radius: 15px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 15px;
+        }
+
+
+
+        .advisor > .cardDescription{
+            margin:20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            /*flex-grow: 2;*/
+        }
+
+        .partner{
+            width: 45%;
+        }
+
+
+        .socialCard{
+            min-width:100%;
+            max-height:150px;
+            /*border: 1px solid black;*/
+        }
+
+
+
+        #footer{
+            max-width:100%;
+            /*display:none;*/
+        }
+
+        #footerLogo{
+            /*margin-left: 10px;*/
+            max-width:21%;
+        }
+
+        .footerMenuItem{
+            margin: 0px 20px 30px 20px;
+        }
+
+        #footerSocial{
+            margin-left: 20px;
+            display: flex;
+        /*flex-direction: row;*/
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        #footerSocialLogo > img{
+            margin-right: 10px;
+        }
+
+        #footerSocialLogo{
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+
+
+
+        #newsContentContainer{
+            display: none;
+        }
+
+        #newsContentContainerMobile{
+            display: block;
+            /*height: 150px;*/
+        }
+
+        .newsMobileHeader{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .newsTitleMobile{
+            font-size: 25px;
+            font-family: "XYZB";
+
+            font-weight: 700;
+        }
+
+        .newDateMobile{
+            font-size: 20px;
+            font-family: "XYZL";
+
+            font-weight: 290;
+            color:#ACACAC;
+        }
+    
+        .newsContentMobile{
+            font-size: 20px;
+            font-family: "XYZL";
+
+            font-weight: 290;
+        }
+
+        .newsContentMobile > span {
+            color:#ACACAC;
+            text-decoration: underline;
+        }
+
+        .newContentMobile{
+            /*padding:20px;*/
+            height: 100px;
+        }
+
+        .newsMobileHeader{
+            margin-top: 50px;
+        }
+
+        #socialMediaContents{
+            display:none;
+        }
+
+        #socialMediaContentsMobile{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        #socialCard3{
+            flex-direction: row;
+            max-width: 100%;
+        }
+
+
+        #socialCard3 > div  {
+            max-width: 45%;
+        }
+
+        #socialCard3 > div >img {
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+
+
+
+        .socialCard{
+            max-height:326px;
+            margin-bottom: 20px;
+        }
+
+        #videoContainer{
+            max-width: 100%;
+        }
+
+        .header1{
+            font-size: 40px;
+            font-family: "XYZB";
+
+            font-weight: 700;
+            line-height: 40px;
+        }
+
+        .header2{
+            font-size: 30px;
+            font-family: "XYZB";
+
+            font-weight: 700;
+            line-height: 30px;
+        }
+
+        .header3{
+            font-size: 20px;
+            font-family: "XYZL";
+
+            font-weight: 290;
+            margin-top: 20px;
+        }
+
+
+        .tag{
+            display:inline-block;
+        }
+
+        .advisorTitle{
+            margin-top: 30px;
+        }
+
+    }
+
+    
+
+
+
 </style>
 
 <div id="header">
@@ -1876,7 +2176,7 @@ this is the first HTML code, load font and style!
         <div id='menuSoftwareContainer'>
             <a class="cursorPointer" href="./courseList?filter=td">
                 <div class='software'>
-                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7087f5df4e170bebc4a04b354ecb3326?imageView2'> 
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3f4c45aa512800bdd29d0cb09a40411e?imageView2'> 
                     <div class='softwareDescription'>
                         <span class='softwareh1'>TouchDesigner</span><br/>
                         <span class='softwareh2'>
@@ -1890,7 +2190,7 @@ this is the first HTML code, load font and style!
             
             <a class="cursorPointer" href="./courseList?filter=unity">
                 <div class='software'>
-                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6a9a77d5b3c9675c16167fe8d2c7766f?imageView2'> 
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_56d0270baea429ca559c283ea66de79c?imageView2'> 
                     <div class='softwareDescription'>
                         <span class='softwareh1'>Unity</span><br/>
                         <span class='softwareh2'>
@@ -1903,7 +2203,7 @@ this is the first HTML code, load font and style!
             
             <a class="cursorPointer" href="./courseList?filter=unreal">
                 <div class='software'>
-                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fb9262b4ac760ea1c2b8af813272b48e?imageView2'> 
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ff19dcd9c5cc98f4bbed7ed3b226dbe1?imageView2'> 
                     <div class='softwareDescription'>
                         <span class='softwareh1'>Unreal Engine</span><br/>
                         <span class='softwareh2'>
@@ -1916,7 +2216,7 @@ this is the first HTML code, load font and style!
 
             <a class="cursorPointer" href="./courseList?filter=processing">
                 <div class='software'>
-                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fc889440b6caa0f1c0e430bbe4176df9?imageView2'> 
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_74b844c227e08df84f918cd00801462f?imageView2'> 
                     <div class='softwareDescription'>
                         <span class='softwareh1'>Processing</span><br/>
                         <span class='softwareh2'>
@@ -1929,7 +2229,7 @@ this is the first HTML code, load font and style!
 
             <a class="cursorPointer" href="./courseList?filter=p5">
                 <div class='software'>
-                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9cc784f659f8498a1a1d563758feaa5d?imageView2'> 
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a8e23a41e8c61e4d087225d096733fc1?imageView2'> 
                     <div class='softwareDescription'>
                         <span class='softwareh1'>P5.js</span><br/>
                         <span class='softwareh2'>
@@ -1943,7 +2243,7 @@ this is the first HTML code, load font and style!
 
             <a class="cursorPointer" href="./courseList">
                 <div class='software'>
-                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f647742a09d5fbe44d69d0a497b05ead?imageView2'> 
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_918031bb4d1ed4778a2501d8cc9e8fe9?imageView2'> 
                     <div class='softwareDescription'>
                         <span class='softwareh1'>MaxMSP</span><br/>
                         <span class='softwareh2'>
@@ -1956,7 +2256,7 @@ this is the first HTML code, load font and style!
 
             <a class="cursorPointer" href="./courseList">
                 <div class='software'>
-                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_094f651765e5162a3a7aa953faa18311?imageView2'> 
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6d422d3aa370c1a5eeb67cbf43e06e20?imageView2'> 
                     <div class='softwareDescription'>
                         <span class='softwareh1'>OpenFrameworks</span><br/>
                         <span class='softwareh2'>
@@ -1969,7 +2269,7 @@ this is the first HTML code, load font and style!
 
             <a class="cursorPointer" href="./courseList?filter=js">
                 <div class='software'>
-                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_95791a5adb8cb34c32caf99c2e031a97?imageView2'> 
+                    <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2537063a2f52c0b42397bc21e8fa2c7f?imageView2'> 
                     <div class='softwareDescription'>
                         <span class='softwareh1'>JavaScript</span><br/>
                         <span class='softwareh2'>
@@ -1985,10 +2285,11 @@ this is the first HTML code, load font and style!
         <div id="weChatCodeMenu"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
 
         <div id='menuSocialContainer'>
-            <div><img id='showCode' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b1e150b94ecd5b631b3ebea4157f66c4?imageView2'></div>
-            <div><a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5f3de3726fafd5fec8227fdb837ff092?imageView2'></a></div>
-            <div><a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5dd27defbacafdea6d042e0b360d3cdf?imageView2'></a></div>
-            <div><a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_89c6958e1189a30c8b25807ae4348a13?imageView2'></a></div>
+            <div><img id='showCode' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b3de7a3adcd00c8fcaf4760edb3293bb?imageView2'></div>
+            <div><a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ca086d08e8659ce01316cad7821532d7?imageView2'></a></div>
+            <div><a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_39673958c8ea16c7f6fe21889a5f1ec6?imageView2'></a></div>
+            <div><a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_79fb0e8ca32207d706f60ba1714d703c?imageView2'></a></div>
+            <div><a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e276675c9aa8b4fcf24bd6a8118834d3?imageView2'></a></div>
         </div>
 
     </div>
