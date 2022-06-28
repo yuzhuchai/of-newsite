@@ -34,6 +34,7 @@ this is the first HTML code, load font and style!
     let advisorWidth
     let advisorHeight
 
+    let socialCardWidth
 
 	$(window).on("load",function(){
 		$(".main_area").width($(window).width())
@@ -49,6 +50,14 @@ this is the first HTML code, load font and style!
 
         socialCard3Width = $('.socialCard3').width();
         $('.socialCard3').height(socialCard3Width)
+        
+        console.log(socialCardWidth)
+
+        socialCardWidth = $('.socialCard').width();
+        if(socialCardWidth < 767){  
+            $('#xiaoyuzhou').attr('src', 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1628b576636c4731e3d446d523a7c16d?imageView2')
+            $('#wechat').attr('src', 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f01e58d658c36e7394c00efd7fdeba19?imageView2')
+        }
 	})
 
 
@@ -65,6 +74,18 @@ this is the first HTML code, load font and style!
         careerWidth = $('.career').width();
         careerHeight = careerWidth * 364/360 
         $('.career').height(careerHeight)
+
+        let screenWidth = screen.width;
+        console.log(socialCardWidth)
+
+        socialCardWidth = $('.socialCard').width();
+        if(socialCardWidth < 767){  
+            $('#xiaoyuzhou').attr('src', 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1628b576636c4731e3d446d523a7c16d?imageView2')
+            $('#wechat').attr('src', 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f01e58d658c36e7394c00efd7fdeba19?imageView2')
+        } else {
+            $('#xiaoyuzhou').attr('src', 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1c7d5b13aace3ddf7d0d740566301e9a?imageView2')
+            $('#wechat').attr('src', 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d3cec76a07e0a0c6b13c7c23559167d3?imageView2')
+        }
     });
 
 
@@ -150,9 +171,7 @@ this is the first HTML code, load font and style!
         top: 0;
         width: 100vw;
         height: 100vh;
-        /* overflow: auto; */
         overflow-x: hidden; 
-        /* disable scrollbar */
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
     }
@@ -1239,92 +1258,92 @@ this is the first HTML code, load font and style!
 
 
     label {
-    font-size: 13px;
-    color: #424242;
-    font-weight: 500;
-}
+        font-size: 13px;
+        color: #424242;
+        font-weight: 500;
+    }
 
-.btn-color-mode-switch{
-    /* display: block; */
-    display: inline-block;
-    margin: 0px;
-    position: relative;
-}
+    .btn-color-mode-switch{
+        /* display: block; */
+        display: inline-block;
+        margin: 0px;
+        position: relative;
+    }
 
-.btn-color-mode-switch > label.btn-color-mode-switch-inner{
-    margin: 0px;
-    width: 120px;
-    height: 30px;
-    background: #e2e2e2;
-    border-radius: 26px;
-    overflow: hidden;
-    position: relative;
-    transition: all 0.3s ease;
-    display: block;
-} 
+    .btn-color-mode-switch > label.btn-color-mode-switch-inner{
+        margin: 0px;
+        width: 120px;
+        height: 30px;
+        background: #e2e2e2;
+        border-radius: 26px;
+        overflow: hidden;
+        position: relative;
+        transition: all 0.3s ease;
+        display: block;
+    } 
 
-.btn-color-mode-switch > label.btn-color-mode-switch-inner:before{
-    content: attr(data-on);
-    position: absolute;
-    font-size: 12px;
-    font-weight: 500;
-    top: 7px;
-    right: 20px;
-}
+    .btn-color-mode-switch > label.btn-color-mode-switch-inner:before{
+        content: attr(data-on);
+        position: absolute;
+        font-size: 12px;
+        font-weight: 500;
+        top: 7px;
+        right: 20px;
+    }
 
-.btn-color-mode-switch > label.btn-color-mode-switch-inner:after{
-    content: attr(data-off);
-    width: 60px;
-    height: 16px;
-    background: #fff;
-    border-radius: 26px;
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0px 0px 6px -2px #111;
-    padding: 5px 0px;
-}   
+    .btn-color-mode-switch > label.btn-color-mode-switch-inner:after{
+        content: attr(data-off);
+        width: 60px;
+        height: 16px;
+        background: #fff;
+        border-radius: 26px;
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0px 0px 6px -2px #111;
+        padding: 5px 0px;
+    }   
 
-.btn-color-mode-switch > .alert{
-    display: none;
-    background: #FF9800;
-    border: none;
-    color: #fff;
-}
+    .btn-color-mode-switch > .alert{
+        display: none;
+        background: #FF9800;
+        border: none;
+        color: #fff;
+    }
 
-.btn-color-mode-switch input[type="checkbox"]{
-    cursor: pointer;
-    width: 0px;
-    height: 25px;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    margin: 0px;
-} 
+    .btn-color-mode-switch input[type="checkbox"]{
+        cursor: pointer;
+        width: 0px;
+        height: 25px;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        margin: 0px;
+    } 
 
-.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
-    /* background: #151515; */
-    /* color: #fff; */
-}
+    .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
+        /* background: #151515; */
+        /* color: #fff; */
+    }
 
-.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after{
-    /* content: attr(data-on); */
-    content: "EN";
-    left: 58px;
-    /* background: #3c3c3c; */
-}
+    .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after{
+        /* content: attr(data-on); */
+        content: "EN";
+        left: 58px;
+        /* background: #3c3c3c; */
+    }
 
-.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before{
-    /* content: attr(data-off); */
-    content: "CN";
-    right: auto;
-    left: 20px;
-}
+    .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before{
+        /* content: attr(data-off); */
+        content: "CN";
+        right: auto;
+        left: 20px;
+    }
 
-#weChatCodeMenu{
+    #weChatCodeMenu{
         background-color:white;
         border-radius: 15px;
         box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
@@ -1401,7 +1420,7 @@ this is the first HTML code, load font and style!
         flex-grow: 2;
     }
 
-
+/* smaller screen */
     @media only screen and (min-width: 1023px) and (max-width: 1660px){
 
         /* menu fixed  start ------------------------------------------------------------------------------ */
@@ -1569,11 +1588,11 @@ this is the first HTML code, load font and style!
             .socialHeader2{
                 font-size: 18px;
             }
-
-            
+         
     }
 
 
+    /* ipad */
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
         /* ipad */
 
@@ -1592,7 +1611,6 @@ this is the first HTML code, load font and style!
 
         #headerlogo > a > img {
             display: block;
-            width: 100%;
         }
 
 
@@ -1784,12 +1802,31 @@ this is the first HTML code, load font and style!
     }
 
 
+    /* iphone */
     @media only screen and (min-width: 200px) and (max-width: 767px)  {
     /* iphone */
     /* heder start copy  start ========================================================================= */
         #header{
             width: 100%;
+            height:60px;
         }
+
+
+        #headerlogo > a > img {
+            display: block;
+            width: 120px;
+        }
+
+        #menuText{
+            font-size: 20px;
+            margin-right:0;
+        }
+
+
+        #menu > div{
+            margin-right: 0;
+        }
+
 
 
         #menu > div:nth-child(1){
@@ -1805,17 +1842,13 @@ this is the first HTML code, load font and style!
         }
 
         #menuIcon{
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
         }
 
         .icon{
-            min-width: 14px;
-            min-height: 14px;
-        }
-
-        #menuText{
-            font-size: 25px;
+            min-width: 12px;
+            min-height: 12  px;
         }
 
 
@@ -1864,10 +1897,6 @@ this is the first HTML code, load font and style!
             margin-right: 10px;
         }
 
-        #headerlogo > a > img {
-            display: block;
-            width: 180px;
-        }
 
         #menuPopUpContents{
             width: 100%;
@@ -1883,6 +1912,7 @@ this is the first HTML code, load font and style!
             bottom: 0;
             overflow-y: scroll;
             overflow-x: hidden;
+            top:60px;
         }
 
         #menuButtonContainer{
@@ -1930,12 +1960,13 @@ this is the first HTML code, load font and style!
             width:90%;
             flex-wrap: wrap;
             margin-top:24px;
-
+            row-gap: 0;
         }
 
         #menuSoftwareContainer > .cursorPointer{
             height: auto;
             width:24%;
+            margin-bottom:15px;
         }
         
         .softwareDescription{
@@ -1962,12 +1993,17 @@ this is the first HTML code, load font and style!
             width: 65%;
             margin-left:5%;
             justify-content: space-between;
+            margin-bottom: 20px;
         }
 
         #menuSocialContainer > div{
             max-width: 18%;
             max-height: 12vw;
             margin-right:0;
+        }
+
+        #contentContainer{
+            top:60px;
         }
 
 
@@ -1982,18 +2018,25 @@ this is the first HTML code, load font and style!
         #courseButtonContainer{
             margin-top: 24px;
             flex-wrap: wrap;
-            row-gap:16px;
+            /* row-gap:16px; */
             justify-content: space-between;
+        }
+
+        #courseButtonContainer > div{
+            margin-bottom: 16px;
         }
 
 
         .courseButton{
             /* column-gap:10px; */
             margin-left: 0;
+            font-size: 18px;
+            padding-left:25px;
+            padding-right:25px;
         }
 
         #courseDisplayContainer{
-            row-gap: 18px;
+            row-gap: 0;
         }
 
         #courseHeader{
@@ -2005,6 +2048,7 @@ this is the first HTML code, load font and style!
         }
 
         .course{
+            margin-bottom: 18px;
             width: 100%;
         }
 
@@ -2014,18 +2058,23 @@ this is the first HTML code, load font and style!
             line-height: 110%;
         }
 
+        .header3 {
+            font-size:18px ;
+        }
+
         #courseSysCardContainer{
             flex-wrap: wrap;
-            row-gap: 18px;
+            /* row-gap: 18px; */
         }
         .courseSystem{
+            margin-bottom: 18px;
             width: 48%;
             height: calc(43vw * 364 / 360 + 80px)
         }
 
         #recommandCourseContainer > div{
             flex-wrap: wrap;
-            row-gap: 18px;
+            /* row-gap: 18px; */
         }
 
         #recommandCourseContainer > div > .course{
@@ -2056,6 +2105,7 @@ this is the first HTML code, load font and style!
 
         #aboutDes{
             font-size: 25px;
+            letter-spacing: 0.8em;
         }
 
         #aboutTitle{
@@ -2077,23 +2127,24 @@ this is the first HTML code, load font and style!
         }
         .newsTitle{
             margin-left: 0;
-            font-size: 18px;
+            font-size: 15px;
         }
 
         #blogContainer > .cardsContainer{
             flex-wrap: wrap;
-            row-gap: 18px;
+            /* row-gap: 18px; */
         }
 
         #advisorContainer > .cardsContainer{
             flex-wrap: wrap;
-            row-gap: 18px;
+            /* row-gap: 18px; */
         }
 
         .advisor{
             width: 100%;
             flex-direction: row;
             height: auto;
+            margin-bottom: 18px;
         }
 
 
@@ -2102,323 +2153,87 @@ this is the first HTML code, load font and style!
         }
 
         .advisor > div > img {
-            height:100%;
+            width: 100%;
+            height:auto;
             border-top-left-radius: 15px;
             border-bottom-left-radius: 15px;
             border-top-right-radius: 0;
         }
         
         .advisor > div > div > .header2{
-            font-size: 5vw;
+            font-size: 4.5vw;
+            line-height:10px;
         }
 
+        .advisor > .cardDescription{
+            margin:15px;
+        }
 
         .advisor > div > div > .header3{
             font-size: 15px;
         }
 
         .advisorTitle{
-            font-size: 15px;
+            font-size: 12px;
         }
 
 
         .partner{
             width:45%;
-        }
-
-
-        
+        }  
 
         .playButton{
-            width:50px;
+            display: none;
         }
         .blog{
+            margin-bottom:18px;
             width: 100%;
-        }
-    }
-
-
-    /* @media screen and (max-width: 767px){
-
-        #header{
-            width: 100%;
-        }
-        
-        #language{
-            display: none;
-        }
-
-        #adContainer{
-            display: block;
-        }
-
-        .adContent{
-            margin: 0 auto 20px auto;
-            min-width: 100%;
-            border-radius: 15px;
-            overflow:hidden;
-        }
-
-        #courseHeader{
-            display: block;
-        }
-
-        #courseButtonContainer{
-            margin-top:20px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            row-gap:20px;
-            column-gap: 20px;
-            justify-content: space-between;
-            align-items: stretch;
-            margin-left:0px;
-        }
-
-        #courseButtonContainer > div {
-            flex-grow: 2;
-            margin-left: 0px;
-        }
-
-
-        .courseExtra{
-            display: none;
-        }
-
-        #courseDisplayContainer{
-            display: block;
-        }
-
-        .myCard{
-            margin-right:auto;
-            margin-left:auto;
-            min-width:100%;
-            margin-bottom: 30px;
-        }
-
-
-        .cardsContainer{
-            display:block;
-        }
-
-        #careerContainer{
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        #metaCareerContainer{
-            margin-top: 100px;
-        }
-
-
-        .career{
-            min-width:45%;
-            height: 280px;
-        }
-
-        #aboutContainer{
-            display: block;
-        }
-
-        #aboutText{
-            margin-top: 49px;
-            max-width: 100%;
-        }
-
-
-
-        .newContent{
-            display: block;;
-        }
-
-        .advisor{
-            display: flex;
-            flex-direction: row;
-            height:100%;
-        }
-
-        .advisor > div > img{
-            border-top-left-radius: 15px;
-            border-top-right-radius: 0px;
-            border-bottom-left-radius: 15px;
-        }
-
-
-
-        .advisor > .cardDescription{
-            margin:20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-
-        .partner{
-            width: 45%;
-        }
-
-
-        .socialCard{
-            min-width:100%;
-            max-height:150px;
-        }
-
-
-
-        #footer{
-            max-width:100%;
-        }
-
-        #footerLogo{
-            max-width:21%;
-        }
-
-        .footerMenuItem{
-            margin: 0px 20px 30px 20px;
-        }
-
-        #footerSocial{
-            margin-left: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        #footerSocialLogo > img{
-            margin-right: 10px;
-        }
-
-        #footerSocialLogo{
-            margin-top: 30px;
-            margin-left: 0px;
-        }
-
-
-
-        #newsContentContainer{
-            display: none;
-        }
-
-        #newsContentContainerMobile{
-            display: block;
-        }
-
-        .newsMobileHeader{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .newsTitleMobile{
-            font-size: 25px;
-            font-family: "XYZB";
-
-            font-weight: 700;
-        }
-
-        .newDateMobile{
-            font-size: 20px;
-            font-family: "XYZL";
-
-            font-weight: 290;
-            color:#ACACAC;
-        }
-    
-        .newsContentMobile{
-            font-size: 20px;
-            font-family: "XYZL";
-
-            font-weight: 290;
-        }
-
-        .newsContentMobile > span {
-            color:#ACACAC;
-            text-decoration: underline;
-        }
-
-        .newContentMobile{
-            height: 100px;
-        }
-
-        .newsMobileHeader{
-            margin-top: 50px;
+            height: calc(90vw * 440 / 474 + 80px)
         }
 
         #socialMediaContents{
-            display:none;
+            flex-direction: column;
         }
 
-        #socialMediaContentsMobile{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+        .socialCard{
+            margin-bottom: 18px;
+        }
+
+        #socialMediaContents > a > div {
+            width: 100%;
         }
 
         #socialCard3{
+            width:100%;
             flex-direction: row;
-            max-width: 100%;
         }
 
-
-        #socialCard3 > div  {
-            max-width: 45%;
+        #socialCard3 > a {
+            width: 48%;
         }
 
-        #socialCard3 > div >img {
-            max-width: 100%;
-            border-radius: 15px;
+        #social3Text{
+            width:100%;
         }
 
-
-
-
-        .socialCard{
-            max-height:326px;
-            margin-bottom: 20px;
+        .SocaialCardText{
+            bottom: 10px;
         }
 
-        #videoContainer{
-            max-width: 100%;
+        .socialHeader1{
+            font-size: 18px;
+            line-height: 10px;
         }
 
-        .header1{
-            font-size: 40px;
-            font-family: "XYZB";
-
-            font-weight: 700;
-            line-height: 40px;
+        .socialHeader2{
+            font-size: 15px;
         }
 
-        .header2{
-            font-size: 30px;
-            font-family: "XYZB";
-
-            font-weight: 700;
-            line-height: 30px;
-        }
-
-        .header3{
-            font-size: 20px;
-            font-family: "XYZL";
-
-            font-weight: 290;
-            margin-top: 20px;
-        }
-
-
-        .tag{
-            display:inline-block;
-        }
-
-        .advisorTitle{
-            margin-top: 30px;
-        }
-
+        
     }
 
-     */
 
-
-
+ 
 </style>
 
 <div id="header">
@@ -2472,7 +2287,7 @@ this is the first HTML code, load font and style!
 
         <div id='menuCategoryContainer'>
             <a class="cursorPointer" href="./courseList">
-                <div class='menuCategory' id="allClass"
+                <div class='menuCategory' id="allClass">
                     <div>
                         <span class="cn">全部课程</span>
                         <span class="eng">All Course</span>
@@ -2666,9 +2481,10 @@ this is the first HTML code, load font and style!
     		<div id='courseButtonContainer'>
     			<div class='courseButton'><a href="./courseList?filter=newest">New</a></div>
     			<div class='courseButton'><a href="./courseList?filter=unity">Unity</a></div>
-    			<div class='courseButton'><a href="./courseList?filter=unreal">Unreal</a></div>
+                <div class='courseButton'><a href="./courseList?filter=unreal">Unreal</a></div>
     			<div class='courseButton'><a href="./courseList?filter=td">TouchDesigner</a></div>
     			<div class='courseButton'><a href="./courseList?filter=processing">Processing</a></div>
+
     		</div>
     	</div>
     	<div id="courseDisplayContainer">
@@ -2777,7 +2593,7 @@ this is the first HTML code, load font and style!
             <div class='myCard career'>
                 <div><img src='https://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_3921ad7d6a8f3caa27f049f355c616bd?imageView2'></div>
                 <div class='cardDescription'>
-                    <div class='header2 header2Resize'>AI Develop</div>
+                    <div class='header2 header2Resize'>AI Developer</div>
                     <div class='header3 header3Resize'>人工智能开发</div>
                 </div>
             </div>
@@ -3266,7 +3082,7 @@ this is the first HTML code, load font and style!
         <div class='cardsContainer' id='socialMediaContents'>
             <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9">
                 <div class='socialCard shadow' id="wechatSocial">
-                    <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1c7d5b13aace3ddf7d0d740566301e9a?imageView2'>
+                    <img id='xiaoyuzhou' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1c7d5b13aace3ddf7d0d740566301e9a?imageView2'>
                     <div class="SocaialCardText">
                         <span class="socialHeader1">
                             <span class="cn">#小宇宙</span>
@@ -3281,7 +3097,7 @@ this is the first HTML code, load font and style!
             </a>
             <a href="https://mp.weixin.qq.com/s/eiwpTbJzvp9cPbHwNp4FMg">
                 <div class='socialCard shadow'>
-                    <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bc43c2cbd46787b9104ceb9de3daab74?imageView2'>
+                    <img id='wechat' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d3cec76a07e0a0c6b13c7c23559167d3?imageView2'>
                     <div class="SocaialCardText">
                         <span class="socialHeader1">
                             <span class="cn">#微信公众号</span>
@@ -3335,7 +3151,7 @@ this is the first HTML code, load font and style!
 
         <div class='cardsContainer' id='socialMediaContentsMobile'>
             <div class='socialCard'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_aef553c434c77eca6670ed8a96550248?imageView2'></div>
-            <div class='socialCard'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_aef553c434c77eca6670ed8a96550248?imageView2'></div>
+            <div class='socialCard'><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d3cec76a07e0a0c6b13c7c23559167d3?imageView2'></div>
             <div class='socialCard' id='socialCard3'>
                 <div>
                     <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_549b05623eb17e9ddcc206bed8e94491?imageView2'>   

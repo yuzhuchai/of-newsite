@@ -13,6 +13,12 @@
         <script>
             $(window).on("load",function(){
                 $(".main_area").width($(window).width())
+
+                socialCardWidth = $('.socialCard').width();
+                if(socialCardWidth < 767){  
+                    $('#xiaoyuzhou').attr('src', 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1628b576636c4731e3d446d523a7c16d?imageView2')
+                    $('#wechat').attr('src', 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f01e58d658c36e7394c00efd7fdeba19?imageView2')
+                }
             })
 
 
@@ -24,6 +30,26 @@
                     $("#header").css({"box-shadow":"0px 0px 0px rgba(0,0,0,0.09)"})
                 }   
             })
+
+
+
+
+            $( window ).resize(function() {
+
+                let screenWidth = screen.width;
+                console.log(socialCardWidth)
+
+                socialCardWidth = $('.socialCard').width();
+                if(socialCardWidth < 767){  
+                    $('#xiaoyuzhou').attr('src', 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1628b576636c4731e3d446d523a7c16d?imageView2')
+                    $('#wechat').attr('src', 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f01e58d658c36e7394c00efd7fdeba19?imageView2')
+                } else {
+                    $('#xiaoyuzhou').attr('src', 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1c7d5b13aace3ddf7d0d740566301e9a?imageView2')
+                    $('#wechat').attr('src', 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d3cec76a07e0a0c6b13c7c23559167d3?imageView2')
+                }
+            })
+
+
 
 
 
@@ -54,19 +80,21 @@
                 width: 100vw;
                 height: 100vh;
                 overflow: auto;
+                overflow-x: hidden; 
+                /* disable scrollbar */
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+                
             }
             
             html, body{
                 /*font-family: "Microsoft YaHei";*/
                 font-family:"XYZ";
                 max-width: 100%;
-                overflow-x: hidden; 
-                /* disable scrollbar */
-                -ms-overflow-style: none;  /* IE and Edge */
-                scrollbar-width: none;  /* Firefox */
+
             }
 
-            body::-webkit-scrollbar {
+            .sections::-webkit-scrollbar {
                 display: none;
             }
 
@@ -1069,6 +1097,591 @@
                 margin:5%;
                 width: 90%;
             }
+
+
+
+            @media only screen and (min-width: 1023px) and (max-width: 1660px){
+
+            /* menu fixed  start ------------------------------------------------------------------------------ */
+                #menu{
+                    width: 70%;
+                }
+
+
+                /* footer and menu popup */
+                #footer > div{
+                    margin-left: 5%;
+                }
+
+                #footerLogo {
+                    width: 10%;
+                }
+
+                #footerMenu{
+                    width: 20%;
+                    justify-content: space-around;
+                }
+                .footerMenuItem{
+                    margin:auto;
+                    margin-bottom:30px;
+                }
+
+                #menuPopUpContents{
+                    width: 90%;
+                }
+
+                #menuButtonContainer,#menuCategoryContainer{
+                    width:100%;
+                }
+
+                #menuButtonContainer > a {
+                    max-width: 18%;
+                }
+                .buttonMenu{
+                    min-width:100%;
+                    max-width:100%;
+                }
+
+
+                #menuCategoryContainer > a {
+                    width:24%;
+                }
+
+                .menuCategory{
+                    min-width:100%;
+                    max-width:100%;
+                    min-height: calc(20vw * 199 / 360)
+                }
+                #menuSoftwareContainer{
+                    width:100%;     
+                }
+
+                #menuSoftwareContainer > a {
+                    width:24%;     
+                }
+                .software{
+                    width:100%;
+                    min-height:140px;
+                }
+
+                .software > img{
+                    height:50px;
+                    margin-left: 15px;
+                    margin-right: 20px;
+                }
+
+                .softwareh1{
+                    font-size: 18px;
+                }
+
+                .softwareh2{
+                    font-size: 14px;
+                }
+
+                #menuPopUp{
+                    height: calc(100vh - 80px);
+                    /* display: flex;
+                    justify-content: center;
+                    align-items: center; */
+                }
+
+                /* end -------------------------------------------------------------------------------------------- */
+
+                .container{
+                    width: 90%;
+                }
+
+                .course{
+                    width: 23%;
+                }
+
+                .advisor{
+                    width: 30%;
+                    height:calc(27vw * 504 / 360)
+                }
+
+                .advisorTitle{
+                    font-size: 18px;
+                }
+
+                .cardDescription > div> .header2{
+                    font-size: 28px;
+                }
+
+                #socialMediaContents > *{
+                    width:32%;
+                }
+
+                .socialCard{
+                    width: 100%;
+                }
+
+                #socialMediaContents > a > div> img{
+                    width:100%;
+                }
+
+                .socialHeader1{
+                    font-size: 24px;
+                }
+
+                .socialHeader2{
+                    font-size: 18px;
+                }
+
+            }
+
+            /* ipad */
+            @media only screen and (min-width: 768px) and (max-width: 1024px) {
+                /* ipad */
+
+                /* header  copy start ------------------------------------------------------------------------------ */
+                #menu{
+                    width: 80%;
+                }
+
+                #headerlogo{
+                    width: 15%;
+                }
+
+                #login{
+                    min-width:110px;
+                }
+
+                #headerlogo > a > img {
+                    display: block;
+                    width: 100%;
+                }
+
+
+
+                #footer > div{
+                    margin-left: 5%;
+                }
+
+                #footerLogo {
+                    width: 10%;
+                }
+
+                #footerMenu{
+                    width: 18%;
+                    justify-content: space-around;
+                }
+                .footerMenuItem{
+                    margin:auto;
+                    margin-bottom:30px;
+                }
+
+                #footerSocial{
+                    margin-left: 20px;
+                }
+
+                #menuPopUpContents{
+                    width: 90%;
+                }
+
+                #menuButtonContainer,#menuCategoryContainer{
+                    width:100%;
+                }
+
+                #menuButtonContainer > a {
+                    max-width: 18%;
+                }
+                .buttonMenu{
+                    min-width:100%;
+                    max-width:100%;
+                }
+
+
+                #menuCategoryContainer > a {
+                    width:24%;
+                }
+
+                .menuCategory{
+                    min-width:100%;
+                    max-width:100%;
+                    min-height: calc(20vw * 199 / 360)
+                }
+                #menuSoftwareContainer{
+                    width:100%;     
+                }
+
+                #menuSoftwareContainer > a {
+                    width:30%;     
+                }
+                .software{
+                    width:100%;
+                    min-height:140px;
+                }
+
+                .software > img{
+                    height:50px;
+                    margin-left: 15px;
+                    margin-right: 20px;
+                }
+
+                .softwareh1{
+                    font-size: 18px;
+                }
+
+                .softwareh2{
+                    font-size: 14px;
+                }
+
+                #menuPopUp{
+                    height: calc(100vh - 80px);
+                }
+
+                #menuSoftwareContainer > a:nth-child(7){
+                    display: none;
+                }
+                #menuSoftwareContainer > a:nth-child(6){
+                    display: none;
+                }
+
+                /* footer and popupmenu end ----------------------------------------------------------------------------- */
+
+                .container{
+                    max-width:90%;
+                }
+
+                #headerPicContainer{
+                    min-width:100%;
+                }
+
+                #courseSysCardContainer{
+                    flex-wrap: wrap;
+                    row-gap:18px;
+                }
+            }
+
+
+            /* iphone */
+            @media only screen and (min-width: 200px) and (max-width: 767px)  {
+            /* iphone */
+            /* heder start copy  start ========================================================================= */
+                #header{
+                    width: 100%;
+                    height:60px;
+                }
+
+
+                #headerlogo > a > img {
+                    display: block;
+                    width: 120px;
+                }
+                #menu > div:nth-child(1){
+                    display: none;
+                }
+
+                .btn-container{
+                    display: none;
+                }
+
+                #login{
+                    display: none;
+                }
+
+
+                #menuIcon{
+                    width: 25px;
+                    height: 25px;
+                }
+
+                .icon{
+                    min-width: 12px;
+                    min-height: 12px;
+                }
+                #menuText{
+                    font-size: 20px;
+                    margin-right:0;
+                }
+
+
+                #menu > div{
+                    margin-right: 0;
+                }
+
+
+
+                #footer > div{
+                    margin-left: 5%;
+                }
+
+                #footerLogo {
+                    width: 5%;
+                }
+
+                .footerMenuItem{
+                    font-size: 12px;
+                    margin: 0px 20px 30px 20px;
+                }
+
+                #footerSocial{
+                    font-size: 12px;
+                    margin-left: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                #footerCode > div {
+                    margin-bottom: 15px;
+                }
+
+
+                #footerSocialLogo{
+                    flex-direction: row;
+                    width:40%;
+                    flex-wrap: wrap;
+                }
+
+                #footerSocialLogo > img {
+                    height: 50px;
+                    width:25px;
+                    margin-right: 10px;
+                    /* width: auto; */
+                }
+
+                #footerSocialLogo > a > img{
+                    height: 50px;
+                    margin-right: 10px;
+                }
+
+
+                #menuPopUpContents{
+                    width: 100%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    /* overflow-y: scroll; */
+                }
+
+                #menuPopUp{
+                    overflow-y: scroll;
+                    height:auto;
+                    bottom: 0;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    top:60px;
+                }
+                #menuButtonContainer{
+                    margin: auto;
+                    width:90%;
+                    flex-wrap: wrap;
+                    /* height: 20vh; */
+                }
+
+                #menuButtonContainer > a {
+                    max-width: 48%;
+                }
+
+                .buttonMenu{
+                    min-width:100%;
+                    max-width:100%;
+                    /* margin-bottom: 5px; */
+                    height: 40px;
+                }
+
+                #menuCategoryContainer{
+                    margin: auto;
+                    width:90%;
+                    flex-wrap: wrap;
+                    margin-top:24px;
+                }
+
+                .cursorPointer{
+                    width: 48%;
+                }
+                .menuCategory{
+                    max-width:100%;
+                    min-width:100%;
+                    min-height: 100px;
+                    margin-bottom:10px;
+                }
+
+                .menuCategory > div{
+                    font-size: 20px;
+                    /* height: 40px; */
+                }
+
+                #menuSoftwareContainer{
+                    margin: auto;
+                    width:90%;
+                    flex-wrap: wrap;
+                    margin-top:24px;
+                    row-gap: 0;
+                }
+
+                #menuSoftwareContainer > .cursorPointer{
+                    height: auto;
+                    width:24%;
+                    margin-bottom: 15px;
+                }
+                
+                .softwareDescription{
+                    display: none;
+                }
+
+                .software{
+                    width: 18vw;
+                    min-height: 18vw;
+                    display: flex;
+                    margin: auto;
+                }
+
+                .software > img{
+                    min-width: 12vw;
+                    max-width: 12vw;
+                    min-height: 12vw;
+                    max-height: 12vw;
+                    margin:auto;
+                    border-radius: 0;
+                }
+
+                #menuSocialContainer{
+                    width: 65%;
+                    margin-left:5%;
+                    justify-content: space-between;
+                    margin-bottom:20px;
+                }
+
+                #menuSocialContainer > div{
+                    max-width: 18%;
+                    max-height: 12vw;
+                    margin-right:0;
+                }
+
+
+                /* end of copy ============================================================================================= */
+
+                #contentContainer{
+                    top:60px;
+                }
+
+                .container{
+                    width:90%;
+                }
+
+                #aboutHeader{
+                    font-size: 40px;
+                }
+                #aboutSummary{
+                    font-size: 22px;
+                }
+
+                #aboutContent{
+                    font-size: 18px;
+                    width:100%;
+                }
+
+                #courseSysCardContainer{
+                    flex-wrap: wrap;
+                    /* row-gap: 18px; */
+                }
+                .course{
+                    width: 100%;
+                    height: calc(90vw * 364 / 360);
+                    margin-bottom: 18px;
+                }
+
+                #teacherInfo{
+                    font-size: 18px;
+                }
+
+
+                .advisor{
+                    width: 100%;
+                    flex-direction: row;
+                    height: auto;
+                    margin-bottom: 18px;
+                }
+
+                #advisorsCardContainer{
+                    row-gap: 0;
+                }
+
+
+                .advisor > div {
+                    width:40%;
+                }
+
+                .advisor > div > img {
+                    width: 100%;
+                    height:auto;
+                    border-top-left-radius: 15px;
+                    border-bottom-left-radius: 15px;
+                    border-top-right-radius: 0;
+                }
+        
+                .advisor > div > div > .header2{
+                    font-size: 4.5vw;
+                    line-height:10px;
+                }
+
+                .advisor > .cardDescription{
+                    margin:15px;
+                }
+
+                .advisor > div > div > .header3{
+                    font-size: 15px;
+                }
+
+                .advisorTitle{
+                    font-size: 12px;
+                }
+
+
+                .partner{
+                    width:45%;
+                }  
+
+
+
+                #contactHeader{
+                    flex-direction: column;
+                }
+
+                #socialMediaContents{
+                    flex-direction: column;
+                }
+
+                .socialCard{
+                    margin-bottom: 18px;
+                }
+
+                #socialMediaContents > a > div {
+                    width: 100%;
+                }
+
+                #socialCard3{
+                    width:100%;
+                    flex-direction: row;
+                }
+
+                #socialCard3 > a {
+                    width: 48%;
+                }
+
+                #social3Text{
+                    width:100%;
+                }
+
+                .SocaialCardText{
+                    bottom: 10px;
+                }
+
+                .socialHeader1{
+                    font-size: 18px;
+                    line-height: 10px;
+                }
+
+                .socialHeader2{
+                    font-size: 15px;
+                }
+
+
+            }
+
         </style>
 
         
@@ -1076,10 +1689,10 @@
 
 
         <div id="header">
-            <div id="headerlogo"><a href="./home.html"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
+            <div id="headerlogo"><a href="./home"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
             <div id="menu">
                 <div>
-                    <form id="form" action="./courseList.html">
+                    <form id="form" action="./courseList">
                         <input type='text' id='search' name='filter' placeholder="processing"> 
                     </form>
                 </div>
@@ -1292,7 +1905,7 @@
             </div>
 
             <div class='container' id="navigation">
-                <span><a href="./home.html"><span class="eng">HOME</span><span class="cn">主页</span></a></span> > <span class="eng">ABOUT US</span><span class="cn">关于我们</span>
+                <span><a href="./home"><span class="eng">HOME</span><span class="cn">主页</span></a></span> > <span class="eng">ABOUT US</span><span class="cn">关于我们</span>
             </div>
 
 
@@ -1324,50 +1937,50 @@
         
                 <div class='cardsContainer' id='courseSysCardContainer'>
                     <div class='myCard course'>
-                        <a href="./courseList.html?filter=ai">                        
+                        <a href="./courseList?filter=ai">                        
                             <div>
                                 <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3651a5bd2bad2b12717a8e80069baa6e?imageView2'>
                             </div>
                         </a>
                         <div class='cardDescription'>
-                            <div class='header2 header2Resize'><a href='./courseList.html?filter=ai'>AI Develop</a></div>
-                            <div class='header3 header3Resize'><a href='./courseList.html?filter=ai'>人工智能开发</a></div>
+                            <div class='header2 header2Resize'><a href='./courseList?filter=ai'>AI Develop</a></div>
+                            <div class='header3 header3Resize'><a href='./courseList?filter=ai'>人工智能开发</a></div>
                         </div>
                     </div>
                     <!-- end of card 1 -->
                     <div class='myCard course'>
-                        <a href='./courseList.html?filter=xr'>                        
+                        <a href='./courseList?filter=xr'>                        
                             <div>
                                 <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_5f4d603b0123dfd39aadbc63f96fb951?imageView2'>
                             </div>
                         </a>
                         <div class='cardDescription'>
-                            <div class='header2 header2Resize'><a href='./courseList.html?filter=xr'>XR Developer</a></div>
-                            <div class='header3 header3Resize'><a href='./courseList.html?filter=xr'>混合现实开发</a></div>
+                            <div class='header2 header2Resize'><a href='./courseList?filter=xr'>XR Developer</a></div>
+                            <div class='header3 header3Resize'><a href='./courseList?filter=xr'>混合现实开发</a></div>
                         </div>
                     </div>
                     <!-- end of card 2 -->
                     <div class='myCard course'>
-                        <a href='./courseList.html?filter=nft'>                        
+                        <a href='./courseList?filter=nft'>                        
                             <div>
                                 <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0f37cae07156d00b6c03dc4b358b2e9b?imageView2'>
                             </div>
                         </a>
                         <div class='cardDescription'>
-                            <div class='header2 header2Resize'><a href='./courseList.html?filter=nft'>NFT Developer</a></div>
-                            <div class='header3 header3Resize'><a href='./courseList.html?filter=nft'>数字藏品开发</a></div>
+                            <div class='header2 header2Resize'><a href='./courseList?filter=nft'>NFT Developer</a></div>
+                            <div class='header3 header3Resize'><a href='./courseList?filter=nft'>数字藏品开发</a></div>
                         </div>
                     </div>
                     <!-- end of card 3 -->
                     <div class='myCard course'>
-                        <a href='./courseList.html?filter=ux'>                        
+                        <a href='./courseList?filter=ux'>                        
                             <div>
                                 <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_dc90bb0a096473c294451531967b1581?imageView2'>
                             </div>
                         </a>
                         <div class='cardDescription'>
-                            <div class='header2 header2Resize'><a href='./courseList.html?filter=ux'>UX Designer</a></div>
-                            <div class='header3 header3Resize'><a href='./courseList.html?filter=ux'>交互设计师</a></div>
+                            <div class='header2 header2Resize'><a href='./courseList?filter=ux'>UX Designer</a></div>
+                            <div class='header3 header3Resize'><a href='./courseList?filter=ux'>交互设计师</a></div>
                         </div>
                     </div>
                     <!-- end of card 4 -->
@@ -1635,7 +2248,7 @@
                                     <span class='cn'>帕森斯设计与技术硕士</span>
                                     <span class='eng'>Parsons Design and Technology</span>
                                     <br/>
-                                    <span class='cn'>芝加哥科技工业博物馆创意工程师</span>
+                                    <span class='cn'>芝加哥科技工业博物馆工程师</span>
                                     <span class='eng'>Creative Engineer</span>
 
                                 </div>
@@ -1702,7 +2315,7 @@
                 <div class='cardsContainer' id='socialMediaContents'>
                     <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9">
                         <div class='socialCard shadow' id="wechatSocial">
-                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1c7d5b13aace3ddf7d0d740566301e9a?imageView2'>
+                            <img id='xiaoyuzhou' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1c7d5b13aace3ddf7d0d740566301e9a?imageView2'>
                             <div class="SocaialCardText">
                                 <span class="socialHeader1">
                                     <span class="cn">#小宇宙</span>
@@ -1717,7 +2330,7 @@
                     </a>
                     <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI4NzQzMjYwMQ==&action=getalbum&album_id=2173312120812027907#wechat_redirect">
                         <div class='socialCard shadow'>
-                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bc43c2cbd46787b9104ceb9de3daab74?imageView2'>
+                            <img id='wechat' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bc43c2cbd46787b9104ceb9de3daab74?imageView2'>
                             <div class="SocaialCardText">
                                 <span class="socialHeader1">
                                     <span class="cn">#微信公众号</span>
