@@ -1726,8 +1726,8 @@ this is the first HTML code, load font and style!
 
         /* iphone */
         @media only screen and (min-width: 200px) and (max-width: 767px)  {
-    /* heder start copy  start ========================================================================= */
-        #header{
+            /* heder start copy  start ========================================================================= */
+            #header{
             width: 100%;
             height:60px;
         }
@@ -1743,9 +1743,17 @@ this is the first HTML code, load font and style!
             margin-right:0;
         }
 
+        #footer{
+            margin-top: 100px;
+        }
+
 
         #menu > div{
             margin-right: 0;
+        }
+
+        #menu > #menuIconContainer{
+            width: auto;
         }
 
 
@@ -1763,13 +1771,14 @@ this is the first HTML code, load font and style!
         }
 
         #menuIcon{
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
         }
 
-        .icon{
-            min-width: 12px;
-            min-height: 12  px;
+        #menuIcon > div {
+            width: 9px;
+            height: 9px;
+            border-radius: 3px;
         }
 
 
@@ -1791,7 +1800,7 @@ this is the first HTML code, load font and style!
             font-size: 12px;
             margin-left: 20px;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: flex-start;
         }
 
@@ -1800,22 +1809,29 @@ this is the first HTML code, load font and style!
         }
 
 
+        #footerCode > div:nth-child(1){
+            display: none;
+        }
+
+
         #footerSocialLogo{
             flex-direction: row;
-            width:40%;
+            width:60%;
             flex-wrap: wrap;
         }
 
         #footerSocialLogo > img {
-            height: 50px;
-            width:25px;
+            width:20px;
+            height:auto;
             margin-right: 10px;
-            /* width: auto; */
+            margin-bottom:25px;
         }
 
         #footerSocialLogo > a > img{
-            height: 50px;
+            width:20px;
+            height:auto;
             margin-right: 10px;
+            margin-bottom:25px;
         }
 
 
@@ -1880,7 +1896,7 @@ this is the first HTML code, load font and style!
             margin: auto;
             width:90%;
             flex-wrap: wrap;
-            margin-top:24px;
+            margin-top:14px;
             row-gap: 0;
         }
 
@@ -1915,6 +1931,7 @@ this is the first HTML code, load font and style!
             margin-left:5%;
             justify-content: space-between;
             margin-bottom: 20px;
+            margin-top: 9px;
         }
 
         #menuSocialContainer > div{
@@ -1922,14 +1939,7 @@ this is the first HTML code, load font and style!
             max-height: 12vw;
             margin-right:0;
         }
-
-        #contentContainer{
-            top:60px;
-        }
-
-
         /* end of copy ============================================================================================= */
-
 
 
         .container{
@@ -1939,10 +1949,12 @@ this is the first HTML code, load font and style!
 
         .course{
             margin:auto;
+            /* height: calc(27vw * 480 / 474 + 100px) */
         }
 
         #filterFiller{
             line-height: 120%;  
+            font-size: 30px;
         }
         
         #buttonListContainer{
@@ -1950,22 +1962,91 @@ this is the first HTML code, load font and style!
         }
 
         .buttonList{
-            min-width: 15%;
-            max-width: 15%;
+            /* min-width: 15%;
+            max-width: 15%; */
             margin-bottom: 10px;
-            /* flex-grow: 2; */
+            margin-right:10px;
+            flex-grow: 2;
             font-size:18px;
+        }
+
+        .tag{
+            margin-bottom: 10px;
+        }
+
+
+        .filterTitle{
+            font-size: 30px;
+        }
+        
+        .filters{
+            font-size: 18px;
+        }
+
+        #filterDisplay {
+            height:auto;
+        }
+
+        #filterDisplay > div{
+            height:auto;
+        }
+
+        .filterH1{
+            font-size: 20px;
+        }
+        
+        #filterIcon{
+            width:20px;
+            height:20px;
+        }
+
+        #filterText{
+            font-size: 20px;
+            margin-left:10px;
+        }
+
+        #filterContainer{
+            align-self: flex-end;
+            justify-content: flex-end;
+        }
+
+        .closeFilterTab{
+            width:20px;
+            height:20px;
+        }
+
+        .closeFilterTab::before, .closeFilterTab::after{
+            top:8px;
+            width: 20px;
+        }
+
+        .header2{
+            /* font-size: 25px; */
+            font-size: 6vw;
+            line-height: 110%;
+        }
+
+        .tag{
+            font-size: 16px;
+        }
+
+        #filterDisplay{
+            width:100%;
+        }
+
+        .empty{
+            display: none;
         }
     }
 
-</style>
+</style>    
 
 
 <div id="header">
-    <div id="headerlogo"><a href="./home.html"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
+    <div id="headerlogo"><a href="./home"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
     <div id="menu">
         <div>
-            <form id="form" action="./courseList.html">
+            <form id="form" action="./courseList">
                 <input type='text' id='search' name='filter' placeholder="processing"> 
             </form>
         </div>
@@ -2194,7 +2275,7 @@ this is the first HTML code, load font and style!
 
 
     <div class='container' id="navigation">
-        <span><a href="./home.html"><span class="cn">主页</span><span class="eng">HOME</span></a></span> > <span><span class="eng">COURSE LIST</span><span class="cn">课程</span></span>
+        <span><a href="./home"><span class="cn">主页</span><span class="eng">HOME</span></a></span> > <span><span class="eng">COURSE LIST</span><span class="cn">课程</span></span>
     </div>
 
 
@@ -2291,33 +2372,33 @@ this is the first HTML code, load font and style!
     		</div>
 
     		<div class="myCard is-animated course recommandCourse unityCourse xrCourse metaverseCourse highCourse popularCourse shaderCourse highTechCourse stageCourse interactiveCourse arCourse">
-    			<div class="arClick"><a href=" ./course.html?courseDisplay=unityAR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_48d23e3e95a4297037652fc25aaa7008?imageView2'></a></div>
+    			<div class="arClick"><a href=" ./course?courseDisplay=unityAR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_48d23e3e95a4297037652fc25aaa7008?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize arClick'><a href=" ./course.html?courseDisplay=unityAR">Mastering Augmented Reality with Unity</a></div>
-                        <div class='header3 header3Resize arClick'><a href=" ./course.html?courseDisplay=unityAR">AR增强现实大师班</a></div>
+                        <div class='header2 header2Resize arClick'><a href=" ./course?courseDisplay=unityAR">Mastering Augmented Reality with Unity</a></div>
+                        <div class='header3 header3Resize arClick'><a href=" ./course?courseDisplay=unityAR">AR增强现实大师班</a></div>
                     </div>
                     <div><div class='tag p5'>#AR</div> <div class='tag unity'>#unity</div></div>
                 </div>
     		</div>
             <!-- end of card 1 -->
     		<div class="myCard is-animated course recommandCourse unityCourse xrCourse metaverseCourse highCourse popularCourse highTechCourse interactiveCourse gameCourse vrCourse">
-                <div class="vrClick"><a href=" ./course.html?courseDisplay=unityVR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ebbd934d258ba30d603ac2bc8e9ca4d1?imageView2'></a></div>
+                <div class="vrClick"><a href=" ./course?courseDisplay=unityVR"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ebbd934d258ba30d603ac2bc8e9ca4d1?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='vrClick header2 header2Resize'><a href=" ./course.html?courseDisplay=unityVR">Mastering Virtual Reality with Unity</a></div>
-                        <div class='vrClick header3 header3Resize'><a href=" ./course.html?courseDisplay=unityVR">VR虚拟实境大师班</a></div>
+                        <div class='vrClick header2 header2Resize'><a href=" ./course?courseDisplay=unityVR">Mastering Virtual Reality with Unity</a></div>
+                        <div class='vrClick header3 header3Resize'><a href=" ./course?courseDisplay=unityVR">VR虚拟实境大师班</a></div>
                     </div>
                     <div><div class='tag vr'>#VR</div> <div class='tag unity'>#unity</div></div>
                 </div>
             </div>
             <!-- end of card 2 -->
             <div class="myCard is-animated course unrealCourse metaverseCourse highTechCourse interactiveCourse gameCourse dhCourse">
-                <div><a href=" ./course.html?courseDisplay=unrealLandScape"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_30399843385fc464023880bccd336334?imageView2'></a></div>
+                <div><a href=" ./course?courseDisplay=unrealLandScape"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_30399843385fc464023880bccd336334?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href=" ./course.html?courseDisplay=unrealLandScape">Matering Landscape and Human with UE</a></div>
-                        <div class='header3 header3Resize'><a href=" ./course.html?courseDisplay=unrealLandScape">Unreal场景人物大师班</a></div>
+                        <div class='header2 header2Resize'><a href=" ./course?courseDisplay=unrealLandScape">Matering Landscape and Human with UE</a></div>
+                        <div class='header3 header3Resize'><a href=" ./course?courseDisplay=unrealLandScape">Unreal场景人物大师班</a></div>
                     </div>
                     <div><div class='tag unreal'>#Unreal Engine</div> <div class="tag dh">#Digital Human</div></div>
                 </div>
@@ -2325,11 +2406,11 @@ this is the first HTML code, load font and style!
             <!-- end of card 3 -->
             
             <!-- <div class="myCard is-animated course unrealCourse metaverseCourse newestCourse popularCourse highTechCourse interactiveCourse gameCourse">
-                <div><a href=" ./course.html?courseDisplay=unrealStylized"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f38e77aa21e05249ed286a50d5ad0e24?imageView2'></a></div>
+                <div><a href=" ./course?courseDisplay=unrealStylized"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f38e77aa21e05249ed286a50d5ad0e24?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href=" ./course.html?courseDisplay=unrealLandScape">Matering 3D Stylized Environment with UE5</a></div>
-                        <div class='header3 header3Resize'><a href=" ./course.html?courseDisplay=unrealLandScape">UE5 3D风格化场景师班</a></div>
+                        <div class='header2 header2Resize'><a href=" ./course?courseDisplay=unrealLandScape">Matering 3D Stylized Environment with UE5</a></div>
+                        <div class='header3 header3Resize'><a href=" ./course?courseDisplay=unrealLandScape">UE5 3D风格化场景师班</a></div>
                     </div>
                     <div><div class='tag unreal'>#Unreal Engine</div> <div class="tag dh">#Digital Human</div></div>
                 </div>
@@ -2338,33 +2419,33 @@ this is the first HTML code, load font and style!
 
 
             <div class="myCard is-animated course recommandCourse aiCourse nftCourse p5Course metaverseCourse popularCourse ml5Course jsCourse stageCourse interactiveCourse">
-                <div><a href=" ./course.html?courseDisplay=ai"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ba53ef10b2fd1320874bac0d34c2c46f?imageView2'></a></div>
+                <div><a href=" ./course?courseDisplay=ai"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ba53ef10b2fd1320874bac0d34c2c46f?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href=" ./course.html?courseDisplay=ai">Mastering AI Generative Art With P5.js</a></div>
-                        <div class='header3 header3Resize'><a href=" ./course.html?courseDisplay=ai">AI生成艺术大师班</a></div>
+                        <div class='header2 header2Resize'><a href=" ./course?courseDisplay=ai">Mastering AI Generative Art With P5.js</a></div>
+                        <div class='header3 header3Resize'><a href=" ./course?courseDisplay=ai">AI生成艺术大师班</a></div>
                     </div>
                     <div><div class='tag p5'>#p5.js</div> <div class='tag ai'>#AI</div></div>
                 </div>
             </div>
             <!-- end of card 4 -->
             <div class="myCard is-animated course processingCourse lightCourse stageCourse interactiveCourse immersiveCourse" >
-                <div><a href="./course.html?courseDisplay=interactiveLight"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8f84b748917a0fac32dfcef36cc09a1e?imageView2'></a></div>
+                <div><a href="./course?courseDisplay=interactiveLight"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8f84b748917a0fac32dfcef36cc09a1e?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href="./course.html?courseDisplay=interactiveLight">Mastering Interactive Lighting with Processing</a></div>
-                        <div class='header3 header3Resize'><a href="./course.html?courseDisplay=interactiveLight">互动灯光编程大师班</a></div>
+                        <div class='header2 header2Resize'><a href="./course?courseDisplay=interactiveLight">Mastering Interactive Lighting with Processing</a></div>
+                        <div class='header3 header3Resize'><a href="./course?courseDisplay=interactiveLight">互动灯光编程大师班</a></div>
                     </div>
                     <div><div class='tag processing'>#Processing</div> <div class='tag light'>#Lighting Design</div></div>
                 </div>
             </div>
             <!-- end of card 5 -->
             <div class="myCard is-animated course tdCourse arduinoCourse interactiveCourse" >
-                <div><a href=" ./course.html?courseDisplay=tdArduino"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_5c9a5541110ef3c6313434abe4820e89?imageView2'></a></div>
+                <div><a href=" ./course?courseDisplay=tdArduino"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_5c9a5541110ef3c6313434abe4820e89?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href=" ./course.html?courseDisplay=tdArduino">Mastering interactive Installation with TD</a></div>
-                        <div class='header3 header3Resize'><a href=" ./course.html?courseDisplay=tdArduino">TD交互装置大师班</a></div>
+                        <div class='header2 header2Resize'><a href=" ./course?courseDisplay=tdArduino">Mastering interactive Installation with TD</a></div>
+                        <div class='header3 header3Resize'><a href=" ./course?courseDisplay=tdArduino">TD交互装置大师班</a></div>
                     </div>
                     <div><div class='tag td'>#touchDesigner</div> <div class='tag arduino'>#arduino</div></div>
                 </div>
@@ -2373,11 +2454,11 @@ this is the first HTML code, load font and style!
 
 
             <div class="myCard is-animated course museumCourse highCourse exhibitionCourse uxCourse interactiveCourse">
-                <div><a href=" ./course.html?courseDisplay=museum"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_48fd995ba3a597f1bfdc44cc1968571f?imageView2'></a></div>
+                <div><a href=" ./course?courseDisplay=museum"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_48fd995ba3a597f1bfdc44cc1968571f?imageView2'></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href="./course.html?courseDisplay=museum">Mastering Museum Interaction Design</a></div>
-                        <div class='header3 header3Resize'><a href="./course.html?courseDisplay=museum">博物馆体验设计大师班</a></div>
+                        <div class='header2 header2Resize'><a href="./course?courseDisplay=museum">Mastering Museum Interaction Design</a></div>
+                        <div class='header3 header3Resize'><a href="./course?courseDisplay=museum">博物馆体验设计大师班</a></div>
                     </div>
                     <div><div class='tag museum'>#Museum Interaction</div> <div class='tag figma'>#figma</div></div>
                 </div>
@@ -2419,21 +2500,20 @@ this is the first HTML code, load font and style!
 
 
 
-    
     <div class='' id="footer">
         <div>
-            <div id='footerLogo'><a href="./home.html"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
+            <div id='footerLogo'><a href="./home"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
             <div id='footerMenu'>
                 <div>
-                    <div class='footerMenuItem'><a href="./courselist.html"><span class='eng'>Course</span><span class="cn">课程</span></a></div>
-                    <div class='footerMenuItem'><a href="./aboutus.html"><span class='eng'>Career</span><span class="cn">职业</span></a></div>
-                    <div class='footerMenuItem'><a href="./news.html"><span class='eng'>News</span><span class="cn">新闻</span></a></div>
-                    <div class='footerMenuItem'><a href="./blogs.html"><span class='eng'>Blog</span><span class="cn">博客</span></a></div>
+                    <div class='footerMenuItem'><a href="./courseList"><span class='eng'>Course</span><span class="cn">课程</span></a></div>
+                    <div class='footerMenuItem'><a href="./about"><span class='eng'>Career</span><span class="cn">职业</span></a></div>
+                    <div class='footerMenuItem'><a href="./news"><span class='eng'>News</span><span class="cn">新闻</span></a></div>
+                    <div class='footerMenuItem'><a href="./blogs"><span class='eng'>Blog</span><span class="cn">博客</span></a></div>
                 </div>
 
                 <div>                
-                    <div class='footerMenuItem'><a href="./aboutus.html"><span class='eng'>About Us</span><span class="cn">关于我们</span></a></div>
-                    <div class='footerMenuItem'><a href="./aboutus.html#advidorsContainer"><span class='eng'>Advisors</span><span class="cn">导师信息</span></a></div>
+                    <div class='footerMenuItem'><a href="./about"><span class='eng'>About Us</span><span class="cn">关于我们</span></a></div>
+                    <div class='footerMenuItem'><a href="./about#advidorsContainer"><span class='eng'>Advisors</span><span class="cn">导师信息</span></a></div>
                     <div class='footerMenuItem'><a href="https://jinshuju.net/f/YzGMtG"><span class='eng'>Join Us</span><span class="cn">加入我们</span></a></div>    
                 </div>
             </div>
@@ -2444,22 +2524,22 @@ this is the first HTML code, load font and style!
                     <div><span class="cn">关注我们</span><span class="eng">Follow Us</span></div>
                     <div id='footerSocialLogo'>
                         <!-- wechat -->
-                        <img id='displayCode' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ca7e148ffaa0dddeedffb10f7c80a392?imageView2'>
+                        <img id='displayCode' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fd30472c3efebea2964de39026033cbd?imageView2'>
                         <!-- bilibili -->
-                        <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048">
-                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d3031dd5e026a1c35906ee627b3021ce?imageView2'>
+                        <a href="https://space.bilibili.com/25081666">
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7a4a9e3cc8aebabae0bafda61f4ae079?imageView2'>
                         </a>
                         <!-- weibo -->
                         <a href="https://weibo.com/u/7126820846">
-                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_4a425023fccb27c3c816c64ec67c67d5?imageView2'>
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_c9fcb6181b86c04ae09c129c197207dd?imageView2'>
                         </a>
                         <!-- 小红书 -->
                         <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515">
-                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e35086209607f49957993a682e0025c4?imageView2'>
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2e95eb130d022fc2f3af10a64f6dfe76?imageView2'>
                         </a>
                         <!-- 小宇宙 -->
                         <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9">
-                            <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0a3342aa250a760309903f3fe3026fc4?imageView2">
+                            <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_aba421402b315f26bd7ed09819f410ef?imageView2">
                         </a>
                     </div>
                     <div id="weChatCode"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>

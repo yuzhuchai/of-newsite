@@ -194,7 +194,7 @@ this is the first HTML code, load font and style!
         top: 0;
         width: 100vw;
         height: 100vh;
-        overflow: auto;
+        overflow-x:hidden;
     }
 
 
@@ -1579,7 +1579,7 @@ this is the first HTML code, load font and style!
        @media only screen and (min-width: 200px) and (max-width: 767px)  {
     /* iphone */
     /* heder start copy  start ========================================================================= */
-        #header{
+    #header{
             width: 100%;
             height:60px;
         }
@@ -1595,9 +1595,17 @@ this is the first HTML code, load font and style!
             margin-right:0;
         }
 
+        #footer{
+            margin-top: 100px;
+        }
+
 
         #menu > div{
             margin-right: 0;
+        }
+
+        #menu > #menuIconContainer{
+            width: auto;
         }
 
 
@@ -1615,13 +1623,14 @@ this is the first HTML code, load font and style!
         }
 
         #menuIcon{
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
         }
 
-        .icon{
-            min-width: 12px;
-            min-height: 12  px;
+        #menuIcon > div {
+            width: 9px;
+            height: 9px;
+            border-radius: 3px;
         }
 
 
@@ -1643,7 +1652,7 @@ this is the first HTML code, load font and style!
             font-size: 12px;
             margin-left: 20px;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: flex-start;
         }
 
@@ -1652,22 +1661,29 @@ this is the first HTML code, load font and style!
         }
 
 
+        #footerCode > div:nth-child(1){
+            display: none;
+        }
+
+
         #footerSocialLogo{
             flex-direction: row;
-            width:40%;
+            width:60%;
             flex-wrap: wrap;
         }
 
         #footerSocialLogo > img {
-            height: 50px;
-            width:25px;
+            width:20px;
+            height:auto;
             margin-right: 10px;
-            /* width: auto; */
+            margin-bottom:25px;
         }
 
         #footerSocialLogo > a > img{
-            height: 50px;
+            width:20px;
+            height:auto;
             margin-right: 10px;
+            margin-bottom:25px;
         }
 
 
@@ -1732,7 +1748,7 @@ this is the first HTML code, load font and style!
             margin: auto;
             width:90%;
             flex-wrap: wrap;
-            margin-top:24px;
+            margin-top:14px;
             row-gap: 0;
         }
 
@@ -1767,6 +1783,7 @@ this is the first HTML code, load font and style!
             margin-left:5%;
             justify-content: space-between;
             margin-bottom: 20px;
+            margin-top: 9px;
         }
 
         #menuSocialContainer > div{
@@ -1774,13 +1791,7 @@ this is the first HTML code, load font and style!
             max-height: 12vw;
             margin-right:0;
         }
-
-        #contentContainer{
-            top:60px;
-        }
-
-
-        /* end of copy ============================================================================================= */
+            /* end ---------------------------------------------------------------- */
 
 
         .container{
@@ -2150,15 +2161,15 @@ this is the first HTML code, load font and style!
             <div id='footerLogo'><a href="./home"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
             <div id='footerMenu'>
                 <div>
-                    <div class='footerMenuItem'><a href="./courselist"><span class='eng'>Course</span><span class="cn">课程</span></a></div>
-                    <div class='footerMenuItem'><a href="./aboutus"><span class='eng'>Career</span><span class="cn">职业</span></a></div>
+                    <div class='footerMenuItem'><a href="./courseList"><span class='eng'>Course</span><span class="cn">课程</span></a></div>
+                    <div class='footerMenuItem'><a href="./about"><span class='eng'>Career</span><span class="cn">职业</span></a></div>
                     <div class='footerMenuItem'><a href="./news"><span class='eng'>News</span><span class="cn">新闻</span></a></div>
                     <div class='footerMenuItem'><a href="./blogs"><span class='eng'>Blog</span><span class="cn">博客</span></a></div>
                 </div>
 
                 <div>                
-                    <div class='footerMenuItem'><a href="./aboutus"><span class='eng'>About Us</span><span class="cn">关于我们</span></a></div>
-                    <div class='footerMenuItem'><a href="./aboutus#advidorsContainer"><span class='eng'>Advisors</span><span class="cn">导师信息</span></a></div>
+                    <div class='footerMenuItem'><a href="./about"><span class='eng'>About Us</span><span class="cn">关于我们</span></a></div>
+                    <div class='footerMenuItem'><a href="./about#advidorsContainer"><span class='eng'>Advisors</span><span class="cn">导师信息</span></a></div>
                     <div class='footerMenuItem'><a href="https://jinshuju.net/f/YzGMtG"><span class='eng'>Join Us</span><span class="cn">加入我们</span></a></div>    
                 </div>
             </div>
@@ -2169,22 +2180,22 @@ this is the first HTML code, load font and style!
                     <div><span class="cn">关注我们</span><span class="eng">Follow Us</span></div>
                     <div id='footerSocialLogo'>
                         <!-- wechat -->
-                        <img id='displayCode' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ca7e148ffaa0dddeedffb10f7c80a392?imageView2'>
+                        <img id='displayCode' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fd30472c3efebea2964de39026033cbd?imageView2'>
                         <!-- bilibili -->
-                        <a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048">
-                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d3031dd5e026a1c35906ee627b3021ce?imageView2'>
+                        <a href="https://space.bilibili.com/25081666">
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7a4a9e3cc8aebabae0bafda61f4ae079?imageView2'>
                         </a>
                         <!-- weibo -->
                         <a href="https://weibo.com/u/7126820846">
-                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_4a425023fccb27c3c816c64ec67c67d5?imageView2'>
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_c9fcb6181b86c04ae09c129c197207dd?imageView2'>
                         </a>
                         <!-- 小红书 -->
                         <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515">
-                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e35086209607f49957993a682e0025c4?imageView2'>
+                            <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2e95eb130d022fc2f3af10a64f6dfe76?imageView2'>
                         </a>
                         <!-- 小宇宙 -->
                         <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9">
-                            <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0a3342aa250a760309903f3fe3026fc4?imageView2">
+                            <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_aba421402b315f26bd7ed09819f410ef?imageView2">
                         </a>
                     </div>
                     <div id="weChatCode"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
