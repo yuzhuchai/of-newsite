@@ -13,9 +13,10 @@
         <script>
             $(window).on("load",function(){
                 $(".main_area").width($(window).width())
+                contentWidth = $('#contentContainer').width();
+                console.log(contentWidth)
 
-                socialCardWidth = $('.socialCard').width();
-                if(socialCardWidth < 767){  
+                if(contentWidth < 767){  
                     $('#xiaoyuzhou').attr('src', 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1628b576636c4731e3d446d523a7c16d?imageView2')
                     $('#wechat').attr('src', 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f01e58d658c36e7394c00efd7fdeba19?imageView2')
                 }
@@ -36,11 +37,12 @@
 
             $( window ).resize(function() {
 
-                let screenWidth = screen.width;
-                console.log(socialCardWidth)
 
-                socialCardWidth = $('.socialCard').width();
-                if(socialCardWidth < 767){  
+                contentWidth = $('#contentContainer').width();
+                console.log(contentWidth)
+
+                if(contentWidth < 767){  
+                    console.log('this is reactive')
                     $('#xiaoyuzhou').attr('src', 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1628b576636c4731e3d446d523a7c16d?imageView2')
                     $('#wechat').attr('src', 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f01e58d658c36e7394c00efd7fdeba19?imageView2')
                 } else {
@@ -1098,11 +1100,20 @@
                 width: 90%;
             }
 
+            .mobileLan{
+                display:none;
+            }
+
+            #mobileMenuDisplay{
+                display: hide;
+            }
+
+
 
 
             @media only screen and (min-width: 1023px) and (max-width: 1660px){
 
-            /* menu fixed  start ------------------------------------------------------------------------------ */
+                /* menu fixed  start ------------------------------------------------------------------------------ */
                 #menu{
                     width: 70%;
                 }
@@ -1132,7 +1143,14 @@
 
                 #menuButtonContainer,#menuCategoryContainer{
                     width:100%;
+                    margin-top:30px;
                 }
+
+
+                #menuSocialContainer{
+                    margin-top: 30px;
+                }
+
 
                 #menuButtonContainer > a {
                     max-width: 18%;
@@ -1142,7 +1160,7 @@
                     max-width:100%;
                 }
 
-
+    
                 #menuCategoryContainer > a {
                     width:24%;
                 }
@@ -1153,11 +1171,14 @@
                     min-height: calc(20vw * 199 / 360)
                 }
                 #menuSoftwareContainer{
-                    width:100%;     
+                    width:100%;
+                    margin-top:30px;
+                    row-gap: 0px;
                 }
 
                 #menuSoftwareContainer > a {
                     width:24%;     
+                    margin-bottom: 10px;
                 }
                 .software{
                     width:100%;
@@ -1171,18 +1192,32 @@
                 }
 
                 .softwareh1{
-                    font-size: 18px;
+                    font-size: 16px;
                 }
 
                 .softwareh2{
-                    font-size: 14px;
+                    font-size: 12px;
+                }
+
+
+                #footerSocialLogo > img {
+                    height: 40px;
+                }
+
+                #footerSocialLogo > a > img {
+                    height:40px;
                 }
 
                 #menuPopUp{
-                    height: calc(100vh - 80px);
-                    /* display: flex;
-                    justify-content: center;
-                    align-items: center; */
+                    height:auto;
+                    bottom: 0;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    top:60px;
+                }
+
+                #menuButtonContainer > a > .buttonMenu{
+                    height: 45px;
                 }
 
                 /* end -------------------------------------------------------------------------------------------- */
@@ -1193,11 +1228,18 @@
 
                 .course{
                     width: 23%;
+                    /* height: auto; */
+                }
+
+                #advisorsCardContainer{
+                    row-gap: 0px;
                 }
 
                 .advisor{
-                    width: 30%;
-                    height:calc(27vw * 504 / 360)
+                    width: 32%;
+                    height: auto;
+                    /* height:calc(27vw * 504 / 360) */
+                    margin-bottom: 20px;
                 }
 
                 .advisorTitle{
@@ -1228,6 +1270,21 @@
                     font-size: 18px;
                 }
 
+                #aboutSummary{
+                    font-size: 24px;
+                }
+
+                #aboutContent{
+                    font-size: 20px;
+                    width: 65%;
+                }
+
+                #teacherInfo{
+                    font-size: 20px;
+                }
+
+
+
             }
 
             /* ipad */
@@ -1235,114 +1292,152 @@
                 /* ipad */
 
                 /* header  copy start ------------------------------------------------------------------------------ */
-                #menu{
-                    width: 80%;
-                }
+        #menu{
+            width: 80%;
+        }
 
-                #headerlogo{
-                    width: 15%;
-                }
+        #menu > div{
+            margin-right:0px;
+        }
 
-                #login{
-                    min-width:110px;
-                }
+        input[type=text]{
+            font-size: 8px;
+        }
 
-                #headerlogo > a > img {
-                    display: block;
-                    width: 100%;
-                }
+        .btn-container{
+            margin-right: 0;
+        }
 
+        #headerlogo{
+            width: 15%;
+        }
 
+        #login{
+            min-width:110px;
+        }
 
-                #footer > div{
-                    margin-left: 5%;
-                }
-
-                #footerLogo {
-                    width: 10%;
-                }
-
-                #footerMenu{
-                    width: 18%;
-                    justify-content: space-around;
-                }
-                .footerMenuItem{
-                    margin:auto;
-                    margin-bottom:30px;
-                }
-
-                #footerSocial{
-                    margin-left: 20px;
-                }
-
-                #menuPopUpContents{
-                    width: 90%;
-                }
-
-                #menuButtonContainer,#menuCategoryContainer{
-                    width:100%;
-                }
-
-                #menuButtonContainer > a {
-                    max-width: 18%;
-                }
-                .buttonMenu{
-                    min-width:100%;
-                    max-width:100%;
-                }
+        #headerlogo > a > img {
+            display: block;
+            width: 100%;
+        }
 
 
-                #menuCategoryContainer > a {
-                    width:24%;
-                }
+        #footer > div{
+            margin-left: 5%;
+        }
 
-                .menuCategory{
-                    min-width:100%;
-                    max-width:100%;
-                    min-height: calc(20vw * 199 / 360)
-                }
-                #menuSoftwareContainer{
-                    width:100%;     
-                }
+        #footerLogo {
+            width: 10%;
+        }
 
-                #menuSoftwareContainer > a {
-                    width:30%;     
-                }
-                .software{
-                    width:100%;
-                    min-height:140px;
-                }
+        #footerMenu{
+            width: 18%;
+            justify-content: space-around;
+        }
+        .footerMenuItem{
+            margin:auto;
+            margin-bottom:30px;
+        }
 
-                .software > img{
-                    height:50px;
-                    margin-left: 15px;
-                    margin-right: 20px;
-                }
+        #footerSocial{
+            margin-left: 20px;
+        }
 
-                .softwareh1{
-                    font-size: 18px;
-                }
+        #footerSocialLogo > img {
+            height: 30px;
+        }
 
-                .softwareh2{
-                    font-size: 14px;
-                }
+        #footerSocialLogo > a > img {
+            height:30px;
+        }
 
-                #menuPopUp{
-                    height: calc(100vh - 80px);
-                }
+        #menuPopUpContents{
+            width: 90%;
+        }
 
-                #menuSoftwareContainer > a:nth-child(7){
-                    display: none;
-                }
-                #menuSoftwareContainer > a:nth-child(6){
-                    display: none;
-                }
+        #menuButtonContainer,#menuCategoryContainer{
+            width:100%;
+            margin-top: 30px;
+        }
 
-                /* footer and popupmenu end ----------------------------------------------------------------------------- */
+        #menuButtonContainer > a {
+            max-width: 18%;
+        }
 
-                .container{
-                    max-width:90%;
-                }
+
+        .buttonMenu{
+            min-width:100%;
+            max-width:100%;
+            font-size: 15px;
+        }
+
+
+        .menuCategory > div {
+            font-size: 20px;
+        }
+
+        #menuCategoryContainer > a {
+            width:24%;
+        }
+
+        .menuCategory{
+            min-width:100%;
+            max-width:100%;
+            min-height: calc(20vw * 199 / 360)
+        }
+
+        #menuSoftwareContainer{
+            width:100%;   
+            row-gap: 0;  
+            margin-top: 30px;
+        }
+
+        #menuSocialContainer{
+            margin-top: 30px;
+        }
+
+        #menuButtonContainer > a > .buttonMenu{
+            height: 45px;
+        }
+
+        #menuSoftwareContainer > a {
+            width:48%;     
+        }
+        .software{
+            width:100%;
+            min-height:140px;
+            margin-bottom: 10px;
+        }
+
+        .software > img{
+            /* height:50px; */
+            margin-left: 15px;
+            margin-right: 50px;
+        }
+
+        .softwareh1{
+            font-size: 18px;
+        }
+
+        .softwareh2{
+            font-size: 14px;
+        }
+
+        #menuPopUp{
+            overflow-y: scroll;
+            height: calc(100vh - 80px);
+        }
+
+        #menuSoftwareContainer > a:nth-child(7){
+            display: none;
+        }
+        #menuSoftwareContainer > a:nth-child(6){
+            display: none;
+        }
+
+
+
+        /* footer and popupmenu end ----------------------------------------------------------------------------- */
 
                 #headerPicContainer{
                     min-width:100%;
@@ -1350,8 +1445,75 @@
 
                 #courseSysCardContainer{
                     flex-wrap: wrap;
-                    row-gap:18px;
+                    /* row-gap:18px; */
                 }
+
+                .container{
+                    width: 90%;
+                }
+
+                .course{
+                    width: 48%;
+                    margin-bottom: 20px;
+                    /* height: auto; */
+                }
+
+                #advisorsCardContainer{
+                    row-gap: 0px;
+                }
+
+                .advisor{
+                    width: 32%;
+                    height: auto;
+                    /* height:calc(27vw * 504 / 360) */
+                    margin-bottom: 20px;
+                }
+
+                .advisorTitle{
+                    font-size: 18px;
+                }
+
+                .cardDescription > div> .header2{
+                    font-size: 28px;
+                }
+
+                #socialMediaContents > *{
+                    width:32%;
+                }
+
+                .socialCard{
+                    width: 100%;
+                }
+
+                #socialMediaContents > a > div> img{
+                    width:100%;
+                }
+
+                .socialHeader1{
+                    font-size: 24px;
+                }
+
+                .socialHeader2{
+                    font-size: 18px;
+                }
+
+                #aboutSummary{
+                    font-size: 24px;
+                }
+
+                #aboutContent{
+                    font-size: 20px;
+                    width: 65%;
+                }
+
+                #teacherInfo{
+                    font-size: 20px;
+                }
+
+                .SocaialCardText{
+                    bottom:10px;
+                }
+
             }
 
 
@@ -1359,13 +1521,17 @@
             @media only screen and (min-width: 200px) and (max-width: 767px)  {
             /* iphone */
             
-    /* heder start copy  start ========================================================================= */
-    #header{
+        /* heder start copy  start ========================================================================= */
+        #header{
             width: 100%;
             height:60px;
         }
 
+    
 
+        #headerlogo, #menu {
+            margin-left:10px;
+        }
         #headerlogo > a > img {
             display: block;
             width: 120px;
@@ -1374,6 +1540,7 @@
         #menuText{
             font-size: 20px;
             margin-right:0;
+            display: none;
         }
 
         #footer{
@@ -1493,14 +1660,27 @@
         }
 
         #menuButtonContainer > a {
-            max-width: 48%;
+            max-width: 32%;
         }
 
+
+        #menuButtonContainer > a > .buttonBlack{
+            min-width: 100%;
+            max-width: 100%;
+            font-size: 15px;
+        }
+
+
         .buttonMenu{
-            min-width:100%;
-            max-width:100%;
-            /* margin-bottom: 5px; */
             height: 40px;
+            margin-top:0;
+            margin-bottom: 10px;
+        }
+
+
+        #mobileMenuDisplay{
+            display: block;
+            width: 32%;
         }
 
         #menuCategoryContainer{
@@ -1573,10 +1753,32 @@
             margin-right:0;
         }
 
+        #menu > .mobileLan{
+            display: block;
+            margin-right:30px;
+        }
+
+        #mobileEn{
+            display: none;
+        }
+
+        #contentContainer{
+            top:60px;
+        }
+
+        #menuPopUpContents{
+            margin-top: 0;
+        }
+
+        #menu{
+            margin-right: 10px;
+        }
+
+        .buttonMenu > .eng{
+            font-size: 12px;
+        }
+
         /* end of copy ============================================================================================= */
-
-
-
 
                 #contentContainer{
                     top:60px;
@@ -1707,6 +1909,14 @@
                 }
 
 
+                iframe{
+                    width: 200%;
+                    left: -600px;
+                    height:calc(100% + 10px);
+                    /* width: calc(100% + 10px);     */
+                    overflow:hidden;
+                }
+
             }
 
         </style>
@@ -1715,30 +1925,34 @@
 
 
 
-        <div id="header">
-            <div id="headerlogo"><a href="./home"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
-            <div id="menu">
-                <div>
-                    <form id="form" action="./courseList">
-                        <input type='text' id='search' name='filter' placeholder="processing"> 
-                    </form>
-                </div>
-
-
-                <div class="btn-container">
-                    <label class="switch btn-color-mode-switch">
-                        <input type="checkbox" name="color_mode" id="color_mode" value="1">
-                        <label for="color_mode" data-on="英文" data-off="中文" class="btn-color-mode-switch-inner"></label>
-                    </label>
-                </div>
-
-                <div id='login'><img id='loginIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_86ceb5932e24e2383cce79506f18ef8a?imageView2'>&nbsp <span class="cn">登陆</span><span class="eng">Log In</span></div> 
-                <div id='menuIconContainer'>
-                    <div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
-                    <div id='menuText'><span class="eng">Menu</span><span class="cn">菜单</span></div>
-                </div>
-            </div>
+<div id="header">
+    <div id="headerlogo"><a href="./home"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
+    <div id="menu">
+        <div>
+            <form id="form" action="./courseList">
+                <input type='text' id='search' name='filter' placeholder="processing"> 
+            </form>
         </div>
+
+
+        <div class="btn-container">
+			<label class="switch btn-color-mode-switch">
+		        <input type="checkbox" name="color_mode" id="color_mode" value="1">
+		        <label for="color_mode" data-on="英文" data-off="中文" class="btn-color-mode-switch-inner"></label>
+		    </label>
+        </div>
+
+        <div class="mobileLan">
+            <div id="mobileLanTxt"><span id="mobileCn">中文</span><span id="mobileEn">EN</span></div>
+        </div>
+
+        <div id='login'><img id='loginIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_86ceb5932e24e2383cce79506f18ef8a?imageView2'>&nbsp <span class="cn">登陆</span><span class="eng">Log In</span></div> 
+        <div id='menuIconContainer'>
+        	<div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
+        	<div id='menuText'><span class="eng">Menu</span><span class="cn">菜单</span></div>
+        </div>
+    </div>
+</div>
         <!-- end of header  -->
         <div id="loginPopupBg">
             <div id="loginPopup">
@@ -1752,6 +1966,8 @@
             </div>
         </div>
         
+
+
         <div id='menuPopUp'>
             <div id='menuPopUpContents'>
                 <div id='menuButtonContainer'>
@@ -1760,6 +1976,8 @@
                     <a href="./news"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
                     <a href="./blogs"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
                     <a href="./about#advisorsContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
+                    <div id="mobileMenuDisplay"></div>
+        
                 </div> 
         
                 <div id='menuCategoryContainer'>
@@ -2494,6 +2712,23 @@
                 }
             })
 
+            $('.mobileLan').on('click',function(){
+            if(lan == 'CN'){
+                $('#mobileCn').hide()
+                $('#mobileEn').show()
+                $('.cn').hide();
+                $('.eng').show();
+                lan = 'EN'
+            } else {
+                $('#mobileCn').show()
+                $('#mobileEn').hide()
+                $('.cn').show();
+                $('.eng').hide();
+                lan = 'CN'
+            }
+
+        })
+
             $('#login').click(function(){
                 $('#loginPopupBg').show()
             })
@@ -2531,6 +2766,20 @@
                 }
             })
 
+
+//             $(window).scroll(function(){
+//                 let scrollPos = $(window).scrollTop()
+
+// // $(window).on('scroll',)
+//                 console.log(scrollPos)
+//                 if(scrollPos > $('#map').position().top - 100){
+//                     if( !iframeLoaded ){
+//                         console.log('display ifroma')
+//                         $('iframe').attr('src', 'https://j.map.baidu.com/be/IatJ')
+//                         iframeLoaded = true 
+//                     }
+//                 }
+//             })
 
         </script>
 

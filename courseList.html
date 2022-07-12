@@ -1468,92 +1468,125 @@ this is the first HTML code, load font and style!
         width: 90%;
     }
 
+    .mobileLan{
+        display:none;
+    }
+
+    #mobileMenuDisplay{
+        display: hide;
+    }
+
+
     @media only screen and (min-width: 1023px) and (max-width: 1660px){
 
-    /* menu fixed  start ------------------------------------------------------------------------------ */
-        #menu{
-            width: 70%;
-        }
+   /* menu fixed  start ------------------------------------------------------------------------------ */
+ #menu{
+                width: 70%;
+            }
 
 
-        /* footer and menu popup */
-        #footer > div{
-            margin-left: 5%;
-        }
+            /* footer and menu popup */
+            #footer > div{
+                margin-left: 5%;
+            }
 
-        #footerLogo {
-            width: 10%;
-        }
+            #footerLogo {
+                width: 10%;
+            }
 
-        #footerMenu{
-            width: 20%;
-            justify-content: space-around;
-        }
-        .footerMenuItem{
-            margin:auto;
-            margin-bottom:30px;
-        }
+            #footerMenu{
+                width: 20%;
+                justify-content: space-around;
+            }
+            .footerMenuItem{
+                margin:auto;
+                margin-bottom:30px;
+            }
 
-        #menuPopUpContents{
-            width: 90%;
-        }
+            #menuPopUpContents{
+                width: 90%;
+            }
 
-        #menuButtonContainer,#menuCategoryContainer{
-            width:100%;
-        }
-
-        #menuButtonContainer > a {
-            max-width: 18%;
-        }
-        .buttonMenu{
-            min-width:100%;
-            max-width:100%;
-        }
+            #menuButtonContainer,#menuCategoryContainer{
+                width:100%;
+                margin-top:30px;
+            }
 
 
-        #menuCategoryContainer > a {
-            width:24%;
-        }
+            #menuSocialContainer{
+                margin-top: 30px;
+            }
 
-        .menuCategory{
-            min-width:100%;
-            max-width:100%;
-            min-height: calc(20vw * 199 / 360)
-        }
-        #menuSoftwareContainer{
-            width:100%;     
-        }
 
-        #menuSoftwareContainer > a {
-            width:24%;     
-        }
-        .software{
-            width:100%;
-            min-height:140px;
-        }
+            #menuButtonContainer > a {
+                max-width: 18%;
+            }
+            .buttonMenu{
+                min-width:100%;
+                max-width:100%;
+            }
 
-        .software > img{
-            height:50px;
-            margin-left: 15px;
-            margin-right: 20px;
-        }
+   
+            #menuCategoryContainer > a {
+                width:24%;
+            }
 
-        .softwareh1{
-            font-size: 18px;
-        }
+            .menuCategory{
+                min-width:100%;
+                max-width:100%;
+                min-height: calc(20vw * 199 / 360)
+            }
+            #menuSoftwareContainer{
+                width:100%;
+                margin-top:30px;
+                row-gap: 0px;
+            }
 
-        .softwareh2{
-            font-size: 14px;
-        }
+            #menuSoftwareContainer > a {
+                width:24%;     
+                margin-bottom: 10px;
+            }
+            .software{
+                width:100%;
+                min-height:140px;
+            }
 
-        #menuPopUp{
-            height: calc(100vh - 80px);
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
-        }
+            .software > img{
+                height:50px;
+                margin-left: 15px;
+                margin-right: 20px;
+            }
 
-        /* end -------------------------------------------------------------------------------------------- */
+            .softwareh1{
+                font-size: 16px;
+            }
+
+            .softwareh2{
+                font-size: 12px;
+            }
+
+
+            #footerSocialLogo > img {
+                height: 40px;
+            }
+
+            #footerSocialLogo > a > img {
+                height:40px;
+            }
+
+            #menuPopUp{
+                height:auto;
+                bottom: 0;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                top:60px;
+            }
+
+            #menuButtonContainer > a > .buttonMenu{
+                height: 45px;
+            }
+
+            /* end -------------------------------------------------------------------------------------------- */
 
         .container{
             max-width:90%;
@@ -1561,7 +1594,8 @@ this is the first HTML code, load font and style!
 
         .course{
             width: 32%;
-            height: calc(27vw * 480 / 474 + 100px)
+            height: calc(27vw * 480 / 474 + 150px);
+            margin-bottom: 20px;
         }
 
         #buttonListContainer{
@@ -1578,11 +1612,21 @@ this is the first HTML code, load font and style!
         }
 
         .header2{
-            font-size: 26px;
+            font-size: 24px;
+            line-height: normal;
         }
 
         .tag{
-            font-size: 18px;
+            font-size: 15px;
+            padding: 4px 5px;
+        }
+
+        #courseDisplayContainer{
+            row-gap: 0;
+        }
+
+        .empty{
+            height:0;
         }
     
     }
@@ -1597,6 +1641,18 @@ this is the first HTML code, load font and style!
             width: 80%;
         }
 
+        #menu > div{
+            margin-right:0px;
+        }
+
+        input[type=text]{
+            font-size: 8px;
+        }
+
+        .btn-container{
+            margin-right: 0;
+        }
+
         #headerlogo{
             width: 15%;
         }
@@ -1607,8 +1663,8 @@ this is the first HTML code, load font and style!
 
         #headerlogo > a > img {
             display: block;
+            width: 100%;
         }
-
 
 
         #footer > div{
@@ -1632,22 +1688,38 @@ this is the first HTML code, load font and style!
             margin-left: 20px;
         }
 
+        #footerSocialLogo > img {
+            height: 30px;
+        }
+
+        #footerSocialLogo > a > img {
+            height:30px;
+        }
+
         #menuPopUpContents{
             width: 90%;
         }
 
         #menuButtonContainer,#menuCategoryContainer{
             width:100%;
+            margin-top: 30px;
         }
 
         #menuButtonContainer > a {
             max-width: 18%;
         }
+
+
         .buttonMenu{
             min-width:100%;
             max-width:100%;
+            font-size: 15px;
         }
 
+
+        .menuCategory > div {
+            font-size: 20px;
+        }
 
         #menuCategoryContainer > a {
             width:24%;
@@ -1658,22 +1730,34 @@ this is the first HTML code, load font and style!
             max-width:100%;
             min-height: calc(20vw * 199 / 360)
         }
+
         #menuSoftwareContainer{
-            width:100%;     
+            width:100%;   
+            row-gap: 0;  
+            margin-top: 30px;
+        }
+
+        #menuSocialContainer{
+            margin-top: 30px;
+        }
+
+        #menuButtonContainer > a > .buttonMenu{
+            height: 45px;
         }
 
         #menuSoftwareContainer > a {
-            width:30%;     
+            width:48%;     
         }
         .software{
             width:100%;
             min-height:140px;
+            margin-bottom: 10px;
         }
 
         .software > img{
-            height:50px;
+            /* height:50px; */
             margin-left: 15px;
-            margin-right: 20px;
+            margin-right: 50px;
         }
 
         .softwareh1{
@@ -1685,6 +1769,7 @@ this is the first HTML code, load font and style!
         }
 
         #menuPopUp{
+            overflow-y: scroll;
             height: calc(100vh - 80px);
         }
 
@@ -1695,14 +1780,17 @@ this is the first HTML code, load font and style!
             display: none;
         }
 
-        /* footer and popupmenu end ----------------------------------------------------------------------------- */
 
+        /* footer and popupmenu end ----------------------------------------------------------------------------- */
+        
+        
         .container{
             max-width:90%;
         }
 
         .course{
-            width: 45%;
+            width: 48%;
+            margin-bottom: 20px;
         }
 
         #buttonListContainer{
@@ -1710,8 +1798,8 @@ this is the first HTML code, load font and style!
         }
 
         .buttonList{
-            min-width: 22%;
-            max-width: 22%;
+            min-width: 20%;
+            max-width: 20%;
             margin-bottom: 10px;
             /* flex-grow: 2; */
             font-size:18px;
@@ -1719,6 +1807,20 @@ this is the first HTML code, load font and style!
 
         .tag{
             margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        #filterDisplay{
+            height: auto;
+            padding-bottom: 50px;
+        }
+
+        #courseDisplayContainer{
+            row-gap: 0;
+        }
+
+        .empty{
+            height: 0;
         }
 
     }
@@ -1726,13 +1828,17 @@ this is the first HTML code, load font and style!
 
         /* iphone */
         @media only screen and (min-width: 200px) and (max-width: 767px)  {
-            /* heder start copy  start ========================================================================= */
-            #header{
+    /* heder start copy  start ========================================================================= */
+    #header{
             width: 100%;
             height:60px;
         }
 
+    
 
+        #headerlogo, #menu {
+            margin-left:10px;
+        }
         #headerlogo > a > img {
             display: block;
             width: 120px;
@@ -1741,6 +1847,7 @@ this is the first HTML code, load font and style!
         #menuText{
             font-size: 20px;
             margin-right:0;
+            display: none;
         }
 
         #footer{
@@ -1860,15 +1967,29 @@ this is the first HTML code, load font and style!
         }
 
         #menuButtonContainer > a {
-            max-width: 48%;
+            max-width: 32%;
         }
 
-        .buttonMenu{
-            min-width:100%;
-            max-width:100%;
-            /* margin-bottom: 5px; */
-            height: 40px;
+
+        #menuButtonContainer > a > .buttonBlack{
+            min-width: 100%;
+            max-width: 100%;
+            font-size: 15px;
         }
+
+
+        .buttonMenu{
+            height: 40px;
+            margin-top:0;
+            margin-bottom: 10px;
+        }
+
+
+        #mobileMenuDisplay{
+            display: block;
+            width: 32%;
+        }
+
 
         #menuCategoryContainer{
             margin: auto;
@@ -1939,13 +2060,37 @@ this is the first HTML code, load font and style!
             max-height: 12vw;
             margin-right:0;
         }
-        /* end of copy ============================================================================================= */
 
+        #menu > .mobileLan{
+            display: block;
+            margin-right:30px;
+        }
+
+        #mobileEn{
+            display: none;
+        }
+
+
+        #contentContainer{
+            top:60px;
+        }
+
+        #menuPopUpContents{
+            margin-top: 0;
+        }
+        
+        #menu{
+            margin-right: 10px;
+        }
+
+        .buttonMenu > .eng{
+            font-size: 12px;
+        }
+        /* end of copy ============================================================================================= */
 
         .container{
             width:90%;
         }
-
 
         .course{
             margin:auto;
@@ -2041,7 +2186,6 @@ this is the first HTML code, load font and style!
 
 </style>    
 
-
 <div id="header">
     <div id="headerlogo"><a href="./home"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
     <div id="menu">
@@ -2053,16 +2197,20 @@ this is the first HTML code, load font and style!
 
 
         <div class="btn-container">
-            <label class="switch btn-color-mode-switch">
-                <input type="checkbox" name="color_mode" id="color_mode" value="1">
-                <label for="color_mode" data-on="英文" data-off="中文" class="btn-color-mode-switch-inner"></label>
-            </label>
+			<label class="switch btn-color-mode-switch">
+		        <input type="checkbox" name="color_mode" id="color_mode" value="1">
+		        <label for="color_mode" data-on="英文" data-off="中文" class="btn-color-mode-switch-inner"></label>
+		    </label>
+        </div>
+
+        <div class="mobileLan">
+            <div id="mobileLanTxt"><span id="mobileCn">中文</span><span id="mobileEn">EN</span></div>
         </div>
 
         <div id='login'><img id='loginIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_86ceb5932e24e2383cce79506f18ef8a?imageView2'>&nbsp <span class="cn">登陆</span><span class="eng">Log In</span></div> 
         <div id='menuIconContainer'>
-            <div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
-            <div id='menuText'><span class="eng">Menu</span><span class="cn">菜单</span></div>
+        	<div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
+        	<div id='menuText'><span class="eng">Menu</span><span class="cn">菜单</span></div>
         </div>
     </div>
 </div>
@@ -2088,6 +2236,8 @@ this is the first HTML code, load font and style!
             <a href="./news"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
             <a href="./blogs"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
             <a href="./about#advisorsContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
+            <div id="mobileMenuDisplay"></div>
+
         </div> 
 
         <div id='menuCategoryContainer'>
@@ -2465,11 +2615,11 @@ this is the first HTML code, load font and style!
             </div>
             <!-- end of card 7 -->
             <div class="myCard is-animated course recommandCourse tdCourse newestCourse popularCourse exhibitionCourse brandCourse interactiveCourse">
-                <div><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/detail/p_6268d4a1e4b01a4851f79d17/6?fromH5=true"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7508903cabc56de3b297a73c789493d0?imageView2'></a></div>
+                <div><a href="./course?courseDisplay=tdCommercial"></a></div>
                 <div class='cardDescription'>
                     <div>
-                        <div class='header2 header2Resize'><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/detail/p_6268d4a1e4b01a4851f79d17/6?fromH5=true">Mastering Commercial Design with TouchDesigner</a></div>
-                        <div class='header3 header3Resize'><a href="https://appqlxrlqkr4784.pc.xiaoe-tech.com/detail/p_6268d4a1e4b01a4851f79d17/6?fromH5=true">TD商业项目大师班</a></div>
+                        <div class='header2 header2Resize'><a href="./course?courseDisplay=tdCommercial">Mastering Commercial Design with TouchDesigner</a></div>
+                        <div class='header3 header3Resize'><a href="./course?courseDisplay=tdCommercial">TD商业项目大师班</a></div>
                     </div>
                     <div><div class='tag td'>#touchDesigner</div> <div class='tag kinect'>#kinect</div></div>
                 </div>
@@ -3005,6 +3155,23 @@ this is the first HTML code, load font and style!
                 $('.eng').hide();
                 lan = "CN"
             }
+        })
+
+        $('.mobileLan').on('click',function(){
+            if(lan == 'CN'){
+                $('#mobileCn').hide()
+                $('#mobileEn').show()
+                $('.cn').hide();
+                $('.eng').show();
+                lan = 'EN'
+            } else {
+                $('#mobileCn').show()
+                $('#mobileEn').hide()
+                $('.cn').show();
+                $('.eng').hide();
+                lan = 'CN'
+            }
+
         })
 
         $('#login').click(function(){

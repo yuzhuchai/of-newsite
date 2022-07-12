@@ -1297,94 +1297,127 @@ this is the first HTML code, load font and style!
 }
 
 
+.mobileLan{
+        display:none;
+    }
+
+    #mobileMenuDisplay{
+        display: hide;
+    }
+
+
 
 /* smaller screen */
 @media only screen and (min-width: 1023px) and (max-width: 1660px){
 
-/* menu fixed  start ------------------------------------------------------------------------------ */
-    #menu{
-        width: 70%;
-    }
+ /* menu fixed  start ------------------------------------------------------------------------------ */
+ #menu{
+                width: 70%;
+            }
 
 
-    /* footer and menu popup */
-    #footer > div{
-        margin-left: 5%;
-    }
+            /* footer and menu popup */
+            #footer > div{
+                margin-left: 5%;
+            }
 
-    #footerLogo {
-        width: 10%;
-    }
+            #footerLogo {
+                width: 10%;
+            }
 
-    #footerMenu{
-        width: 20%;
-        justify-content: space-around;
-    }
-    .footerMenuItem{
-        margin:auto;
-        margin-bottom:30px;
-    }
+            #footerMenu{
+                width: 20%;
+                justify-content: space-around;
+            }
+            .footerMenuItem{
+                margin:auto;
+                margin-bottom:30px;
+            }
 
-    #menuPopUpContents{
-        width: 90%;
-    }
+            #menuPopUpContents{
+                width: 90%;
+            }
 
-    #menuButtonContainer,#menuCategoryContainer{
-        width:100%;
-    }
-
-    #menuButtonContainer > a {
-        max-width: 18%;
-    }
-    .buttonMenu{
-        min-width:100%;
-        max-width:100%;
-    }
+            #menuButtonContainer,#menuCategoryContainer{
+                width:100%;
+                margin-top:30px;
+            }
 
 
-    #menuCategoryContainer > a {
-        width:24%;
-    }
+            #menuSocialContainer{
+                margin-top: 30px;
+            }
 
-    .menuCategory{
-        min-width:100%;
-        max-width:100%;
-        min-height: calc(20vw * 199 / 360)
-    }
-    #menuSoftwareContainer{
-        width:100%;     
-    }
 
-    #menuSoftwareContainer > a {
-        width:24%;     
-    }
-    .software{
-        width:100%;
-        min-height:140px;
-    }
+            #menuButtonContainer > a {
+                max-width: 18%;
+            }
+            .buttonMenu{
+                min-width:100%;
+                max-width:100%;
+            }
 
-    .software > img{
-        height:50px;
-        margin-left: 15px;
-        margin-right: 20px;
-    }
+   
+            #menuCategoryContainer > a {
+                width:24%;
+            }
 
-    .softwareh1{
-        font-size: 18px;
-    }
+            .menuCategory{
+                min-width:100%;
+                max-width:100%;
+                min-height: calc(20vw * 199 / 360)
+            }
+            #menuSoftwareContainer{
+                width:100%;
+                margin-top:30px;
+                row-gap: 0px;
+            }
 
-    .softwareh2{
-        font-size: 14px;
-    }
+            #menuSoftwareContainer > a {
+                width:24%;     
+                margin-bottom: 10px;
+            }
+            .software{
+                width:100%;
+                min-height:140px;
+            }
 
-    #menuPopUp{
-        height: calc(100vh - 80px);
-        /* display: flex;
-        justify-content: center;
-        align-items: center; */
-    }
+            .software > img{
+                height:50px;
+                margin-left: 15px;
+                margin-right: 20px;
+            }
 
-    /* end -------------------------------------------------------------------------------------------- */
+            .softwareh1{
+                font-size: 16px;
+            }
+
+            .softwareh2{
+                font-size: 12px;
+            }
+
+
+            #footerSocialLogo > img {
+                height: 40px;
+            }
+
+            #footerSocialLogo > a > img {
+                height:40px;
+            }
+
+            #menuPopUp{
+                height:auto;
+                bottom: 0;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                top:60px;
+            }
+
+            #menuButtonContainer > a > .buttonMenu{
+                height: 45px;
+            }
+
+            /* end -------------------------------------------------------------------------------------------- */
 
     .container{
         max-width:90%;
@@ -1394,6 +1427,12 @@ this is the first HTML code, load font and style!
         min-width:100vw;
     }
 
+    .newContent{
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
     .date{
         font-size: 1.5em;
     }
@@ -1401,21 +1440,194 @@ this is the first HTML code, load font and style!
 }
 
 
-/* ipad */
+
+ /* ipad */
+ @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        /* ipad */
+
+        /* header  copy start ------------------------------------------------------------------------------ */
+        #menu{
+            width: 80%;
+        }
+
+        #menu > div{
+            margin-right:0px;
+        }
+
+        input[type=text]{
+            font-size: 8px;
+        }
+
+        .btn-container{
+            margin-right: 0;
+        }
+
+        #headerlogo{
+            width: 15%;
+        }
+
+        #login{
+            min-width:110px;
+        }
+
+        #headerlogo > a > img {
+            display: block;
+            width: 100%;
+        }
 
 
+        #footer > div{
+            margin-left: 5%;
+        }
+
+        #footerLogo {
+            width: 10%;
+        }
+
+        #footerMenu{
+            width: 18%;
+            justify-content: space-around;
+        }
+        .footerMenuItem{
+            margin:auto;
+            margin-bottom:30px;
+        }
+
+        #footerSocial{
+            margin-left: 20px;
+        }
+
+        #footerSocialLogo > img {
+            height: 30px;
+        }
+
+        #footerSocialLogo > a > img {
+            height:30px;
+        }
+
+        #menuPopUpContents{
+            width: 90%;
+        }
+
+        #menuButtonContainer,#menuCategoryContainer{
+            width:100%;
+            margin-top: 30px;
+        }
+
+        #menuButtonContainer > a {
+            max-width: 18%;
+        }
+
+
+        .buttonMenu{
+            min-width:100%;
+            max-width:100%;
+            font-size: 15px;
+        }
+
+
+        .menuCategory > div {
+            font-size: 20px;
+        }
+
+        #menuCategoryContainer > a {
+            width:24%;
+        }
+
+        .menuCategory{
+            min-width:100%;
+            max-width:100%;
+            min-height: calc(20vw * 199 / 360)
+        }
+
+        #menuSoftwareContainer{
+            width:100%;   
+            row-gap: 0;  
+            margin-top: 30px;
+        }
+
+        #menuSocialContainer{
+            margin-top: 30px;
+        }
+
+        #menuButtonContainer > a > .buttonMenu{
+            height: 45px;
+        }
+
+        #menuSoftwareContainer > a {
+            width:48%;     
+        }
+        .software{
+            width:100%;
+            min-height:140px;
+            margin-bottom: 10px;
+        }
+
+        .software > img{
+            /* height:50px; */
+            margin-left: 15px;
+            margin-right: 50px;
+        }
+
+        .softwareh1{
+            font-size: 18px;
+        }
+
+        .softwareh2{
+            font-size: 14px;
+        }
+
+        #menuPopUp{
+            overflow-y: scroll;
+            height: calc(100vh - 80px);
+        }
+
+        #menuSoftwareContainer > a:nth-child(7){
+            display: none;
+        }
+        #menuSoftwareContainer > a:nth-child(6){
+            display: none;
+        }
+
+
+
+        /* footer and popupmenu end ----------------------------------------------------------------------------- */
+
+        
+        .container{
+            max-width:90%;
+        }
+
+        #headerPicContainer{
+            min-width:100vw;
+        }
+
+        .newContent{
+            height: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .date{
+            font-size: 1em;
+        }
+    }
 
 
        /* iphone */
     @media only screen and (min-width: 200px) and (max-width: 767px)  {
     /* iphone */
-      /* heder start copy  start ========================================================================= */
-      #header{
+        /* heder start copy  start ========================================================================= */
+        #header{
             width: 100%;
             height:60px;
         }
 
+    
 
+        #headerlogo, #menu {
+            margin-left:10px;
+        }
         #headerlogo > a > img {
             display: block;
             width: 120px;
@@ -1424,6 +1636,7 @@ this is the first HTML code, load font and style!
         #menuText{
             font-size: 20px;
             margin-right:0;
+            display: none;
         }
 
         #footer{
@@ -1543,31 +1756,45 @@ this is the first HTML code, load font and style!
         }
 
         #menuButtonContainer > a {
-            max-width: 48%;
+            max-width: 32%;
         }
 
-        .buttonMenu{
-            min-width:100%;
-            max-width:100%;
-            /* margin-bottom: 5px; */
-            height: 40px;
+        #menuButtonContainer > a > .buttonBlack{
+            min-width: 100%;
+            max-width: 100%;
+            font-size: 15px;
         }
+
+
+        .buttonMenu{
+            height: 40px;
+            margin-top:0;
+            margin-bottom: 10px;
+        }
+
+
+        #mobileMenuDisplay{
+            display: block;
+            width: 32%;
+        }
+
 
         #menuCategoryContainer{
             margin: auto;
             width:90%;
             flex-wrap: wrap;
-            margin-top:24px;
+            margin-top:9px;
         }
-
         .cursorPointer{
             width: 48%;
+            margin-bottom: 10px;
         }
+
         .menuCategory{
             max-width:100%;
             min-width:100%;
             min-height: 100px;
-            margin-bottom:10px;
+            /* margin-bottom:10px; */
         }
 
         .menuCategory > div{
@@ -1579,14 +1806,14 @@ this is the first HTML code, load font and style!
             margin: auto;
             width:90%;
             flex-wrap: wrap;
-            margin-top:14px;
+            margin-top:9px;
             row-gap: 0;
         }
 
         #menuSoftwareContainer > .cursorPointer{
             height: auto;
             width:24%;
-            margin-bottom:15px;
+            margin-bottom:10px;
         }
         
         .softwareDescription{
@@ -1623,9 +1850,33 @@ this is the first HTML code, load font and style!
             margin-right:0;
         }
 
-        /* end of copy ===================================================================== */
+        #menu > .mobileLan{
+            display: block;
+            margin-right:30px;
+        }
+
+        #mobileEn{
+            display: none;
+        }
+
+        #contentContainer{
+            top:60px;
+        }
 
 
+        #menuPopUpContents{
+            margin-top: 0;
+        }
+        
+        #menu{
+            margin-right: 10px;
+        }
+
+        .buttonMenu > .eng{
+            font-size: 12px;
+        }
+
+        /* end of copy ============================================================================================= */
 
         .container{
             width:90%;
@@ -1667,16 +1918,13 @@ this is the first HTML code, load font and style!
 </style>
 
 
-
 <div id="header">
     <div id="headerlogo"><a href="./home"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
     <div id="menu">
         <div>
-            <div>
-                <form id="form" action="./courseList">
-                    <input type='text' id='search' name='filter' placeholder="processing"> 
-                </form>
-            </div>
+            <form id="form" action="./courseList">
+                <input type='text' id='search' name='filter' placeholder="processing"> 
+            </form>
         </div>
 
 
@@ -1687,6 +1935,10 @@ this is the first HTML code, load font and style!
 		    </label>
         </div>
 
+        <div class="mobileLan">
+            <div id="mobileLanTxt"><span id="mobileCn">中文</span><span id="mobileEn">EN</span></div>
+        </div>
+
         <div id='login'><img id='loginIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_86ceb5932e24e2383cce79506f18ef8a?imageView2'>&nbsp <span class="cn">登陆</span><span class="eng">Log In</span></div> 
         <div id='menuIconContainer'>
         	<div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
@@ -1694,6 +1946,7 @@ this is the first HTML code, load font and style!
         </div>
     </div>
 </div>
+
 <!-- end of header  -->
 
 
@@ -1717,6 +1970,8 @@ this is the first HTML code, load font and style!
             <a href="./news"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
             <a href="./blogs"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
             <a href="./about#advisorsContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
+            <div id="mobileMenuDisplay"></div>
+
         </div> 
 
         <div id='menuCategoryContainer'>
@@ -2050,6 +2305,23 @@ this is the first HTML code, load font and style!
                 $('.eng').hide();
                 lan = "CN"
             }
+        })
+
+        $('.mobileLan').on('click',function(){
+            if(lan == 'CN'){
+                $('#mobileCn').hide()
+                $('#mobileEn').show()
+                $('.cn').hide();
+                $('.eng').show();
+                lan = 'EN'
+            } else {
+                $('#mobileCn').show()
+                $('#mobileEn').hide()
+                $('.cn').show();
+                $('.eng').hide();
+                lan = 'CN'
+            }
+
         })
 
         $('#login').click(function(){

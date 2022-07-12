@@ -205,7 +205,7 @@ syllabus: [
     {
         title: '元宇宙空间搭建入门',
         description: '快速创建在线虚拟场景，掌握全球领先的styly元宇宙平台在线编辑器',
-        img:"http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5abacbac97ecbf0cd37938df92d34028?imageView2",
+        img:"http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5abacbac97ecbf0cd37938df92d34028?imageView2/2/w/360/h/210",
         fullSyllabus:["1.了解VR概念和发展历程",
         "2.了解StylyVR线上编辑器",
         "3.了解沉浸式虚拟世界及元宇宙概念",
@@ -457,7 +457,7 @@ syllabus: [
 
 // 以下是图片内容填充
 mainPoster:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_0d4e357b323b77556f11d5ddcac5b237?imageView2',
-mainPosterMobile:'手机版海报url',
+mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_094d9b3facf27088f54c7308b964f32d?imageView2',
 classVideo: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_3fdbd58904d8e62156d0b5c05764ece5',
 videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d91ac87f851039b4c9b2f8dbfee449f5?imageView2',
 showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_fb897c44519816b003cc93abe74d7455?imageView2",
@@ -634,7 +634,7 @@ let ai = {
 
     // 以下是图片内容填充
     mainPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_82bc45f363db6606515aee3f6789eece?imageView2',
-    mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bfa89f5ecdca524e64d30ca3bd109b96?imageView2',
+    mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1e2c70f70616f219289a92ba2bb0248f?imageView2',
     classVideo: '课程宣导片url',
     videoPoster: '课程宣导片封面图片url',
     showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_8cc405d239d99667484901ebfd9fc469?imageView2",
@@ -809,7 +809,7 @@ syllabus: [
 
 // 以下是图片内容填充
 mainPoster:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_acc49d3441d3d248c064024d494afbb0?imageView2',
-mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bfa89f5ecdca524e64d30ca3bd109b96?imageView2',
+mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b67b242598a24e2aef38b652d31df2fe?imageView2',
 classVideo: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_d1dad6d62004749497315ee884c605b9',
 videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d421d808dac8e17e6a078bcfc77e6589?imageView2',
 showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_c30066649070dd9b55131678fa07d39f?imageView2",
@@ -981,7 +981,7 @@ syllabus: [
 
 // 以下是图片内容填充
 mainPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7bb29b57a90f8ea953d993c28bdebb2d?imageView2',
-mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bfa89f5ecdca524e64d30ca3bd109b96?imageView2',
+mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_64294ea1e2dbaf30043ec300df554bfa?imageView2',
 classVideo: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_9e29155594d4e83af5012b365cc01552',
 videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_44f7f46f32041430c78d540c984aa0e5?imageView2',
 showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_7db6a541fca47e07ce4bcb865cdc1165?imageView2",
@@ -1157,7 +1157,7 @@ let museum = {
 
     // 以下是图片内容填充
     mainPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8b5061701dffdc5465e5acaedf158dc2?imageView2',
-    mainPosterMobile:'手机版海报url',
+    mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8534de17d1d28c88392d73159c5f52dd?imageView2',
     classVideo: '课程宣导片url',
     videoPoster: '课程宣导片封面图片url',
     showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_03a49cb93e6415208cd28a13c68f563f?imageView2",
@@ -1337,7 +1337,7 @@ let interactiveLight = {
 
     // 以下是图片内容填充
     mainPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f7f4909046731e84a3d76f852c5b3e41?imageView2',
-    mainPosterMobile:'手机版海报url',
+    mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ac587fe473ec352bf4cfffdd91984ccd?imageView2',
     classVideo: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_1b939b6f736cbb8b7557ea3ddb6d55dd',
     mentorPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_655298a20a5727a9859615d59a23fc60?imageView2',
     videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_82c90fcdb4e9bb9eb88711872f527f7a?imageView2',
@@ -1367,6 +1367,149 @@ let interactiveLight = {
                 ],
 }
 
+
+let tdCommercial = {
+    // 以下是文字内容填充
+    classID: "unityVR(不要修改)",
+    classNameEng:'MASTERING COMMERCIAL PROGRAM WITH TOUCHDESIGNER',
+    classNameCn: 'TD商业项目大师班',
+    price:'6718',
+    installmentValue:'560',
+    installmentTime: "12",
+    classSlogan:'制作TD商业项目作品，让脑海创想转为现实财富',
+    classHeader:"掌握TD可视化编程技术<br/>成为商业交互设计师",
+    classSeries:'TouchDesigner元宇宙系列',
+    classSeriesLink:'课程系列链接',
+    prepClass:'TD快速筑基班',
+    prepClassLink:'前置课程链接',
+    requirements:'课程硬件需求',
+    classOverview: '你想成为交互设计师吗？你想加入LV、乐高、可口可乐等全球顶尖品牌企业做交互设计吗？你想创作出冲击视觉的交互设计商业作品吗？那么快加入TD商业项目大师班吧！本课程由国际知名HAAC工作室的安东尼奥·米隆内老师和白宇老师携手亲授。你可以零基础学习最流行的可视化编程和开发工具TouchDesigner，迅速掌握和运用制作体感互动的两款主流硬件Kinect与 Leap Motion，精通目前市面上最热门的交互技术，独立制作TD商业级作品。最终你会成为让人羡慕的交互设计师，入职全球顶尖品牌企业，或接交互相关商业项目以及独立办展获得丰盈收入。',
+    mentorNameEng:'Antonio Minonne',
+    mentorNameCn:'安东尼奥 米隆内',
+    mentorTitle:["空间设计师",
+                "意大利费拉拉大学建筑学硕士",
+                "HAAC工作室联合创始人与创意总监"
+            ],
+    mentorText:'空间设计师，HAAC工作室联合创始人与创意总监，byb资深设计师，Design OVERLAY建筑设计师以及Itac Marine室内设计师。Antonio Minonne从建筑专业毕业后，一直长期关注零售行业的设计工作。他曾与多家意大利本地品牌展开合作，创作交互灯光系统与互动展示柜台，也曾与国际知名品牌如：Bose，丝芙兰，LV与中国本地品牌美素、自然堂等展开展示设计的合作项目。',
+    freeClassTitle:'安东尼奥老师公开课「TD快速筑基班」',
+    studentReviewMain: {
+        name: "匡同学",
+        title:'高级体验设计师',
+        review: "其实作为在这个行业里工作了很多年的一名打工人，我也很难做到完全躺平。因为技术更新得实在是太快了，一些软件的使用和操作都在不断加入新内容。然后设计的思维也在不断更新换代，甲方总喜欢一些新鲜的事物，然而这种新东西往往很难用旧的思维创作出来。所以为了精进一下自己的创新能力，我报了Antonio Minonne老师的课程。因为之前有了解过老师的项目，所以我个人准备还是很充分的，主要是学习老师的一些创新思维。虽然对TD这些技术已经有过了解，但是再回顾一遍还是会发现很多之前遗漏的点，非常奇妙的一种感觉，像高中晚自习那种查漏补缺。感谢Antonio的细心辅导！",
+    },
+    studentReview:[
+            {
+                name: '张同学',
+                title:'往期学员',
+                review:'还算不错的课程，市面上太多所谓免费的课程，点进去都是基础教程或者那种引诱付费的东西，还是看准优秀的老师比较重要，而且还能认识全国各地的朋友~'
+            },
+            {
+                name: '林同学',
+                title:'往期学员',
+                review:'因为疫情报了个线上课来加深自己对Leap Motion的理解与掌握，一直想成为那种数字策展人，希望未来有一天能真的成功吧！'
+            },
+            {
+                name: '孙同学',
+                title:'往期学员',
+                review:'每天进步一点点，虽然我可能跟不太上其他的同学，但是反复看录播也能慢慢把不懂的地方弄懂，而且老师也很好，问他问题都会给到解答。 '
+            },
+            {
+                name: '邝同学',
+                title:'往期学员',
+                review:'内容不错，我比较喜欢老师的设计思维，跟国内一些项目还是有很大区别的，能学到挺多的，而且我上的线上课也比较方便，thx Antonio!'
+            },
+            {
+                name: '唐同学',
+                title:'往期学员',
+                review:'之前有短时间自学过TD和Kinect，但是有些细节内容很难靠自己解决，去网上找教程又找不太到，最终还是报了个课，老师完美地解决了我遇到的困难，还对我之前的项目给予了肯定，让我自信心大大增加了哈哈。'
+            },
+            {
+                name: '刘同学',
+                title:'往期学员',
+                review:'很好的课程，老师讲得挺不错的，课程内容比较适合我这种小白，整套学下来也不会觉得很累，上课排表安排得很好。'
+            },
+    ],
+    syllabus: [
+        {
+            title: '创作Leap Motion二维特效',
+            description: '制作Leap Motion二维图像生成特效作品，掌握TD与Leap Motion的通讯方式和开发流程，运用Feedback循环进行生成互动',
+            img:"http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a95dcadd93f6c06f1ff889a7e6fb212b?imageView2"
+        },
+        {
+            title:'创作Leap Motion粒子特效',
+            description:'制作Leap Motion粒子生成特效作品，掌握粒子系统与三维系统的搭建和使用，运用SOP和TOP元件进行生成互动',
+            img:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_eeeeba2d1064f41f2726645aba3e753b?imageView2'
+        },
+        {
+            title:'创作Leap Motion三维特效',
+            description:'制作Leap Motion粒子生成特效作品，掌握三维系统中力场和材质的使用，运用Leap Motion进行生成互动',
+            img:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f08eea00ee0e9a85af04311f6d0ce89b?imageView2'
+        },
+        {
+            title:'创作Kinect二维特效',
+            description:'制作Kinect图像生成特效作品，掌握TD中烟雾效果和instance音画互动的使用，运用摄像头制作体感捕捉特效',
+            img:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3e6cec4143bc67afb56a7bdacec46ca5?imageView2'
+        },
+        {
+            title:'创作Kinect粒子特效',
+            description:'制作Kinect粒子生成特效作品，掌握Kinect点云和粒子效果的使用，运用粒子系统进行生成互动',
+            img:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0abff896742bddd2d9dc7c920ed573ef?imageView2'
+        },
+        {
+            title: "创作Kinect数据特效",
+            description: '制作Kinect数据生成特效作品，掌握Kinect数据的使用，运用数据与instance结合进行生成互动',
+            img:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0eac987d5af303a23b0b2bad127cbd28?imageView2'
+        },
+        {
+            title: '掌握商业项目思维',
+            description: '了解商业项目中的创作媒介类型，掌握不同媒介的特性，运用设计思维确定最终作品呈现方案',
+            img:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f43eb6243129325e12fb71675fb8d925?imageView2'
+        },
+        {
+            title:'创作最终展示空间',
+            description:'制作最终的展示空间作品，拓展TD与其他软件的通讯方式，将数字艺术作品成功转化为商业案例',
+            img:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_81d6c5a9c58ff172986b81b527aab423?imageView2'
+        }
+    ],
+    
+    // 以下是图片内容填充
+    mainPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0137385d787cd37c95b522922a97f8d8?imageView2',
+    mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d120ba4fa36b863cf1185a90d1aa7a90?imageView2',
+    classVideo: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_a3c02272c758dc7aa483e2ed85c6fe19',
+    videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_75cfb4335eecfb10221d28ef94737ca7?imageView2',
+    showCase: ["http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e863521f20594df9bc3bdf8725703524?imageView2",
+                "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ff2301a218d631983b31418a5ec771fc?imageView2",
+                "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_52c15b4c0fbf7320af8d9183baa674cd?imageView2",
+                "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6a05d0883f838df085dd4da59610fc6d?imageView2",
+                "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_81ca11cd7debdfdd2c906e4b52e4eeab?imageView2",
+                "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_366eedce26a7f92a2f1a3ef36aec17a8?imageView2",
+                "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b0b39b01e0184a16a4922fa89eade9e3?imageView2",
+                "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_87cb0e4ac67b6413476401abe0f3e677?imageView2",
+                "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0994a87bb104e376ab3a2154d163edf4?imageView2",
+                "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_14587500e9b4dee7ace7e78733600264?imageView2"],
+    mentorImg: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_78c347539befcba36200d9ca9ab3909f?imageView2',
+    mentorVideo:"精彩瞬间视频 url",
+    teacherCase:[
+                'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1cb403da330e76d95ec33356601bf9cd?imageView2',
+                'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e95afea12bc411f8946ad7b8693a4eea?imageView2',
+                'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_667802cd397da4a6e278793dd9c59555?imageView2',
+                'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e27fcee7f4e3ca5be30f04992939c33a?imageView2',
+                'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_26b7e18ee16fae99ceda76fde2af9b72?imageView2',
+                'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_07a4eb8cc89fe8391b9c9c1d08d063f9?imageView2',],
+    studentWork: ['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_944e3f957fd6ea55f828109658ade78a?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_227a2b63e52d70b12e0fe2d7e887e081?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ed2491cd31d521aeea52544cac28a069?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_72c0b0dcf3218f4bc5c4f18c00f8b1f7?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_871c75d34d4c17d2f19363832aa41fe2?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_25ffee87830c4868dbcbd5bd702e5b53?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_997bace94cad221a8f9cc09693b2c49b?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_60c4ec6054bb6dc830c4e4f5567d8d44?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_798d2160dd9c388d6ab893348eb91c37?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_1978b8b20886ffbc6901ea377cb4deb1?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d0c18091ab03addcf5dec83a4df3b7ef?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_175ee5a78be1067e03ab48dfdeda99ca?imageView2'
+                ],
+}
 
 
 
