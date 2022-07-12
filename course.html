@@ -2639,18 +2639,6 @@ let courseDisplay
     	margin-top: 42px;
     }
 
-    .service{
-    	width: 15%;
-    	display: flex;
-    	flex-direction: column;
-    	justify-content: space-around;
-    	align-items: center;
-    	height: 250px;
-    	padding-top:50px;
-    	padding-bottom: 50px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
-    }
 
     .service:hover {
         transform: translateY(2px) translateX(2px) scale(1) translateZ(0);
@@ -2679,6 +2667,67 @@ let courseDisplay
     #servicesContainer{
     	margin-top:120px;
     	/*margin-bottom: 120px;*/
+    }
+    
+
+
+    .service{
+    	width: 15%;
+        height: auto;
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: flex-end;
+    	align-items: center;
+    	height: 250px;
+    	padding-top:50px;
+    	padding-bottom: 50px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+
+    }
+
+
+    #services1{ 
+        background: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_15020dde36ca2684076f927dcdfa5dba?imageView2);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    #services2{ 
+        background: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9024377425c598389ecf4857339101fc?imageView2);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    #services3{ 
+        background: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_24ef3c50540c464024ba4bc634765a01?imageView2);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    #services4{ 
+        background: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_4502ad650504efebe57184e51e4b7214?imageView2);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+
+    #services5{ 
+        background: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_441f0f5163bd0d3d0ccf3b80f06f0e83?imageView2);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    #services6{ 
+        background: url(http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e2150b1029f7c3cdbd60b318d836e519?imageView2);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
 
 
@@ -2919,7 +2968,7 @@ let courseDisplay
     }
 
     .software > img {
-        min-width: 20%;
+        /* min-width: 20%; */
         height: 70px;
         align-self: center;
         border-radius: 10px;
@@ -3103,7 +3152,6 @@ let courseDisplay
     	display: inline-block;
     	color: #754D00;
         font-family: "XYZL";
-
     	font-weight: 290;
 		font-size: 20px;
 		display: flex;
@@ -3252,6 +3300,7 @@ let courseDisplay
         justify-content: space-between;
         height: 80px;
         margin-top: 24px;
+        border-radius: 8px;
     }
 
     #freeCourseButton{
@@ -3734,10 +3783,15 @@ li:nth-child(3) {
         display: none;
     }
 
+
+    #priceRow2Mobile{
+        display: none;
+    }
+        
 @media only screen and (min-width: 1023px) and (max-width: 1660px){
 
 /* menu fixed  start ------------------------------------------------------------------------------ */
-#menu{
+            #menu{
                 width: 70%;
             }
 
@@ -4035,10 +4089,6 @@ li:nth-child(3) {
         }
 
 
-
-
-
-
     .teacherSmall{
         width: 31%;
         margin-bottom: 10px;
@@ -4113,6 +4163,8 @@ li:nth-child(3) {
 
 
     /* ipad */
+
+    /* min-width: 200px */
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
         /* ipad */
         /* header  copy start ------------------------------------------------------------------------------ */
@@ -4315,7 +4367,6 @@ li:nth-child(3) {
         #buttonTop{
             margin-top: 16px;
             margin-bottom: 16px;
-
         }
 
         #priceRow1{
@@ -4441,21 +4492,26 @@ li:nth-child(3) {
 
     #freeCourseButton, #freeCourseButton2{
         font-size: 20px;
+        width: 20%;
     }
-    
+
     #fillMentorImg, #fillMentorImg2{
         border-radius: 8px;
     }
 
 
-    #fillCourseTitle, #fillCourseTitle2 {
+    #freeCourseTitle2, #freeCourseTitle2 {
         font-size: 18px;
+        margin-right: 20px;
     }
 
     #fullVideoLink2, #fullVideoLink{
         font-size: 18px;
     }
 
+    .playButton{
+        display: none;
+    }
 
 
 
@@ -4525,15 +4581,17 @@ li:nth-child(3) {
         grid-template-columns: [first] 30%; 
         grid-template-rows: [row1-start] 50%;
         margin-left: 0;
+        margin-right: 15px;
         /* display: flex;
         flex-direction: column; */
     }
 
     .studentImgright{
-        min-width: 45px;
-        min-height: 45px;
-        max-width: 45px;
-        max-height: 45px;
+        /* min-width: 75px;
+        min-height: 60px;
+        max-width: 60px;
+        max-height: 60px; */
+        margin-top:10px;
         grid-column-start:1;
         grid-column-end: 2;
         grid-row-start: 1;
@@ -4582,16 +4640,271 @@ li:nth-child(3) {
 
 
 
+@media only screen and (min-width: 200px) and (max-width: 767px) { 
+        #header{
+            width: 100%;
+            height:60px;
+        }
+
+    
+
+        #headerlogo, #menu {
+            margin-left:10px;
+        }
+        #headerlogo > a > img {
+            display: block;
+            width: 120px;
+        }
+
+        #menuText{
+            font-size: 20px;
+            margin-right:0;
+            display: none;
+        }
+
+        #footer{
+            margin-top: 100px;
+        }
 
 
-    @media only screen and (min-width: 200px) and (max-width: 767px)  {
-        #headerMobile {
-            height: 60px;
-            position: fixed;
-            top: 0;
-            left: 0;
+        #menu > div{
+            margin-right: 0;
+        }
+
+        #menu > #menuIconContainer{
+            width: auto;
+        }
+
+
+
+        #menu > div:nth-child(1){
+            display: none;
+        }
+
+        .btn-container{
+            display: none;
+        }
+
+        #login{
+            display: none;
+        }
+
+        #menuIcon{
+            width: 20px;
+            height: 20px;
+        }
+
+        #menuIcon > div {
+            width: 9px;
+            height: 9px;
+            border-radius: 3px;
+        }
+
+
+
+        #footer > div{
+            margin-left: 5%;
+        }
+
+        #footerLogo {
+            width: 5%;
+        }
+
+        .footerMenuItem{
+            font-size: 12px;
+            margin: 0px 20px 30px 20px;
+        }
+
+        #footerSocial{
+            font-size: 12px;
+            margin-left: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        #footerCode > div {
+            margin-bottom: 15px;
+        }
+
+
+        #footerCode > div:nth-child(1){
+            display: none;
+        }
+
+
+        #footerSocialLogo{
+            flex-direction: row;
+            width:60%;
+            flex-wrap: wrap;
+        }
+
+        #footerSocialLogo > img {
+            width:20px;
+            height:auto;
+            margin-right: 10px;
+            margin-bottom:25px;
+        }
+
+        #footerSocialLogo > a > img{
+            width:20px;
+            height:auto;
+            margin-right: 10px;
+            margin-bottom:25px;
+        }
+
+
+        #menuPopUpContents{
+            width: 100%;
             width: 100%;
             display: flex;
+            flex-direction: column;
+        }
+
+        #menuPopUp{
+            overflow-y: scroll;
+            height:auto;
+            bottom: 0;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            top:60px;
+        }
+
+        #menuButtonContainer{
+            margin: auto;
+            width:90%;
+            flex-wrap: wrap;
+        }
+
+        #menuButtonContainer > a {
+            max-width: 32%;
+        }
+
+
+        #menuButtonContainer > a > .buttonBlack{
+            min-width: 100%;
+            max-width: 100%;
+            font-size: 15px;
+        }
+
+
+        .buttonMenu{
+            height: 40px;
+            margin-top:0;
+            margin-bottom: 10px;
+        }
+
+
+        #mobileMenuDisplay{
+            display: block;
+            width: 32%;
+        }
+
+        #menuCategoryContainer{
+            margin: auto;
+            width:90%;
+            flex-wrap: wrap;
+            margin-top:24px;
+        }
+
+        .cursorPointer{
+            width: 48%;
+        }
+        .menuCategory{
+            max-width:100%;
+            min-width:100%;
+            min-height: 100px;
+            margin-bottom:10px;
+        }
+
+        .menuCategory > div{
+            font-size: 20px;
+        }
+
+        #menuSoftwareContainer{
+            margin: auto;
+            width:90%;
+            flex-wrap: wrap;
+            margin-top:14px;
+            row-gap: 0;
+        }
+
+        #menuSoftwareContainer > .cursorPointer{
+            height: auto;
+            width:24%;
+            margin-bottom:15px;
+        }
+        
+        .softwareDescription{
+            display: none;
+        }
+
+        .software{
+            width: 18vw;
+            min-height: 18vw;
+            display: flex;
+            margin: auto;
+        }
+
+        .software > img{
+            min-width: 12vw;
+            max-width: 12vw;
+            min-height: 12vw;
+            max-height: 12vw;
+            margin:auto;
+            border-radius: 0;
+        }
+
+        #menuSocialContainer{
+            width: 65%;
+            margin-left:5%;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            margin-top: 9px;
+        }
+
+        #menuSocialContainer > div{
+            max-width: 18%;
+            max-height: 12vw;
+            margin-right:0;
+        }
+
+        #menu > .mobileLan{
+            display: block;
+            margin-right:30px;
+        }
+
+        #mobileEn{
+            display: none;
+        }
+
+        #contentContainer{
+            top:60px;
+        }
+
+        #menuPopUpContents{
+            margin-top: 0;
+        }
+
+        #menu{
+            margin-right: 10px;
+        }
+
+        .buttonMenu > .eng{
+            font-size: 12px;
+        }
+
+
+
+
+
+        #headerMobile {
+            display:none;
+            height: 60px;
+            position: sticky;
+            top: 60px;
+            left: 0;
+            width: 100%;
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
@@ -4602,12 +4915,9 @@ li:nth-child(3) {
             background: white;
         }
 
-        #header{
-            display: none;
-        }
 
         #contentContainer{
-            top:60px;
+            top:120px;
         }
 
         .container{
@@ -4660,7 +4970,7 @@ li:nth-child(3) {
         #fillSlogan{
             line-height: normal;
             font-size: 15px;
-            margin-top: 20px;
+            margin-top: 15px;
             font-family: 'XYZL';
             font-weight: 290;
         }
@@ -4668,7 +4978,7 @@ li:nth-child(3) {
         #price{
             width: 100%;
             margin-bottom: 10px;
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         #social{
@@ -4678,8 +4988,7 @@ li:nth-child(3) {
         .priceLeft{
             height: auto;
         }
-        
-
+    
 
 
         #priceRow2{
@@ -4692,11 +5001,11 @@ li:nth-child(3) {
         }
 
         .priceTag{
-            width: 48%;
-            padding: 5px 0px;
+            width: 24%;
+            font-size: 12px;
+            padding: 5px 0;
             margin-right:0;
             margin-bottom: 10px;
-            font-size: 15px;
         }
 
         #fire{
@@ -4805,7 +5114,6 @@ li:nth-child(3) {
         }
 
         #studentWorkContents{
-            /* flex-wrap: wrap;  */
             row-gap: 0;
         }
 
@@ -4837,13 +5145,10 @@ li:nth-child(3) {
             grid-template-columns: [first] 30%; 
             grid-template-rows: [row1-start] 50%;
             margin-left:0;
+            margin-right: 15px;
         }
 
         .studentImgright{
-            min-width: 45px;
-            min-height: 45px;
-            max-width: 45px;
-            max-height: 45px;
             margin-right: 0;
             grid-column-start:1;
             grid-column-end: 2;
@@ -4862,7 +5167,6 @@ li:nth-child(3) {
 
         .studentCommentRight{
             grid-column-start:2;
-            /* grid-column-end: ; */
             grid-row-start: 1;
             grid-row-end: 3;
         }
@@ -4884,17 +5188,14 @@ li:nth-child(3) {
         }
 
         #servicesContents {
-            /* display: flex; */
             flex-wrap: wrap;
-            /* row-gap: 10px; */
         }
 
         .service{
             width: 48%;
             margin-bottom: 10px;
             padding-top:10px;
-            padding-bottom: 10px;
-            height: auto;
+            padding-bottom: 20px;
         }
 
         .serviceText{
@@ -4908,7 +5209,6 @@ li:nth-child(3) {
 
         #mentorVideo,#mentorVideo2{
             width: 100%; 
-            /* order: -1; */
             margin-bottom: 20px;
         }
 
@@ -4935,7 +5235,6 @@ li:nth-child(3) {
 
         #mentorTopLeft,#mentorTopLeft2{
             width: 100%;
-            /* flex-direction: row; */
         }
         #mentorTopLeftTop,#mentorTopLeftTop2{
             justify-content: flex-start;
@@ -4955,10 +5254,6 @@ li:nth-child(3) {
             font-size: 15px;
             margin-top: 10px;
             line-height: normal;
-        }
-
-        #fullVideoLink{
-            /* display: none; */
         }
 
 
@@ -4987,7 +5282,6 @@ li:nth-child(3) {
             margin-right: 20px;
             font-size: 15px;
             line-height: normal;
-            /* width: 60%; */
         }
 
 
@@ -5085,14 +5379,14 @@ li:nth-child(3) {
         #mobileDisplay{
             display: flex;
             flex-direction: row;
-            width: 25%;
+            width: 15%;
             justify-content: space-between;
         }
 
         .priceSocialMobile{
             display: inline-block;
-            height: 37px;
-            min-width: 37px;
+            height: 30px;
+            min-width: 30px;
             color: #ACACAC;
             font-size: 20px;
             font-weight: 400;
@@ -5100,12 +5394,17 @@ li:nth-child(3) {
 
 
         .priceSocialMobile > img{
-            height:70%;
+            height:50%;
         }
 
         .priceButton {
-            width: 35%;
-            font-size: 20px;
+            width: 38%;
+            font-size: 22px;
+            height: 40px;
+        }
+
+        #buttonBottom{
+            order:-1;
         }
 
         #buttonLogo{
@@ -5117,17 +5416,16 @@ li:nth-child(3) {
             margin-left: -5vw;
             flex-direction: row;
             justify-content: space-between;
-            order:-1;
-            padding: 5vw;
-            /* border: 1px solid black; */
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+            order:1;
+            padding: 0vw 5vw;
+            margin-top:25px;
         }
 
         #price > div > .size-40{
             font-size: 20px;
         }
         #price > div > .size-80{
-            font-size: 30px;
+            font-size: 40px;
         }
         #price > div > .size-15{
             font-size: 10px;
@@ -5138,7 +5436,6 @@ li:nth-child(3) {
 
         #follwerMobile{
             display: inline-block;
-            /* display: inline-block; */
             font-size: 15px;
             color: #ACACAC;
             font-weight: 290;
@@ -5148,8 +5445,31 @@ li:nth-child(3) {
         .showCaseRectBig{
             width:100%;
         }
+
+        #fullVideoLink2, #fullVideoLink{
+            width:60%;
+            text-align: right;
+            font-size: 12px;
+        }
+
+
+        #priceRow2{
+            display: none;
+        }
+
+        #priceRow2Mobile{
+            margin-top:15px;
+            display: flex;
+        }
+
+        #buttonTop{
+            margin-right: 20px;
+        }
+
+
+
         
-    }
+    } */
 
 
 
@@ -5433,17 +5753,42 @@ li:nth-child(3) {
 
 
     			</div>
+
+                <div id='priceRow2Mobile' class="">
+                    <div class='priceLeft' id='tags'>
+                        <div class='priceTag'><span class="eng">Connect Teachers</span><span class="cn">导师亲自授课</span></div>
+                        <div class='priceTag'><span class="cn">支持反复观看</span><span class="eng">support replay</span></div>
+                        <div class='priceTag'><span class="cn">录播+直播</span><span class="eng">Video + livestream</span></div>
+                        <div class='priceTag mobileHide'><span class="cn">作业点评</span><span class="eng">project support</span></div>
+                        <div class='priceTag mobileHide'><span class="cn">学习群答疑</span><span class="eng">Study Group</span></div>
+                        <div class='priceTag'><span class="cn">支持分期</span><span class="eng">payment installment</span></div>
+                    </div>
+                    <div class='priceRight mobileHide' id='social'>
+                        <div class='priceSocial'>
+                            <!-- <img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_b5147c17719d93bfd7b745f9bf9d8768?imageView2'> -->
+                            <!-- &nbsp 2K人已关注 -->
+                            <span class="cn">已关注</span><span class="eng">Followers</span>：20,000
+                        </div>
+                        <div class='priceSocial' onclick="share()"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_6f1a1f66c0c4833df48991c9b52a69ff?imageView2'></div>
+                        <div class='priceSocial' onclick="addViewNum()"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_01e454e136308f3258c40d107de68596?imageView2'></div>
+                    </div>		
+                </div>
+
+
     			<div class='priceRight' id='priceButtonContents'>
+
+    				<div class='priceButton'id='buttonTop'><span class="cn">立即咨询</span><span class="eng">Live Support</span></div>
+    				<div class='priceButton 'id='buttonBottom'><img id='buttonLogo' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_280793507d1f6918fafaebe95ebaa9d6?imageView2'> &nbsp <span class="cn">抢占席位</span><span class="eng">Apply Now</span></div>
                     <div id="mobileDisplay">
                         <div class='priceSocialMobile' onclick="share()"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_6f1a1f66c0c4833df48991c9b52a69ff?imageView2'></div>
     				    <div class='priceSocialMobile' onclick="addViewNum()"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_01e454e136308f3258c40d107de68596?imageView2'></div>
                     </div>
-    				<div class='priceButton'id='buttonTop'><span class="cn">立即咨询</span><span class="eng">Live Support</span></div>
-    				<div class='priceButton 'id='buttonBottom'><img id='buttonLogo' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_280793507d1f6918fafaebe95ebaa9d6?imageView2'> &nbsp <span class="cn">抢占席位</span><span class="eng">Apply Now</span></div>
-    			</div>
+                
+                </div>
 
     		</div>
-    		<div id='priceRow2'>
+
+    		<div id='priceRow2' class="mobileHide">
     	    	<div class='priceLeft' id='tags'>
     	    		<div class='priceTag'><span class="eng">Connect Teachers</span><span class="cn">导师亲自授课</span></div>
     	    		<div class='priceTag'><span class="cn">支持反复观看</span><span class="eng">support replay</span></div>
@@ -5730,7 +6075,7 @@ li:nth-child(3) {
                 <div id='freeCourseButton'><span class="cn">免费领取</span><span class="eng">Preview</span></div>
                 <div id='freeCourseTitle'>
                     <div id='fillCourseTitle'>UE4 动画角色模型的处理技巧</div>
-                    <div id='fullVideoLink'><span class='mobileHide'><span class="cn">立即获得</span><span class="eng">Get it now</span></span> >></div>
+                    <div id='fullVideoLink'><span class=''><span class="cn">立即获得</span><span class="eng">Get it now</span></span> >></div>
                 </div>
             </div>
         </div>
@@ -5767,7 +6112,7 @@ li:nth-child(3) {
                 <div id='freeCourseButton'><span class="cn">免费领取</span><span class="eng">Preview</span></div>
                 <div id='freeCourseTitle2'>
                     <div id='fillCourseTitle2'>UE4 动画角色模型的处理技巧</div>
-                    <div id='fullVideoLink2'><span class='mobileHide'><span class="cn">立即获得</span><span class="eng">Get it now</span></span> >></div>
+                    <div id='fullVideoLink2'><span class=''><span class="cn">立即获得</span><span class="eng">Get it now</span></span> >></div>
                 </div>
             </div>
         </div>
@@ -6006,33 +6351,33 @@ li:nth-child(3) {
 		<div class='titleText header1'>OTHER FEATURES<br/><span class='headerChinese'>增值服务</span></div>
 
 		<div id='servicesContents'>
-			<div class=' service'> 
-				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_50c71d26db5e44c1e5ae5c2c0789077e?imageView2'></div>
+			<div class='service' id='services1'> 
+				<!-- <div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_50c71d26db5e44c1e5ae5c2c0789077e?imageView2'></div> -->
 				<div class='serviceText'><span class="cn">光子<br/>结业证书</span><span class="eng">Certificate</span></div>
 			</div>
 
-			<div class=' service'> 
-				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_f928d98257f69ff0bc030086366238d2?imageView2'></div>
+			<div class=' service' id='services2'> 
+				<!-- <div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_f928d98257f69ff0bc030086366238d2?imageView2'></div> -->
 				<div class='serviceText'><span class="cn">推荐就业</span><span class="eng">Job<br/>Recommendation</span></div>
 			</div>
 
-			<div class=' service'> 
-				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_f55529baa1a78f80bd2df66e600852c0?imageView2'></div>
+			<div class=' service' id='services3'> 
+				<!-- <div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_f55529baa1a78f80bd2df66e600852c0?imageView2'></div> -->
 				<div class='serviceText'><span class="cn">全方位<br/>服务辅导</span> <span class="eng">All-round<br/>counseling</span></div>
 			</div>
 
-			<div class=' service'> 
-				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_24b06df610dc66edd3ee3e298b544f67?imageView2'></div>
+			<div class=' service' id='services4'> 
+				<!-- <div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_24b06df610dc66edd3ee3e298b544f67?imageView2'></div> -->
 				<div class='serviceText'><span class="cn">专属<br/>学习平台 </span> <span class="eng">Exclusive<br/>Learning platform</span></div>
 			</div>
 
-			<div class=' service'> 
-				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_673f2527bfd637cafbe5dc7cbafd8980?imageView2'></div>
+			<div class=' service' id='services5'> 
+				<!-- <div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_673f2527bfd637cafbe5dc7cbafd8980?imageView2'></div> -->
 				<div class='serviceText'><span class="cn">附赠全套<br/>配置文件</span><span class="eng">Complete <br/>Course Files</span></div>
 			</div>
 
-			<div class=' service'> 
-				<div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_6a862f0e8043056be5a2a512c5fe2385?imageView2'></div>
+			<div class=' service' id='services6'> 
+				<!-- <div class='serviceIcon'><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_6a862f0e8043056be5a2a512c5fe2385?imageView2'></div> -->
 				<div class='serviceText'><span class="cn">就业指导</span><span class="eng">Career<br/>Guidance</span></div>
 			</div>
 		</div>
@@ -6185,6 +6530,8 @@ li:nth-child(3) {
 
             }
         }) 
+
+        // $( window )
 
 
 
@@ -6457,6 +6804,18 @@ li:nth-child(3) {
         })
 
         $('#fullVideoLink').click(function(){
+            cardShow = true
+            $('#consultantImgBg').css('display','flex')
+            $('#buyImg').hide()
+            $('#consultImg').show();
+            if(lan == 'CN'){
+                $('#fillConsultText').text('免费领取公开课')
+            } else {
+                $('#fillConsultText').text('Get Free Public Class')
+            }
+        })
+
+        $('#fullVideoLink2').click(function(){
             cardShow = true
             $('#consultantImgBg').css('display','flex')
             $('#buyImg').hide()
