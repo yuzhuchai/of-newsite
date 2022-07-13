@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=0.25, user-scalable=yes">
         <title></title>
     <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>
     <!-- <script type="text/javascript" src='data.js'></script> -->
+    <link rel="stylesheet" href="../style/about.css">
+    
+    
     </head>
 
     <body>
-        <script>
+
+        <!-- <script>
             $(window).on("load",function(){
                 $(".main_area").width($(window).width())
                 contentWidth = $('#contentContainer').width();
@@ -55,9 +61,9 @@
 
 
 
-        </script>
+        </script> -->
 
-        <style>
+        <!-- <style>
             @font-face {
                 font-family:  "XYZB";
                 src: url("/static/font/MSYHBD.TTC");
@@ -1919,41 +1925,43 @@
 
             }
 
-        </style>
+        </style> -->
 
         
 
 
 
-<div id="header">
-    <div id="headerlogo"><a href="./home"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
-    <div id="menu">
-        <div>
-            <form id="form" action="./courseList">
-                <input type='text' id='search' name='filter' placeholder="processing"> 
-            </form>
-        </div>
+        <div id="header">
+            <div id="headerlogo"><a href="./home"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
+            <div id="menu">
+                <div>
+                    <form id="form" action="./courseList">
+                        <input type='text' id='search' name='filter' placeholder="processing"> 
+                    </form>
+                </div>
 
 
-        <div class="btn-container">
-			<label class="switch btn-color-mode-switch">
-		        <input type="checkbox" name="color_mode" id="color_mode" value="1">
-		        <label for="color_mode" data-on="英文" data-off="中文" class="btn-color-mode-switch-inner"></label>
-		    </label>
-        </div>
+                <div class="btn-container">
+                    <label class="switch btn-color-mode-switch">
+                        <input type="checkbox" name="color_mode" id="color_mode" value="1">
+                        <label for="color_mode" data-on="英文" data-off="中文" class="btn-color-mode-switch-inner"></label>
+                    </label>
+                </div>
 
-        <div class="mobileLan">
-            <div id="mobileLanTxt"><span id="mobileCn">中文</span><span id="mobileEn">EN</span></div>
-        </div>
+                <div class="mobileLan">
+                    <div id="mobileLanTxt"><span id="mobileCn">中文</span><span id="mobileEn">EN</span></div>
+                </div>
 
-        <div id='login'><img id='loginIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_86ceb5932e24e2383cce79506f18ef8a?imageView2'>&nbsp <span class="cn">登陆</span><span class="eng">Log In</span></div> 
-        <div id='menuIconContainer'>
-        	<div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
-        	<div id='menuText'><span class="eng">Menu</span><span class="cn">菜单</span></div>
+                <div id='login'><img id='loginIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_86ceb5932e24e2383cce79506f18ef8a?imageView2'>&nbsp <span class="cn">登陆</span><span class="eng">Log In</span></div> 
+                <div id='menuIconContainer'>
+                    <div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
+                    <div id='menuText'><span class="eng">Menu</span><span class="cn">菜单</span></div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
         <!-- end of header  -->
+
+
         <div id="loginPopupBg">
             <div id="loginPopup">
                 <div class="closeTab"></div>
@@ -2139,9 +2147,6 @@
         
         </div>
         
-        
-
-
 
         <div id="contentContainer">
 
@@ -2682,7 +2687,7 @@
 
         </div>
 
-
+<!-- 
         <script>
 
             let displayMenu = false;
@@ -2767,24 +2772,10 @@
             })
 
 
-//             $(window).scroll(function(){
-//                 let scrollPos = $(window).scrollTop()
+        </script> -->
 
-// // $(window).on('scroll',)
-//                 console.log(scrollPos)
-//                 if(scrollPos > $('#map').position().top - 100){
-//                     if( !iframeLoaded ){
-//                         console.log('display ifroma')
-//                         $('iframe').attr('src', 'https://j.map.baidu.com/be/IatJ')
-//                         iframeLoaded = true 
-//                     }
-//                 }
-//             })
 
-        </script>
-
+        <script src="../js/about.js"></script>
     </body>
 </html>
 
-
-<!-- 课程体系素材 （微信封面） -->

@@ -1513,7 +1513,184 @@ let tdCommercial = {
 
 
 
+let unrealVP = {
+    classID: "unityVR(不要修改)",
+classNameEng:'MASTERING VIRTUAL PRODUCTION WITH UE5',
+classNameCn: 'UE5虚拟制片大师班',
+price:'6718',
+installmentValue:'560',
+installmentTime: "12",
+classSlogan:'揭秘国外虚拟制片流程，创作个人虚拟拍摄短片',
+classHeader:"掌握UE5创作平台<br/>成为精通虚拟制片的影视创作者",
+classSeries:'UE系列',
+classSeriesLink:'课程系列链接',
+prepClass:'Unreal筑基班',
+prepClassLink:'前置课程链接',
+requirements:'课程硬件需求',
+classOverview: '你想成为精通虚拟制片的影视创作者吗？你想跨入诸如华纳兄弟、派拉蒙、环球等行业领先的影视公司的大门吗？你想创作出电影级真实的UE5作品吗？那么快加入UE5虚拟制片大师班吧！本课程由全球建筑院校排名TOP10的南加州建筑学院陈苏杨老师亲自授课。你可以零基础学习最强大的实时3D创作平台Unreal Engine 5，迅速掌握和运用UE5灯光、镜头和材质等内容，精通目前市面上最火爆的交互式叙事结构和搭建，独立制作UE5生成的高逼真渲染虚拟影视作品。最终你会成为交互叙事设计师，入职大型影视企业，或接UE5相关项目以及出售UE5作品获得丰盈收入。',
+mentorNameEng:'Ina Chen',
+mentorNameCn:'陈苏杨',
+mentorTitle:["UE创意工程师和独立导演",
+            "美国南加州建筑学院硕士",
+            "美国PHNTM工作室虚幻引擎内容总监"
+        ],
+mentorText:'Ina是一位拥有建筑和电影制作背景的多元文化体验设计师，毕业于美国先锋派建筑名校南加州建筑学院，在PHNTM工作室担任虚幻引擎内容主管。在创作过程中，她利用诸如UE5、CGI 和沉浸式媒体尖端技术来进行构建和叙事并探索不同文化场景。她的作品曾入围第三届NOWNESS 2021 天才计划，并于2022 SLAMDANCE 国际电影节、2021 FIRST 国际电影节、2021 纽约国际短片电影节以及2020伦敦电影节等各大国际电影节展出。',
+freeClassTitle:'陈苏杨老师公开课「Unreal筑基班」',
+studentReviewMain: {
+    name: "李同学",
+    title:'交互叙事设计师',
+    review: "我是在某电影工作室担任交互叙事设计相关工作的设计师，主要做的项目都和电影相关。因为刚刚入行的原因，所以想提升一下自己对UE5虚拟电影研发的水平，以免被这个快速发展的时代抛弃。学校教的内容都比较课本化，很难运用到现在的真实开发环境。我在挑选课程的时候，有特别留意授课老师们的作品，因为我主要还是做交互叙事这块，更偏向那种完整的UE5叙事作品。事实证明，我没有选错。Ina老师有着电影学术基础，在电影制作中强大地体现出来了。通过这次学习，我明白了其实电影也是艺术的一种形式，创作思维是最重要的。非常谢谢Ina老师不厌其烦的指导！",
+},
+studentReview:[
+        {
+            name: '张同学',
+            title:'往期学员',
+            review:'Ina老师真的很好，非常耐心地回答我这个小白的一些愚蠢问题，比如材质导入失误、顶点绘制错误等。非常喜欢老师分享的影视商业案例制作心得，希望以后也能成为和老师一样厉害的人！'
+        },
+        {
+            name: '余同学',
+            title:'往期学员',
+            review:'老师非常亲切，没有那种架子，很喜欢这种平等沟通的感觉，这样学习起来也没有压迫感~'
+        },
+        {
+            name: '江同学',
+            title:'往期学员',
+            review:'我是有过这个UE4的基础的，市面上没什么UE5的课程，所以就参加了Ina老师的课程。蛮好的课程内容分配，可以带我重新复习一遍之前的内容，还能添加新东西。'
+        },
+        {
+            name: '刘同学',
+            title:'往期学员',
+            review:'兴趣是最重要的老师，因为喜欢看电影，现在开始做虚拟电影这块，通俗易懂的课程，比较适合真心想学到东西的人。'
+        },
+        {
+            name: '朱同学',
+            title:'往期学员',
+            review:'老师有比较丰富的国际项目制作经历，而且也是有着多文化生活经验，非常喜欢她的叙事节奏和特色，我都要变成粉丝啦哈哈~'
+        },
+        {
+            name: '林同学',
+            title:'往期学员',
+            review:'学完下来收获颇多，想以后自己将剧本搬到大荧幕上，还需要继续努力下去。'
+        },
+],
+syllabus: [
+    {
+        title: '创作UE5虚拟电影场景灯光',
+        description: '制作UE5虚拟电影场景灯光，掌握全球领先的次世代实时3D内容创作工具Unreal Engine 5，运用灯光和相机生成不同情绪',
+        img:"http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_38d16739f691f1abdba258335ffc8c4a?imageView2",
+        fullSyllabus:["掌握UE5基本界面",
+                      "几何/nanite石介绍",
+                      "学习如何使用照明和相机赋予电影场景各种情绪和气氛",
+                    ]
+    },
+    {
+        title:'创作UE5虚拟布景及镜头',
+        description:'制作UE5虚拟电影布景及镜头，掌握虚拟电影场景在UE5中的使用，运用布景及镜头完成氛围搭建',
+        img:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f0fb2740b33c9c81a4fbf74f19aff415?imageView2',
+        fullSyllabus:["指导虚拟电影场景并赋予电影场景各种气氛",
+                      "介绍Sequencer",
+                      "用三种光影打造三种最终场景",
+                    ]
+    },
+    {
+        title:'介绍UE5虚拟电影拍摄',
+        description:'介绍UE5虚拟电影拍摄，掌握电影手法在UE5中的使用，运用布景及镜头复刻经典电影画面',
+        img:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_08f041f07623d823bfb3d1b38239399b?imageView2',
+        fullSyllabus:["了解电影摄影在虚拟制作中的使用",
+                      "介绍虚拟生产的概念和案例",
+                      "收集所有参考资料和视觉案例并编译creative deck",
+                    ]
+    },
+    {
+        title:'创作UE5虚拟电影构图',
+        description:'制作UE5虚拟电影构图，掌握电影构图在UE5中的使用，运用不同资产进行大型模型搭建',
+        img:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_418eda34ac87e6af9b61651c7feb85a1?imageView2',
+        fullSyllabus:["介绍游戏资产的准备工作流程",
+                      "介绍用于资产采购的Quixel Megascan、UE marketplace、Sketchfab、Artstation 、Kitbash3D",
+                      "设置虚拟摄像机并进行大型模型搭建",
+                    ]
+    },
+    {
+        title:'创作UE5虚拟电影特效',
+        description:'制作UE5虚拟电影特效，掌握电影素材在UE5中的使用，运用不同素材和粒子进行静止图像拍摄',
+        img:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_35e0f3ec67c760afdeed4cefadbb1510?imageView2',
+        fullSyllabus:["掌握材质/shader",
+                      "掌握FX/粒子系统",
+                      "优化构图并将之前的大型模型细节化",
+                    ]
+    },
+    {
+        title: "创作UE5虚拟电影镜头动画",
+        description: '制作UE5虚拟电影镜头动画，掌握电影镜头在UE5中的使用，运用Ipad相机进行虚拟电影动画拍摄',
+        img:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_01e7c2c8975a28b2d823666682d277cb?imageView2',
+        fullSyllabus:["介绍Ipad相机和使用方法",
+                      "在 UE 环境中拍摄自己的故事版本",
+                      "最终完成电影镜头",
+                    ]
+    },
+    {
+        title: '创作UE5虚拟声音和后期',
+        description: '制作UE5虚拟电影声音和后期，掌握电影声音和音效在UE5中的使用，运用Premiere进行声音编辑',
+        img:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a58a8f3486c87fe2ea802359a7f808fa?imageView2',
+        fullSyllabus:["了解寻找声音设计和音乐资源的方法",
+                      "添加声音并在Premiere进行编辑",
+                      "了解虚幻渲染预设和不同的控制台命令设置",
+                    ]
+    },
+    {
+        title:'创作UE5最终个人虚拟短片',
+        description:'制作UE5虚拟电影最终项目，掌握虚拟电影创意思维，运用故事板等进行最终个人短片项目开发',
+        img:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e2d31a71f777cbaf5c9d6023821920f8?imageView2',
+        fullSyllabus:["介绍使用Dall E人工智能技术生成概念艺术的方法",
+                      "在概念开发中介绍行业创意工作流程的理论：故事板、预览 、最终镜头",
+                      "完成虚拟电影镜头",
+                    ]
+    }
+],
+// 以下是图片内容填充
+mainPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e458c30f6e4f4d952609432b607d109c?imageView2',
+mainPosterMobile:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8ed34a1e9a41c7a649e991e507bafa19?imageView2',
+classVideo: '课程宣导片url',
+videoPoster: '课程宣导片封面图片url',
+showCase: ["http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2182f5832dddd134b04274823fe943c9?imageView2",
+            "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e2d1dd6f5e9f3cc6bd4ee34bbc81e76e?imageView2",
+            "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f15b9a3c0ab8f6aee57d6d189fdb30f1?imageView2",
+            "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_285a63c4d871e5d5a61a3ec84614d572?imageView2",
+            "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6415457e775d1dd143bce16835772480?imageView2",
+            "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e9cfdab0df466eae245c5dcb8268af58?imageView2",
+            "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7bff079c1bb56c786f4a36b4ebd3ce28?imageView2",
+            "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2844e7c7f341045a72c9cd59a258f15b?imageView2",
+            "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_00d400362ab08ebb6cb057d43970c65c?imageView2",
+            "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9300ef3f10df1016a577687358839d7f?imageView2"],
+mentorImg: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6694f606ccb7193d3b0045a8a9f312f3?imageView2',
+mentorPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_85869ab51f303d51851030d56269c283?imageView2',
+mentorVideo:"http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_aed86cb8668cad828d2322ef60c918c8",
+teacherCase:['http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_260a04f8cf3f6fcc50ae7783a2b3a458?imageView2',
+            'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_1cce3834779afe3886925e1c5fc5eb5a?imageView2',
+            'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f6d57b8694bf7f0238458fae78dc9282?imageView2',
+            'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_85ffa2bf3823fca9dc655edf65a3d194?imageView2',
+            'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bb1bdbb633633fddf90dbf3b1d5fc55b?imageView2',
+            'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3c0cdf9287d883192c6238060c5b7d99?imageView2'],
+studentWork: ['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_944e3f957fd6ea55f828109658ade78a?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_227a2b63e52d70b12e0fe2d7e887e081?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ed2491cd31d521aeea52544cac28a069?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_72c0b0dcf3218f4bc5c4f18c00f8b1f7?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_871c75d34d4c17d2f19363832aa41fe2?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_25ffee87830c4868dbcbd5bd702e5b53?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_997bace94cad221a8f9cc09693b2c49b?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_60c4ec6054bb6dc830c4e4f5567d8d44?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_798d2160dd9c388d6ab893348eb91c37?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_1978b8b20886ffbc6901ea377cb4deb1?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d0c18091ab03addcf5dec83a4df3b7ef?imageView2',
+            'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_175ee5a78be1067e03ab48dfdeda99ca?imageView2'
+            ],
+}
 
 
 
-let courseDisplay 
+
+
+
+
+
+// let courseDisplay 
