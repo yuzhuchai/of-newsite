@@ -21,11 +21,13 @@
 html, body{
     /*font-family: "Microsoft YaHei";*/
     font-family:"XYZ";
+    font-family:Arial, Helvetica, sans-serif;
     max-width: 100%;
     overflow-x: hidden; 
     /* disable scrollbar */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    margin:0;
 }
 
 body::-webkit-scrollbar {
@@ -94,7 +96,7 @@ a {
     display: none;
     width: 100vw;
     height:100vh;
-    z-index: 1;
+    z-index: 2000;
     position: fixed;
     left: 0;
     top:80px;
@@ -142,7 +144,7 @@ a {
     margin-bottom:auto;
     font-size: 20px;
     margin-right:26px;
-    font-family: "XYZB";
+    /* font-family: "XYZB"; */
     font-weight: 700;
     display: flex;
     flex-direction: row;
@@ -276,10 +278,13 @@ input[type=text]::placeholder{
 
 
 #contentContainer{
-    top: 80px;
+    /* top: 80px; */
     /* position: absolute; */
     left: 0px;
     width: 100%;
+    margin-top: 80px;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .container{
@@ -332,7 +337,7 @@ input[type=text]::placeholder{
     color: #E2E2E2;
     text-decoration: none;
     font-size: 18px;
-    font-family: "XYZ";
+    /* font-family: "XYZ"; */
     font-weight: 400;
     /*position: absolute;*/
     margin-left: 20px;
@@ -346,7 +351,7 @@ input[type=text]::placeholder{
 #posterText{
     text-align: center;
       margin-top: -50px;
-    font-family: "XYZB";
+    /* font-family: "XYZB"; */
       font-weight: 700;
       font-size: 3.4vw;
       color: white;
@@ -364,14 +369,14 @@ input[type=text]::placeholder{
     height:359px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -150px;
+    margin-top: 180px;
     border-radius: 15px;
 }
 
 
 
 #courseTitle{
-    margin-top: 76px;
+    margin-top: 276px;
     margin-bottom: 76px;
     text-align: center;
 }
@@ -409,7 +414,7 @@ input[type=text]::placeholder{
 #overViewContent{
     margin-top: 42px;
     font-size: 25px;
-    font-family: 'XYZL';
+    /* font-family: 'XYZL'; */
     font-weight: 290;
     line-height: 52.2px;
     color:#222222;
@@ -483,7 +488,7 @@ input[type=text]::placeholder{
     border-radius: 8px;
     border:none;
     font-size: 24px;
-    font-family: 'XYZB';
+    /* font-family: 'XYZB'; */
     font-weight: 700;
     text-align: center;
     vertical-align: baseline;
@@ -612,7 +617,7 @@ input[type=text]::placeholder{
 
 #commentLeft > div {
     margin: 48px 52px;
-    font-family: 'XYZL';
+    /* font-family: 'XYZL'; */
     font-weight: 290;
     display: flex;
     flex-direction: column;
@@ -656,7 +661,7 @@ input[type=text]::placeholder{
 .commentRight > div {
     margin-left: 30px;
     margin-right:48px;
-    font-family: "XYZL";
+    /* font-family: "XYZL"; */
     font-weight: 290;
     display: flex;
     flex-direction: row;
@@ -666,7 +671,7 @@ input[type=text]::placeholder{
 }
 
 .commentRight{
-    font-family: "XYZL";
+    /* font-family: "XYZL"; */
     font-weight: 290;
     width: 1005px;
     height:93px;
@@ -744,7 +749,7 @@ input[type=text]::placeholder{
     align-items: center;
     height: 90px;
     justify-content: center;
-    font-family: "XYZB";
+    /* font-family: "XYZB"; */
     font-weight: 700;
     font-size: 30px;
 }
@@ -793,7 +798,7 @@ input[type=text]::placeholder{
 }
 
 .header2{
-    font-family: "XYZB";
+    /* font-family: "XYZB"; */
     font-weight: 700;
     font-size: 24px;
 }
@@ -834,7 +839,7 @@ input[type=text]::placeholder{
 .serviceText{
     color:#754D00;
     text-align: center;
-    font-family: "XYZB";
+    /* font-family: "XYZB"; */
     font-weight: 700;
     font-size: 24px;
 }
@@ -919,7 +924,7 @@ input[type=text]::placeholder{
 
 .header1{
     font-size: 40px;
-    font-family: "XYZB";
+    /* font-family: "XYZB"; */
     font-weight: 700;
     color: #222222;
     line-height: 35px;
@@ -927,7 +932,7 @@ input[type=text]::placeholder{
 
 .headerChinese{
     font-size: 30px;
-    font-family: "XYZL";
+    /* font-family: "XYZL"; */
     font-weight: 290;
     color:#222222;
 }
@@ -1002,7 +1007,7 @@ input[type=text]::placeholder{
     height: 100px;
     align-content: flex-start;
     font-size: 20px;
-    font-family: "XYZL";
+    /* font-family: "XYZL"; */
 
     font-weight:290;
     color: #7c7c7c;
@@ -1119,7 +1124,7 @@ input[type=text]::placeholder{
 
 .menuCategory > div {
     align-self: center;
-    font-family: "XYZB";
+    /* font-family: "XYZB"; */
     font-weight: 700;
     font-size: 30px;
 }
@@ -1160,13 +1165,13 @@ input[type=text]::placeholder{
 
 .softwareh1{
     font-size: 20px;
-    font-family:  "XYZB";
+    /* font-family:  "XYZB"; */
     font-weight: 700;
 }
 
 .softwareh2{
     font-size: 15px;
-    font-family:  "XYZL";
+    /* font-family:  "XYZL"; */
     font-weight: 290px;
 }
 
@@ -1220,7 +1225,7 @@ input[type=text]::placeholder{
     color:white;
     margin-top: 20px;
     font-size: 20px;
-    font-family: "XYZB";
+    /* font-family: "XYZB"; */
 
     font-weight: 700;
     border-radius: 8px;
@@ -1263,7 +1268,7 @@ input[type=text]::placeholder{
 }
 
 #price{    	
-    font-family: "XYZB";
+    /* font-family: "XYZB"; */
 
     font-weight: 700;
     color: #222222;
@@ -1294,7 +1299,7 @@ input[type=text]::placeholder{
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    font-family: "XYZB";
+    /* font-family: "XYZB"; */
 
     font-weight: 700;
     height: 60px;
@@ -1327,7 +1332,7 @@ input[type=text]::placeholder{
 .priceTag{
     display: inline-block;
     color: #754D00;
-    font-family: "XYZL";
+    /* font-family: "XYZL"; */
     font-weight: 290;
     font-size: 20px;
     display: flex;
@@ -1432,12 +1437,12 @@ input[type=text]::placeholder{
 }
 
 .weight-400{
-    font-family: 'XYZL';
+    /* font-family: 'XYZL'; */
     font-weight: 400;
 }
 
 .weight-700{
-    font-family: "XYZB";
+    /* font-family: "XYZB"; */
 
     font-weight: 700;
 }
@@ -1482,7 +1487,7 @@ input[type=text]::placeholder{
 #freeCourseButton{
     color: #754D00;
     font-size: 30px;
-    font-family: 'XYZL';
+    /* font-family: 'XYZL'; */
     font-weight: 300;
     background: linear-gradient(95.75deg, #F4DBAB -12.16%, #FFE38D 28.51%, rgba(244, 219, 171, 0) 111.21%, rgba(244, 219, 171, 0) 111.21%, #FFEFD0 111.21%);
     border-radius: 8px 0px 0px 8px;
@@ -1503,7 +1508,7 @@ input[type=text]::placeholder{
     margin-right:60px;
     flex-grow: 2;
     color:#754D00;
-    font-family: "XYZB";
+    /* font-family: "XYZB"; */
 
     font-weight: 700;
     font-size: 30px;
@@ -1541,7 +1546,7 @@ input[type=text]::placeholder{
 }
 
 #mentorheader, #mentorheader2{
-    font-family: 'XYZL';
+    /* font-family: 'XYZL'; */
     font-weight: 400;
     font-size: 30px;
     line-height: 40px;
@@ -1549,7 +1554,7 @@ input[type=text]::placeholder{
 
 #mentorNameEng,#mentorNameEng2{
     margin-top: 20px;
-    font-family: "XYZB";
+    /* font-family: "XYZB"; */
 
     font-weight: 700;
     font-size: 30px;
@@ -1557,7 +1562,7 @@ input[type=text]::placeholder{
 }
 
 #mentorNameCn, #mentorNameCn2{
-    font-family: 'XYZL';
+    /* font-family: 'XYZL'; */
     font-weight: 300;
     font-size: 20px;
     line-height: 27px;
@@ -1566,7 +1571,7 @@ input[type=text]::placeholder{
 
 #mentorTitle, #mentorTitle2{
     margin-top: 40px;
-    font-family: 'XYZL';
+    /* font-family: 'XYZL'; */
     font-weight: 300;
     font-size: 20px;
     line-height: 27px;
@@ -1575,7 +1580,7 @@ input[type=text]::placeholder{
 }
 
 #mentorTopLeftBottom, #mentorTopLeftBottom2{
-    font-family: 'XYZL';
+    /* font-family: 'XYZL'; */
     font-weight: 300;
     font-size: 20px;
     line-height: 27px;
@@ -1626,6 +1631,10 @@ input[type=text]::placeholder{
 
 #mentorContainer{
     margin-top: 120px;
+}
+
+#menu > .mobileLan{
+    display: none;
 }
 
 
@@ -1822,7 +1831,7 @@ right:2px;
 }
 
 .weight-290{
-font-family: "XYZL";
+/* font-family: "XYZL"; */
 font-weight: 290;
 }
 
@@ -1870,7 +1879,7 @@ font-weight: 700;
 font-size: 1.5em;
 line-height: 63px;
 letter-spacing: 0.045em;
-font-family:'XYZB';
+/* font-family:'XYZB'; */
 }
 
 
@@ -1963,7 +1972,16 @@ display: none;
 #priceRow2Mobile{
     display: none;
 }
+
+#priceContainerMobile{
+    display:none;
+}
     
+#stickyBottom{
+    display: none;
+}
+
+/* ipad landscape */
 @media only screen and (min-width: 1023px) and (max-width: 1660px){
 
 /* menu fixed  start ------------------------------------------------------------------------------ */
@@ -2087,7 +2105,7 @@ display: none;
 
 
 #priceContainer{
-    margin-top: -80px;
+    margin-top: 80px;
     height:auto;
     padding-top:20px;
     padding-bottom:20px;
@@ -2338,9 +2356,7 @@ img{
 }
 
 
-/* ipad */
-
-/* min-width: 200px */
+/* ipad profile*/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     /* ipad */
     /* header  copy start ------------------------------------------------------------------------------ */
@@ -2529,7 +2545,7 @@ img{
 
 
     #priceContainer{
-        margin-top: -150px;
+        margin-top: 80px;
         height:auto;
         padding-top:20px;
         padding-bottom:20px;
@@ -2819,261 +2835,12 @@ img{
 
 
 
-
+/* iphone */
 @media only screen and (min-width: 200px) and (max-width: 767px) { 
-    /* #header{
-        width: 100%;
-        height:60px;
-    }
 
-
-
-    #headerlogo, #menu {
-        margin-left:10px;
-    }
-    #headerlogo > a > img {
-        display: block;
-        width: 120px;
-    }
-
-    #menuText{
-        font-size: 20px;
-        margin-right:0;
+    .mobileHide{
         display: none;
     }
-
-    #footer{
-        margin-top: 100px;
-    }
-
-
-    #menu > div{
-        margin-right: 0;
-    }
-
-    #menu > #menuIconContainer{
-        width: auto;
-    }
-
-
-
-    #menu > div:nth-child(1){
-        display: none;
-    }
-
-    .btn-container{
-        display: none;
-    }
-
-    #login{
-        display: none;
-    }
-
-    #menuIcon{
-        width: 20px;
-        height: 20px;
-    }
-
-    #menuIcon > div {
-        width: 9px;
-        height: 9px;
-        border-radius: 3px;
-    }
-
-
-
-    #footer > div{
-        margin-left: 5%;
-    }
-
-    #footerLogo {
-        width: 5%;
-    }
-
-    .footerMenuItem{
-        font-size: 12px;
-        margin: 0px 20px 30px 20px;
-    }
-
-    #footerSocial{
-        font-size: 12px;
-        margin-left: 20px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    #footerCode > div {
-        margin-bottom: 15px;
-    }
-
-
-    #footerCode > div:nth-child(1){
-        display: none;
-    }
-
-
-    #footerSocialLogo{
-        flex-direction: row;
-        width:60%;
-        flex-wrap: wrap;
-    }
-
-    #footerSocialLogo > img {
-        width:20px;
-        height:auto;
-        margin-right: 10px;
-        margin-bottom:25px;
-    }
-
-    #footerSocialLogo > a > img{
-        width:20px;
-        height:auto;
-        margin-right: 10px;
-        margin-bottom:25px;
-    }
-
-
-    #menuPopUpContents{
-        width: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    #menuPopUp{
-        overflow-y: scroll;
-        height:auto;
-        bottom: 0;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        top:60px;
-    }
-
-    #menuButtonContainer{
-        margin: auto;
-        width:90%;
-        flex-wrap: wrap;
-    }
-
-    #menuButtonContainer > a {
-        max-width: 32%;
-    }
-
-
-    #menuButtonContainer > a > .buttonBlack{
-        min-width: 100%;
-        max-width: 100%;
-        font-size: 15px;
-    }
-
-
-    .buttonMenu{
-        height: 40px;
-        margin-top:0;
-        margin-bottom: 10px;
-    }
-
-
-    #mobileMenuDisplay{
-        display: block;
-        width: 32%;
-    }
-
-    #menuCategoryContainer{
-        margin: auto;
-        width:90%;
-        flex-wrap: wrap;
-        margin-top:24px;
-    }
-
-    .cursorPointer{
-        width: 48%;
-    }
-    .menuCategory{
-        max-width:100%;
-        min-width:100%;
-        min-height: 100px;
-        margin-bottom:10px;
-    }
-
-    .menuCategory > div{
-        font-size: 20px;
-    }
-
-    #menuSoftwareContainer{
-        margin: auto;
-        width:90%;
-        flex-wrap: wrap;
-        margin-top:14px;
-        row-gap: 0;
-    }
-
-    #menuSoftwareContainer > .cursorPointer{
-        height: auto;
-        width:24%;
-        margin-bottom:15px;
-    }
-    
-    .softwareDescription{
-        display: none;
-    }
-
-    .software{
-        width: 18vw;
-        min-height: 18vw;
-        display: flex;
-        margin: auto;
-    }
-
-    .software > img{
-        min-width: 12vw;
-        max-width: 12vw;
-        min-height: 12vw;
-        max-height: 12vw;
-        margin:auto;
-        border-radius: 0;
-    }
-
-    #menuSocialContainer{
-        width: 65%;
-        margin-left:5%;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        margin-top: 9px;
-    }
-
-    #menuSocialContainer > div{
-        max-width: 18%;
-        max-height: 12vw;
-        margin-right:0;
-    }
-
-    #menu > .mobileLan{
-        display: block;
-        margin-right:30px;
-    }
-
-    #mobileEn{
-        display: none;
-    }
-
-    #contentContainer{
-        top:60px;
-    }
-
-    #menuPopUpContents{
-        margin-top: 0;
-    }
-
-    #menu{
-        margin-right: 10px;
-    }
-
-    .buttonMenu > .eng{
-        font-size: 12px;
-    } */
-
 
     #header{
         width: 100vw;
@@ -3223,7 +2990,7 @@ img{
     #menuButtonContainer > a > .buttonBlack{
         min-width: 100%;
         max-width: 100%;
-        font-size: 15px;
+        font-size: 12px;
     }
 
 
@@ -3259,7 +3026,7 @@ img{
     }
 
     .menuCategory > div{
-        font-size: 20px;
+        font-size: 14px;
         /* height: 40px; */
     }
 
@@ -3313,8 +3080,48 @@ img{
 
     #menu > .mobileLan{
         display: block;
-        margin-right:30px;
+        margin-right:25px;
+        /* height: 20px; */
     }
+
+    #mobileLanClick{
+        height: 25px
+    } 
+
+    #mobileLanClick > img {
+        height: 100%;    
+    }
+
+    #lanDropDown{
+        display: none;
+        position: absolute;
+        margin-top: 16px;
+        background: rgba(255, 255, 255, 0.57);
+        border-radius: 3px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        border-radius: 3px;
+        overflow: hidden;
+        z-index: 2001;
+    }
+    
+    #lanDropDown > div {
+        color:rgba(172, 172, 172, 1);
+        padding: 10px;
+    }
+
+    #cnMobile{
+        text-decoration: underline;
+        background: #F8F8F8;
+    }
+
+    #enMobile{
+        background: #F4F4F4;
+    }
+
+
 
     #mobileEn{
         display: none;
@@ -3324,14 +3131,21 @@ img{
         margin-top: 0;
     }
 
-
+/* 
     .buttonMenu > .eng{
         font-size: 12px;
+    } */
+
+    .icon{
+        border-radius: 1px;
     }
 
 
 
-    #headerMobile {
+    /* end of iphone header and */
+
+
+    /* #headerMobile {
         display:none;
         height: 60px;
         position: sticky;
@@ -3346,46 +3160,625 @@ img{
         font-weight: 400;
         z-index: 100;
         background: white;
-    }
+    } */
 
 
-    #contentContainer{
-        top:60px;
-    }
-
-    .container{
-        width: 90%;
-    } 
-
-
-    #mainPoster{
+    /* #mainPoster{
         display: none;
-    }
+    } */
 
-    #mainPosterMobile{
+    /* #mainPosterMobile{
         margin: 20px auto;
         display: block;
         width: 90%;
         margin-bottom: 0;
-    }
+    } */
 
-    #mobilePosterImg {
+    /* #mobilePosterImg {
         width: 100%;
-    }
+    } */
 
-    #priceContainer{
+    /* #priceContainer{
         margin-top: 0px;
         box-shadow: none;
+    } */
+
+    /* #priceContents{
+        margin-left: 0;
+        margin-right: 0;
+    } */
+
+
+    #contentContainer{
+        /* top:60px; */
+        /* margin-top:60px; */
+        height: 100vh;
+        margin-top:0;
+    }
+
+    .container{
+        /* margin-top: 90px; */
+        width: 90%;
+    } 
+
+
+    #navigation{
+        display: none;
+    }
+
+    #mainPoster{
+        /* height: calc(100vh - 120px); */
+        height: calc(100vh - 60px);
+        position:relative;
+    }
+
+    #posterText{
+        padding-top:223px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 120%;
+    }
+
+    #posterChinese{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 73.48%;
+    }
+
+
+    #priceContainer{
+        display: none;
+    }
+
+    #priceContainerMobile{
+        display: block;
+        background: #FFFFFF;
+        box-shadow: 0px 3.03333px 30.3333px rgba(0, 0, 0, 0.08);
+        border-radius: 6px;
+        width: 90%;
+        position:absolute;
+        bottom:0;
+        left: 5%;
+        height: auto;
     }
 
     #priceContents{
-        margin-left: 0;
-        margin-right: 0;
+        margin: 24px 20px; 
     }
 
-    #priceRow1{
+    #price{
+        margin-top:0;
+        width:100%;
+    }
+
+    #fillPrice{
+        /* line-height: 0px; */
+        /* font-size: 50px; */
+        font-size:30px;
+    }
+
+
+    #price > div > .size-40{
+        font-size: 16px;
+    }
+
+    #price > div > .size-15{
+        font-size: 16px;
+    }
+    #price > div > .size-30{
+        font-size: 16px;
+    }
+
+    #fillSlogan{
+        margin-top: 20px;
+        line-height: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 160.01%;
+    }
+
+
+    #tags{
+        margin-top:20px;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .priceTag{
+        font-size: 10px;
+    }
+
+    .priceTag{
+        /* width: 24%; */
+        /* font-size: 12px; */
+        padding: 5px 10px;
+        margin-right:10px;
+        margin-bottom: 10px;
+    }
+
+    #priceSocailMobile{
+        margin-top:20px;
+        font-weight: 400;
+        font-size: 12px;
+        color: #ACACAC;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #followNum{
+        color: rgba(255, 124, 50, 1);
+    }
+
+    #socialButton{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .priceSocial {
+        height: 20px;
+        margin-left:0;
+    }
+
+    #stickyBottom{
+        position: fixed;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        height:60px;
+        background: #FFFFFF;
+        box-shadow: 0px 3.03333px 30.3333px rgba(0, 0, 0, 0.08);
+        align-items: center;
+        justify-content: flex-end;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    #buttonTopMobile{
+        color: #FF7C32;
+        box-shadow:0px 0px 0px 2px #FF7C32 inset;
+    }
+
+
+
+    #buttonBottomMobile{
+        background-color: #FF7C32;
+        color: white;
+        margin-right: 20px;
+    }
+
+
+    .priceButton {
+        width: 30%;
+        margin-left: 10px;
+        font-size: 16px;
+        height: 40px;
+    }
+
+
+    #courseTitle{
+        margin: 45px 30px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 149.48%;
+        text-align: center;
+        letter-spacing: 0.045em;
+        text-transform: uppercase;
+    }
+
+    #fire{
+        height: 15px;
+    }
+
+    .playButton{
+        display: none;
+    }
+
+
+    #courseOverViewContainer,#syllabusContainer,#showCaseContainer, #mentorContainer,#TeacherCaseContainer,#studentWorkContainer,#commentsContainer,#featuresContainer, #servicesContainer{
+        margin-top:45px;
+    }
+
+    .header1{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 73.48%;
+        letter-spacing: 0.005em;
+        text-transform: uppercase;
+        text-align: left;
+        line-height: 30px;
+    }
+
+    .headerChinese{
+        font-size: 14px;
+        /* margin-top: 15px; */
+    }
+
+    #titleText{
+        margin-bottom: 10px;
+    }
+    .titleText{
+        margin-bottom: 10px;
+    }
+
+    #overViewContent{
+        font-size: 14px;
+        line-height: 200%;
+        margin-top:0;
+        font-weight: 290;
+        color: #4d4d4d;   
+    }
+
+
+    #syllabusContents{
+        margin-top:0;
+        display: flex;
+        flex-direction: row;
+        row-gap: 0;
+    }
+
+    .syllabus{
+        width: 48%;
+        margin-bottom:15px;
+        height:auto;
+    }
+
+    .myCard{
+        border-radius: 6px;
+    }
+
+    .myCard > div > img {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        width: 100%;
+    }
+
+    .overlay{
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+
+    .overlay> div > li{
+        font-size:10px;
+    }
+
+    .overlay > div {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .header2{
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 13px;
+        letter-spacing: 0.045em;
+    }
+
+    .header3{
+        font-style: normal;
+        font-weight: 290;
+        font-size: 12px;
+        /* line-height: 11px; */
+        letter-spacing: 0.045em;
+        text-align:justify;
+        color: #4d4d4d;
+    }
+
+    .cardDescription{
+        margin:12.5px;
+    }
+
+    .showCaseRow{
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+        margin-top:0;
+    }
+
+    .showCaseSquare{
+        width: 48%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+
+    .buttonOrange{
+        font-size: 14px;
+        padding: 10px 30px;
+        margin-top: 20px;
+    }
+
+    .buttonOrange > .inlineImg{
+        height: 20px;
+    }
+
+    #mentorContent{
+        margin-top: 0;
+    }
+
+    #mentorTop,#mentorTop2{
         flex-direction: column;
     }
+
+
+    #mentorTopLeft,#mentorTopLeft2{
+        width: 100%;
+    }
+    #mentorTopLeftTop,#mentorTopLeftTop2{
+        justify-content: flex-start;
+    }
+
+    #mentorTopLeftTop > div{
+        height: auto;
+        margin-right: 10px;
+    }
+
+    #mentorTopLeftTop2 > div{
+        height: auto;
+        margin-right: 10px;
+    }
+
+    #mentorImg,#mentorImg2{
+        width:45%;
+    }
+
+    #mentorheader, #mentorheader2{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        /* display: none; */
+    }
+
+
+
+    #mentorNameEng, #mentorNameEng2{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height:normal;
+        letter-spacing: 0.005em;
+        margin-top:0;
+    }
+
+    #mentorNameCn,#mentorNameCn2{
+        font-size: 12px;
+        line-height: normal;
+    }
+
+
+
+    #mentorTitle,#mentorTitle2{
+        font-style: normal;
+        font-weight: 290;
+        font-size: 12px;
+        line-height: 160%;
+        align-self: bottom;
+        /* or 19px */
+    }
+
+    #mentorTopLeftBottom,#mentorTopLeftBottom2{
+        font-style: normal;
+        font-weight: 290;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: justify;
+        margin-top:20px;
+    }
+
+
+
+    #mentorVideo,#mentorVideo2{
+        margin-top:20px;
+        width: 100%; 
+        /* margin-bottom: 20px; */
+    }
+
+
+    #mentorBottom, #mentorBottom2{
+        height: auto;
+    }
+
+    #freeCourseButton, #freeCourseButton2{
+        font-size: 12px;
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 8%;
+    }
+    
+    #fillMentorImg,#fillMentorImg2{
+        border-radius: 8px;
+    }
+
+    #freeCourseTitle,#freeCourseTitle2{
+        margin-right: 20px;
+        font-size: 15px;
+        line-height: normal;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.045em;
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+
+    #fullVideoLink2, #fullVideoLink{
+        width:8%;
+        text-align: right;
+        font-size: 12px;
+    }
+
+
+    .teacherShowCaseContents{
+        margin-top:0;
+        row-gap: 0;
+    }
+
+    .teacherBig {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .teacherBig > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .teacherSmall {
+        width: 48%;
+        margin-bottom: 15px;
+    }
+
+    .teacherSmall > img {
+        width: 100%;
+        height: auto;
+    }
+
+    #studentWorkContents{
+        margin-top:0;
+        /* flex-wrap: nowrap; */
+        row-gap:0;
+    }
+
+    .studentWork{
+        width: 48%;
+        margin-bottom: 4vw;
+        height: auto;   
+    }
+
+
+    #commentContents{
+        margin-top:0;
+    }
+
+   
+
+    #commentContents{
+        flex-direction: column;
+    }
+
+    #commentLeft{
+        width: 100%;
+    }
+
+    .commentRight{
+        width:100%;
+        padding-top:10px;
+        padding-bottom: 10px;
+        height:auto;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .commentRight > div {
+        display: grid;
+        grid-template-columns: [first] 30%; 
+        grid-template-rows: [row1-start] 50%;
+        margin-left:0;
+        margin-right: 15px;
+    }
+
+    .studentImgright{
+        min-width: 45px;
+        max-width: 45px;
+        margin-right: 0;
+        grid-column-start:1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        justify-self: center;
+    }
+
+    .studentNameRight{
+        grid-column-start:1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .studentNameRight > .size-20{
+        font-size: 14px;
+    }
+
+    .studentNameRight > .size-15{
+        font-size: 10px;
+    }
+
+    .studentCommentRight{
+        grid-column-start:2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        font-size: 12px;
+    }
+
+
+    #featureContents{
+        margin-top: 0;
+    }
+
+    #servicesContents{
+        margin-top:0;
+    }
+
+
+
+    .columnTitle{
+        font-size: 14px;
+        padding: 0px 25px
+    }
+    .columnItem{
+        font-size: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-top: 1px solid #E2E2E2;
+    }
+
+    .columnItem > .inlineImg{
+        height: 10px;
+    }
+
+
+    #consultImgContainer{
+        height: 60vh;
+    }
+
+    #fillBuyText{
+        font-size: 14px;
+    }
+
+    #buyText{
+        bottom:16%;
+    }
+
+    #askText{
+        bottom:12%;
+    }
+
+    #consultImgContainer > .consultImgDiv > .imgText > .inlineImg{
+        height: 14px;
+        vertical-align: middle;
+    }
+
+    #fillConsultText{
+        font-size: 14px;
+    }
+
+    .consultImgDiv > .ingText > .inlineImg {
+        height: 14px;
+        vertical-align: middle;
+    }
+
+
+/* up till here ----------------------------------------------/////////////////////////////// */
+
 
 
     #footer{
@@ -3396,64 +3789,11 @@ img{
         margin-left: 5%;
     }
 
-    #fillPrice{
-        font-size: 50px;
-    }
-
-    #fillSlogan{
-        line-height: normal;
-        font-size: 15px;
-        margin-top: 15px;
-        font-family: 'XYZL';
-        font-weight: 290;
-    }
-
-    #price{
-        width: 100%;
-        margin-bottom: 10px;
-        margin-top: 30px;
-    }
-
-    #social{
-        display: none;
-    }
-
-    .priceLeft{
-        height: auto;
-    }
 
 
 
-    #priceRow2{
-        flex-direction: column;
-    }
 
-    #tags{
-        width: 100%;
-        justify-content: space-between;
-    }
 
-    .priceTag{
-        width: 24%;
-        font-size: 12px;
-        padding: 5px 0;
-        margin-right:0;
-        margin-bottom: 10px;
-    }
-
-    #fire{
-        height: 25px;
-    }
-
-    #courseTitle{
-        font-size: 25px;
-        margin-left:30px;
-        margin-right:30px;
-    }
-
-    .playButton{
-        display: none;
-    }
 
 
     #coursePropsContainer{
@@ -3461,47 +3801,11 @@ img{
     }
 
 
-    #overViewContent{
-        font-size: 16px;
-        line-height: 180%;
-    }
-
-
-    .header1{
-        text-align: left;
-    }
-
-    #syllabusContents{
-        display: flex;
-        flex-direction: row;
-        row-gap: 0;
-    }
-
-    .syllabus{
-        width: 100%;
-        margin-bottom:15px;
-    }
-
-    .mobileHide{
-        display: none;
-    }
-
-
-    .showCaseSquare{
-        width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-    }
-
+  
     #showCaseContainer > .titleText{
         margin-bottom: 42px;
     }
 
-    .showCaseRow{
-        flex-direction: column;
-        height: auto;
-        margin-top: 0px;
-    }
 
 
     .showCaseRectBig{
@@ -3521,201 +3825,29 @@ img{
         margin-bottom:10px;
     }
 
-    .teacherBig {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    .teacherBig > img {
-        width: 100%;
-        height: auto;
-    }
-
-    .teacherSmall {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    .teacherSmall > img {
-        width: 100%;
-        height: auto;
-    }
-
-
-    .teacherShowCaseContents{
-        row-gap: 0;
-    }
-
-    #studentWorkContents{
-        row-gap: 0;
-    }
-
-    .studentWork{
-        width: 100%;
-        height:auto;
-        margin-bottom: 15px;
-    }
-
-    #commentContents{
-        flex-direction: column;
-    }
-
-    #commentLeft{
-        width: 100%;
-    }
-
-    .commentRight{
-        width:100%;
-        padding-top:10px;
-        padding-bottom: 10px;
-        height:auto;
+    #showCaseContainer > .titleText {
         margin-bottom: 10px;
-        font-size: 14px;
     }
 
-    .commentRight > div {
-        display: grid;
-        grid-template-columns: [first] 30%; 
-        grid-template-rows: [row1-start] 50%;
-        margin-left:0;
-        margin-right: 15px;
-    }
-
-    .studentImgright{
-        margin-right: 0;
-        grid-column-start:1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        justify-self: center;
-    }
-
-    .studentNameRight{
-        grid-column-start:1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        justify-self: center;
-        text-align: center;
-    }
-
-    .studentCommentRight{
-        grid-column-start:2;
-        grid-row-start: 1;
-        grid-row-end: 3;
-    }
-
-
-    .columnTitle{
-        font-size: 20px;
-        padding: 0px 15px
-    }
-    .columnItem{
-        font-size: 14px;
-        padding-left: 10px;
-        padding-right: 10px;
-        border-top: 1px solid #E2E2E2;
-    }
-
-    .columnItem > .inlineImg{
-        height: 12px;
-    }
 
     #servicesContents {
         flex-wrap: wrap;
     }
 
     .service{
-        width: 48%;
+        width: 32%;
         margin-bottom: 10px;
-        padding-top:10px;
+        padding-top:50px;
         padding-bottom: 20px;
+        height:calc(35.5vw * 708 / 1050);
     }
 
     .serviceText{
-        font-size: 20px;
-    }
-
-
-    #mentorTop,#mentorTop2{
-        flex-direction: column;
-    }
-
-    #mentorVideo,#mentorVideo2{
-        width: 100%; 
-        margin-bottom: 20px;
-    }
-
-    #mentorheader, #mentorheader2{
-        font-size: 20px;
-        display: none;
-    }
-
-    
-
-    #mentorNameEng, #mentorNameEng2{
-        font-size: 19px;
-        margin-top: 5px;
-        line-height: normal;
-    }
-
-    #mentorNameCn,#mentorNameCn2{
-        font-size: 15px;
-    }
-
-    #mentorImg,#mentorImg2{
-        width:45%;
-    }
-
-    #mentorTopLeft,#mentorTopLeft2{
-        width: 100%;
-    }
-    #mentorTopLeftTop,#mentorTopLeftTop2{
-        justify-content: flex-start;
-    }
-
-    #mentorTopLeftTop > div{
-        height: auto;
-        margin-right: 10px;
-    }
-
-    #mentorTopLeftTop2 > div{
-        height: auto;
-        margin-right: 10px;
-    }
-
-    #mentorTitle,#mentorTitle2{
-        font-size: 15px;
-        margin-top: 10px;
-        line-height: normal;
-    }
-
-
-#mentorTopLeftBottom,#mentorTopLeftBottom2{
-    font-size: 15px;
-    margin-bottom: 10px;
-    margin-top:10px;
-}
-
-#mentorBottom,#mentorBottom2{
-    margin-top:10px;
-}
-
-    #freeCourseButton{
         font-size: 12px;
-        padding-left: 5px;
-        padding-right: 5px;
-        width: 20%;
-    }
-    
-    #fillMentorImg,#fillMentorImg2{
-        border-radius: 8px;
     }
 
-    #freeCourseTitle,#freeCourseTitle2{
-        margin-right: 20px;
-        font-size: 15px;
-        line-height: normal;
-    }
+
+
 
 
 
@@ -3766,42 +3898,8 @@ img{
         margin-bottom:25px;
     }
 
-    .buttonOrange{
-        font-size: 15px;
-        padding: 10px 25px;
-    }
 
-    .buttonOrange > .inlineImg{
-        height: 20px;
-    }
 
-    #consultImgContainer{
-        height: 60vh;
-    }
-
-    #fillBuyText{
-        font-size: 18px;
-    }
-
-    #buyText{
-        bottom:17%;
-    }
-
-    #askText{
-        bottom:14%;
-    }
-
-    #consultImgContainer > .consultImgDiv > .imgText > .inlineImg{
-        height: 20px;
-    }
-
-    #fillConsultText{
-        font-size: 18px;
-    }
-
-    .consultImgDiv > .ingText > .inlineImg {
-        height: 20px;
-    }
 
 
     #featureColumn2{
@@ -3830,15 +3928,8 @@ img{
         height:50%;
     }
 
-    .priceButton {
-        width: 38%;
-        font-size: 22px;
-        height: 40px;
-    }
 
-    #buttonBottom{
-        order:-1;
-    }
+
 
     #buttonLogo{
         height:20px;
@@ -3854,36 +3945,21 @@ img{
         margin-top:25px;
     }
 
-    #price > div > .size-40{
-        font-size: 20px;
-    }
-    #price > div > .size-80{
-        font-size: 40px;
-    }
-    #price > div > .size-15{
-        font-size: 10px;
-    }
-    #price > div > .size-30{
-        font-size: 20px;
-    }
+
 
     #follwerMobile{
         display: inline-block;
         font-size: 15px;
         color: #ACACAC;
         font-weight: 290;
-        font-family: "XYZL";
+        /* font-family: "XYZL"; */
     }
 
     .showCaseRectBig{
         width:100%;
     }
 
-    #fullVideoLink2, #fullVideoLink{
-        width:60%;
-        text-align: right;
-        font-size: 12px;
-    }
+
 
 
     #priceRow2{
@@ -3895,9 +3971,6 @@ img{
         display: flex;
     }
 
-    #buttonTop{
-        margin-right: 20px;
-    }
 
 
 

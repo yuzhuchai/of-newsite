@@ -1,0 +1,41 @@
+#contentContainer{
+    /* top: 80px; */
+    left: 0px;
+    width: 100%;
+    margin-top: 80px;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
+.container{
+    width:800px;
+    /* margin-top: 40px; */
+    margin-left:auto;
+    margin-right: auto;
+}
+
+
+#navigation {
+    color:#ACACAC;
+    text-decoration: none;
+    margin-top:120px;
+} /* Visited link    */
+
+
+#blogTitle{
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 40px;
+    color: #222222;
+}
+
+#blogContents{
+    margin-top:40px;
+}
+
+
+#blogContents > img {
+    width: 100%;
+}
+

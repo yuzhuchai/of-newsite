@@ -413,23 +413,39 @@
         })
 
 
-
+        let dropDownDisplay = false; 
         $('.mobileLan').on('click',function(){
-            if(lan == 'CN'){
-                $('#mobileCn').hide()
-                $('#mobileEn').show()
-                $('.cn').hide();
-                $('.eng').show();
-                lan = 'EN'
-            } else {
-                $('#mobileCn').show()
-                $('#mobileEn').hide()
-                $('.cn').show();
-                $('.eng').hide();
-                lan = 'CN'
+            if(!dropDownDisplay){
+                $('#lanDropDown').show()
+                dropDownDisplay = true;
+            } 
+        })
+
+        $('#contentContainer').on('click', function(){
+            if(dropDownDisplay){
+                $('#lanDropDown').hide()
+                dropDownDisplay = false;
             }
+        })
+
+        $('#cnMobile').on('click', function(){
+            $('.cn').show();
+            $('.eng').hide();
+            lan = 'CN'
+            $('#cnMobile').css('text-decoration','underline')
+            $('#enMobile').css('text-decoration','none')
 
         })
+
+        $('#enMobile').on('click', function(){
+            $('.cn').hide();
+            $('.eng').show();
+            lan = 'EN'
+            $('#enMobile').css('text-decoration','underline')
+            $('#cnMobile').css('text-decoration','none')
+        })
+
+
 
         $('#login').click(function(){
             $('#loginPopupBg').show()
@@ -470,9 +486,10 @@
             }
         })
 
-
+       
 
         $('#buttonBottom').click(function(){
+            console.log('buttom Bottom is clicked')
             cardShow = true
             $('#consultantImgBg').css('display','flex')
             $('#buyImg').show()
@@ -484,6 +501,34 @@
             }
         })
 
+        $('#buttonTopMobile').click(function(){
+            cardShow = true
+            $('#consultantImgBg').css('display','flex')
+            $('#buyImg').hide()
+            $('#consultImg').show();
+            if(lan == 'CN'){
+                $('#fillConsultText').text("立即免费咨询")
+            } else {
+                $('#fillConsultText').text('Get Free Consultation')
+            }
+        })
+
+        $('#buttonBottomMobile').click(function(){
+            console.log('buttom Bottom is clicked')
+            cardShow = true
+            $('#consultantImgBg').css('display','flex')
+            $('#buyImg').show()
+            $('#consultImg').hide();
+            if(lan == 'CN'){
+                $('#fillBuyText').text('立即报名')
+            } else {
+                $('#fillBuyText').text('Apply Now')
+            }
+        })
+
+        $('#stickyBottom').click(function(){
+            console.log('sticky buttom is clicked')
+        })
 
         $('#requirements').click(function(){
             cardShow = true

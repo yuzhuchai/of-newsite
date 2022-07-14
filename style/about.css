@@ -637,9 +637,12 @@ label {
 /* begin contents ============================================= */
 
 #contentContainer{
-    top: 80px;
+    /* top: 80px; */
     left: 0px;
     width: 100%;
+    margin-top: 60px;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .container{
@@ -1722,6 +1725,48 @@ iframe{
 
     .buttonMenu > .eng{
     font-size: 12px;
+    }
+    #menu > .mobileLan{
+        display: block;
+        margin-right:25px;
+        /* height: 20px; */
+    }
+
+    #mobileLanClick{
+        height: 25px
+    } 
+
+    #mobileLanClick > img {
+        height: 100%;    
+    }
+
+    #lanDropDown{
+        display: none;
+        position: absolute;
+        margin-top: 16px;
+        background: rgba(255, 255, 255, 0.57);
+        border-radius: 3px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        border-radius: 3px;
+        overflow: hidden;
+        z-index: 2001;
+    }
+    
+    #lanDropDown > div {
+        color:rgba(172, 172, 172, 1);
+        padding: 10px;
+    }
+
+    #cnMobile{
+        text-decoration: underline;
+        background: #F8F8F8;
+    }
+
+    #enMobile{
+        background: #F4F4F4;
     }
 
 /* end of copy ============================================================================================= */

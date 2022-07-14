@@ -1,0 +1,109 @@
+
+#footer{
+    margin-top: 213px;
+    background-color: #E5E5E5;
+    width:100vw;
+    height: 331px;
+    padding-top: 106px;
+    color:#7c7c7c;
+}
+
+
+#footer > div{
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-between;*/
+    width: 1536px;
+    margin-left: 192px;
+}
+
+#footerLogo{
+    width: 250px;
+    /*width:31%*/
+}
+
+#footerLogo > a > img{
+    width:100%;
+}
+
+#footerSocialLogo{
+    display: flex;
+    flex-direction: row;
+}
+
+#footerSocialLogo > img{
+    /* width:100%; */
+    margin-right: 30px;
+    height: 60px;
+}
+
+#footerSocialLogo > a > img{
+    /* width:100%; */
+    margin-right: 30px;
+    height: 60px;
+}
+
+#footerMenu{
+    display: flex;
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
+    height: 100px;
+    /*justify-content: space-between;*/
+    align-content: flex-start;
+    font-size: 20px;
+    font-family:  "XYZL";
+    font-weight:290;
+    color: #7c7c7c;
+}
+
+
+.footerMenuItem{
+    margin: 0px 70px 30px 70px;
+}
+
+#footerSocial{
+    margin-left: 70px;
+    display: flex;
+    /*flex-direction: row;*/
+    align-items: flex-end;
+
+}
+
+#footerSocialLogo > img:hover{
+    cursor: pointer;
+}
+
+#footerCode > div {
+    margin-bottom: 30px;
+}
+
+
+#weChatCode{
+    background-color:white;
+    border-radius: 15px;
+    box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+    padding:20px;
+    position: relative;
+    margin-left: -15px;
+    display:none;
+    width:100px;
+    height:100px;
+}
+
+#weChatCode > img{
+    width: 100%;
+}
+
+
+#weChatCode::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 100%;
+    /* left:0; */
+    border: .75rem solid transparent;
+    border-top: none;
+    border-bottom-color: #fff;
+    filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+}

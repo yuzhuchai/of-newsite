@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=0.25, user-scalable=yes">
+        <title></title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <!-- <script type="text/javascript" src='data.js'></script> -->
+    <link rel="stylesheet" href="../style/blogContent.css">
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/header.css">
+
+
+
+    
+    
+    </head>
+
+    <body>
+
+
+        <div id="header">
+            <div id="headerlogo"><a href="./home"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
+            <div id="menu">
+                <div>
+                    <form id="form" action="./courseList">
+                        <input type='text' id='search' name='filter' placeholder="processing"> 
+                    </form>
+                </div>
+        
+        
+                <div class="btn-container">
+                    <label class="switch btn-color-mode-switch">
+                        <input type="checkbox" name="color_mode" id="color_mode" value="1">
+                        <label for="color_mode" data-on="英文" data-off="中文" class="btn-color-mode-switch-inner"></label>
+                    </label>
+                </div>
+        
+                <div class="mobileLan">
+                    <div id="mobileLanClick"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_656041d788875c7c2f598e4f3651e238?imageView2"></div>
+                    <div id="lanDropDown">
+                        <div id="cnMobile">简体中文</div>
+                        <div id="enMobile">ENGLISH</div>
+                    </div>
+                    <!-- <div id="mobileLanTxt"><span id="mobileCn">中文</span><span id="mobileEn">EN</span></div> -->
+                </div>
+        
+                <div id='login'><img id='loginIcon' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_86ceb5932e24e2383cce79506f18ef8a?imageView2'>&nbsp <span class="cn">登陆</span><span class="eng">Log In</span></div> 
+                <div id='menuIconContainer'>
+                    <div id='menuIcon'><div class='icon'></div><div class='icon'></div><div class='icon'></div><div class='icon'></div></div>
+                    <div id='menuText'><span class="eng">Menu</span><span class="cn">菜单</span></div>
+                </div>
+            </div>
+        </div>
+        <!-- end of header  -->
+        
+        <div id="loginPopupBg">
+            <div id="loginPopup">
+                <div class="closeTab"></div>
+                <div class="loginContent">
+                    <div class="loginText"><span class="cn">微信登陆</span><span class="eng">WeChat Login</span></div>
+                    <div class="loginImg"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d0df37497ebafdf8a7a9fc4a6071ad8b?imageView2"></div>
+                    <div class="loginText"><span class="eng">Scan Code With WeChat Complete Login</span><span class="cn">请打开微信扫描二维码登陆</span></div>
+                    <div class="loginTextSmall"><span class="cn">（首次登陆成功即完成注册）</span> <span class="eng">(Login to Complete Sign up)</span></div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div id='menuPopUp'>
+            <div id='menuPopUpContents'>
+                <div id='menuButtonContainer'>
+                    <a href="./courseList"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
+                    <a href="./about"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
+                    <a href="./news"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
+                    <a href="./blogs"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
+                    <a href="./about#advisorsContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
+                    <div id="mobileMenuDisplay"></div>
+        
+                </div> 
+        
+                <div id='menuCategoryContainer'>
+                    <a class="cursorPointer" href="./courseList">
+                        <div class='menuCategory' id="allClass">
+                            <div>
+                                <span class="cn">全部课程</span>
+                                <span class="eng">All Course</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="cursorPointer" href="./courseList">
+                        <div class='menuCategory' id="aiClass">
+                            <div>
+                                <span class="cn">快速筑基班</span>
+                                <span class="eng">Foundation Course</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="cursorPointer" href="./courseList">
+                        <div class='menuCategory' id="masterClass">
+                            <div>
+                                <span class="cn">大师班</span>
+                                <span class="eng">Master Class</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="cursorPointer" href="./courseList">
+                        <div class='menuCategory' id="bootCampClass">
+                            <div>
+                                <span class="cn">冲刺营</span>
+                                <span class="eng">BootCamp</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+        
+        
+                <div id='menuSoftwareContainer'>
+                    <a class="cursorPointer" href="./courseList?filter=td">
+                        <div class='software'>
+                            <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3f4c45aa512800bdd29d0cb09a40411e?imageView2'> 
+                            <div class='softwareDescription'>
+                                <span class='softwareh1'>TouchDesigner</span><br/>
+                                <span class='softwareh2'>
+                                    <span class="cn">基于节点式的视觉话编程语言</span>
+                                    <span class="eng">Node-based programming language</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                    <a class="cursorPointer" href="./courseList?filter=unity">
+                        <div class='software'>
+                            <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_56d0270baea429ca559c283ea66de79c?imageView2'> 
+                            <div class='softwareDescription'>
+                                <span class='softwareh1'>Unity</span><br/>
+                                <span class='softwareh2'>
+                                    <span class="cn">实时内容开发平台</span>
+                                    <span class="eng">real-time content delivery platform</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a class="cursorPointer" href="./courseList?filter=unreal">
+                        <div class='software'>
+                            <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ff19dcd9c5cc98f4bbed7ed3b226dbe1?imageView2'> 
+                            <div class='softwareDescription'>
+                                <span class='softwareh1'>Unreal Engine</span><br/>
+                                <span class='softwareh2'>
+                                    <span class="cn">实时3D创作工具</span>
+                                    <span class="eng">real-time 3D platfrom</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+        
+                    <a class="cursorPointer" href="./courseList?filter=processing">
+                        <div class='software'>
+                            <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_74b844c227e08df84f918cd00801462f?imageView2'> 
+                            <div class='softwareDescription'>
+                                <span class='softwareh1'>Processing</span><br/>
+                                <span class='softwareh2'>
+                                    <span class="cn">新兴计算机语言</span>
+                                    <span class="eng">creative coding language</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+        
+                    <a class="cursorPointer" href="./courseList?filter=p5">
+                        <div class='software'>
+                            <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a8e23a41e8c61e4d087225d096733fc1?imageView2'> 
+                            <div class='softwareDescription'>
+                                <span class='softwareh1'>P5.js</span><br/>
+                                <span class='softwareh2'>
+                                    <span class="cn">创意编码的 JavaScript 库</span>
+                                    <span class="eng">JS creative coding library</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+        
+        
+                    <a class="cursorPointer" href="./courseList">
+                        <div class='software'>
+                            <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_918031bb4d1ed4778a2501d8cc9e8fe9?imageView2'> 
+                            <div class='softwareDescription'>
+                                <span class='softwareh1'>MaxMSP</span><br/>
+                                <span class='softwareh2'>
+                                    <span class="cn">交互式编程语言与开发环境</span>
+                                    <span class="eng">interactive creative codeing language</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+        
+                    <a class="cursorPointer" href="./courseList">
+                        <div class='software'>
+                            <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6d422d3aa370c1a5eeb67cbf43e06e20?imageView2'> 
+                            <div class='softwareDescription'>
+                                <span class='softwareh1'>OpenFrameworks</span><br/>
+                                <span class='softwareh2'>
+                                    <span class="cn">是C++为基准的简洁开发框架,擅长开发图像和动画</span>
+                                    <span class="eng">C++ creative coding framework</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+        
+                    <a class="cursorPointer" href="./courseList?filter=js">
+                        <div class='software'>
+                            <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2537063a2f52c0b42397bc21e8fa2c7f?imageView2'> 
+                            <div class='softwareDescription'>
+                                <span class='softwareh1'>JavaScript</span><br/>
+                                <span class='softwareh2'>
+                                    <span class="cn">直译式脚本语言</span>
+                                    <span class="eng">Code for web-deveopment</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+        
+                <div id="weChatCodeMenu"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
+        
+                <div id='menuSocialContainer'>
+                    <div><img id='showCode' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b3de7a3adcd00c8fcaf4760edb3293bb?imageView2'></div>
+                    <div><a href="https://space.bilibili.com/25081666/channel/collectiondetail?sid=398048"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ca086d08e8659ce01316cad7821532d7?imageView2'></a></div>
+                    <div><a href="https://weibo.com/u/7126820846"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_39673958c8ea16c7f6fe21889a5f1ec6?imageView2'></a></div>
+                    <div><a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_79fb0e8ca32207d706f60ba1714d703c?imageView2'></a></div>
+                    <div><a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9"><img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_e276675c9aa8b4fcf24bd6a8118834d3?imageView2'></a></div>
+                </div>
+        
+            </div>
+        
+        </div>
+        
+
+
+        
+        <div id="contentContainer">
+            <div class='container' id="navigation">
+                <span><a href="./home.html">HOME</a></span> > <span><a href="./blogs.html">BLOGS</a></span> > <span>DETAILS</span>
+            </div>
+
+
+            <div class="container" id="blogTitle">数字艺术的“世界之最”在中国！NDG画廊联合Stratosphere DAO加密社区举办了全球最大的数字艺术周！| 山猫侃艺术</div>
+
+            <div class="container" id="blogContents">
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_591f0875a0ce3cc2456ca16a0ba70c12?imageView2">
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7c78ddab59e9ff68c46934ad93e65347?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_58229ba6288d16195346889bb14e6563?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6394296015f1681f524f7091a47664ae?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_34df0230d7a572d70ae938628f75ec71?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0162281abc5586a38040a1e4524bd41e?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_294f60a9275b4a140b796c9a68d1a894?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_cb63f0a7dd328e64e28189d113befcff?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0df991c8324d21eda6218a164f11cf37?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8b92cba8ed58d8e9aa4872c9cfde8414?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b2115ccfcb959b914a319c272a970f57?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0890e8e09439da412c1ee5676d59af2a?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_27915b11f4eaee6d4759cab91e9b2467?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7ab86466d455197b3224aab54666840d?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_c1182ad44c140b02919020496a7a2389?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_8b0fe8fc70c1e3bba968a1c3deeccd0d?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0a06f0b098a41ec330cc0f0990fd5e97?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_373393e1e87eac6cda684e5911383326?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_5a638740edd2e60b30c4ba2b26220522?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_c86c18d895f2f6d0007052576f8425fc?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2fac7ec432ec82640dbb31624e0ef012?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7fb4675d4562a2897471ac282bae23f8" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d2ad2a7d26a20032f1b39bca1513ac74?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_b2d3b38502e984a39045c0408916c63d?imageView2" loading=lazy>
+                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_02d39693ae6cc5701b6f4c7cd021c86d?imageView2" loading=lazy>
+                
+
+            </div>
+        </div>
+
+
+
+        <div class='' id="footer">
+            <div>
+                <div id='footerLogo'><a href="./home"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
+                <div id='footerMenu'>
+                    <div>
+                        <div class='footerMenuItem'><a href="./courseList"><span class='eng'>Course</span><span class="cn">课程</span></a></div>
+                        <div class='footerMenuItem'><a href="./about"><span class='eng'>Career</span><span class="cn">职业</span></a></div>
+                        <div class='footerMenuItem'><a href="./news"><span class='eng'>News</span><span class="cn">新闻</span></a></div>
+                        <div class='footerMenuItem'><a href="./blogs"><span class='eng'>Blog</span><span class="cn">博客</span></a></div>
+                    </div>
+    
+                    <div>                
+                        <div class='footerMenuItem'><a href="./about"><span class='eng'>About Us</span><span class="cn">关于我们</span></a></div>
+                        <div class='footerMenuItem'><a href="./about#advidorsContainer"><span class='eng'>Advisors</span><span class="cn">导师信息</span></a></div>
+                        <div class='footerMenuItem'><a href="https://jinshuju.net/f/YzGMtG"><span class='eng'>Join Us</span><span class="cn">加入我们</span></a></div>    
+                    </div>
+                </div>
+    
+    
+                <div id='footerSocial'>
+                    <div id='footerCode'>
+                        <div><span class="cn">关注我们</span><span class="eng">Follow Us</span></div>
+                        <div id='footerSocialLogo'>
+                            <!-- wechat -->
+                            <img id='displayCode' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_fd30472c3efebea2964de39026033cbd?imageView2'>
+                            <!-- bilibili -->
+                            <a href="https://space.bilibili.com/25081666">
+                                <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7a4a9e3cc8aebabae0bafda61f4ae079?imageView2'>
+                            </a>
+                            <!-- weibo -->
+                            <a href="https://weibo.com/u/7126820846">
+                                <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_c9fcb6181b86c04ae09c129c197207dd?imageView2'>
+                            </a>
+                            <!-- 小红书 -->
+                            <a href="https://www.xiaohongshu.com/user/profile/5bb98d2dd030070001731565?xhsshare=WeixinSession&appuid=57a31ec66a6a693ffe435e63&apptime=1653897515">
+                                <img src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2e95eb130d022fc2f3af10a64f6dfe76?imageView2'>
+                            </a>
+                            <!-- 小宇宙 -->
+                            <a href="https://www.xiaoyuzhoufm.com/podcast/62459c65a36f87d90b3adcbc?s=eyJ1IjogIjYyMTEwOTFkZWRjZTY3MTA0YWE0ZjE3YiJ9">
+                                <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_aba421402b315f26bd7ed09819f410ef?imageView2">
+                            </a>
+                        </div>
+                        <div id="weChatCode"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7b4fab415244d5aa8ba1e16ec48eb725?imageView2"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    
+
+
+    </body>
+
+</html>
