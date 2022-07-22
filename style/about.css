@@ -15,17 +15,18 @@
 }
 
 
+
 .sections{
+    font-family: Arial, Helvetica, sans-serif;
     position: fixed;
     left: 0;
     top: 0;
+    bottom: 0;
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
     width: 100vw;
-    height: 100vh;
-    overflow: auto;
-    overflow-x: hidden; 
-    /* disable scrollbar */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    overflow-x: hidden;
 }
 
 
@@ -38,7 +39,9 @@
 
 html, body{
     /*font-family: "Microsoft YaHei";*/
-    font-family:"XYZ";
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0px;
+    /* font-family:"XYZ"; */
     max-width: 100%;
     overflow-x: hidden; 
     /* disable scrollbar */
@@ -61,7 +64,7 @@ img{
 }
 
 a:visited {
-    color:#22222;
+    color:#222222;
     text-decoration: none;
 } 
 
@@ -122,7 +125,7 @@ a, a:visited, a:hover, a:active {
     margin-bottom:auto;
     font-size: 20px;
     margin-right:26px;
-    font-family: "XYZB";
+    /* font-family: "XYZB"; */
     font-weight: 700;
     display: flex;
     flex-direction: row;
@@ -131,7 +134,7 @@ a, a:visited, a:hover, a:active {
 }
 
 #menu > div{
-    font-family:  "XYZB";
+    /* font-family:  "XYZB"; */
     font-weight: 700;
     font-style: bold;
     margin-right:26px;
@@ -462,7 +465,7 @@ label {
 
 .menuCategory > div {
     align-self: center;
-    font-family:  "XYZB";
+    /* font-family:  "XYZB"; */
     font-weight: 700;
     font-size: 30px;
 }
@@ -506,7 +509,7 @@ label {
 }
 
 .software > img {
-    min-width: 20%;
+    /* min-width: 20%; */
     height: 70px;
     align-self: center;
     border-radius: 10px;
@@ -522,13 +525,13 @@ label {
 
 .softwareh1{
     font-size: 20px;
-    font-family:  "XYZB";
+    /* font-family:  "XYZB"; */
     font-weight: 700;
 }
 
 .softwareh2{
     font-size: 15px;
-    font-family:  "XYZL";
+    /* font-family:  "XYZL"; */
     font-weight: 290px;
 }
 
@@ -561,7 +564,7 @@ label {
     color:white;
     margin-top: 20px;
     font-size: 20px;
-    font-family: "XYZB";
+    /* font-family: "XYZB"; */
     font-weight: 700;
     border-radius: 8px;
     padding: 4px 20px 4px 20px;
@@ -679,7 +682,7 @@ label {
 }
 
 #aboutHeader{
-    font-family:'XYZB';
+    /* font-family:'XYZB'; */
     font-weight: 700;
     font-size: 60px;
     margin-top:49px;
@@ -687,7 +690,7 @@ label {
 
 #aboutSummary{
     margin-top:49px;
-    font-family:'XYZB';
+    /* font-family:'XYZB'; */
     font-weight: 700;
     font-size: 28px;
     line-height: 180%;
@@ -709,21 +712,21 @@ label {
 
 .header1{
     font-size: 40px;
-    font-family: "XYZB";
+    /* font-family: "XYZB"; */
     font-weight: 700;
     line-height: 30px;
 }
 
 .header2{
     font-size: 30px;
-    font-family: "XYZB";
+    /* font-family: "XYZB"; */
     font-weight: 700;
     line-height: 30px;
 }
 
 .header3{
     font-size: 20px;
-    font-family: "XYZL";
+    /* font-family: "XYZL"; */
     font-weight: 290;
     margin-top: 20px;
 }
@@ -760,7 +763,7 @@ label {
 
 #courseSysSummary{
     margin-top:49px;
-    font-family:'XYZB';
+    /* font-family:'XYZB'; */
     font-weight: 700;
     font-size: 28px;
     line-height: 180%;
@@ -800,7 +803,7 @@ label {
 .advisorTitle{
     color:rgba(0, 0, 0, 0.45);
     font-size: 20px;
-    font-family: "XYZL";
+    /* font-family: "XYZL"; */
     font-weight: 290;
 }
 
@@ -906,7 +909,7 @@ iframe{
 
 
 .socialHeader1{
-    font-family: 'XYZB';
+    /* font-family: 'XYZB'; */
     font-weight: 700;
     font-size: 30px;
     line-height: 40px;
@@ -975,7 +978,7 @@ iframe{
     /*justify-content: space-between;*/
     align-content: flex-start;
     font-size: 20px;
-    font-family:  "XYZL";
+    /* font-family:  "XYZL"; */
     font-weight:290;
     color: #7c7c7c;
 }
@@ -1036,7 +1039,7 @@ iframe{
 #teacherInfo{
     margin-top: 42px;
     font-size: 24px;
-    font-family: 'XYZL';
+    /* font-family: 'XYZL'; */
     font-weight: 290;
     line-height:180%;
 }
@@ -1056,7 +1059,7 @@ iframe{
 }
 
 #mobileMenuDisplay{
-    display: hide;
+    display: none;
 }
 
 
@@ -1064,7 +1067,11 @@ iframe{
 /* ipad landscape */
 @media only screen and (min-width: 1023px) and (max-width: 1660px){
 
-    /* menu fixed  start ------------------------------------------------------------------------------ */
+       /* menu fixed  start ------------------------------------------------------------------------------ */
+       #contentContainer{
+        max-width: 100vw;
+    }
+
     #menu{
         width: 70%;
     }
@@ -1090,6 +1097,7 @@ iframe{
 
     #menuPopUpContents{
         width: 90%;
+        position:relative;
     }
 
     #menuButtonContainer,#menuCategoryContainer{
@@ -1097,6 +1105,10 @@ iframe{
         margin-top:30px;
     }
 
+
+    #weChatCodeMenu{
+        bottom: 80px;
+    }
 
     #menuSocialContainer{
         margin-top: 30px;
@@ -1173,6 +1185,8 @@ iframe{
 
     /* end -------------------------------------------------------------------------------------------- */
 
+
+
     .container{
         width: 90%;
     }
@@ -1242,151 +1256,171 @@ iframe{
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     /* ipad */
 
+    .playButton{
+        display:none;
+    }
+
+    #contentContainer{
+        max-width: 100vw;
+    }
+
+    #header{
+        width: 100vw;
+    }
+
     /* header  copy start ------------------------------------------------------------------------------ */
     #menu{
-    width: 80%;
+        width: 80%;
     }
 
     #menu > div{
-    margin-right:0px;
+        margin-right:0px;
     }
 
     input[type=text]{
-    font-size: 8px;
+        font-size: 8px;
     }
 
     .btn-container{
-    margin-right: 0;
+        margin-right: 0;
     }
 
     #headerlogo{
-    width: 15%;
+        width: 15%;
     }
 
     #login{
-    min-width:110px;
+        min-width:110px;
     }
 
     #headerlogo > a > img {
-    display: block;
-    width: 100%;
+        display: block;
+        width: 100%;
     }
 
 
     #footer > div{
-    margin-left: 5%;
+        margin-left: 5%;
     }
 
     #footerLogo {
-    width: 10%;
+        width: 10%;
     }
 
     #footerMenu{
-    width: 18%;
-    justify-content: space-around;
+        width: 18%;
+        justify-content: space-around;
     }
     .footerMenuItem{
-    margin:auto;
-    margin-bottom:30px;
+        margin:auto;
+        margin-bottom:30px;
     }
 
     #footerSocial{
-    margin-left: 20px;
+        margin-left: 20px;
     }
 
     #footerSocialLogo > img {
-    height: 30px;
+        height: 30px;
     }
 
     #footerSocialLogo > a > img {
-    height:30px;
+        height:30px;
     }
 
     #menuPopUpContents{
-    width: 90%;
+        width: 90%;
+        position:relative;
+    }
+
+    #weChatCodeMenu{
+        bottom: 80px;
     }
 
     #menuButtonContainer,#menuCategoryContainer{
-    width:100%;
-    margin-top: 30px;
+        width:100%;
+        margin-top: 30px;
     }
 
     #menuButtonContainer > a {
-    max-width: 18%;
+        max-width: 18%;
     }
 
 
     .buttonMenu{
-    min-width:100%;
-    max-width:100%;
-    font-size: 15px;
+        min-width:100%;
+        max-width:100%;
+        font-size: 15px;
     }
 
 
     .menuCategory > div {
-    font-size: 20px;
+        font-size: 20px;
     }
 
     #menuCategoryContainer > a {
-    width:24%;
+        width:24%;
     }
 
     .menuCategory{
-    min-width:100%;
-    max-width:100%;
-    min-height: calc(20vw * 199 / 360)
+        min-width:100%;
+        max-width:100%;
+        min-height: calc(20vw * 199 / 360);
+        /* font-size: 20px; */
     }
 
     #menuSoftwareContainer{
-    width:100%;   
-    row-gap: 0;  
-    margin-top: 30px;
+        width:100%;   
+        row-gap: 0;  
+        margin-top: 30px;
     }
 
     #menuSocialContainer{
-    margin-top: 30px;
+        margin-top: 30px;
     }
 
     #menuButtonContainer > a > .buttonMenu{
-    height: 45px;
+        height: 45px;
     }
 
     #menuSoftwareContainer > a {
-    width:48%;     
+        width:48%;     
     }
     .software{
-    width:100%;
-    min-height:140px;
-    margin-bottom: 10px;
+        width:100%;
+        min-height:140px;
+        margin-bottom: 10px;
     }
 
     .software > img{
-    /* height:50px; */
-    margin-left: 15px;
-    margin-right: 50px;
+        /* height:50px; */
+        margin-left: 15px;
+        margin-right: 50px;
     }
 
     .softwareh1{
-    font-size: 18px;
+        font-size: 18px;
     }
 
     .softwareh2{
-    font-size: 14px;
+        font-size: 14px;
     }
 
     #menuPopUp{
-    overflow-y: scroll;
-    height: calc(100vh - 80px);
+        overflow-y: scroll;
+        height: calc(100vh - 80px);
     }
 
     #menuSoftwareContainer > a:nth-child(7){
-    display: none;
+        display: none;
     }
     #menuSoftwareContainer > a:nth-child(6){
-    display: none;
+        display: none;
     }
 
-/* footer and popupmenu end ----------------------------------------------------------------------------- */
+
+
+    /* footer and popupmenu end ----------------------------------------------------------------------------- */
 
     #headerPicContainer{
         min-width:100%;
@@ -1468,263 +1502,271 @@ iframe{
 
 /* iphone */
 @media only screen and (min-width: 200px) and (max-width: 767px)  {
-/* iphone */
+    .playButton{
+        display:none;
+    }
 
+    #contentContainer{
+        max-width: 100vw;
+    }
+
+    
 /* heder start copy  start ========================================================================= */
     #header{
-    width: 100%;
-    height:60px;
+        width: 100vw;
+        height:60px;
     }
 
 
 
-    #headerlogo, #menu {
-    margin-left:10px;
+    #headerlogo {
+        margin-left:10px;
     }
+
+    #menu{
+        margin-right: 10px;
+    }
+
     #headerlogo > a > img {
-    display: block;
-    width: 120px;
+        display: block;
+        width: 120px;
     }
 
     #menuText{
-    font-size: 20px;
-    margin-right:0;
-    display: none;
+        font-size: 20px;
+        margin-right:0;
+        display: none;
     }
 
     #footer{
-    margin-top: 100px;
+        margin-top: 100px;
     }
 
 
     #menu > div{
-    margin-right: 0;
+        margin-right: 0;
     }
 
     #menu > #menuIconContainer{
-    width: auto;
+        width: auto;
     }
 
 
 
     #menu > div:nth-child(1){
-    display: none;
+        display: none;
     }
 
     .btn-container{
-    display: none;
+        display: none;
     }
 
     #login{
-    display: none;
+        display: none;
     }
 
     #menuIcon{
-    width: 20px;
-    height: 20px;
+        width: 20px;
+        height: 20px;
     }
 
     #menuIcon > div {
-    width: 9px;
-    height: 9px;
-    border-radius: 3px;
+        width: 9px;
+        height: 9px;
+        border-radius: 1px;
     }
 
 
 
     #footer > div{
-    margin-left: 5%;
+        margin-left: 5%;
     }
 
     #footerLogo {
-    width: 5%;
+        width: 5%;
     }
 
     .footerMenuItem{
-    font-size: 12px;
-    margin: 0px 20px 30px 20px;
+        font-size: 12px;
+        margin: 0px 20px 30px 20px;
     }
 
     #footerSocial{
-    font-size: 12px;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+        font-size: 12px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
     }
 
     #footerCode > div {
-    margin-bottom: 15px;
+        margin-bottom: 15px;
     }
 
 
     #footerCode > div:nth-child(1){
-    display: none;
+        display: none;
     }
 
 
     #footerSocialLogo{
-    flex-direction: row;
-    width:60%;
-    flex-wrap: wrap;
+        flex-direction: row;
+        width:60%;
+        flex-wrap: wrap;
     }
 
     #footerSocialLogo > img {
-    width:20px;
-    height:auto;
-    margin-right: 10px;
-    margin-bottom:25px;
+        width:20px;
+        height:auto;
+        margin-right: 10px;
+        margin-bottom:25px;
     }
 
     #footerSocialLogo > a > img{
-    width:20px;
-    height:auto;
-    margin-right: 10px;
-    margin-bottom:25px;
+        width:20px;
+        height:auto;
+        margin-right: 10px;
+        margin-bottom:25px;
     }
 
 
     #menuPopUpContents{
-    width: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* overflow-y: scroll; */
+        width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* overflow-y: scroll; */
     }
 
     #menuPopUp{
-    overflow-y: scroll;
-    height:auto;
-    bottom: 0;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    top:60px;
+        height:auto;
+        bottom: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        top:60px;
     }
 
     #menuButtonContainer{
-    margin: auto;
-    width:90%;
-    flex-wrap: wrap;
-    /* height: 20vh; */
+        margin: auto;
+        width:90%;
+        flex-wrap: wrap;
+        /* height: 20vh; */
     }
 
     #menuButtonContainer > a {
-    max-width: 32%;
+        max-width: 32%;
     }
 
-
     #menuButtonContainer > a > .buttonBlack{
-    min-width: 100%;
-    max-width: 100%;
-    font-size: 15px;
+        min-width: 100%;
+        max-width: 100%;
+        font-size: 12px;
     }
 
 
     .buttonMenu{
-    height: 40px;
-    margin-top:0;
-    margin-bottom: 10px;
+        height: 40px;
+        margin-top:0;
+        margin-bottom: 10px;
     }
 
 
     #mobileMenuDisplay{
-    display: block;
-    width: 32%;
+        display: block;
+        width: 32%;
     }
+
 
     #menuCategoryContainer{
-    margin: auto;
-    width:90%;
-    flex-wrap: wrap;
-    margin-top:24px;
+        margin: auto;
+        width:90%;
+        flex-wrap: wrap;
+        margin-top:9px;
+    }
+    .cursorPointer{
+        width: 48%;
+        margin-bottom: 10px;
     }
 
-    .cursorPointer{
-    width: 48%;
-    }
     .menuCategory{
-    max-width:100%;
-    min-width:100%;
-    min-height: 100px;
-    margin-bottom:10px;
+        max-width:100%;
+        min-width:100%;
+        min-height: 100px;
+        /* margin-bottom:10px; */
     }
 
     .menuCategory > div{
-    font-size: 20px;
-    /* height: 40px; */
+        font-size: 14px;
+        /* height: 40px; */
     }
 
     #menuSoftwareContainer{
-    margin: auto;
-    width:90%;
-    flex-wrap: wrap;
-    margin-top:14px;
-    row-gap: 0;
+        margin: auto;
+        width:90%;
+        flex-wrap: wrap;
+        margin-top:9px;
+        row-gap: 0;
     }
 
     #menuSoftwareContainer > .cursorPointer{
-    height: auto;
-    width:24%;
-    margin-bottom:15px;
+        height: auto;
+        width:24%;
+        margin-bottom:10px;
     }
-
+    
     .softwareDescription{
-    display: none;
+        display: none;
     }
 
     .software{
-    width: 18vw;
-    min-height: 18vw;
-    display: flex;
-    margin: auto;
+        width: 18vw;
+        min-height: 18vw;
+        display: flex;
+        /* margin: auto; */
+        margin-right:0px;
+        margin-left:0px;
     }
 
     .software > img{
-    min-width: 12vw;
-    max-width: 12vw;
-    min-height: 12vw;
-    max-height: 12vw;
-    margin:auto;
-    border-radius: 0;
+        min-width: 12vw;
+        max-width: 12vw;
+        min-height: 12vw;
+        max-height: 12vw;
+        margin:auto;
+        border-radius: 0;
     }
 
     #menuSocialContainer{
-    width: 65%;
-    margin-left:5%;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    margin-top: 9px;
+        width: 65%;
+        margin-left:5%;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        margin-top: 9px;
     }
 
     #menuSocialContainer > div{
-    max-width: 18%;
-    max-height: 12vw;
-    margin-right:0;
+        max-width: 18%;
+        max-height: 12vw;
+        margin-right:0;
     }
 
     #menu > .mobileLan{
-    display: block;
-    margin-right:30px;
+        display: block;
+        margin-right:30px;
     }
 
     #mobileEn{
-    display: none;
-    }
-
-    #contentContainer{
-    top:60px;
+        display: none;
     }
 
     #menuPopUpContents{
-    margin-top: 0;
+        margin-top: 0;
+        position: relative;
     }
 
-    #menu{
-    margin-right: 10px;
-    }
 
     .buttonMenu > .eng{
-    font-size: 12px;
+        font-size: 12px;
     }
     #menu > .mobileLan{
         display: block;
@@ -1769,7 +1811,15 @@ iframe{
         background: #F4F4F4;
     }
 
-/* end of copy ============================================================================================= */
+
+    #weChatCodeMenu{
+        /* left: 10%; */
+        left: 5%;
+        bottom: 80px;
+    }
+
+
+    /* end of copy ============================================================================================= */
 
     #contentContainer{
         top:60px;
@@ -1796,8 +1846,9 @@ iframe{
         /* row-gap: 18px; */
     }
     .course{
-        width: 100%;
-        height: calc(90vw * 364 / 360);
+        width: 48%;
+        /* height: calc(90vw * 364 / 360); */
+        height:auto;
         margin-bottom: 18px;
     }
 
@@ -1906,6 +1957,14 @@ iframe{
         height:calc(100% + 10px);
         /* width: calc(100% + 10px);     */
         overflow:hidden;
+    }
+
+    .cardDescription > .header2{
+        font-size: 18px;
+    }
+
+    .cardDescription > .header3{
+        font-size: 15px;
     }
 
 }

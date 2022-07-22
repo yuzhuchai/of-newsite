@@ -13,22 +13,22 @@
   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- <script type="text/javascript" src='./courseDes/unrealStyle_data.js'></script> -->
-  <script type="text/javascript" src='../js/data.js'></script>
+ <script type="text/javascript" src='../js/data.js'></script>
   <link rel="stylesheet" href="../style/course.css">
 
 </head>
+
 <body>
 
 
-
-
+<!-- <link rel="stylesheet" href="https://cdn0.ofcourse.io/9ba241ace1b24928bcada92ee2b3f276_f_07ae95f9a3d3f3214aae1277a9df055e"> -->
+<!-- <script src="https://cdn0.ofcourse.io/9ba241ace1b24928bcada92ee2b3f276_f_ac4220e0b73914f64c4febbb35e19c43"></script> -->
 
 <div id="header">
-    <div id="headerlogo"><a href="./home.html"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
+    <div id="headerlogo"><a href="./home"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3220e738b0aa668a19c140a823cfe128?imageView2"></a></div>
     <div id="menu">
         <div>
-            <form id="form" action="./courseList.html">
+            <form id="form" action="./courseList">
                 <input type='text' id='search' name='filter' placeholder="processing"> 
             </form>
         </div>
@@ -42,7 +42,7 @@
         </div>
 
         <div class="mobileLan">
-            <div id="mobileLanClick"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_656041d788875c7c2f598e4f3651e238?imageView2"></div>
+            <div id="mobileLanClick"><img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_33b4a3a9da5584b42bae5abd252bd878?imageView2"></div>
             <div id="lanDropDown">
                 <div id="cnMobile">简体中文</div>
                 <div id="enMobile">ENGLISH</div>
@@ -84,17 +84,17 @@
 <div id='menuPopUp'>
     <div id='menuPopUpContents'>
         <div id='menuButtonContainer'>
-            <a href="./courseList.html"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
-            <a href="./about.html"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
-            <a href="./news.html"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
-            <a href="./blogs.html"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
-            <a href="./about.html#advisorsContainer.html"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
+            <a href="./courseList"><button class='buttonBlack buttonMenu'><span class="eng">COURSES</span><span class="cn">课程</span></button></a>
+            <a href="./about"><button class='buttonBlack buttonMenu'><span class="eng">ABOUT US</span><span class="cn">关于我们</span></button></a>
+            <a href="./news"><button class='buttonBlack buttonMenu'><span class="eng">NEWS</span><span class="cn">新闻</span></button></a>
+            <a href="./blogs"><button class='buttonBlack buttonMenu'><span class="eng">BLOGS</span><span class="cn">博客</span></button></a>
+            <a href="./about#advisorsContainer"><button class='buttonBlack buttonMenu'><span class="eng">ADVISORS</span><span class="cn">导师</span></button></a>
             <div id="mobileMenuDisplay"></div>
 
         </div> 
 
         <div id='menuCategoryContainer'>
-            <a class="cursorPointer" href="./courseList.html">
+            <a class="cursorPointer" href="./courseList">
                 <div class='menuCategory' id="allClass">
                     <div>
                         <span class="cn">全部课程</span>
@@ -102,7 +102,7 @@
                     </div>
                 </div>
             </a>
-            <a class="cursorPointer" href="./courseList.html">
+            <a class="cursorPointer" href="./courseList">
                 <div class='menuCategory' id="aiClass">
                     <div>
                         <span class="cn">快速筑基班</span>
@@ -110,7 +110,7 @@
                     </div>
                 </div>
             </a>
-            <a class="cursorPointer" href="./courseList.html">
+            <a class="cursorPointer" href="./courseList">
                 <div class='menuCategory' id="masterClass">
                     <div>
                         <span class="cn">大师班</span>
@@ -118,7 +118,7 @@
                     </div>
                 </div>
             </a>
-            <a class="cursorPointer" href="./courseList.html">
+            <a class="cursorPointer" href="./courseList">
                 <div class='menuCategory' id="bootCampClass">
                     <div>
                         <span class="cn">冲刺营</span>
@@ -130,7 +130,7 @@
 
 
         <div id='menuSoftwareContainer'>
-            <a class="cursorPointer" href="./courseList.html?filter=td">
+            <a class="cursorPointer" href="./courseList?filter=td">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_3f4c45aa512800bdd29d0cb09a40411e?imageView2'> 
                     <div class='softwareDescription'>
@@ -144,7 +144,7 @@
             </a>
             
             
-            <a class="cursorPointer" href="./courseList.html?filter=unity">
+            <a class="cursorPointer" href="./courseList?filter=unity">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_56d0270baea429ca559c283ea66de79c?imageView2'> 
                     <div class='softwareDescription'>
@@ -157,7 +157,7 @@
                 </div>
             </a>
             
-            <a class="cursorPointer" href="./courseList.html?filter=unreal">
+            <a class="cursorPointer" href="./courseList?filter=unreal">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_ff19dcd9c5cc98f4bbed7ed3b226dbe1?imageView2'> 
                     <div class='softwareDescription'>
@@ -170,7 +170,7 @@
                 </div>
             </a>
 
-            <a class="cursorPointer" href="./courseList.html?filter=processing">
+            <a class="cursorPointer" href="./courseList?filter=processing">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_74b844c227e08df84f918cd00801462f?imageView2'> 
                     <div class='softwareDescription'>
@@ -183,7 +183,7 @@
                 </div>
             </a>
 
-            <a class="cursorPointer" href="./courseList.html?filter=p5">
+            <a class="cursorPointer" href="./courseList?filter=p5">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a8e23a41e8c61e4d087225d096733fc1?imageView2'> 
                     <div class='softwareDescription'>
@@ -197,7 +197,7 @@
             </a>
 
 
-            <a class="cursorPointer" href="./courseList.html">
+            <a class="cursorPointer" href="./courseList">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_918031bb4d1ed4778a2501d8cc9e8fe9?imageView2'> 
                     <div class='softwareDescription'>
@@ -210,7 +210,7 @@
                 </div>
             </a>
 
-            <a class="cursorPointer" href="./courseList.html">
+            <a class="cursorPointer" href="./courseList">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6d422d3aa370c1a5eeb67cbf43e06e20?imageView2'> 
                     <div class='softwareDescription'>
@@ -223,7 +223,7 @@
                 </div>
             </a>
 
-            <a class="cursorPointer" href="./courseList.html?filter=js">
+            <a class="cursorPointer" href="./courseList?filter=js">
                 <div class='software'>
                     <img class='softwareIcon' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_2537063a2f52c0b42397bc21e8fa2c7f?imageView2'> 
                     <div class='softwareDescription'>
@@ -254,22 +254,23 @@
 
 
 
-
 <div id="consultantImgBg">
     <div id="consultImgContainer">
         <!-- <div class="closeTabShop"></div> -->
         <div class='consultImgDiv' id="buyImg">
+            <div class="advisorTitle"><span class="cn">高级课程顾问</span><span class="eng">OF Advisor</span></div>
             <div class="imgText" id="buyText">
                 <img class='inlineImg' src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a8844a5a0ca41eaa5bd3b6dc605c3947?imageView2"> <span id="fillBuyText">立即报名</span>
             </div>
-            <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_315a7abefe693f5da8e54882fd36299e?imageView2">
+            <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d5fa56bf33a3c234cba46b221907f274?imageView2">
         </div>
         <div class='consultImgDiv' id="consultImg">
+            <div class="advisorTitle"><span class="cn">高级课程顾问</span><span class="eng">OF Advisor</span></div>
             <div class="imgText" id="askText">
                 <img class='inlineImg' src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_4d33a89c1231cac30fe740b4928c1d61?imageView2">
                  <span id="fillConsultText">详细咨询</span>
             </div>
-            <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_f6b272e2c6c99c629e1b95fc006288f3?imageView2">
+            <img src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_931e5f9d7fed6028cb52afb684b03b67?imageView2">
         </div>
     </div>
 
@@ -281,28 +282,28 @@
 <div id="contentContainer">
 
     <div id='mainPoster'>
-        <div id='navigation'><a href='./home.html' class='link' id='home'><span class="eng">Home</span><span class="cn">主页</span></a> > <a href='courseList' class='link' id='courseList'><span class="eng">Course List</span><span class="cn">课程列表</span></a> > <span id='navCourse' class='fillCourseTitleEng'>MASTER COURSE OF VIRTUAL REALITY WITH UNITY</span></div>
+        <div id='navigation'><a href='./home' class='link' id='home'><span class="eng">Home</span><span class="cn">主页</span></a> > <a href='courseList' class='link' id='courseList'><span class="eng">Course List</span><span class="cn">课程列表</span></a> > <span id='navCourse' class='fillNav'>MASTER COURSE OF VIRTUAL REALITY WITH UNITY</span></div>
         <div id='posterText'><span class='fillCourseTitleEng'>Master Course of Virtual Reality with Unity</span><br/><span class='fillCourseTitleCn' id='posterChinese'>VR 虚拟实境大师班</span></div>
 
         <div class='container shadow' id='priceContainerMobile'>
             <div id="priceContents">
                 <div class='priceLeft' id='price'>
-                    <div><span class='size-40'>¥</span><span id='fillPrice' class='size-80'>3799</span><span class='size-15'>&#8776;</span><span class='size-30'>¥</span><span class='size-30'><span id="fillInstallmentPrice">320</span>X<span id="fillInstallmentTime">12</span><span class="cn">期</span><span class="eng"> mth</span>
+                    <div><span class='size-40'>¥</span><span id='fillPrice' class='size-80'>3799</span><span class='size-15'>&#8776;</span><span class='size-30'>¥</span><span class='size-30'><span id="fillInstallmentPrice">320</span>X<span id="fillInstallmentTime">12</span><span class="cn">期</span><span class="eng"></span>
                     <div id='fillSlogan' class='size-20 wight-400'>搭建次世代影视虚拟场景，掌握最前沿的Metahuman数字人技术!</div></div>
                 </div>
                 
                 <div class='priceLeft' id='tags'>
-                    <div class='priceTag'><span class="eng">Connect Teachers</span><span class="cn">导师亲自授课</span></div>
-                    <div class='priceTag'><span class="cn">支持反复观看</span><span class="eng">support replay</span></div>
-                    <div class='priceTag'><span class="cn">录播+直播</span><span class="eng">Video + livestream</span></div>
-                    <div class='priceTag'><span class="cn">作业点评</span><span class="eng">project support</span></div>
+                    <div class='priceTag'><span class="eng">Meet Mentor</span><span class="cn">导师亲自授课</span></div>
+                    <div class='priceTag'><span class="cn">支持反复观看</span><span class="eng">Unlimited Replay</span></div>
+                    <div class='priceTag'><span class="cn">录播+直播</span><span class="eng">Livestream + Tutorial</span></div>
+                    <div class='priceTag'><span class="cn">作业点评</span><span class="eng">Project Support</span></div>
                     <div class='priceTag'><span class="cn">学习群答疑</span><span class="eng">Study Group</span></div>
-                    <div class='priceTag'><span class="cn">支持分期</span><span class="eng">payment installment</span></div>
+                    <div class='priceTag'><span class="cn">支持分期</span><span class="eng">Payment Installment</span></div>
                 </div>
     
                 <div id="priceSocailMobile">
                     <div>
-                        <span class="cn">已关注</span><span class="eng">Followers</span>：<span id="followNum">20,000</span>
+                        <span class="cn">已关注</span><span class="eng">Likes</span>：<span id="followNum">20,000</span>
                     </div>
                     <div id="socialButton">
                         <div class='priceSocial' onclick="share()"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_6f1a1f66c0c4833df48991c9b52a69ff?imageView2'></div>
@@ -323,14 +324,14 @@
             <div id='priceContents'>
                 <div id='priceRow1'>
                     <div class='priceLeft' id='price'>
-                        <div><span class='size-40'>¥</span><span id='fillPrice' class='size-80'>3799</span><span class='size-15'>&#8776;</span><span class='size-30'>¥</span><span class='size-30'><span id="fillInstallmentPrice">320</span>X<span id="fillInstallmentTime">12</span><span class="cn">期</span><span class="eng"> mth</span>              
+                        <div><span class='size-40'>¥ </span><span id='fillPrice' class='size-80'>3799</span><span class='size-15'>&#8776;</span><span class='size-30'>¥</span><span class='size-30'><span id="fillInstallmentPrice">320</span>X<span id="fillInstallmentTime">12</span><span class="cn">期</span><span class="eng"></span>              
                         <div id='follwerMobile'>
                             <span class="cn">已关注</span><span class="eng">Followers</span>：20,000
                         </div> 
                         <div id='fillSlogan' class='size-20 wight-400'>搭建次世代影视虚拟场景，掌握最前沿的Metahuman数字人技术!</div></div>
                     </div>
                     <div class='priceRight' id='priceButtonContents'>
-                        <div class='priceButton'id='buttonTop'><span class="cn">立即咨询</span><span class="eng">Live Support</span></div>
+                        <div class='priceButton'id='buttonTop'><span class="cn">立即咨询</span><span class="eng">Consultant</span></div>
                         <div class='priceButton 'id='buttonBottom'><img id='buttonLogo' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_280793507d1f6918fafaebe95ebaa9d6?imageView2'> &nbsp <span class="cn">抢占席位</span><span class="eng">Apply Now</span></div>
                         <div id="mobileDisplay">
                             <div class='priceSocialMobile' onclick="share()"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_6f1a1f66c0c4833df48991c9b52a69ff?imageView2'></div>
@@ -350,7 +351,7 @@
                     </div>
                     <div class='priceRight' id='social'>
                         <div class='priceSocial'>
-                            <span class="cn">已关注</span><span class="eng">Followers</span>：20,000
+                            <span class="cn">已关注</span><span class="eng">Likes</span>：20,000
                         </div>
                         <div class='priceSocial' onclick="share()"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_6f1a1f66c0c4833df48991c9b52a69ff?imageView2'></div>
                         <div class='priceSocial' onclick="addViewNum()"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_01e454e136308f3258c40d107de68596?imageView2'></div>
@@ -364,7 +365,7 @@
 
 <!-- 购买按钮stickey -->
     <div class='container' id="stickyBottom">
-        <div class='priceButton'id='buttonTopMobile'><span class="cn">立即咨询</span><span class="eng">Live Support</span></div>
+        <div class='priceButton'id='buttonTopMobile'><span class="cn">立即咨询</span><span class="eng">Consultant</span></div>
         <div class='priceButton 'id='buttonBottomMobile'><img id='buttonLogo' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_280793507d1f6918fafaebe95ebaa9d6?imageView2'> &nbsp <span class="cn">抢占席位</span><span class="eng">Apply Now</span></div>
     </div>
 
@@ -432,8 +433,8 @@
                 <div class="overlayBottom">
                     <img class='overlayHover' id='fillSyllabusImg1' src='' loading=lazy>
                     <div class="overlay">
-                        <div class="syllabusLists0">
-                        </div>
+                        <ul class="syllabusLists0">
+                        </ul>
                     </div>
                 </div>
                 <div class='cardDescription'>
@@ -445,8 +446,8 @@
                 <div class="overlayBottom">
                     <img class='overlayHover' id='fillSyllabusImg2' src='' loading=lazy>
                     <div class="overlay">
-                        <div class="syllabusLists1">
-                        </div>
+                        <ul class="syllabusLists1">
+                        </ul>
                     </div>
                 </div>
                 <div class='cardDescription'>
@@ -459,8 +460,8 @@
                 <div class="overlayBottom">
                     <img class='overlayHover' id='fillSyllabusImg3' src='' loading=lazy>
                     <div class="overlay">
-                        <div class="syllabusLists2">
-                        </div>
+                        <ul class="syllabusLists2">
+                        </ul>
                     </div>
                 </div>                 
                 <div class='cardDescription'>
@@ -473,8 +474,8 @@
                 <div class="overlayBottom">
                     <img class='overlayHover' id='fillSyllabusImg4' src='' loading=lazy>
                     <div class="overlay">
-                        <div class="syllabusLists3">
-                        </div>
+                        <ul class="syllabusLists3">
+                        </ul>
                     </div>
                 </div>
                 <div class='cardDescription'>
@@ -487,8 +488,8 @@
                 <div class="overlayBottom">
                     <img class='overlayHover' id='fillSyllabusImg5' src='' loading=lazy>
                     <div class="overlay">
-                        <div class="syllabusLists4">
-                        </div>
+                        <ul class="syllabusLists4">
+                        </ul>
                     </div>
                 </div>
                 <div class='cardDescription'>
@@ -501,8 +502,8 @@
                 <div class="overlayBottom">
                     <img class='overlayHover' id='fillSyllabusImg6' src='' loading=lazy>
                     <div class="overlay">
-                        <div class="syllabusLists5">
-                        </div>
+                        <ul class="syllabusLists5">
+                        </ul>
                     </div>
                 </div>
                 <div class='cardDescription'>
@@ -515,8 +516,8 @@
                 <div class="overlayBottom">
                     <img class='overlayHover' id='fillSyllabusImg7' src='' loading=lazy>
                     <div class="overlay">
-                        <div class="syllabusLists6">
-                        </div>
+                        <ul class="syllabusLists6">
+                        </ul>
                     </div>
                 </div>
                 <div class='cardDescription'>
@@ -529,8 +530,8 @@
                 <div class="overlayBottom">
                     <img class='overlayHover' id='fillSyllabusImg8' src='' loading=lazy>
                     <div class="overlay">
-                        <div class="syllabusLists7">
-                        </div>
+                        <ul class="syllabusLists7">
+                        </ul>
                     </div>
                 </div>
                 <div class='cardDescription'>
@@ -539,12 +540,12 @@
             	</div>
 			</div>
 		</div>
-		<button class='buttonOrange' id="getSyllabus"><img class='inlineImg' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_fcd7add53d3951de8dbfc916c0a013c2?imageView2'> <span class="eng">Get Course Materials</span><span class="cn">获取课程大纲</span></button>
+		<button class='buttonOrange' id="getSyllabus"><img class='inlineImg' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_fcd7add53d3951de8dbfc916c0a013c2?imageView2'> <span class="eng">Free Materials</span><span class="cn">获取课程大纲</span></button>
 	</div>
 
 
 	<div class='container' id='showCaseContainer'>
-		<div class='titleText header1'>SHOW CASE<br/><span class='headerChinese'>案例展示</span></div>
+		<div class='titleText header1'>SHOWCASE<br/><span class='headerChinese'>案例展示</span></div>
 		<div class='showCaseContents'>
 			<div class='showCaseRow' id='showCaseRow1'>
                 <!-- first -->
@@ -590,7 +591,7 @@
 			</div>
 
 		</div>
-		<button class='buttonOrange' id="getShowCase"> <img class='inlineImg' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_d32b778e68cff33a4e5d4af4b23f5816?imageView2'> <span class="eng">more show case</span><span class="cn">更多案例</span></button>
+		<button class='buttonOrange' id="getShowCase"> <img class='inlineImg' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_d32b778e68cff33a4e5d4af4b23f5816?imageView2'> <span class="eng">More Showcase</span><span class="cn">更多案例</span></button>
 	</div>
 
 
@@ -604,7 +605,7 @@
                     <div id='mentorTopLeftTop'>
                         <div id='mentorImg'><img id='fillMentorImg' src='' loading=lazy></div>
                         <div>
-                            <div id='mentorheader'><span class="cn">主讲老师</span><span class="eng">Instructor</span></div>
+                            <div id='mentorheader'><span class="cn">主讲老师</span><span class="eng">Core Mentor</span></div>
                             <div id='mentorNameEng'>Kyle Li</div>
                             <div id='mentorNameCn'>李肃纲</div>
                             <div id='mentorTitle'>
@@ -627,7 +628,7 @@
                 </div>
             </div>
             <div id='mentorBottom' class='shadow'>
-                <div id='freeCourseButton'><span class="cn">免费领取</span><span class="eng">Preview</span></div>
+                <div id='freeCourseButton'><span class="cn">免费</span><span class="eng">Free</span></div>
                 <div id='freeCourseTitle'>
                     <div id='fillCourseTitle'>UE4 动画角色模型的处理技巧</div>
                     <div id='fullVideoLink'><span class='mobileHide'><span class="cn">立即获得</span><span class="eng">Get it now</span></span> >></div>
@@ -664,7 +665,7 @@
                 </div>
             </div>
             <div id='mentorBottom2' class='shadow'>
-                <div id='freeCourseButton'><span class="cn">免费领取</span><span class="eng">Preview</span></div>
+                <div id='freeCourseButton'><span class="cn">免费</span><span class="eng">Preview</span></div>
                 <div id='freeCourseTitle2'>
                     <div id='fillCourseTitle2'>UE4 动画角色模型的处理技巧</div>
                     <div id='fullVideoLink2'><span class=''><span class="cn">立即获得</span><span class="eng">Get it now</span></span> >></div>
@@ -676,10 +677,10 @@
 
 
 
-
+<!-- test -->
 
 	<div class='container' id='TeacherCaseContainer'>
-		<div class='titleText header1'>TEACHER CASE<br/><span class='headerChinese'>主讲老师案例展示</span></div>
+		<div class='titleText header1'>Mentor Portfolio<br/><span class='headerChinese'>主讲老师案例展示</span></div>
 		<div class='teacherShowCaseContents'>
 			<!-- <div class='showCaseRow'> -->
             	<div class=' mobileHide teacherSmall'><img id='teacherShowCase0' src='' loading=lazy></div>
@@ -695,12 +696,12 @@
             	<div class=' teacherBig'><img id='teacherShowCase5' src='' loading=lazy></div>
 			<!-- </div> -->
 		</div>
-		<button class='buttonOrange' id="getTeacherShowCase"><img class='inlineImg' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_84678076858247b76be6e44eb5eeb056?imageView2'> <span class="eng">Get Teacher Portfolio</span><span class="cn">获取更多导师作品</span></button>
+		<button class='buttonOrange' id="getTeacherShowCase"><img class='inlineImg' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_84678076858247b76be6e44eb5eeb056?imageView2'> <span class="eng">Complete Portfolio</span><span class="cn">获取更多导师作品</span></button>
 	</div>
 
 
     <div class='container' id='studentWorkContainer'>
-		<div class='titleText header1'>STUDENT WORK<br/><span class='headerChinese'>部分学员作品</span></div>
+		<div class='titleText header1'>STUDENT WORK<br/><span class='headerChinese'>精选学员作品</span></div>
 			
 		<div id='studentWorkContents'>
 			<div class='hide studentWork'><img id='studentWork0' src='' loading=lazy></div>
@@ -717,7 +718,7 @@
 			<div class='hide studentWork mobileHide'><img id='studentWork11' src='' loading=lazy></div>
 		</div>
 
-		<button class='buttonOrange' id="getStudentWork"><img class='inlineImg' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_d32b778e68cff33a4e5d4af4b23f5816?imageView2'> <span class="eng">more students works</span><span class="cn">更多学员作品</span></button>
+		<button class='buttonOrange' id="getStudentWork"><img class='inlineImg' src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_d32b778e68cff33a4e5d4af4b23f5816?imageView2'> <span class="eng">More Student Work</span><span class="cn">更多学员作品</span></button>
 
 	</div>
 
@@ -743,50 +744,49 @@
 					<div>
                         <!-- <div class='studentNames'> -->
 						<div class='studentImgright'><img class='studentPhoto' src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_89f3097de57b5a651fc54efe0288fac2?imageView2"></div>
-						<div class='studentNameRight'><span class='fillStudentName1 size-20'>Cdvvcv</span><br/><span class='size-15' id="fillstudentTitle01">往期学员</span></div>
+						<div class='studentNameRight'><span class='fillStudentName1 size-20'>Cdvvcv</span><br/><span class='size-15' id="fillstudentTitle1">往期学员</span></div>
                         <!-- </div> -->
 						<div class='studentCommentRight' id="comment1">我想做个虚拟UP主，短视频现在这么火，真人拍摄已经远远满足不了大家的需要了，虚拟偶像这个可以，一定能吸引眼球。</div>
 					</div>
-					
 				</div>
 				<div class='commentRight shadow'>
 					<div>
 						<div class='studentImgright'><img class='studentPhoto' src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_6a0560b9ad655db1cffd1312c6f8976d?imageView2"></div>
-						<div class='studentNameRight'><span class='fillStudentName2 size-20'>Cdvvcv</span><br/><span class='size-15' id="fillstudentTitle02">往期学员</span></div>
+						<div class='studentNameRight'><span class='fillStudentName2 size-20'>Cdvvcv</span><br/><span class='size-15' id="fillstudentTitle2">往期学员</span></div>
 						<div class='studentCommentRight' id="comment2">我想做个虚拟UP主，短视频现在这么火，真人拍摄已经远远满足不了大家的需要了，虚拟偶像这个可以，一定能吸引眼球。</div>
 					</div>
 				</div>
 				<div class='commentRight shadow'>
 					<div>
 						<div class='studentImgright'><img class='studentPhoto' src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_31fa486f9430d1255195838ec2275549?imageView2"></div>
-						<div class='studentNameRight'><span class='fillStudentName3 size-20'>Cdvvcv</span><br/><span class='size-15' id="fillstudentTitle03">往期学员</span></div>
+						<div class='studentNameRight'><span class='fillStudentName3 size-20'>Cdvvcv</span><br/><span class='size-15' id="fillstudentTitle3">往期学员</span></div>
 						<div class='studentCommentRight' id="comment3">我想做个虚拟UP主，短视频现在这么火，真人拍摄已经远远满足不了大家的需要了，虚拟偶像这个可以，一定能吸引眼球。</div>
 					</div>
 				</div>
 				<div class='commentRight shadow'>
 					<div>
 						<div class='studentImgright'><img class='studentPhoto' src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_7caa8feab7e10edad0ccacb9fa7d76b3?imageView2"></div>
-						<div class='studentNameRight'><span class='fillStudentName4 size-20'>Cdvvcv</span><br/><span class='size-15' id="fillstudentTitle04">往期学员</span></div>
+						<div class='studentNameRight'><span class='fillStudentName4 size-20'>Cdvvcv</span><br/><span class='size-15' id="fillstudentTitle4">往期学员</span></div>
 						<div class='studentCommentRight' id="comment4">我想做个虚拟UP主，短视频现在这么火，真人拍摄已经远远满足不了大家的需要了，虚拟偶像这个可以，一定能吸引眼球。</div>
 					</div>
 				</div>
 				<div class='commentRight shadow'>
 					<div>
 						<div class='studentImgright'><img class='studentPhoto' src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_bfb9cc4d1e11b0820da4e59c80c4d3a0?imageView2"></div>
-						<div class='studentNameRight'><span class='fillStudentName5 size-20'>Cdvvcv</span><br/><span class='size-15' id="fillstudentTitle05">往期学员</span></div>
+						<div class='studentNameRight'><span class='fillStudentName5 size-20'>Cdvvcv</span><br/><span class='size-15' id="fillstudentTitle5">往期学员</span></div>
 						<div class='studentCommentRight' id="comment5">我想做个虚拟UP主，短视频现在这么火，真人拍摄已经远远满足不了大家的需要了，虚拟偶像这个可以，一定能吸引眼球。</div>
 					</div>
 				</div>
 				<div class='commentRight shadow'>
 					<div>
 						<div class='studentImgright'><img class='studentPhoto' src="http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_9bc64575660a1ead2378dc1d0ce3b824?imageView2"></div>
-						<div class='studentNameRight'><span class='fillStudentName6 size-20'>Cdvvcv</span><br/><span class='size-15' id="fillstudentTitle06">往期学员</span></div>
+						<div class='studentNameRight'><span class='fillStudentName6 size-20'>Cdvvcv</span><br/><span class='size-15' id="fillstudentTitle6">往期学员</span></div>
 						<div class='studentCommentRight' id="comment6">我想做个虚拟UP主，短视频现在这么火，真人拍摄已经远远满足不了大家的需要了，虚拟偶像这个可以，一定能吸引眼球。</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<button class='buttonOrange' id="applyNowButton"><img class='inlineImg' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0f97c69b89b335345e0c777bd5cf0b5c?imageView2'> <span class="eng">Apply Now</span><span class="cn">立即报名</span></button>
+		<button class='buttonOrange' id="applyNowButton"><img class='inlineImg' src='http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_0f97c69b89b335345e0c777bd5cf0b5c?imageView2'> <span class="eng">Sign Up Now</span><span class="cn">立即报名</span></button>
 	</div>
 
 
@@ -794,7 +794,7 @@
 
 
 	<div class='container' id='featuresContainer'>
-		<div class='titleText header1'>TEACHING FEATURES<br/><span class='headerChinese'>教学特色</span></div>
+		<div class='titleText header1'>COURSE SPECS<br/><span class='headerChinese'>课程规格</span></div>
 		<div id='featureContents' class='shadow'>
 			<div id='featureColumn1'>
 				<div class='columnTitle fillCourseTitleCn' id='column1Title'>Unreal场景人物大师班</div>
@@ -853,7 +853,7 @@
 				<div class='columnItem noAnimation'><span class='cn'>个人成长</span><span class='eng'>Growth</span></div>
 			</div>
 			<div id='featureColumn3'>
-				<div class='columnTitle' id='column3Title'><span class='cn'>普通培训营</span><span class='eng'>Other training Camp</span></div>
+				<div class='columnTitle' id='column3Title'><span class='cn'>普通培训营</span><span class='eng'>COMPETITORS</span></div>
 				<div class='columnItem'>
 					<span class='cn'>定价虚高或含隐性费用</span>
 					<span class='eng'>Non-transparent</span>
@@ -903,7 +903,7 @@
 
 
 	<div class='container' id='servicesContainer'>
-		<div class='titleText header1'>OTHER FEATURES<br/><span class='headerChinese'>增值服务</span></div>
+		<div class='titleText header1'>VALUE ADDED<br/><span class='headerChinese'>增值服务</span></div>
 
 		<div id='servicesContents'>
 			<div class='service' id='services1'> 
@@ -950,18 +950,18 @@
 
     <div class='' id="footer">
         <div>
-            <div id='footerLogo'><a href="./home.html"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
+            <div id='footerLogo'><a href="./home"><img src='http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7bd0134ebf80ab85044eefb6892f5605?imageView2'></a></div>
             <div id='footerMenu'>
                 <div>
-                    <div class='footerMenuItem'><a href="./courseList.html"><span class='eng'>Course</span><span class="cn">课程</span></a></div>
-                    <div class='footerMenuItem'><a href="./about.html"><span class='eng'>Career</span><span class="cn">职业</span></a></div>
-                    <div class='footerMenuItem'><a href="./news.html"><span class='eng'>News</span><span class="cn">新闻</span></a></div>
-                    <div class='footerMenuItem'><a href="./blogs.html"><span class='eng'>Blog</span><span class="cn">博客</span></a></div>
+                    <div class='footerMenuItem'><a href="./courseList"><span class='eng'>Course</span><span class="cn">课程</span></a></div>
+                    <div class='footerMenuItem'><a href="./about"><span class='eng'>Career</span><span class="cn">职业</span></a></div>
+                    <div class='footerMenuItem'><a href="./news"><span class='eng'>News</span><span class="cn">新闻</span></a></div>
+                    <div class='footerMenuItem'><a href="./blogs"><span class='eng'>Blog</span><span class="cn">博客</span></a></div>
                 </div>
 
                 <div>                
-                    <div class='footerMenuItem'><a href="./about.html"><span class='eng'>About Us</span><span class="cn">关于我们</span></a></div>
-                    <div class='footerMenuItem'><a href="./about.html#advidorsContainer"><span class='eng'>Advisors</span><span class="cn">导师信息</span></a></div>
+                    <div class='footerMenuItem'><a href="./about"><span class='eng'>About Us</span><span class="cn">关于我们</span></a></div>
+                    <div class='footerMenuItem'><a href="./about#advidorsContainer"><span class='eng'>Advisors</span><span class="cn">导师信息</span></a></div>
                     <div class='footerMenuItem'><a href="https://jinshuju.net/f/YzGMtG"><span class='eng'>Join Us</span><span class="cn">加入我们</span></a></div>    
                 </div>
             </div>
@@ -1003,10 +1003,11 @@
 <!-- end of content container -->
 
 
-
+    <!-- <script src="https://cdn0.ofcourse.io/9ba241ace1b24928bcada92ee2b3f276_f_d8dc5030f8371a86b8c2b1fe10683ee4"></script> -->
     <script src="../js/course.js"></script>
 
 </body>
+
 </html>
 
 

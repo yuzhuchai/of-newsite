@@ -63,16 +63,23 @@
 
 
 
-    // console.log(filter)
+// this is loading the header shadow with sections, on uploading to the site 
 
-    $('.sections').scroll(function(){
-        // console.log("hi")
-        $("#header").css({"box-shadow":"0px 4px 10px rgba(0,0,0,0.05)"})
-        if($('#contentContainer').position().top == 80){
-            console.log('hit')
-            $("#header").css({"box-shadow":"0px 0px 0px rgba(0,0,0,0.09)"})
-        }   
-    })
+$('.sections').scroll(function(){
+    $("#header").css({"box-shadow":"0px 4px 10px rgba(0,0,0,0.05)"})
+    if($('.sections').scrollTop() == 0){
+        $("#header").css({"box-shadow":"0px 0px 0px rgba(0,0,0,0.09)"})
+    }
+})
+
+// this is loading the header shadow with sections, on loacal testing 
+$( window ).scroll(function(){
+    $("#header").css({"box-shadow":"0px 4px 10px rgba(0,0,0,0.05)"})
+    if($(window).scrollTop() == 0){
+        $("#header").css({"box-shadow":"0px 0px 0px rgba(0,0,0,0.09)"})
+    }
+})
+
 
 
     $('#hiddenLen').click(function(){

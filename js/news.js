@@ -49,28 +49,22 @@ $( window ).resize(function() {
 
 
 
-// console.log(filter)
-
-// this is the header box shadow on uploading 
+    
+// this is loading the header shadow with sections, on uploading to the site 
 $('.sections').scroll(function(){
-    // console.log("hi")
     $("#header").css({"box-shadow":"0px 4px 10px rgba(0,0,0,0.05)"})
-    if($('#contentContainer').position().top == 80){
-        console.log('hit')
+    if($('.sections').scrollTop() == 0){
         $("#header").css({"box-shadow":"0px 0px 0px rgba(0,0,0,0.09)"})
     }
 })
 
-// this is the header box shadow on loacl testing s
-$(window).scroll(function(){
-    // console.log("hi")
+// this is loading the header shadow with sections, on loacal testing 
+$( window ).scroll(function(){
     $("#header").css({"box-shadow":"0px 4px 10px rgba(0,0,0,0.05)"})
-    if($('#contentContainer').position().top == 80){
-        console.log('hit')
+    if($(window).scrollTop() == 0){
         $("#header").css({"box-shadow":"0px 0px 0px rgba(0,0,0,0.09)"})
     }
 })
-
 
 
 

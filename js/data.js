@@ -146,134 +146,134 @@ let unityVR = {
 classID: "unityVR",
 classNameEng:'MASTERING VIRTUAL REALITY WITH UNITY',
 classNameCn: 'UnityVR虚拟实境大师班',
+navigation:'<span class="cn">UnityVR虚拟实境大师班</span><span class="eng">Mastering virtual reality with unity</span>',
+columnName: '<span class="cn">UnityVR虚拟实境大师班</span><span class="eng">MASTERING VIRTUAL REALITY WITH UNITY</span>',
 price:'6999',
 installmentValue:'580',
 installmentTime: "12",
 classSlogan:'<span class="cn">制作超体验元宇宙世界，从0到1掌握Unity虚拟实境全流程开发路径</span><span class="eng weight-290">From zero to one master virtual reality development with Unity create super metaverse</span>',
 classHeader:"<span class='cn'>掌握UnityVR虚拟实境技术<br/>成为高级虚拟现实设计师</span><span class='eng'>MASTER UNITY VR TECHNOLOGY<br/> BECOME VR DESIGNER</span>",
-classSeries:'<span class="cn">Unity元宇宙课程系列</span><span class="eng">Unity Metaverse course series</span>',
-classSeriesLink:'课程系列链接',
-prepClass:'<span class="cn">Unity快速筑基课程</span><span class="eng">Creative technologist with Unity</span>',
-prepClassLink:'前置课程链接',
+classSeries:'<a href="./courseList.html?filter=unity"><span class="cn">Unity元宇宙课程系列</span><span class="eng">Unity Metaverse course series</span></a>',
+prepClass:'<a href="./courseList.html"><span class="cn">Unity快速筑基课程</span><span class="eng">Creative technologist with Unity</span></a>',
 classOverview: "<span class='cn'>你想成为虚拟现实设计师吗？你想入职元宇宙高精尖企业吗？你脑海中有一个梦幻场景想做出来吗？那么快加入Unity 虚拟实境大师班课程吧！本课程由美国排名Top1的帕森斯设计学院教授李肃纲老师亲自授课，传授全球最多人使用的实时交互引擎Unity与元宇宙平台Styly在线编辑器，快速从0到1掌握Unity VR虚拟实境创作全流程开发路径，制作超体验元宇宙世界，成为高级虚拟现实设计师，入职高精尖创新企业，并有机会参加Styly举办的虚拟实境国际大赛，赢取2万美金大奖。</span> <span class='eng'>Do you want to become a VR designer? Do you want to join a high-end Metaverse enterprise? Do you have a dream world in your head that you want to create? Then join the Mastering Virtual Reality With Unity course! This course is taught by Kyle Li, associate professor at the Top 1 school in the US, Parsons School of Design. He has years of experience teaching Unity, the world's most used realtime interaction engine, as well as Styly online editor. You can quickly master Unity VR creation pipline, and create your own Metaverse. You will also have the opportunity to participate in the annual VR international competition held my Styly, and win a grand prize of 20,000 US dollars.</span>",
 mentorNameEng:'Kyle Li',
 mentorNameCn:'李肃纲',
 mentorTitle:["<span class='cn'>互动与体验设计师</span><span class='eng'>Interactive Experience Designer</span>",
             "<span class='cn'>帕森斯设计学院副教授</span><span class='eng'>Associate Professor at Parsons</span>",
-            "<span class='cn'>帕森斯设计与科技系前系主任</span><span class='eng'>Head of </span>"
+            "<span class='cn'>帕森斯设计与科技系前系主任</span><span class='eng'>Head of Design and Technology Department at Parsons</span>"
         ],
-mentorText:'李肃纲教授2008年开始任教于帕森斯设计艺术学院，2014年成为设计与科技系大学部系主任，创立了多门主修课程和专业级室内动态捕捉系统。他设计的互动学习空间被纽约时报誉为改变未来教育的四大科技之一。',
-freeClassTitle:'李肃纲教授公开课「如何创造虚拟世界」',
+mentorText:'<span class="cn"> 李肃纲教授2008年开始任教于帕森斯设计艺术学院，2014年成为设计与科技系大学部系主任，创立了多门主修课程和专业级室内动态捕捉系统。他设计的互动学习空间被纽约时报誉为改变未来教育的四大科技之一。</span><span class="eng">Professor Kyle Li stated teaching at Parsons School of Design in 2008. In 2014, he became the dean of the Department of Design and Technology. He founded several major courses and professional motion capture system at the school.</span>',
+freeClassTitle:'<span class="cn">李肃纲教授公开课「如何创造虚拟世界」</span><span class="eng">Public Class by Kyle Li "How to Create a Virtual World"</span>',
 studentReviewMain: {
-    name: "王同学",
-    title:'游戏场景设计师',
-    review: "我从事的是游戏场景相关设计工作，现在在一家知名游戏公司工作，最近我在创作中总是找不到感觉，职业遇到了瓶颈，所以我就报名了这门课程。我一开始抱着试试看的心态，冲着这门课程的老师是全球排名第一的帕森斯设计学院的教授，就报名了参加了。我记忆中最深刻的是李老师在课上提醒我们虚拟实境是第一人称的体验，世界一开始不用做太大，从一个路口开始都可以。这瞬间让我茅塞顿开，我知道了之前创作遇到的核心问题就是开场做太大了。李肃纲老师的课非常精彩，不愧是帕森斯学院的教授，他深厚的虚拟实境知识和国际化的视野，让我们学到了别的地方学不到的知识，值得所有希望从事虚拟实境设计的同学学习！",
+    name: "<span class='cn'>王同学</span><span class='eng'>Wang</span>",
+    title:"<span class='cn'>游戏场景设计师</span><span class='eng'>Game Designer</span>",
+    review: "<span class='cn'>我从事的是游戏场景相关设计工作，现在在一家知名游戏公司工作，最近我在创作中总是找不到感觉，职业遇到了瓶颈，所以我就报名了这门课程。我一开始抱着试试看的心态，冲着这门课程的老师是全球排名第一的帕森斯设计学院的教授，就报名了参加了。我记忆中最深刻的是李老师在课上提醒我们虚拟实境是第一人称的体验，世界一开始不用做太大，从一个路口开始都可以。这瞬间让我茅塞顿开，我知道了之前创作遇到的核心问题就是开场做太大了。李肃纲老师的课非常精彩，不愧是帕森斯学院的教授，他深厚的虚拟实境知识和国际化的视野，让我们学到了别的地方学不到的知识，值得所有希望从事虚拟实境设计的同学学习！</span><span class='eng'>I am a game designer, and currently working for a well known game studio. I've lost my inspriation lately and had some difficulity at work, so I signed up for the class. At first I just wanted to give it a try because the instructor is the professor from Parsons, one of the TOP design schools. What I remembered the most is what Kyle mentioned in the class, that VR is a first person experience, and the world does not need to be too big at the beginning. Which sloved my creation problem. Kyle's profound knowledge of VR allowed us to learn knowledge that cannnot be learned in other places. I recommend all student enganged in the VR Design to takee this course.</span>",
 },
 studentReview:[
     {
-        name: '程同学',
-        title:'学生',
-        review:'这门课挺适合我这种零基础的小白的。我一开还担心自己是小白会跟不上，没想到李老师上课很耐心，也很仔细，我很快就学会了UnityVR！'
+        name: '<span class="cn">程同学</span><span class="eng">Cheng</span>',
+        title:'<span class="cn">学生</span><span class="eng">student</span>',
+        review:'<span class="cn">这门课挺适合我这种零基础的小白的。我一开还担心自己是小白会跟不上，没想到李老师上课很耐心，也很仔细，我很快就学会了UnityVR！</span><span class="eng">This is a really beginner friendly class, I was worried that I would have a hard time following the course, but Kyle is very patient, I was able to learn unity VR very quickly</span>'
     },
     {
-        name: '王同学',
-        title:'学生',
-        review:'我现在英国读研，我觉的这门课太超值了，因为李肃纲老原滋原味的带来了帕森斯学院的课程内容，我不用申请就读到了顶尖名校的课程。'
+        name: '<span class="cn">王同学</span><span class="eng">Wang</span>',
+        title:'<span class="cn">学生</span><span class="eng">student</span>',
+        review:'<span class="cn">我现在英国读研，我觉的这门课太超值了，因为李肃纲老原滋原味的带来了帕森斯学院的课程内容，我不用申请就读到了顶尖名校的课程。</span><span class="eng">I am taking graduate school in the UK, I think this course is rally worth investing. I get to experience the learning experience from Parsons at home.</span>'
     },
     {
-        name: '赵同学',
-        title:'建筑师',
-        review:'我是学过一点Unity的，我觉的课程有点简单。但我发现一些一直搞不明白的地方，李老师都能给我解答，比如烤光问题，还有资源调配问题'
+        name: '<span class="cn">赵同学</span><span class="eng">Zhao</span>',
+        title:'<span class="cn">建筑师</span><span class="eng">architect</span>',
+        review:'<span class="cn">我是学过一点Unity的，我觉的课程有点简单。但我发现一些一直搞不明白的地方，李老师都能给我解答，比如烤光问题，还有资源调配问题</span><span class="eng">I have learned Unity before, and I found this class is a more beginner level cours. However, Kyle can help me slove many problems that I encountered like bake lights, and resource allocation issues.</span>'
     },
     {
-        name: '马同学',
-        title:'大学教师',
-        review:'门课真正讲的是如何搭建一个交互式元宇宙场景，这是未来所有设计师都需要掌握的技能'
+        name: '<span class="cn">马同学</span><span class="eng">Ma</span>',
+        title:'<span class="cn">大学教师</span><span class="eng">teacher</span>',
+        review:'<span class="cn">这门课真正讲的是如何搭建一个交互式元宇宙场景，这是未来所有设计师都需要掌握的技能</span><span class="eng">This is a course on building an interactive Metaverse space, I think this is the skill that all the designer should aquire in the future.</span>'
     },
     {
-        name: '陈同学',
-        title:'服装设计',
-        review:'我脑海中一直有很多对未来空间的幻象，我要用这门课学到的知识把他们都实现出来'
+        name: '<span class="cn">陈同学</span><span class="eng">Chen</span>',
+        title:'<span class="cn">服装设计</span><span class="eng">designer</span>',
+        review:'<span class="cn">我脑海中一直有很多对未来空间的幻象，我要用这门课学到的知识把他们都实现出来</span><span class="eng">I have always imagined many future sapces, with what I learned in the class, now I can actually build them in the VR space</span>'
     },
     {
-        name: '张同学',
-        title:'学生',
-        review:'路遥知马力，日久见人心！这3个月的相处体验，我感受到了李老师对学生的无私关爱和细心教诲！'
+        name: '<span class="cn">张同学</span><span class="eng">Zhang</span>',
+        title:'<span class="cn">学生</span><span class="eng">student</span>',
+        review:"<span class='cn'>路遥知马力，日久见人心！这3个月的相处体验，我感受到了李老师对学生的无私关爱和细心教诲！</span><span class='eng'>During the three months, I have kyle's selfless care and careful teaching to the students!</span>"
     },
 ],
 syllabus: [
     {
-        title: '元宇宙空间搭建入门',
-        description: '快速创建在线虚拟场景，掌握全球领先的styly元宇宙平台在线编辑器',
+        title: '<span class="cn">元宇宙空间搭建入门</span><span class="eng">Intro to World Building</span>',
+        description: '<span class="cn">快速创建在线虚拟场景，掌握全球领先的styly元宇宙平台在线编辑器</span><span class="eng">Create online virtual scene, and master the world leading online editor for metaverse platfomr - Styly</span>',
         img:"http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_5abacbac97ecbf0cd37938df92d34028?imageView2/2/w/360/h/210",
-        fullSyllabus:["了解VR概念和发展历程",
-        "了解StylyVR线上编辑器",
-        "了解沉浸式虚拟世界及元宇宙概念",
+        fullSyllabus:["<span class='cn'>了解VR概念和发展历程</span><span class='eng'>Understand the concept and development of VR</span>",
+        "<span class='cn'>了解StylyVR线上编辑器</span><span class='eng'>Get familiar with Styly editor</span>",
+        "<span class='cn'>了解沉浸式虚拟世界及元宇宙概念</span><span class='eng'>Learn about immersive virtual worlds and metaverse concepts</span>",
         ]
     },
     {
-        title:'基础虚拟空间',
-        description:'搭建基础VR空间场景，学习最多人使用的交互引擎Uniy，掌握Unity与styly结合工作流',
+        title:'<span class="cn">基础虚拟空间</span><span class="eng">Basic Virtual Space</span>',
+        description:'<span class="cn">搭建基础VR空间场景，学习最多人使用的交互引擎Uniy，掌握Unity与styly结合工作流</span><span class="eng">Build basic VR scenes, learn Uniy, and master the workflow of combining Unity and styly</span>',
         img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_de2faf658af13ed8e13ee430f7c1f6e0?imageView2',
-        fullSyllabus:["掌握户外地图的创建",
-        "掌握WhiteBoxing的操作",
-        "掌握Unity 3D中模块化3D资产的使用",
+        fullSyllabus:["<span class='cn'>掌握户外地图的创建</span><span class='eng'>Create an outdoor Map in Unity</span>",
+        "<span class='cn'>掌握WhiteBoxing的操作</span><span class='eng'>WhiteBoxing</span>",
+        "<span class='cn'>掌握Unity 3D中模块化3D资产的使用</span><span class='eng'>Master the use of modular 3D assets in Unity 3D</span>",
         ]
     },
     {
-        title:'高级虚拟场景渲染',
-        description:'制作真实感VR场景，学习场景灯光和渲染技术，并用Post Processing Stack技术场景添加后期滤镜特效',
+        title:'<span class="cn">高级虚拟场景渲染</span><span class="eng">Advanced Virual Scene Building</span>',
+        description:'<span class="cn">制作真实感VR场景，学习场景灯光和渲染技术，并用Post Processing Stack技术场景添加后期滤镜特效</span><span class="eng">Create realistic VR scenes, learn lighting and rendering techniques, and add post-processing filter effects to scenes with PostProcessing Stack technology</span>',
         img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_01024513886bdf754bd949a7bb960f23?imageView2',
-        fullSyllabus:["掌握Unity中的realtime灯光、bake灯光及mix灯光",
-        "掌握PostProcessing后期制作特效的运用",
-        "掌握不同渲染管道、颜色和滤镜的使用",
+        fullSyllabus:["<span class='cn'>掌握Unity中的realtime灯光、bake灯光及mix灯光</span><span class='eng'>Understand different lighting rendering method in unity</span>",
+        "<span class='cn'>掌握PostProcessing后期制作特效的运用</span><span class='eng'>understand and master PostProcessing stack</span>",
+        "<span class='cn'>掌握不同渲染管道、颜色和滤镜的使用</span><span class='eng'>Master the use of different rendering pipelines, colors and filters</span>",
         ]
     },
     {
-        title:'互动虚拟场景',
-        description:'完成互动VR场景搭建，掌握playmaker可视化互动插件核心技术-有限状态机',
+        title:'<span class="cn">互动虚拟场景</span><span class="eng">Playmaker Interaction I</span>',
+        description:'<span class="cn">完成互动VR场景搭建，掌握playmaker可视化互动插件核心技术-有限状态机</span><span class="eng">Complete an interactive VR scenes, master the core technology of playmaker visual interactive plug-in - finite state machine</span>',
         img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_d307267fb2ee54076ce1263e1ff80c10?imageView2',
-        fullSyllabus:["掌握可视化编程的核心概念",
-        "掌握有限机状态及Playmaker逻辑",
-        "利用Playmaker搭建互动场景",
+        fullSyllabus:["<span class='cn'>掌握可视化编程的核心概念</span><span class='eng'>Learn visual scripting</span>",
+        "<span class='cn'>掌握有限机状态及Playmaker逻辑</span><span class='eng'>master the concept and logic of FSM</span>",
+        "<span class='cn'>利用Playmaker搭建互动场景</span><span class='eng'>create an interaction with Playmaker</span>",
         ]
     },
     {
-        title:'剧情式虚拟场景',
-        description:'完成互动剧情场景设计，掌握剧情场景的核心设计方法，学习Playmaker可视化编程内容',
+        title:'<span class="cn">剧情式虚拟场景</span><span class="eng">Playmaker Interaction II</span>',
+        description:'<span class="cn">完成互动剧情场景设计，掌握剧情场景的核心设计方法，学习Playmaker可视化编程内容</span><span class="eng">Complete the interactive scene design, Master the core design method for interaction design, Learn playmaker visual scriprting tool.</span>',
         img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_2e668456fe97a86d514a783e01d3af42?imageView2',
-        fullSyllabus:["掌握剧情界面与非剧情界面设计区别",
-        "掌握Playmaker进阶逻辑",
-        "掌握在场景中添加可交互物件的方法",
+        fullSyllabus:["<span class='cn'>掌握剧情界面与非剧情界面设计区别</span><span class='eng'>understand designing for story telling</span>",
+        "<span class='cn'>掌握Playmaker进阶逻辑</span><span class='eng'>Learn advanced Playmaker logic</span>",
+        "<span class='cn'>掌握在场景中添加可交互物件的方法</span><span class='eng'>Learn how to add interactable objects to your scene</span>",
         ]
 
     },
     {
-        title: "虚拟场景特效",
-        description: '场景中添加雨/雪/火焰等特效，掌握VFX graph插件，学习如何制作粒子效果',
+        title: "<span class='cn'>虚拟场景特效</span><span class='eng'>VFX Effects</span>",
+        description: '<span class="cn">场景中添加雨/雪/火焰等特效，掌握VFX graph插件，学习如何制作粒子效果</span><span class="eng">Add rain/snow/fire and other special effects to the scene, master the VFX graph plug-in, and learn how to make particle effects</span>',
         img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_47781cd7383316c0b80f5521bd1f4d1c?imageView2',
-        fullSyllabus:["掌握纹理、材质和着色器的使用",
-        "掌握3D音效的使用",
-        "掌握粒子系统的互动效果制",
+        fullSyllabus:["<span class='cn'>掌握纹理、材质和着色器的使用</span><span class='eng'>Master the use of textures, materials and shaders</span>",
+        "<span class='cn'>掌握3D音效的使用</span><span class='eng'>Master the use of spatial sound effects</span>",
+        "<span class='cn'>掌握粒子系统的互动效果制</span><span class='eng'>Master the interactive effects of particle systems</span>",
         ]
     },
     {
-        title: '制作超体验元宇宙',
-        description: '完成超体验元宇宙世界制作，掌握Unity中XR模式设定，学会如何将作品上传到VR眼镜中',
+        title: '<span class="cn">制作超体验元宇宙世界</span><span class="eng">VR Experiene</span>',
+        description: '<span class="cn">完成超体验元宇宙世界制作，掌握Unity中XR模式设定，学会如何将作品上传到VR眼镜中</span><span class="eng">Complete building your mataverse experience. Understand the XR mode setting in Unity, and upload your work to VR platforms</span>',
         img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_234708551f227242592b6a279c939eab?imageView2',
-        fullSyllabus:["掌握VR眼睛的配置",
-        "掌握XR-plug in的使用",
-        "掌握从舞台场景设计来解构世界架构的技巧",
+        fullSyllabus:["<span class='cn'>掌握VR眼镜的配置</span><span class='eng'>understand the configuration of VR glasses</span>",
+        "<span class='cn'>掌握XR-plug in的使用</span><span class='eng'>master the use of VR-plugin</span>",
+        "<span class='cn'>掌握从舞台场景设计来解构世界架构的技巧</span><span class='eng'>Understand how to construct a virtual world</span>",
         ]
 
     },
     {
-        title:'完成最终作品',
-        description:'完成最终作品，学会如何发布到PC或手机平台，了解或参与价值2万美金的Styly全球虚拟实境大赛',
+        title:'<span class="cn">完成最终作品</span><span class="eng">Complete Final Project</span>',
+        description:'<span class="cn">完成最终作品，学会如何发布到PC或手机平台，了解或参与价值2万美金的Styly全球虚拟实境大赛</span><span class="eng">Complete the final work, learn how to publish to PC or mobile platform, understand or participate in the Styly global virtual reality competition worth $20,000</span>',
         img:'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_61640ab2507efef78425b33e354b9e7d?imageView2',
-        fullSyllabus:["掌握虚拟世界的冒险式叙事设计",
-        "构建超体验世界场景",
-        "了解如何将作品发布到各大VR平台",
+        fullSyllabus:["<span class='cn'>掌握虚拟世界的冒险式叙事设计</span><span class='eng'>Mastering adventurous narrative design in virtual worlds</span>",
+        "<span class='cn'>构建超体验世界场景</span><span class='eng'>Build an ultra-experience world scene</span>",
+        "<span class='cn'>了解如何将作品发布到各大VR平台</span><span class='eng'>Publish your work to major VR platforms</span>",
         ]
     }
 ],
@@ -285,7 +285,7 @@ classVideo: 'http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_v_d41d8cd9
 videoPoster: 'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_a75b38e3cd16e01284b8eb12518d7529?imageView2',
 showCase: ["http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_ea50ef589cbd97ce394acccbebbf981a?imageView2",
             "http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_7b6be75398f1d7f03fc3b90f7702202f?imageView2",
-            "http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_61640ab2507efef78425b33e354b9e7d?imageView2",
+            "http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_5245b524202ee5ad929c3a4c54841aed?imageView2",
             "http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_917aa7ec30fb13c59b77e20eebc49d53?imageView2",
             "http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_90d98a12c3134024b4f126afe65acb6e?imageView2",
             "http://cdn0.ofcourse.io/5b1ca0cb349f4250877dbc4fc16fc1e8_77ad1b8c09047d73740521c7e90d86d1?imageView2",
@@ -472,7 +472,7 @@ showCase: ["http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_fb897c44519
             "http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_e1981fba5223d9aac55740cf99e9ff01?imageView2"],
 mentorImg: 'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_ddcf823280887ea27282c4c1dfba804a?imageView2',
 mentorVideo:"http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_v_17a78b81c16d4f1b54c881dcbef291b0",
-mentorPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d72b61b77a1e7e54150622f6201b94ee?imageView2',
+mentorPoster:'http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_cc9b280da45fd776e42ecb1def8ba6c2?imageView2',
 teacherCase:['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_730f430fa438db4de7d6b6cc6624ded0?imageView2',
             'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_cf3cba12673cfe44cb3ce84dceb189a2?imageView2',
             'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_73e0a91db43a8f509dfef28e94bcc9cd?imageView2',
@@ -654,8 +654,8 @@ let ai = {
                 'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_69c5f266d9d3c104e366affb6568950c?imageView2',
                 'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_d5aa22c11efb3808b5dfe7b10f814a51?imageView2',
                 'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_6f8eb3650ce862b7bbf36f3f160357d0?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_6245c6977917e7bdcae279df797388b3?imageView2',
-                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_0188d692c0b48f4648dace8c4277c80d?imageView2'],
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_0188d692c0b48f4648dace8c4277c80d?imageView2',
+                'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_6245c6977917e7bdcae279df797388b3?imageView2'],
     studentWork: ['学生作品01url',
                 '学生作品02url',
                 '学生作品03url',
@@ -793,16 +793,16 @@ syllabus: [
         img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_290cee53eaf927e209d19cb6f9cfee5b?imageView2',
         fullSyllabus:["利用Metahuman制作角色面部表情",
         "利用X-gen 和Groom系统制作角色真实毛发",
-        "利用Livelink实施捕捉面部动画",
+        "3.利用Livelink实施捕捉面部动画",
         ]
     },
     {
         title:'创建高画质场景',
         description:'完成最终场景作品，掌握UE画面优化流程和声音系统，实现用Sequence系统输出高品质动画',
         img:'http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_76fc620752a93861a6c9c6f110b614ea?imageView2',
-        fullSyllabus:["掌握虚幻引擎5的Lumen 和 Nanite",
-        "掌握UE5的声音系统Chaos",
-        "利用Sequence系统输出高品质动画",
+        fullSyllabus:["1.掌握虚幻引擎5的Lumen 和 Nanite",
+        "2.掌握UE5的声音系统Chaos",
+        "3.利用Sequence系统输出高品质动画",
         ]
     }
 ],
@@ -1694,3 +1694,4 @@ studentWork: ['http://cdn0.ofcourse.io/e3351aeae8ca4e009f2becd8c1153496_944e3f95
 
 
 // let courseDisplay 
+// unity VR老师title

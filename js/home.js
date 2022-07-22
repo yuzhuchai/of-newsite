@@ -1,4 +1,4 @@
-let courseWidth
+    let courseWidth
     let courseHeight
 
     let socialCard3Width
@@ -67,20 +67,16 @@ let courseWidth
 // this is loading the header shadow with sections, on uploading to the site 
 
     $('.sections').scroll(function(){
-        // console.log("hi")
         $("#header").css({"box-shadow":"0px 4px 10px rgba(0,0,0,0.05)"})
-        if($('#contentContainer').position().top == 80){
-            console.log('hit')
+        if($('.sections').scrollTop() == 0){
             $("#header").css({"box-shadow":"0px 0px 0px rgba(0,0,0,0.09)"})
         }
     })
 
 // this is loading the header shadow with sections, on loacal testing 
     $( window ).scroll(function(){
-        // console.log("hi")
         $("#header").css({"box-shadow":"0px 4px 10px rgba(0,0,0,0.05)"})
-        if($('#contentContainer').position().top == 80){
-            console.log('hit')
+        if($(window).scrollTop() == 0){
             $("#header").css({"box-shadow":"0px 0px 0px rgba(0,0,0,0.09)"})
         }
     })
@@ -182,12 +178,17 @@ let courseWidth
         //     $("#header").css({"box-shadow":"0px 4px 20px rgba(0,0,0,0.09)"})
         // })
 
+
         $('#videoContainer').click(function () {
-            if($(this).children('#aboutVideo').get(0).paused){        
-                $(this).children('#aboutVideo').get(0).play();   
-                $(this).children(".playButton").fadeOut();
+            if($('#videoContainer').children('#aboutVideo').get(0).paused){        
+                $('#videoContainer').children(".playButton").fadeOut();
+            } else{
+                // $('#videoContainer').children(".playButton").fadeIn();
             }
         });
+
+
+
 
         function submitSearch(e){
             // e.preventDefault();

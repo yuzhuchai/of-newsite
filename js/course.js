@@ -1,5 +1,4 @@
-
-
+// this is displaying the correct course with https request quary string ---------------- 
     let courseDisplay
     
     let qs = (function(a) {
@@ -17,6 +16,11 @@
     })(window.location.search.substr(1).split('&'));
 
     let courseID = qs['courseDisplay'];
+
+
+
+
+// this is the like function - to generate likes ======================================
 
     let viewNum 
     let fakeNum = 20456
@@ -36,6 +40,9 @@
         return addNum
     }
 
+
+
+// this is the share function ----------------------------------------------------------------
     function share(){
         let input = document.createElement('input')
         input.type = 'text'
@@ -47,14 +54,14 @@
     }
 
 
+
+// execute functions when window is loaded ================================================================
     $(window).on("load",function(){
 
-        // viewNum = getViewNum()
-        
-
+    
         $(".main_area").width($(window).width())
 
-
+        // this is selecting the correct course object with corresponding quary string: 
         if(courseID == 'unityAR'){
             courseDisplay = unityAR
         } else if(courseID == 'unityVR'){
@@ -91,171 +98,76 @@
         $('#mainPoster').css("background-image", "url(" + courseDisplay.mainPoster + ")");
         $('#fillPrice').text(courseDisplay.price)
         $('.fillCourseTitleEng').text(courseDisplay.classNameEng)
-        $('.fillCourseTitleCn').text(courseDisplay.classNameCn)
+        $('.fillNav').html(courseDisplay.navigation)
+        $('#column1Title').html(courseDisplay.columnName)
+        $('#posterChinese').text(courseDisplay.classNameCn)
         $('#fillSlogan').html(courseDisplay.classSlogan)
         $('#fillHeader').html(courseDisplay.classHeader)
         $('#fillVideo').attr('src', courseDisplay.classVideo)
         $('#fillVideo').attr('poster', courseDisplay.videoPoster)
-
         $('#fillteacherVideo').attr('src', courseDisplay.mentorVideo)
         $('#fillteacherVideo2').attr('src', courseDisplay.mentorVideo2)
-
         $('#fillteacherVideo').attr('poster', courseDisplay.mentorPoster)
         $('#fillteacherVideo2').attr('poster', courseDisplay.mentorPoster2)
-
-
         $('#overViewContent').html(courseDisplay.classOverview)
-
         $('#classSeries').html(courseDisplay.classSeries)
         $('#prepClass').html(courseDisplay.prepClass)
-        // $('#requirements').text(courseDisplay.requirements)
-
         for(let i = 0; i < 8; i++){
             $('#fillSyllabusImg' + (i+1)).attr('src', courseDisplay.syllabus[i].img)
-            $('#fillSyllabus' + (i+1)).text(courseDisplay.syllabus[i].title)
-            $('#fillSyllabusDes' + (i+1)).text(courseDisplay.syllabus[i].description)
+            $('#fillSyllabus' + (i+1)).html(courseDisplay.syllabus[i].title)
+            $('#fillSyllabusDes' + (i+1)).html(courseDisplay.syllabus[i].description)
         }
-
         for(let i = 0; i < 10; i++){
             $('#showCaseImg' + i).attr('src', courseDisplay.showCase[i])
         }
-
         for(let i = 0; i < 6; i++){
             $('#teacherShowCase' + i).attr('src', courseDisplay.teacherCase[i])
         }
-
-
         let workLength = courseDisplay.studentWork.length
-
         for (let i = 0; i < workLength; i++){
             $('#studentWork' + i).attr('src',courseDisplay.studentWork[i]).parent().removeClass('hide')
         }
-
         if(courseDisplay == museum){
             $('#mentorNameEng2').text(courseDisplay.mentorNameEng2)
             $('#mentorNameCn2').text(courseDisplay.mentorNameCn2)
             let mentorTitle2 = courseDisplay.mentorTitle2[0] + "<br/>" + courseDisplay.mentorTitle2[1] + "<br/>" + courseDisplay.mentorTitle2[2]
             $('#mentorTitle2').html(mentorTitle2)
             $('#fillMentorImg2').attr('src',courseDisplay.mentorImg2)
-            $('#mentorTopLeftBottom2').text(courseDisplay.mentorText2)
-            $('#fillCourseTitle2').text(courseDisplay.freeClassTitle2)
+            $('#fillCourseTitle2').html(courseDisplay.freeClassTitle2)
+            $('#mentorTopLeftBottom2').html(courseDisplay.mentorText2)
         }
-
         $('#mentorNameEng').text(courseDisplay.mentorNameEng)
         $('#mentorNameCn').text(courseDisplay.mentorNameCn)
-
         let mentorTitle = courseDisplay.mentorTitle[0] + "<br/>" + courseDisplay.mentorTitle[1] + "<br/>" + courseDisplay.mentorTitle[2]
         $('#mentorTitle').html(mentorTitle)
-
-
         $('#fillMentorImg').attr('src',courseDisplay.mentorImg)
-
-
-        $('#mentorTopLeftBottom').text(courseDisplay.mentorText)
-
-
-        $('#fillCourseTitle').text(courseDisplay.freeClassTitle)
-
-
+        $('#mentorTopLeftBottom').html(courseDisplay.mentorText)
+        $('#fillCourseTitle').html(courseDisplay.freeClassTitle)
         $('#mobilePosterImg').attr('src',courseDisplay.mainPosterMobile)
-
-        $('#mainCommentName').text(courseDisplay.studentReviewMain.name)
-        $('#mainCommentTitle').text(courseDisplay.studentReviewMain.title)
-        $('#studentCommentLeft').text(courseDisplay.studentReviewMain.review)
-
+        $('#mainCommentName').html(courseDisplay.studentReviewMain.name)
+        $('#mainCommentTitle').html(courseDisplay.studentReviewMain.title)
+        $('#studentCommentLeft').html(courseDisplay.studentReviewMain.review)
         for(let i = 0; i < 6; i++){
-            $('.fillStudentName' + (i+1)).text(courseDisplay.studentReview[i].name)
-            $('#comment' + (i+1)).text(courseDisplay.studentReview[i].review)
-            $('#fillStudentName' + (i+1)).text(courseDisplay.studentReview[i].title)
+            $('.fillStudentName' + (i+1)).html(courseDisplay.studentReview[i].name)
+            $('#comment' + (i+1)).html(courseDisplay.studentReview[i].review)
+            $('#fillstudentTitle' + (i+1)).html(courseDisplay.studentReview[i].title)
         }
-       
         $('#fillInstallmentPrice').text(courseDisplay.installmentValue)
         $('#fillInstallmentTime').text(courseDisplay.installmentTime)
-
         for(let i = 0; i < 8; i++){
-            // $('#syllabusList')
             let syllabusList = courseDisplay.syllabus[i].fullSyllabus
             console.log()
             for(let j =0; j < 3; j++){
                 $('.syllabusLists' + i).append("<li>" + syllabusList[j] + "</li>")
             }
         }
-
-        $('#courseVideo').click(function () {
-            if($(this).children('#fillVideo').get(0).paused){        
-                $(this).children('#fillVideo').get(0).play();   
-                $(this).children(".playButton").fadeOut();
-            }
-        });
-
-        $('#mentorVideo').click(function () {
-            if($(this).children('#fillteacherVideo').get(0).paused){        
-                $(this).children('#fillteacherVideo').get(0).play();   
-                $(this).children(".playButton").fadeOut();
-            }
-        });
-
     })
 
-
-
-
-
         
-        
-    let displayMenu = false;
+ // this is toggle the menu-------------------------------------------------------------------
+        let displayMenu = false;
 
-    let courseWidth
-    let courseHeight
-
-    let socialCard3Width
-
-    let careerWidth
-    let careerHeight
-
-    let advisorWidth
-    let advisorHeight
-
-
-    // console.log(courseDisplay)
-
-
-
-    $( window ).resize(function() {
-
-
-        // showCaseSquareWidth = $('.showCaseSquare').width();
-        // showCaseSquareHeight = showCaseSquareWidth * 480/474
-        // $('.showCaseSquare').height(showCaseSquareHeight)
-        // $('.showCaseRow').height(showCaseSquareHeight)
-
-
-        // showCaseRectBig = $('.showCaseRectBig').width();
-        // showcaseRectBigHeight = showCaseRectBig * 480/1005 
-        // $('.showCaseRectBig').height(showcaseRectBigHeight)
-
-        // showCaseRectSmallWidth = $('.showCaseRectSmall').width();
-        // showCaseRectSmallHeight = showCaseRectSmallWidth * 211/474
-        // $('.showCaseRectSmall').height(showCaseRectSmallHeight)
-
-        //     // studentWorkWidth = $('.studentWork').width()
-        //     // $('.studentWork').height(studentWorkWidth)
-
-        // teacherBigWidth = $('.teacherBig').width()
-        // teacherBigHeight = teacherBigWidth * 480 / 1005
-        // $('.teacherBig').height(teacherBigHeight)
-
-
-        // teacherSmallWidth = $('.teacherSmall').width()
-        // teacherSmallHeight = teacherSmallWidth * 480 / 474
-        // $('.teacherSmall').height(teacherSmallHeight)
-
-    });
-
-
-
-
-    $("#menuIconContainer").click(function() {
+        $("#menuIconContainer").click(function() {
             if(!displayMenu){
                 $("#menuPopUp").slideDown()
                 displayMenu = true;
@@ -266,116 +178,118 @@
         })
 
 
-        let filterDisplay = false;
-        $('#filterIcon').click(function(){
-            if(!filterDisplay){
-                $('#filterText').css({'color':'#ACACAC'})
-                $('#filterDisplay').css({'display':'flex'})
-                filterDisplay = true;
+        // let filterDisplay = false;
+        // $('#filterIcon').click(function(){
+        //     if(!filterDisplay){
+        //         $('#filterText').css({'color':'#ACACAC'})
+        //         $('#filterDisplay').css({'display':'flex'})
+        //         filterDisplay = true;
 
-            } else {
-                $('#filterText').css({'color':'#222222'})
-                $('#filterDisplay').css({'display':'none'})
-                filterDisplay = false;
+        //     } else {
+        //         $('#filterText').css({'color':'#222222'})
+        //         $('#filterDisplay').css({'display':'none'})
+        //         filterDisplay = false;
+        //     }
+        // }) 
 
-            }
-        }) 
+    
 
-        // $( window )
-
-
-
+        // this is creating scrolling effects that need scrolling functions 
         $('.sections').scroll(function(){
-            // console.log("hi")
+            // this is creating the box shadow and get rid of it when scroll back to the top 
             $("#header").css({"box-shadow":"0px 4px 20px rgba(0,0,0,0.09)"})
             $("#headerMobile").css({"box-shadow":"0px 4px 20px rgba(0,0,0,0.09)"})
-            // console.log($(window).scrollTop())
-            let scrollPos = $('.sections').scrollTop()
-            // console.log(scrollPos)
-            if(scrollPos > $('#priceContents').position().top && scrollPos < $('#syllabusContainer').position().top){
-                $('#priceMenu').css({'color':'#FF7C32'})
-                $('#syllabusMenu').css({'color':'black'})
-                $('#exampleMenu').css({'color':'black'})
-                $('#advisorMenu').css({'color':'black'})
-                $('#featureMenu').css({'color':'black'})
-            } else if (scrollPos > $('#syllabusContainer').position().top && scrollPos < $('#showCaseContainer').position().top){
-                $('#priceMenu').css({'color':'black'})
-                $('#syllabusMenu').css({'color':'#FF7C32'})
-                $('#exampleMenu').css({'color':'black'})
-                $('#advisorMenu').css({'color':'black'})
-                $('#featureMenu').css({'color':'black'})
-            } else if (scrollPos > $('#showCaseContainer').position().top && scrollPos < $('#mentorContainer').position().top){
-                $('#priceMenu').css({'color':'black'})
-                $('#syllabusMenu').css({'color':'black'})
-                $('#exampleMenu').css({'color':'#FF7C32'})
-                $('#advisorMenu').css({'color':'black'})
-                $('#featureMenu').css({'color':'black'})
-            } else if(scrollPos > $('#mentorContainer').position().top && scrollPos < $('#featuresContainer').position().top){
-                $('#priceMenu').css({'color':'black'})
-                $('#syllabusMenu').css({'color':'black'})
-                $('#exampleMenu').css({'color':'black'})
-                $('#advisorMenu').css({'color':'#FF7C32'})
-                $('#featureMenu').css({'color':'black'})
-            } else if (scrollPos > $('#featuresContainer').position().top){
-                $('#priceMenu').css({'color':'black'})
-                $('#syllabusMenu').css({'color':'black'})
-                $('#exampleMenu').css({'color':'black'})
-                $('#advisorMenu').css({'color':'black'})
-                $('#featureMenu').css({'color':'#FF7C32'})
+            if($('.sections').scrollTop() == 0){
+                $("#header").css({"box-shadow":"0px 0px 0px rgba(0,0,0,0.09)"})
+                $("#headerMobile").css({"box-shadow":"0px 0px 0px rgba(0,0,0,0.09)"})
             }
+
+        // this is creatin the scrolling header on the iphone - disabled 
+            // let scrollPos = $('.sections').scrollTop()
+            // if(scrollPos > $('#priceContents').position().top && scrollPos < $('#syllabusContainer').position().top){
+            //     $('#priceMenu').css({'color':'#FF7C32'})
+            //     $('#syllabusMenu').css({'color':'black'})
+            //     $('#exampleMenu').css({'color':'black'})
+            //     $('#advisorMenu').css({'color':'black'})
+            //     $('#featureMenu').css({'color':'black'})
+            // } else if (scrollPos > $('#syllabusContainer').position().top && scrollPos < $('#showCaseContainer').position().top){
+            //     $('#priceMenu').css({'color':'black'})
+            //     $('#syllabusMenu').css({'color':'#FF7C32'})
+            //     $('#exampleMenu').css({'color':'black'})
+            //     $('#advisorMenu').css({'color':'black'})
+            //     $('#featureMenu').css({'color':'black'})
+            // } else if (scrollPos > $('#showCaseContainer').position().top && scrollPos < $('#mentorContainer').position().top){
+            //     $('#priceMenu').css({'color':'black'})
+            //     $('#syllabusMenu').css({'color':'black'})
+            //     $('#exampleMenu').css({'color':'#FF7C32'})
+            //     $('#advisorMenu').css({'color':'black'})
+            //     $('#featureMenu').css({'color':'black'})
+            // } else if(scrollPos > $('#mentorContainer').position().top && scrollPos < $('#featuresContainer').position().top){
+            //     $('#priceMenu').css({'color':'black'})
+            //     $('#syllabusMenu').css({'color':'black'})
+            //     $('#exampleMenu').css({'color':'black'})
+            //     $('#advisorMenu').css({'color':'#FF7C32'})
+            //     $('#featureMenu').css({'color':'black'})
+            // } else if (scrollPos > $('#featuresContainer').position().top){
+            //     $('#priceMenu').css({'color':'black'})
+            //     $('#syllabusMenu').css({'color':'black'})
+            //     $('#exampleMenu').css({'color':'black'})
+            //     $('#advisorMenu').css({'color':'black'})
+            //     $('#featureMenu').css({'color':'#FF7C32'})
+            // }
         })
 
         
-       
-        $('#priceMenu').on('click',function(){
-            $('.sections').scrollTop($('#priceContents').position().top + 1);
-            $('#priceMenu').css({'color':'#FF7C32'})
-            $('#syllabusMenu').css({'color':'black'})
-            $('#exampleMenu').css({'color':'black'})
-            $('#advisorMenu').css({'color':'black'})
-            $('#featureMenu').css({'color':'black'})
-        })
+    //    this is change the color of the scrolling header in the iphone verison  - disabled 
+        // $('#priceMenu').on('click',function(){
+        //     $('.sections').scrollTop($('#priceContents').position().top + 1);
+        //     $('#priceMenu').css({'color':'#FF7C32'})
+        //     $('#syllabusMenu').css({'color':'black'})
+        //     $('#exampleMenu').css({'color':'black'})
+        //     $('#advisorMenu').css({'color':'black'})
+        //     $('#featureMenu').css({'color':'black'})
+        // })
 
-        $('#syllabusMenu').on('click', function(){
-                $('.sections').scrollTop($('#syllabusContainer').position().top + 1);
-                $('#priceMenu').css({'color':'black'})
-                $('#syllabusMenu').css({'color':'#FF7C32'})
-                $('#exampleMenu').css({'color':'black'})
-                $('#advisorMenu').css({'color':'black'})
-                $('#featureMenu').css({'color':'black'})
-        })
+        // $('#syllabusMenu').on('click', function(){
+        //         $('.sections').scrollTop($('#syllabusContainer').position().top + 1);
+        //         $('#priceMenu').css({'color':'black'})
+        //         $('#syllabusMenu').css({'color':'#FF7C32'})
+        //         $('#exampleMenu').css({'color':'black'})
+        //         $('#advisorMenu').css({'color':'black'})
+        //         $('#featureMenu').css({'color':'black'})
+        // })
 
-        $('#exampleMenu').on('click', function(){
-            $('.sections').scrollTop($('#showCaseContainer').position().top  + 1 );
-                $('#priceMenu').css({'color':'black'})
-                $('#syllabusMenu').css({'color':'black'})
-                $('#exampleMenu').css({'color':'#FF7C32'})
-                $('#advisorMenu').css({'color':'black'})
-                $('#featureMenu').css({'color':'black'})
-        })
+        // $('#exampleMenu').on('click', function(){
+        //     $('.sections').scrollTop($('#showCaseContainer').position().top  + 1 );
+        //         $('#priceMenu').css({'color':'black'})
+        //         $('#syllabusMenu').css({'color':'black'})
+        //         $('#exampleMenu').css({'color':'#FF7C32'})
+        //         $('#advisorMenu').css({'color':'black'})
+        //         $('#featureMenu').css({'color':'black'})
+        // })
 
-        $('#advisorMenu').on('click', function(){
-            $('.sections').scrollTop($('#mentorContainer').position().top + 1);
-                $('#priceMenu').css({'color':'black'})
-                $('#syllabusMenu').css({'color':'black'})
-                $('#exampleMenu').css({'color':'black'})
-                $('#advisorMenu').css({'color':'#FF7C32'})
-                $('#featureMenu').css({'color':'black'})
-        })
+        // $('#advisorMenu').on('click', function(){
+        //     $('.sections').scrollTop($('#mentorContainer').position().top + 1);
+        //         $('#priceMenu').css({'color':'black'})
+        //         $('#syllabusMenu').css({'color':'black'})
+        //         $('#exampleMenu').css({'color':'black'})
+        //         $('#advisorMenu').css({'color':'#FF7C32'})
+        //         $('#featureMenu').css({'color':'black'})
+        // })
 
-        $('#featureMenu').on('click', function(){
-            $('.sections').scrollTop($('#featuresContainer').position().top + 1);
-                $('#priceMenu').css({'color':'black'})
-                $('#syllabusMenu').css({'color':'black'})
-                $('#exampleMenu').css({'color':'black'})
-                $('#advisorMenu').css({'color':'black'})
-                $('#featureMenu').css({'color':'#FF7C32'})
-        })
-
-
+        // $('#featureMenu').on('click', function(){
+        //     $('.sections').scrollTop($('#featuresContainer').position().top + 1);
+        //         $('#priceMenu').css({'color':'black'})
+        //         $('#syllabusMenu').css({'color':'black'})
+        //         $('#exampleMenu').css({'color':'black'})
+        //         $('#advisorMenu').css({'color':'black'})
+        //         $('#featureMenu').css({'color':'#FF7C32'})
+        // })
 
 
 
+
+//  this is creaing the button effect -----------------------------------------------------------------------------------
         let orangeButton = document.querySelector(".buttonOrange");
         orangeButton.addEventListener("mousemove", (e) => {
             const { x, y } = orangeButton.getBoundingClientRect();
@@ -383,28 +297,29 @@
             orangeButton.style.setProperty("--y", e.clientY - y);
         });
 
-
+// this is displaying the wechat code to scan ----------------------------------------------------------------------------
         $('#displayCode').hover(function(){
-            // console.log('hovered')
             $('#weChatCode').show()
         }, function(){
             $('#weChatCode').hide()
         })
 
         $('#showCode').hover(function(){
-            // console.log('hovered')
             $('#weChatCodeMenu').show()
         }, function(){
             $('#weChatCodeMenu').hide()
         })
 
+
+
+// this is for changin the language ---------------------------------------------------------------------------------------
         let lan = 'CN'
         $("#color_mode").on("change", function () {
             console.log('this is clickedd')
             if(lan == 'CN'){
                 $('.cn').hide();
                 $('.eng').show();
-                lan = "EN"
+                lan = "EN"          
             } else {
                 $('.cn').show();
                 $('.eng').hide();
@@ -416,7 +331,7 @@
         let dropDownDisplay = false; 
         $('.mobileLan').on('click',function(){
             if(!dropDownDisplay){
-                $('#lanDropDown').show()
+                $('#lanDropDown').css('display','flex')
                 dropDownDisplay = true;
             } 
         })
@@ -432,21 +347,36 @@
             $('.cn').show();
             $('.eng').hide();
             lan = 'CN'
-            $('#cnMobile').css('text-decoration','underline')
-            $('#enMobile').css('text-decoration','none')
-
+            $('#cnMobile').css({
+                'text-decoration':'underline',
+                'order':'-1',
+                'color':'#222222'
+            })
+            $('#enMobile').css({
+                'text-decoration':'none',
+                'order':'1',
+                'color':'rgba(172, 172, 172, 1)'
+            })
         })
 
         $('#enMobile').on('click', function(){
             $('.cn').hide();
             $('.eng').show();
             lan = 'EN'
-            $('#enMobile').css('text-decoration','underline')
-            $('#cnMobile').css('text-decoration','none')
+            $('#enMobile').css({
+                'text-decoration':'underline',
+                'order':'-1',
+                'color':'#222222'
+            })
+            $('#cnMobile').css({
+                'text-decoration':'none',
+                'order':'1',
+                'color':'rgba(172, 172, 172, 1)'
+            })
         })
 
 
-
+// this is for toggling the log in card -----------------------------------------------------------------------------------
         $('#login').click(function(){
             $('#loginPopupBg').show()
             $('#loginHeader').text('微信扫码登录')
@@ -454,6 +384,8 @@
             $('.loginImgreplace').attr('src','http://cdn0.ofcourse.io/9b9ad25ba1404d5e9df0b84c20636274_d0df37497ebafdf8a7a9fc4a6071ad8b?imageView2')
         })
 
+
+// this is for toggling the card for checking out ------------------------------------------------------------------------------------
         let cardShow = false 
 
         $('#consultantImgBg').click(function(){
@@ -485,8 +417,6 @@
                 $('#fillConsultText').text('Get Free Consultation')
             }
         })
-
-       
 
         $('#buttonBottom').click(function(){
             console.log('buttom Bottom is clicked')
@@ -526,9 +456,6 @@
             }
         })
 
-        $('#stickyBottom').click(function(){
-            console.log('sticky buttom is clicked')
-        })
 
         $('#requirements').click(function(){
             cardShow = true
@@ -541,7 +468,6 @@
                 $('#fillConsultText').text('Learn More')
             }
         })
-
 
         $('#getSyllabus').click(function(){
             cardShow = true
@@ -603,8 +529,6 @@
             }
         })
 
-        
-
         $('#applyNowButton').click(function(){
             cardShow = true
             $('#consultantImgBg').css('display','flex')
@@ -617,7 +541,7 @@
             }
         })
 
-        $('#fullVideoLink').click(function(){
+        $('#mentorBottom').click(function(){
             cardShow = true
             $('#consultantImgBg').css('display','flex')
             $('#buyImg').hide()
@@ -629,7 +553,7 @@
             }
         })
 
-        $('#fullVideoLink2').click(function(){
+        $('#mentorBottom2').click(function(){
             cardShow = true
             $('#consultantImgBg').css('display','flex')
             $('#buyImg').hide()
@@ -642,15 +566,47 @@
         })
 
 
+// this is the displaying full syllabus content ---------------------------------------------------------------------------------
         $('.syllabus').hover(function(){
-            // $(this).find(".overlay").show().promise().done(function() {
-            // });
             $(this).find('.overlay').first().addClass('transition')
         },function(){
             $(this).find('.overlay').first().removeClass('transition')
         })
 
+        let overlayDisplay 
+        $(window).on("load",function(){
+            console.log(screen.width)
+            if(screen.width < 1366){
+                $('.syllabus').find('.overlay').addClass('transition')
+                overlayDisplay = true
+            }
 
+            $('.syllabus').on('click', function(){
+                console.log('clicksyllabus',overlayDisplay)
+                if(overlayDisplay){
+                    $(this).find('.overlay').first().removeClass('transition')
+                    overlayDisplay = false
+                } else {
+                    $(this).find('.overlay').first().addClass('transition')
+                    overlayDisplay = true
+                    console.log('this is clicked, overlaydisplay')
+                }
+            })
+        })
         
+// this is playing video with play button there is a bug---------------------------------------------------------------------------------------
+        $('#courseVideo').click(function () {
+            if($('#courseVideo').children('#fillVideo').get(0).paused){        
+                $('#courseVideo').children(".playButton").fadeOut();
+            } 
+        });
+
+
+        $('#mentorVideo').click(function () {
+            console.log('clicked ')
+            if($('#mentorVideo').children('#fillteacherVideo').get(0).paused){        
+                $('#mentorVideo').children(".playButton").fadeOut();
+            } 
+        });
         
 
